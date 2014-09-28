@@ -1,0 +1,12 @@
+- add JSSC and hidapi to libs with all needed staff
+- spring mvc + jquery front to display HID and MC data rows
+- javascript charts and history
+- H2 tables logging
+
+
+dependencies
+ - json (GSON)
+ - JSSC
+ - javahidapi
+ - spring mvc and ioc
+ - h2
