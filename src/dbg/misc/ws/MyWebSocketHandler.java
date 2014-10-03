@@ -53,14 +53,25 @@ public class MyWebSocketHandler {
 
     @OnWebSocketClose
     public void onClose(int statusCode, String reason) {
-        System.out.println("Close: statusCode=" + statusCode + ", reason=" + reason);
+      System.out.println("Close: statusCode=" + statusCode + ", reason=" + reason);
       ticker.session = null;
+      staticSession = null;
     }
 
     @OnWebSocketError
     public void onError(Throwable t) {
       ticker.session = null;
+      staticSession = null;
       System.out.println("Error: " + t.getMessage());
+    }
+
+
+
+    private static Session staticSession;
+    public static void sendToClient(String msg) throws IOException {
+        if (staticSession != null) {
+            staticSession.getRemote().sendString(msg);
+        }
     }
 
     @OnWebSocketConnect
@@ -69,7 +80,8 @@ public class MyWebSocketHandler {
         try {
           session.getRemote().sendString("Hello Web browser");
           ticker.session = session;
-          new Thread(ticker).start();
+          staticSession = session;
+          //new Thread(ticker).start();
 
         } catch (IOException e) {
             e.printStackTrace();
