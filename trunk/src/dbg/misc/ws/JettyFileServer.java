@@ -16,6 +16,7 @@ import org.eclipse.jetty.websocket.servlet.WebSocketServletFactory;
 public class JettyFileServer {
 
   public static void main(String[] args) throws Exception {
+
     Server server = new Server(9090);
     Connector connector = new ServerConnector(server);
     server.addConnector(connector);
