@@ -1,4 +1,5 @@
-var ws = new WebSocket("ws://127.0.0.1:8080/");
+//var ws = new WebSocket("ws://127.0.0.1:9090/");
+var ws = new WebSocket("ws://" + location.host);
 
 ws.onopen = function() {
     alert("Opened!");
