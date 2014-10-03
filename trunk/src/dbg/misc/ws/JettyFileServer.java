@@ -13,33 +13,32 @@ import org.eclipse.jetty.websocket.servlet.WebSocketServletFactory;
 /**
  * @author bogdel
  */
-public class JettyFileServer
-{
-    public static void main(String[] args) throws Exception
-    {
-        Server server = new Server(9090);
-        Connector connector = new ServerConnector(server);
-        server.addConnector(connector);
+public class JettyFileServer {
 
-        ResourceHandler resourceHandler = createResourceHandler();
+  public static void main(String[] args) throws Exception {
+    Server server = new Server(9090);
+    Connector connector = new ServerConnector(server);
+    server.addConnector(connector);
 
-        Handler wsHandler = createWsHandler();
+    ResourceHandler resourceHandler = createResourceHandler();
+
+    Handler wsHandler = createWsHandler();
 
 
-        HandlerList handlers = new HandlerList();
-        handlers.setHandlers(new Handler[] { wsHandler, resourceHandler, new DefaultHandler() });
-        server.setHandler(handlers);
+    HandlerList handlers = new HandlerList();
+    handlers.setHandlers(new Handler[]{wsHandler, resourceHandler, new DefaultHandler()});
+    server.setHandler(handlers);
 
-        server.start();
-        server.join();
-    }
+    server.start();
+    server.join();
+  }
 
   private static Handler createWsHandler() {
     return new WebSocketHandler() {
-        @Override
-        public void configure(WebSocketServletFactory factory) {
-            factory.register(MyWebSocketHandler.class);
-        }
+      @Override
+      public void configure(WebSocketServletFactory factory) {
+        factory.register(MyWebSocketHandler.class);
+      }
     };
   }
 
