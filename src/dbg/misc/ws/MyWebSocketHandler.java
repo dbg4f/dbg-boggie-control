@@ -23,6 +23,12 @@ public class MyWebSocketHandler {
       public void run() {
 
 
+        try {
+          Thread.sleep(3000);
+        }
+        catch (InterruptedException e) {
+          e.printStackTrace();
+        }
 
         while (session != null) {
 
@@ -30,7 +36,7 @@ public class MyWebSocketHandler {
 
           try {
 
-            Thread.sleep(3000);
+            Thread.sleep(30);
 
             session.getRemote().sendString(String.format(" i= %d", i++));
           }
