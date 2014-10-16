@@ -4,6 +4,7 @@ import org.eclipse.jetty.server.Connector;
 import org.eclipse.jetty.server.Handler;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.server.ServerConnector;
+import org.eclipse.jetty.server.handler.ContextHandler;
 import org.eclipse.jetty.server.handler.DefaultHandler;
 import org.eclipse.jetty.server.handler.HandlerList;
 import org.eclipse.jetty.server.handler.ResourceHandler;
@@ -26,15 +27,27 @@ public class JettyFileServer {
     Handler wsHandler = createWsHandler();
 
 
+    ContextHandler contextHandler = createContextHandler(new HelloHandler());
+
     HandlerList handlers = new HandlerList();
-    handlers.setHandlers(new Handler[]{wsHandler, resourceHandler, new DefaultHandler()});
+    handlers.setHandlers(new Handler[]{contextHandler, wsHandler, resourceHandler, new DefaultHandler()});
     server.setHandler(handlers);
 
     server.start();
     server.join();
   }
 
-  private static Handler createWsHandler() {
+    private static ContextHandler createContextHandler(Handler handler) throws Exception {
+        ContextHandler context = new ContextHandler();
+        context.setContextPath("/service");
+        context.setResourceBase(".");
+        context.setClassLoader(Thread.currentThread().getContextClassLoader());
+        context.setHandler(handler);
+
+        return context;
+    }
+
+    private static Handler createWsHandler() {
     return new WebSocketHandler() {
       @Override
       public void configure(WebSocketServletFactory factory) {
