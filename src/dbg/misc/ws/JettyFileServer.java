@@ -1,5 +1,6 @@
 package dbg.misc.ws;
 
+import dbg.misc.ws.serial.SerialRead;
 import org.eclipse.jetty.server.Connector;
 import org.eclipse.jetty.server.Handler;
 import org.eclipse.jetty.server.Server;
@@ -17,6 +18,8 @@ import org.eclipse.jetty.websocket.servlet.WebSocketServletFactory;
 public class JettyFileServer {
 
   public static void main(String[] args) throws Exception {
+
+      SerialRead.launch();
 
     Server server = new Server(9090);
     Connector connector = new ServerConnector(server);
