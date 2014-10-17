@@ -1,10 +1,9 @@
 package dbg.misc.ws.hidapi;
 
-import com.codeminders.hidapi.ClassPathLibraryLoader;
 import com.codeminders.hidapi.HIDDevice;
 import com.codeminders.hidapi.HIDDeviceInfo;
 import com.codeminders.hidapi.HIDManager;
-import dbg.misc.ws.MyWebSocketHandler;
+import dbg.misc.ws.JettyWebSocketHandler;
 
 import java.io.IOException;
 import java.util.Date;
@@ -109,7 +108,7 @@ public class HIDAPITest
                         String hidReportWithDate = hidReport + " " + new Date();
                         System.out.println("hidReport = " + hidReportWithDate);
 
-                        MyWebSocketHandler.sendToClient(hidReport);
+                        JettyWebSocketHandler.sendToClient(hidReport);
 
                     }
 
