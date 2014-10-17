@@ -8,10 +8,13 @@ import org.eclipse.jetty.websocket.api.annotations.OnWebSocketMessage;
 import org.eclipse.jetty.websocket.api.annotations.WebSocket;
 
 import java.io.IOException;
+import java.util.LinkedHashMap;
+import java.util.Map;
 
 @WebSocket
-public class MyWebSocketHandler {
+public class JettyWebSocketHandler {
 
+    private Map<Session, MessageConsumer> activeSessions = new LinkedHashMap<>();
 
     class Ticker implements Runnable {
 
@@ -52,10 +55,15 @@ public class MyWebSocketHandler {
 
 
     @OnWebSocketClose
-    public void onClose(int statusCode, String reason) {
+    public void onClose(Session session, int statusCode, String reason) {
       System.out.println("Close: statusCode=" + statusCode + ", reason=" + reason);
       ticker.session = null;
       staticSession = null;
+
+      if (activeSessions.containsKey(session)) {
+        MessageFlowMediator.getInstance().deregisterConsumer(activeSessions.get(session));
+      }
+
     }
 
     @OnWebSocketError
@@ -75,13 +83,23 @@ public class MyWebSocketHandler {
     }
 
     @OnWebSocketConnect
-    public void onConnect(Session session) {
+    public void onConnect(final Session session) {
         System.out.println("Connect: " + session.getRemoteAddress().getAddress());
         try {
           session.getRemote().sendString("Hello Web browser");
           ticker.session = session;
           staticSession = session;
           //new Thread(ticker).start();
+
+          activeSessions.put(session, new MessageConsumer() {
+            @Override
+            public void onMessage(String message) throws IOException {
+              session.getRemote().sendString(message);
+            }
+          });
+
+          MessageFlowMediator.getInstance().registerConsumer(activeSessions.get(session));
+
 
         } catch (IOException e) {
             e.printStackTrace();

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<!-- saved from url=(0039)http://getbootstrap.com/examples/theme/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="http://getbootstrap.com/favicon.ico">
+
+    <title>Monitoring</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap theme -->
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="http://getbootstrap.com/examples/theme/theme.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
+
+
+    <![endif]-->
+  <style id="holderjs-style" type="text/css"></style>
+
+</head>
+
+
+
+
+  <body role="document">
+
+    <!-- Fixed navbar -->
+
+
+    <div class="container theme-showcase" role="main">
+      <div class="row">
+        <div class="col-md-6">
+          <table class="table table-condensed" id="tagsTable">
+            <thead>
+              <tr>
+                <th>Tag</th>
+                <th>Value</th>
+                <th>Last Update</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Mark</td>
+                <td>Otto</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Jacob</td>
+                <td>Thornton</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="col-md-6">
+          <table class="table table-condensed" id="msgLogTable">
+            <thead>
+            <tr>
+              <th>Time</th>
+              <th>Message</th>
+            </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/docs.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+
+    <script type="text/javascript">//<![CDATA[
+
+      $(window).load(function() {
+
+
+         //$('#test-table-1 #table1-row1').children('td').first().html('XXX');
+
+        //alert('loaded');
+
+
+        //var valeur = 30;
+
+        //$('.progress-bar').css('width', valeur+'%').attr('aria-valuenow', valeur);
+
+      });//]]>
+
+
+      var ws = new WebSocket("ws://" + location.host);
+
+      ws.onopen = function() {
+          //alert("Opened!");
+          addLogTableRow("WS opened");
+          ws.send("Hello Server");
+          //$('#test-table-1 #table1-row1').children('td').first().html('Open');
+      };
+
+    function addOrUpdateTagsTableRow(tag, text) {
+
+      var tableRef = document.getElementById('tagsTable').getElementsByTagName('tbody')[0];
+
+      var taggedRow = tableRef.rows.namedItem(tag);//tableRef.getElementById(tag);
+
+      if (taggedRow == undefined) {
+
+        var newRow = tableRef.insertRow(0);
+        newRow.id = tag;
+
+        var newCell0 = newRow.insertCell(0);
+        var newCell1 = newRow.insertCell(1);
+        var newCell2 = newRow.insertCell(2);
+
+        newCell0.appendChild(document.createTextNode(tag));
+        newCell1.appendChild(document.createTextNode(text));
+        newCell2.appendChild(document.createTextNode(new Date().toLocaleString()));
+
+      }
+      else {
+        taggedRow.cells[1].innerHTML = text;
+        taggedRow.cells[2].innerHTML = new Date().toLocaleString();
+      }
+
+    }
+
+    function addLogTableRow(text) {
+      var tableRef = document.getElementById('msgLogTable').getElementsByTagName('tbody')[0];
+
+      //var newRow = tableRef.insertRow(tableRef.rows.length);
+      var newRow = tableRef.insertRow(0);
+
+      var newCellTime = newRow.insertCell(0);
+      var newCellContent = newRow.insertCell(1);
+
+      newCellTime.appendChild(document.createTextNode(new Date().toLocaleString()));
+      newCellContent.appendChild(document.createTextNode(text));
+
+      if (tableRef.rows.length > 5) {
+        tableRef.deleteRow(5);
+      }
+
+    }
+
+    ws.onmessage = function (evt) {
+         // alert("Message: " + evt.data);
+        //$('#test-table-1 #table1-row1').children('td').first().html("Message: " + evt.data);
+
+        //var valeur = evt.data;
+
+        //$('.progress-bar').css('width', valeur+'%').attr('aria-valuenow', valeur);
+
+      addLogTableRow(evt.data);
+
+      addOrUpdateTagsTableRow("lastMsg", evt.data);
+
+    };
+
+      ws.onclose = function() {
+          //alert("Closed!");
+        //$('#test-table-1 #table1-row1').children('td').first().html("Closed");
+      };
+
+      ws.onerror = function(err) {
+          alert("Error: " + err);
+          //$('#test-table-1 #table1-row1').children('td').first().html("Error: " + err);
+      };
+
+    </script>
+
+  
+
+  </body></html>

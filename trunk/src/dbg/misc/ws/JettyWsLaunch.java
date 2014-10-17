@@ -11,7 +11,7 @@ public class JettyWsLaunch {
         WebSocketHandler wsHandler = new WebSocketHandler() {
             @Override
             public void configure(WebSocketServletFactory factory) {
-                factory.register(MyWebSocketHandler.class);
+                factory.register(JettyWebSocketHandler.class);
             }
         };
         server.setHandler(wsHandler);

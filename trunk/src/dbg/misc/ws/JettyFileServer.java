@@ -23,35 +23,38 @@ public class JettyFileServer {
     server.addConnector(connector);
 
     ResourceHandler resourceHandler = createResourceHandler();
-
     Handler wsHandler = createWsHandler();
-
-
-    ContextHandler contextHandler = createContextHandler(new HelloHandler());
+    ContextHandler contextHandler = createContextHandler(new ServiceHandler());
 
     HandlerList handlers = new HandlerList();
-    handlers.setHandlers(new Handler[]{contextHandler, wsHandler, resourceHandler, new DefaultHandler()});
+
+    handlers.setHandlers(new Handler[]{
+      contextHandler,
+      wsHandler,
+      resourceHandler,
+      new DefaultHandler()});
+
     server.setHandler(handlers);
 
     server.start();
     server.join();
   }
 
-    private static ContextHandler createContextHandler(Handler handler) throws Exception {
-        ContextHandler context = new ContextHandler();
-        context.setContextPath("/service");
-        context.setResourceBase(".");
-        context.setClassLoader(Thread.currentThread().getContextClassLoader());
-        context.setHandler(handler);
+  private static ContextHandler createContextHandler(Handler handler) throws Exception {
+    ContextHandler context = new ContextHandler();
+    context.setContextPath("/service");
+    context.setResourceBase(".");
+    context.setClassLoader(Thread.currentThread().getContextClassLoader());
+    context.setHandler(handler);
 
-        return context;
-    }
+    return context;
+  }
 
-    private static Handler createWsHandler() {
+  private static Handler createWsHandler() {
     return new WebSocketHandler() {
       @Override
       public void configure(WebSocketServletFactory factory) {
-        factory.register(MyWebSocketHandler.class);
+        factory.register(JettyWebSocketHandler.class);
       }
     };
   }
