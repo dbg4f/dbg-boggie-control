@@ -1,5 +1,6 @@
 package dbg.misc.ws.serial;
 
+import dbg.misc.ws.MessageFlowMediator;
 import jssc.SerialPort;
 import jssc.SerialPortEvent;
 import jssc.SerialPortEventListener;
@@ -8,6 +9,15 @@ import jssc.SerialPortException;
 public class SerialRead {
 
     static SerialPort serialPort;
+
+    public static void launch() {
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                main(new String[0]);
+            }
+        }).start();
+    }
 
     public static void main(String[] args) {
         serialPort = new SerialPort("/dev/ttyACM0");
@@ -20,12 +30,27 @@ public class SerialRead {
 
             System.out.println("serialPort = " + serialPort);
 
+            StringBuilder text = new StringBuilder();
+
             while(!Thread.currentThread().isInterrupted()) {
 
                 byte[] buf = serialPort.readBytes();
 
                 if (buf != null){
-                    System.out.print(new String(buf));
+                    //System.out.print(new String(buf));
+
+                    for (byte bt : buf){
+
+                        text.append((char)bt);
+
+                        if (bt == '}') {
+                            MessageFlowMediator.getInstance().broadcast(text.toString());
+                            text = new StringBuilder();
+                        }
+
+                    }
+
+
                 }
 
 

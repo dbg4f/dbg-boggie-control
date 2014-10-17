@@ -171,6 +171,15 @@
 
         //$('.progress-bar').css('width', valeur+'%').attr('aria-valuenow', valeur);
 
+        var p = JSON.parse(evt.data);
+
+        for (var key in p) {
+            if (p.hasOwnProperty(key)) {
+                //alert(key + " -> " + p[key]);
+                addOrUpdateTagsTableRow(key, p[key]);
+            }
+        }
+
       addLogTableRow(evt.data);
 
       addOrUpdateTagsTableRow("lastMsg", evt.data);
