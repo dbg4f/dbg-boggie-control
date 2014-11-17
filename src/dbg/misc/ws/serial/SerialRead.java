@@ -1,5 +1,6 @@
 package dbg.misc.ws.serial;
 
+import com.google.gson.Gson;
 import dbg.misc.ws.MessageConsumer;
 import dbg.misc.ws.MessageFlowMediator;
 import jssc.SerialPort;
@@ -35,17 +36,26 @@ public class SerialRead implements MessageConsumer {
     new SerialRead().mainCycle();
   }
 
+
+  private void sendStatus(String text) {
+      MessageFlowMediator.getInstance().broadcast(new Gson().toJson(new SerialStatus(text)));
+  }
+
   private void mainCycle() throws InterruptedException, SerialPortException {
 
     serialPort = new SerialPort("/dev/ttyACM0");
 
     while (!Thread.currentThread().isInterrupted()) {
 
+      sendStatus("Connecting...");
+
       waitForConnectionOk();
 
       registerAsConsumer();
 
       configurePort();
+
+      sendStatus("Connected");
 
       StringBuilder text = new StringBuilder();
 
@@ -59,6 +69,7 @@ public class SerialRead implements MessageConsumer {
         }
         catch (Exception e) {
           log.error("Failed to read and forward serial data: " + e.getMessage(), e);
+          sendStatus("ERROR: " + e.getMessage());
           deregisterConsumer();
         }
 
@@ -73,7 +84,7 @@ public class SerialRead implements MessageConsumer {
   }
 
   private void registerAsConsumer() {
-    MessageFlowMediator.getInstance().registerConsumer(this);
+    MessageFlowMediator.getInstance().registerTarget(this);
   }
 
   private StringBuilder parseAndForward(StringBuilder text, byte[] buf) {
@@ -118,6 +129,7 @@ public class SerialRead implements MessageConsumer {
 
         if (i % 10 == 0) {
           log.error("Failed to open serial port: " + e.getMessage(), e);
+          sendStatus("ERROR: " + e.getMessage());
         }
 
         Thread.sleep(5000);
@@ -132,12 +144,17 @@ public class SerialRead implements MessageConsumer {
   public void onMessage(String message) throws IOException {
 
     if (serialPort != null && serialPort.isOpened()) {
+
       try {
-        serialPort.writeBytes(message.getBytes());
+        serialPort.writeString(message);
+        log.info("Msg sent to serial:" + message);
       }
       catch (Exception e) {
         log.error("Failed to send message to serial: " + e.getMessage(), e);
       }
+    }
+    else {
+        log.info("Port not opened, send skipped:" + message);
     }
 
   }
