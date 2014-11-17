@@ -1,11 +1,14 @@
 package dbg.misc.ws;
 
+import dbg.misc.ws.serial.SerialRead;
 import org.eclipse.jetty.websocket.api.Session;
 import org.eclipse.jetty.websocket.api.annotations.OnWebSocketClose;
 import org.eclipse.jetty.websocket.api.annotations.OnWebSocketConnect;
 import org.eclipse.jetty.websocket.api.annotations.OnWebSocketError;
 import org.eclipse.jetty.websocket.api.annotations.OnWebSocketMessage;
 import org.eclipse.jetty.websocket.api.annotations.WebSocket;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.util.LinkedHashMap;
@@ -13,6 +16,8 @@ import java.util.Map;
 
 @WebSocket
 public class JettyWebSocketHandler {
+
+    private static Logger log = LoggerFactory.getLogger(JettyWebSocketHandler.class);
 
     private Map<Session, MessageConsumer> activeSessions = new LinkedHashMap<>();
 
@@ -86,7 +91,7 @@ public class JettyWebSocketHandler {
     public void onConnect(final Session session) {
         System.out.println("Connect: " + session.getRemoteAddress().getAddress());
         try {
-          session.getRemote().sendString("Hello Web browser");
+          session.getRemote().sendString("{greeting:\"Hello Web browser\"}");
           ticker.session = session;
           staticSession = session;
           //new Thread(ticker).start();
@@ -108,6 +113,7 @@ public class JettyWebSocketHandler {
 
     @OnWebSocketMessage
     public void onMessage(String message) {
-        System.out.println("Message: " + message);
+        log.info("WS message: " + message);
+        MessageFlowMediator.getInstance().senToTarget(message, SerialRead.class);
     }
 }
