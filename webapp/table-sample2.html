@@ -94,6 +94,8 @@
 
     <script type="text/javascript">//<![CDATA[
 
+      var ws;
+
       $(window).load(function() {
 
 
@@ -109,7 +111,7 @@
       });//]]>
 
 
-      var ws = new WebSocket("ws://" + location.host);
+      ws = new WebSocket("ws://" + location.host);
 
       ws.onopen = function() {
           //alert("Opened!");
@@ -195,6 +197,32 @@
           alert("Error: " + err);
           //$('#test-table-1 #table1-row1').children('td').first().html("Error: " + err);
       };
+
+
+    $(document).keydown(function(e) {
+
+      switch (e.which) {
+        case 37: // left
+          ws.send(JSON.stringify({key:'left'}));
+          break;
+
+        case 38: // up
+          ws.send({key:'up'});
+          break;
+
+        case 39: // right
+          ws.send({key:'right'});
+          break;
+
+        case 40: // down
+          ws.send({key:'down'});
+          break;
+
+        default:
+          return; // exit this handler for other keys
+      }
+      e.preventDefault(); // prevent the default action (scroll / move caret)
+    });
 
     </script>
 
