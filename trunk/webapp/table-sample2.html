@@ -203,7 +203,7 @@
 
       switch (e.which) {
         case 37: // left
-          ws.send(JSON.stringify({"cmd":"blinkNear","value":0.5}));
+          ws.send(JSON.stringify({"cmd":"blinkNear","value":0.8}));
           break;
 
         case 38: // up
@@ -211,11 +211,11 @@
           break;
 
         case 39: // right
-        ws.send(JSON.stringify({"cmd":"blinkNear","value":-0.5}));
+        ws.send(JSON.stringify({"cmd":"blinkNear","value":-0.8}));
           break;
 
         case 40: // down
-        ws.send(JSON.stringify({"cmd":"blinkFar","value":-0.5}));
+        ws.send(JSON.stringify({"cmd":"blinkFar","value":-0.4}));
           break;
 
         default:
