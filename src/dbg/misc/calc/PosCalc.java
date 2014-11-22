@@ -1,4 +1,4 @@
-package dbg.misc.ws;
+package dbg.misc.calc;
 
 /**
  * @author bogdel
@@ -9,6 +9,8 @@ public class PosCalc {
 
   public static final Pair NEAR_CALIBRATION_POINT1 = new Pair(degreesToAngle(90.0), 0.3165); // degrees - sensor
   public static final Pair NEAR_CALIBRATION_POINT2 = new Pair(degreesToAngle(33.0), 0.179);
+
+  public static final double NEAR_CALIBRATION_ANGLE = degreesToAngle(33.0);
 
   public static final Pair FAR_CALIBRATION_POINT1 = new Pair(degreesToAngle(0.0), 0.1008);
   public static final Pair FAR_CALIBRATION_POINT2 = new Pair(degreesToAngle(46.0), 0.24435);
@@ -36,6 +38,8 @@ public class PosCalc {
     double angleNear = interpolateFindNear(sensors.near, NEAR_CALIBRATION_POINT1, NEAR_CALIBRATION_POINT2);
 
     double angleFar = interpolateFindNear(sensors.far, FAR_CALIBRATION_POINT1, FAR_CALIBRATION_POINT2);
+
+    angleFar = angleNear - NEAR_CALIBRATION_ANGLE + angleFar;
 
     Pair pointNearLever = new Pair(LEVER_LENGTHS.near * Math.cos(angleNear), LEVER_LENGTHS.near * Math.sin(angleNear));
     Pair pointFarLeverFromStart = new Pair(LEVER_LENGTHS.far * Math.cos(angleFar), LEVER_LENGTHS.far * Math.sin(angleFar));
@@ -111,10 +115,18 @@ public class PosCalc {
 
   public static void main(String[] args) {
 
-    Pair p = calcPosTarget(new Pair(235.9, 12.55));
+      // 0.212824,0.152784
+
+
+      Pair p = new Pair(212.6, 109.5);
+
+      System.out.println("p = " + p);
+
+     p = calcPosTarget(p);
 
     System.out.println("p = " + p);
 
+    //p = calcCaretPos(new Pair(0.212824,0.152784));
     p = calcCaretPos(p);
 
     System.out.println("p = " + p);

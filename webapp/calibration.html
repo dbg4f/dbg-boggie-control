@@ -1,0 +1,152 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<script type="text/javascript">
+
+	window.onload = function () {
+
+    var dataPointsNear = [];
+    var dataPointsFar = [];
+
+    var xmlhttp = new XMLHttpRequest();
+    var url = "calibration.json";
+
+    xmlhttp.onreadystatechange = function() {
+        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+            var myArr = JSON.parse(xmlhttp.responseText);
+            myFunction(myArr);
+        }
+    };
+
+    xmlhttp.open("GET", url, true);
+    xmlhttp.send();
+
+    function myFunction(arr) {
+        var out = "";
+        var i;
+        for(i = 0; i < arr.length; i++) {
+
+          dataPointsNear.push({
+      					x: arr[i].near,
+      					y: arr[i].a
+      				});
+          dataPointsFar.push({
+      					x: arr[i].far,
+      					y: arr[i].b
+      				});
+
+        }
+
+    }
+
+
+        /*
+        A(0) = 0.21846109809298997
+        A(0.5) = 2.2817170986004482
+        B(0) = 2.5929563564270324
+        A(0.5) = 0.28844726257824416
+
+        */
+
+		// dataPoints
+		var dataPointsA = [
+            { x: 0, y: 0.218 },
+            { x: 0.5, y: 2.281 }
+        ];
+		var dataPointsB = [
+            { x: 0, y: 2.593 },
+            { x: 0.5, y: 0.288 }
+        ];
+
+
+		var chart = new CanvasJS.Chart("chartContainer",{
+			zoomEnabled: true,
+			toolTip: {
+				shared: true
+
+			},
+			legend: {
+				verticalAlign: "top",
+				horizontalAlign: "center",
+        fontSize: 10,
+				fontWeight: "bold",
+				fontFamily: "calibri",
+				fontColor: "dimGrey"
+			},
+      axisX:{
+             gridColor: "lightblue" ,
+             gridThickness: 2
+           },
+			axisY:{
+				prefix: '',
+        gridColor: "lightblue" ,
+        gridThickness: 2
+			},
+			data: [{
+				// dataSeries1
+				type: "scatter",
+				showInLegend: true,
+				name: "Pos Near",
+				dataPoints: dataPointsNear
+			},
+        {
+        // dataSeries1
+        type: "scatter",
+        showInLegend: true,
+        name: "Pos Far",
+        dataPoints: dataPointsFar
+        },
+            {
+
+                type: "line",
+                showInLegend: true,
+                name: "Regression A",
+                dataPoints: dataPointsA
+            },
+            {
+
+                type: "line",
+                showInLegend: true,
+                name: "Regression B",
+                dataPoints: dataPointsB
+            }
+        ],
+          legend:{
+            cursor:"pointer",
+            itemclick : function(e) {
+              if (typeof(e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+                e.dataSeries.visible = false;
+              }
+              else {
+                e.dataSeries.visible = true;
+              }
+              chart.render();
+            }
+          }
+		});
+
+		var updateInterval = 3000;
+
+		var updateChart = function (count) {
+			chart.render();
+
+		};
+
+		// generates first set of dataPoints
+		updateChart(3000);
+
+		// update chart after specified interval
+		setInterval(function(){updateChart()}, updateInterval);
+	}
+	</script>
+	<script type="text/javascript" src="js/canvasjs.min.js"></script>
+</head>
+<body>
+  <br>
+	<div id="chartContainer" style="height: 600px; width: 900px;">
+	</div>
+</body>
+
+
+</html>
