@@ -3,12 +3,6 @@ package dbg.misc.calc;
 public class LinearRegression {
 
 
-    public static void main(String[] args) {
-
-        System.out.println("args = " + calc(new double[] {1, 2, 3}, new double[] {1, 2, 3}));
-
-    }
-
     public static LinearRegressionResult calc(double[] x, double[] y) {
 
         int n = 0;
@@ -56,11 +50,10 @@ public class LinearRegression {
         double R2    = ssr / yybar;
         double svar  = rss / df;
         double svar1 = svar / xxbar;
-        double svar0 = svar/n + xbar*xbar*svar1;
         regressionResult.R2 = R2;
 
         regressionResult.stdErrBeta1 = Math.sqrt(svar1);
-        regressionResult.stdErrBeta01 = Math.sqrt(svar0);
+        regressionResult.stdErrBeta01 = Math.sqrt(svar/n + xbar*xbar*svar1);
         regressionResult.stdErrBeta02 = Math.sqrt(svar * sumx2 / (n * xxbar));
 
         regressionResult.SSTO = yybar;
