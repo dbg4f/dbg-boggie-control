@@ -39,8 +39,26 @@ public class CncCalc {
 
 
     /*
-    Lnea􀁕 = 86
-Lfa􀁕 = 165
+
+    *
+  Y *                    ************ C
+    *      B         ****         *
+    *            ***           *
+    *       ****           *
+    *      *          *
+    *     *         *
+    *    *      *
+    *   *     *
+    *  *   *
+    * *
+    * ***************************************************
+   A                                  X
+
+
+
+Lnear = 86
+Lfar  = 165
+
 0.2145 0.14615 204 52
 0.3120 0.2990 157 23
 0.4355 0.3687 129 25
@@ -123,6 +141,21 @@ Lfa􀁕 = 165
         return Math.acos((b*b + c*c - a*a) / (2.0 * b * c));
     }
 
+    static double oppositeSide(double b, double c, double alpha){
+        return Math.sqrt(b*b + c*c - 2.0*b*c*Math.cos(alpha));
+    }
+
+    static double calcRByBeta(double beta) {
+        return oppositeSide(NEAR, FAR, beta);
+    }
+
+    static double calcAlpha(double alpha, double beta) {
+        double r = calcRByBeta(beta);
+        double angleCAB = angleBySides(NEAR, r, FAR);
+        double angleCAX = alpha - angleCAB;
+        return angleCAX;
+    }
+
     static double calcAN(double x, double y) {
         double r = calcR(x, y);
         return angle(x, y) + angleBySides(FAR, NEAR, r);
@@ -132,6 +165,15 @@ Lfa􀁕 = 165
         double r = calcR(x, y);
         return angleBySides(r, NEAR, FAR);
     }
+
+    static double getY(double x, double beta1, double beta0) {
+        return x * beta1 + beta0;
+    }
+
+
+
+
+
 
 
 
