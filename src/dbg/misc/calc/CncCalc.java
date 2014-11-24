@@ -100,6 +100,15 @@ Lfar  = 165
         System.out.println("B(0.5) = " + regrB.y(0.5));
 
 
+        for (double Sn=0; Sn <1.01; Sn += 0.1) {
+            for (double Sf = 0; Sf <1.01; Sf += 0.1) {
+                System.out.print(" " + Y(Sf, Sn));
+            }
+            System.out.println();
+        }
+
+
+
     }
 
     static double sideAC(double Sf) {
