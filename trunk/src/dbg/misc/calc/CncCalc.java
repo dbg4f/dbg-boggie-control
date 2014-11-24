@@ -6,37 +6,6 @@ import com.google.gson.Gson;
  */
 public class CncCalc {
 
-    static class CalibrationCase {
-
-        final double near;
-        final double far;
-        final double x;
-        final double y;
-
-        double a;
-        double b;
-
-        CalibrationCase(double near, double far, double x, double y) {
-            this.near = near;
-            this.far = far;
-            this.x = x;
-            this.y = y;
-        }
-
-
-        @Override
-        public String toString() {
-            return "CalibrationCase{" +
-                    "near=" + near +
-                    ", far=" + far +
-                    ", x=" + x +
-                    ", y=" + y +
-                    ", a=" + a +
-                    ", b=" + b +
-                    '}';
-        }
-    }
-
 
     /*
 
@@ -71,7 +40,7 @@ Lfar  = 165
 0.5255 0.3290 090 116
      */
 
-    static CalibrationCase[] CASES = new CalibrationCase[] {
+    public static CalibrationCase[] CASES = new CalibrationCase[] {
 
             new CalibrationCase(0.2145, 0.14615,204, 52 ),
             new CalibrationCase(0.3120, 0.2990, 157, 23 ),
@@ -90,6 +59,10 @@ Lfar  = 165
     public static double NEAR = 86.0;
     public static double FAR = 165.0;
 
+    // result
+    public static LinearDependency ANGLE_XAB_BY_SENSOR_NEAR = new LinearDependency(4.126512001014917, 0.21846109809298997);
+    public static LinearDependency ANGLE_ABC_BY_SENSOR_FAR  = new LinearDependency(-4.609018187697576, 2.5929563564270324);
+
     public static void main(String[] args) {
 
         double[] as = new double[CASES.length];
@@ -104,7 +77,7 @@ Lfar  = 165
             aCase.a = calcAN(aCase.x, aCase.y);
             aCase.b = calcBN(aCase.x, aCase.y);
 
-            System.out.println("" + new Gson().toJson(aCase));
+            System.out.println("" + new Gson().toJson(aCase) + " x=" + X(aCase.far, aCase.near) + " y=" + Y(aCase.far, aCase.near));
 
             as[i] = aCase.near;
             ac[i] = aCase.a;
@@ -128,6 +101,29 @@ Lfar  = 165
 
 
     }
+
+    static double sideAC(double Sf) {
+        double angleABC = ANGLE_ABC_BY_SENSOR_FAR.getY(Sf);
+        return Math.sqrt(NEAR * NEAR + FAR * FAR - 2.0 * NEAR * FAR * Math.cos(angleABC));
+    }
+
+    static double angleXAC(double Sf, double Sn) {
+        //double angleABC = ANGLE_ABC_BY_SENSOR_FAR.getY(Sf);
+        double angleXAB = ANGLE_XAB_BY_SENSOR_NEAR.getY(Sn);
+        double R = sideAC(Sf);
+        double angleBAC = angleBySides(FAR, R, NEAR);//Math.asin((FAR * Math.sin(angleABC)) / R);
+        return angleXAB - angleBAC;
+    }
+
+    static double X(double Sf, double Sn) {
+        return sideAC(Sf) * Math.cos(angleXAC(Sf, Sn));
+    }
+
+    static double Y(double Sf, double Sn) {
+        return sideAC(Sf) * Math.sin(angleXAC(Sf, Sn));
+    }
+
+
 
     static double calcR(double x, double y) {
         return Math.sqrt(x*x + y*y);
