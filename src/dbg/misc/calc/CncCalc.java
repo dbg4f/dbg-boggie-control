@@ -77,7 +77,9 @@ Lfar  = 165
             aCase.a = calcAN(aCase.x, aCase.y);
             aCase.b = calcBN(aCase.x, aCase.y);
 
-            System.out.println("" + new Gson().toJson(aCase) + " x=" + X(aCase.far, aCase.near) + " y=" + Y(aCase.far, aCase.near));
+            //System.out.println("" + new Gson().toJson(aCase) + " x=" + X(aCase.far, aCase.near) + " y=" + Y(aCase.far, aCase.near));
+
+            analyze(aCase);
 
             as[i] = aCase.near;
             ac[i] = aCase.a;
@@ -91,6 +93,9 @@ Lfar  = 165
         LinearRegressionResult regrA = LinearRegression.calc(as, ac);
         LinearRegressionResult regrB = LinearRegression.calc(bs, bc);
 
+        ANGLE_XAB_BY_SENSOR_NEAR = new LinearDependency(regrA.beta1, regrA.beta0);
+        ANGLE_ABC_BY_SENSOR_FAR  = new LinearDependency(regrB.beta1, regrB.beta0);
+
         System.out.println("regrA = " + regrA);
         System.out.println("regrB = " + regrB);
 
@@ -102,7 +107,7 @@ Lfar  = 165
 
         for (double Sn=0; Sn <1.01; Sn += 0.1) {
             for (double Sf = 0; Sf <1.01; Sf += 0.1) {
-                System.out.print(" " + Y(Sf, Sn));
+                System.out.print("," + angleXAC(Sf, Sn));
             }
             System.out.println();
         }
@@ -176,6 +181,27 @@ Lfar  = 165
     }
 
 
+    static void printDiff(String meaning, double ref, double calc) {
+        double delta = ref - calc;
+        System.out.println(String.format("%s: %f - %f = %f (%f %%)  ", meaning, ref, calc, delta, (delta/ref) * 100.0));
+    }
+
+    static void analyze(CalibrationCase c) {
+        double x = X(c.far, c.near);
+        double y = Y(c.far, c.near);
+
+        double Rref = calcR(c.x, c.y);
+
+        double r = sideAC(c.far);
+
+        printDiff("X", c.x, x);
+        printDiff("Y", c.y, y);
+        printDiff("R", Rref, r);
+
+        System.out.println();
+
+
+    }
 
 
 
