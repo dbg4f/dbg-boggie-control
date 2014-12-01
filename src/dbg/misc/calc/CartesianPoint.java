@@ -14,6 +14,12 @@ public class CartesianPoint {
         return new PolarPoint(Math.sqrt(x*x + y*y), Math.atan2(y, x));
     }
 
+    public double distanceTo(CartesianPoint point2) {
+        double dx = point2.x - x;
+        double dy = point2.y - y;
+        return Math.sqrt(dx*dx + dy*dy);
+    }
+
     @Override
     public String toString() {
         return "CartesianPoint{" +
