@@ -28,7 +28,7 @@ public class LinearDependency {
 
     public LinearDependency (CartesianPoint p1, CartesianPoint p2) {
 
-        if (p1.y == p2.y && p1.x== p2.x) {
+        if (Util.isAlmostEqual(p1.y, p2.y) && Util.isAlmostEqual(p1.x, p2.x)) {
             throw new IllegalArgumentException("Cannot calc linear dependency based on one and the same point: " + p1 + " " + p2);
         }
 
@@ -49,17 +49,25 @@ public class LinearDependency {
       return new Vector2D(normalForm.A, normalForm.B);
     }
 
-  /*
-    public boolean isParallel(LinearDependency line2) {
 
+    public boolean isParallel(LinearDependency line2) {
+        return Util.isAlmostEqual(k, line2.k);
     }
 
     public CartesianPoint intersect(LinearDependency line2) {
 
+        if (isParallel(line2)) {
+            throw new IllegalArgumentException("Lines are almost parallel: " + this + " " + line2 + " cannot find intersection");
+        }
 
+        double xi = (line2.b - b) / (k - line2.k);
+
+        double yi = getY(xi);
+
+        return new CartesianPoint(xi, yi);
 
     }
-    */
+
     @Override
     public String toString() {
         return "LinearDependency{" +
