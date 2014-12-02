@@ -41,6 +41,15 @@ public class LinearDependency {
         return k * x + b;
     }
 
+    public double getX(double y) {
+        return (y - b) / k;
+    }
+
+    public double getR(double phi) {
+        // in polar coordinates
+        return b / (Math.sin(phi) - k*Math.cos(phi));
+    }
+
     public NormalForm toNormalForm() {
       return normalForm;
     }
