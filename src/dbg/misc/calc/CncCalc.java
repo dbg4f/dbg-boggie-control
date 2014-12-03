@@ -1,7 +1,5 @@
 package dbg.misc.calc;
 
-import com.google.gson.Gson;
-
 /**
  */
 public class CncCalc {
@@ -105,13 +103,39 @@ Lfar  = 165
         System.out.println("B(0.5) = " + regrB.y(0.5));
 
 
+
+      TwainLever lever = new TwainLever(NEAR, FAR, ANGLE_XAB_BY_SENSOR_NEAR, ANGLE_ABC_BY_SENSOR_FAR);
+
+      for (CalibrationCase calibrationCase : CASES) {
+
+        CartesianPoint point = lever.position(new PosSensors(calibrationCase.near, calibrationCase.far)).toCartesianPoint();
+        PosSensors expectedPos = lever.expectSensors(new CartesianPoint(calibrationCase.x, calibrationCase.y).toPolarPoint());
+
+        System.out.println(" case    " + calibrationCase);
+        System.out.println(" point   " + point);
+        System.out.println(" sensors " + expectedPos);
+        System.out.println("-------------------------------------------------------");
+
+
+      }
+
+      Section section = new Section(new CartesianPoint(204, 52), new CartesianPoint(90, 116));
+
+      for (CartesianPoint subSectionPoint : section.split(10)) {
+        //System.out.println("cartesianPoint = " + subSectionPoint);
+        PosSensors posSensors = lever.expectSensors(subSectionPoint.toPolarPoint());
+        System.out.println("posSensors = " + posSensors);
+      }
+
+
+      /*
         for (double Sn=0; Sn <1.01; Sn += 0.1) {
             for (double Sf = 0; Sf <1.01; Sf += 0.1) {
                 System.out.print("," + angleXAC(Sf, Sn));
             }
             System.out.println();
         }
-
+        */
 
 
     }
