@@ -1,5 +1,6 @@
 package dbg.misc.ws;
 
+import dbg.misc.format.JsonMessagePicker;
 import dbg.misc.ws.serial.SerialRead;
 import org.eclipse.jetty.server.Connector;
 import org.eclipse.jetty.server.Handler;
@@ -21,18 +22,24 @@ public class JettyFileServer {
 
       SerialRead.launch();
 
+      JsonMessagePicker messagePicker = new JsonMessagePicker();
+
+      MessageFlowMediator.getInstance().registerConsumer(messagePicker);
+
     Server server = new Server(9090);
     Connector connector = new ServerConnector(server);
     server.addConnector(connector);
 
     ResourceHandler resourceHandler = createResourceHandler();
     Handler wsHandler = createWsHandler();
-    ContextHandler contextHandler = createContextHandler(new ServiceHandler());
+    ContextHandler contextHandler1 = createContextHandler(new ServiceHandler(), "/service");
+    ContextHandler contextHandler2 = createContextHandler(new JsonDataHandler(messagePicker), "/dataset");
 
     HandlerList handlers = new HandlerList();
 
     handlers.setHandlers(new Handler[]{
-      contextHandler,
+      contextHandler1,
+      contextHandler2,
       wsHandler,
       resourceHandler,
       new DefaultHandler()});
@@ -43,9 +50,9 @@ public class JettyFileServer {
     server.join();
   }
 
-  private static ContextHandler createContextHandler(Handler handler) throws Exception {
+  private static ContextHandler createContextHandler(Handler handler, String contextPath) throws Exception {
     ContextHandler context = new ContextHandler();
-    context.setContextPath("/service");
+    context.setContextPath(contextPath);
     context.setResourceBase(".");
     context.setClassLoader(Thread.currentThread().getContextClassLoader());
     context.setHandler(handler);

@@ -2,6 +2,7 @@ package dbg.misc.ws;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import dbg.misc.ws.serial.SerialRead;
 import org.eclipse.jetty.server.Request;
 import org.eclipse.jetty.server.handler.AbstractHandler;
 import org.slf4j.Logger;
@@ -53,16 +54,24 @@ public class ServiceHandler extends AbstractHandler {
     if (command != null) {
       commands.add(new Date() + " " + command);
 
-        Gson gson = new Gson();
-        Type stringStringMap = new TypeToken<Map<String, String>>(){}.getType();
-        try {
-            Map<String,String> map = gson.fromJson(command, stringStringMap);
-            MessageFlowMediator.getInstance().broadcast(gson.toJson(map));
-        }
-        catch (Exception e) {
-            log.error("Failed to parse json:" + command + " " + e.getMessage(), e);
-        }
+        if ("reset".compareToIgnoreCase(command) == 0) {
 
+        }
+        else {
+
+            Gson gson = new Gson();
+            Type stringStringMap = new TypeToken<Map<String, String>>(){}.getType();
+            try {
+                Map<String,String> map = gson.fromJson(command, stringStringMap);
+                //MessageFlowMediator.getInstance().broadcast(gson.toJson(map));
+                MessageFlowMediator.getInstance().senToTarget(command, SerialRead.class);
+
+            }
+            catch (Exception e) {
+                log.error("Failed to parse json:" + command + " " + e.getMessage(), e);
+            }
+
+        }
 
     }
 
