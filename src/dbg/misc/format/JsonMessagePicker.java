@@ -1,12 +1,15 @@
 package dbg.misc.format;
 
 import com.google.gson.Gson;
+import com.google.gson.JsonArray;
 import com.google.gson.JsonParser;
 import com.google.gson.JsonSyntaxException;
 import com.google.gson.reflect.TypeToken;
+import dbg.misc.ws.MessageConsumer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.io.IOException;
 import java.lang.reflect.Field;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -18,7 +21,7 @@ import java.util.Set;
 /**
  * @author bogdel
  */
-public class JsonMessagePicker {
+public class JsonMessagePicker implements MessageConsumer{
 
   private static Logger log = LoggerFactory.getLogger(JsonMessagePicker.class);
 
@@ -35,7 +38,12 @@ public class JsonMessagePicker {
   private List<String> invalidMessages = new ArrayList<>();
 
 
-  public void probe(String rawInput) {
+    @Override
+    public void onMessage(String message) throws IOException {
+        probe(message);
+    }
+
+    public void probe(String rawInput) {
 
     Gson gson = new Gson();
 
@@ -102,6 +110,22 @@ public class JsonMessagePicker {
     return fields;
   }
 
+
+  public void reset() {
+      logsRows.clear();
+  }
+
+
+  public String log() {
+      JsonArray array = new JsonArray();
+      Gson gson = new Gson();
+
+      for (PositionLogRow positionLogRow :logsRows) {
+          array.add(gson.toJsonTree(positionLogRow));
+      }
+
+      return gson.toJson(array);
+  }
    /*
   public static void main(String[] args) {
 
@@ -114,6 +138,10 @@ public class JsonMessagePicker {
     picker.probe("AAAAAAAAAAAAAAa");
 
     System.out.println("picker = " + picker);
+
+    System.out.println("picker = " + picker.log());
+
+
 
   }
   */
