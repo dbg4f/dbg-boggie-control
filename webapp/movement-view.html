@@ -17,7 +17,7 @@
     var dataPointsFar = [];
 
     var xmlhttp = new XMLHttpRequest();
-    var url = "movement1.log.json";
+    var url = "movement4.log.json";
 
     xmlhttp.onreadystatechange = function() {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
@@ -34,6 +34,23 @@
         var i;
         for(i = 0; i < arr.length; i++) {
 
+          if (arr[i].typeCode == 70) {
+            dataPointsNear.push({
+                x: arr[i].t,
+                y: arr[i].value
+               });
+          }
+          else {
+            dataPointsFar.push({
+            x: arr[i].t,
+            y: arr[i].value
+           });
+          }
+
+
+
+
+          /*
           dataPointsNear.push({
       					x: (arr[i].t - arr[0].t),
       					y: arr[i].posNear
@@ -43,7 +60,7 @@
       					x: (arr[i].t - arr[0].t),
       					y: arr[i].posFar
       				});
-
+          */
         }
 
     }
