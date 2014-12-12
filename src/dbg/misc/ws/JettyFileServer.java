@@ -34,12 +34,14 @@ public class JettyFileServer {
     Handler wsHandler = createWsHandler();
     ContextHandler contextHandler1 = createContextHandler(new ServiceHandler(), "/service");
     ContextHandler contextHandler2 = createContextHandler(new JsonDataHandler(messagePicker), "/dataset");
+    ContextHandler contextHandler3 = createContextHandler(new ConsoleHandler(messagePicker), "/console");
 
     HandlerList handlers = new HandlerList();
 
     handlers.setHandlers(new Handler[]{
       contextHandler1,
       contextHandler2,
+      contextHandler3,
       wsHandler,
       resourceHandler,
       new DefaultHandler()});

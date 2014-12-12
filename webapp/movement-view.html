@@ -12,12 +12,12 @@
 
     }
 
-
-    var dataPointsNear = [];
-    var dataPointsFar = [];
+    var dataPointsPwmFar = [];
+    var dataPointsPosFar = [];
 
     var xmlhttp = new XMLHttpRequest();
-    var url = "movement4.log.json";
+    //var url = "movement4.log.json";
+    var url = "dataset/?markers=1";
 
     xmlhttp.onreadystatechange = function() {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
@@ -35,32 +35,18 @@
         for(i = 0; i < arr.length; i++) {
 
           if (arr[i].typeCode == 70) {
-            dataPointsNear.push({
+            dataPointsPwmFar.push({
                 x: arr[i].t,
                 y: arr[i].value
                });
           }
           else {
-            dataPointsFar.push({
+            dataPointsPosFar.push({
             x: arr[i].t,
             y: arr[i].value
            });
           }
 
-
-
-
-          /*
-          dataPointsNear.push({
-      					x: (arr[i].t - arr[0].t),
-      					y: arr[i].posNear
-      				});
-
-          dataPointsFar.push({
-      					x: (arr[i].t - arr[0].t),
-      					y: arr[i].posFar
-      				});
-          */
         }
 
     }
@@ -72,9 +58,10 @@
 
 		var chart = new CanvasJS.Chart("chartContainer",{
 			zoomEnabled: true,
-			title: {
+			/*
+      title: {
 				text: "Share Value of Two Companies"
-			},
+			},*/
 			toolTip: {
 				shared: true
 
@@ -88,7 +75,8 @@
 				fontColor: "dimGrey"
 			},
 			axisX: {
-				title: "chart updates every 3 secs"
+				/*title: "chart updates every 3 secs"*/
+        interlacedColor: "#F0F8FF"
 			},
 			axisY:{
 				prefix: '',
@@ -99,8 +87,8 @@
 				type: "line",
 				xValueType: "dateTime",
 				showInLegend: true,
-				name: "Pos Near",
-				dataPoints: dataPointsNear
+				name: "Rate Far",
+				dataPoints: dataPointsPwmFar
 			},
 			{
 				// dataSeries2
@@ -108,7 +96,7 @@
 				xValueType: "dateTime",
 				showInLegend: true,
 				name: "Pos Far" ,
-				dataPoints: dataPointsFar
+				dataPoints: dataPointsPosFar
 			}],
           legend:{
             cursor:"pointer",
@@ -126,13 +114,13 @@
 
 		var updateInterval = 3000;
 
-		var updateChart = function (count) {
+		var updateChart = function () {
 			chart.render();
 
 		};
 
 		// generates first set of dataPoints
-		updateChart(3000);
+		updateChart();
 
 		// update chart after specified interval
 		setInterval(function(){updateChart()}, updateInterval);

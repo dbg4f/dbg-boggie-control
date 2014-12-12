@@ -13,6 +13,7 @@ import java.io.IOException;
 import java.lang.reflect.Field;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
+import java.util.LinkedHashMap;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
@@ -37,6 +38,8 @@ public class JsonMessagePicker implements MessageConsumer{
 
   private List<String> invalidMessages = new ArrayList<>();
 
+  private List<TimedMarker> timedMarkers = new ArrayList<>();
+
 
     @Override
     public void onMessage(String message) throws IOException {
@@ -57,6 +60,10 @@ public class JsonMessagePicker implements MessageConsumer{
 
       Map<String, String> messageImage = gson.fromJson(rawInput, mapType);
 
+      if (messageImage == null) {
+        messageImage = new LinkedHashMap<String, String>();
+      }
+
       if (isConforms(PositionLogRow.class, messageImage.keySet())) {
 
         Type rowType = new TypeToken<PositionLogRow>(){}.getType();
@@ -64,6 +71,15 @@ public class JsonMessagePicker implements MessageConsumer{
         PositionLogRow row = gson.fromJson(rawInput, rowType);
 
         logsRows.add(row);
+
+      }
+      if (isConforms(TimedMarker.class, messageImage.keySet())) {
+
+        Type rowType = new TypeToken<TimedMarker>(){}.getType();
+
+        TimedMarker row = gson.fromJson(rawInput, rowType);
+
+        timedMarkers.add(row);
 
       }
       else if (isConforms(CurrentPositionSnapshot.class, messageImage.keySet())) {
@@ -113,6 +129,7 @@ public class JsonMessagePicker implements MessageConsumer{
 
   public void reset() {
       logsRows.clear();
+      timedMarkers.clear();
   }
 
 
@@ -122,6 +139,17 @@ public class JsonMessagePicker implements MessageConsumer{
 
       for (PositionLogRow positionLogRow :logsRows) {
           array.add(gson.toJsonTree(positionLogRow));
+      }
+
+      return gson.toJson(array);
+  }
+
+  public String markers() {
+      JsonArray array = new JsonArray();
+      Gson gson = new Gson();
+
+      for (TimedMarker timedMarker : timedMarkers) {
+          array.add(gson.toJsonTree(timedMarker));
       }
 
       return gson.toJson(array);
@@ -145,6 +173,22 @@ public class JsonMessagePicker implements MessageConsumer{
 
   }
   */
+
+  public List<PositionLogRow> getLogsRows() {
+    return logsRows;
+  }
+
+  public List<Map<String, String>> getUnrecognizedMessages() {
+    return unrecognizedMessages;
+  }
+
+  public List<String> getInvalidMessages() {
+    return invalidMessages;
+  }
+
+  public List<TimedMarker> getTimedMarkers() {
+    return timedMarkers;
+  }
 
   @Override
   public String toString() {
