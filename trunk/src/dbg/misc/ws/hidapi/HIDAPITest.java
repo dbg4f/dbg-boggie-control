@@ -26,8 +26,14 @@ public class HIDAPITest
 
     //static final int VENDOR_ID = 1411;
     //static final int PRODUCT_ID = 40971;
+/*
     static final int VENDOR_ID = 4607;
     static final int PRODUCT_ID = 13105;
+*/
+    static final int VENDOR_ID = 1008;
+    static final int PRODUCT_ID = 54;
+
+
     private static final int BUFSIZE = 2048;
 
     /**
@@ -36,7 +42,7 @@ public class HIDAPITest
     public static void main(String[] args) throws IOException
     {
 
-        System.setProperty("java.library.path", "native\\win");
+        //System.setProperty("java.library.path", "native\\win");
         System.loadLibrary("hidapi-jni-64");
 
         listDevices();

@@ -119,6 +119,33 @@ Lfar  = 165
 
       }
 
+      System.out.print("x=[");
+      for (CalibrationCase calibrationCase : CASES) {
+        System.out.print(calibrationCase.near + ", ");
+      }
+      System.out.println("];");
+
+
+      System.out.print("y=[");
+      for (CalibrationCase calibrationCase : CASES) {
+        System.out.print(calibrationCase.a + ", ");
+      }
+      System.out.println("];");
+
+      System.out.print("x1=[");
+      for (CalibrationCase calibrationCase : CASES) {
+        System.out.print(calibrationCase.far + ", ");
+      }
+      System.out.println("];");
+
+
+      System.out.print("y1=[");
+      for (CalibrationCase calibrationCase : CASES) {
+        System.out.print(calibrationCase.b + ", ");
+      }
+      System.out.println("];");
+
+
       Section section = new Section(new CartesianPoint(204, 52), new CartesianPoint(90, 116));
 
       for (CartesianPoint subSectionPoint : section.split(10)) {
