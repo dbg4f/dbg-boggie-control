@@ -54,18 +54,22 @@ public class ConsoleHandler extends AbstractHandler {
 
         String tail = requestParts[2];
 
-        System.out.println("tail = " + tail);
-
-        if (tail.equalsIgnoreCase("AAA")) {
+        if (tail.equalsIgnoreCase("commands")) {
           createCommandsForm(response);
         }
         else if (tail.equalsIgnoreCase("sendCommands")) {
           String commands = request.getParameter("commands");
-          System.out.println("commands = " + commands);
 
-          for (String command : commands.split("\n")) {
-            jsonMessagePicker.onMessage(command);
+          if (commands != null) {
+
+              log.info("commands = " + commands);
+
+              for (String command : commands.split("\n")) {
+                  jsonMessagePicker.onMessage(command);
+              }
+
           }
+
 
           createCommandsForm(response);
         }
