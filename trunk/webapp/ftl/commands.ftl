@@ -30,7 +30,16 @@
             <button type="submit" class="btn btn-default">Submit</button>
           </form>
 
-       </div>
+             <br>
+             <p>
+                 <a href="../movement-view.html" class="btn btn-info btn-lg">Chart</a>
+                 <a href="reset" class="btn btn-info btn-lg">Reset</a>
+             </p>
+
+
+     </div>
+
+
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="../js/jquery.min.js"></script>

@@ -82,6 +82,11 @@
 				prefix: '',
 				includeZero: false
 			},
+            axisY2:{
+                prefix: '',
+                includeZero: false
+            },
+
 			data: [{
 				// dataSeries1
 				type: "line",
@@ -96,6 +101,7 @@
 				xValueType: "dateTime",
 				showInLegend: true,
 				name: "Pos Far" ,
+                axisYType: "secondary",
 				dataPoints: dataPointsPosFar
 			}],
           legend:{
@@ -129,7 +135,7 @@
 	<script type="text/javascript" src="js/canvasjs.min.js"></script>
 </head>
 <body>
-	<div id="chartContainer" style="height: 800px; width: 100%;">
+	<div id="chartContainer" style="height: 700px; width: 100%;">
 	</div>
 </body>
 
