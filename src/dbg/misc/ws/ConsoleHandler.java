@@ -1,6 +1,7 @@
 package dbg.misc.ws;
 
 import dbg.misc.format.JsonMessagePicker;
+import dbg.misc.ws.serial.SerialRead;
 import freemarker.template.Configuration;
 import freemarker.template.Template;
 import freemarker.template.TemplateException;
@@ -65,7 +66,13 @@ public class ConsoleHandler extends AbstractHandler {
               log.info("commands = " + commands);
 
               for (String command : commands.split("\n")) {
-                  jsonMessagePicker.onMessage(command);
+                  //jsonMessagePicker.onMessage(command);
+                  MessageFlowMediator.getInstance().senToTarget(command, SerialRead.class);
+                  try {
+                      Thread.sleep(10);
+                  } catch (InterruptedException e) {
+                      e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+                  }
               }
 
           }
