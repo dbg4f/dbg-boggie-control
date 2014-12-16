@@ -16,8 +16,8 @@
     var dataPointsPosFar = [];
 
     var xmlhttp = new XMLHttpRequest();
-    //var url = "movement4.log.json";
-    var url = "dataset/?markers=1";
+    var url = "movement4.log.json";
+    //var url = "dataset/?markers=1";
 
     xmlhttp.onreadystatechange = function() {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
@@ -32,19 +32,62 @@
     function myFunction(arr) {
         var out = "";
         var i;
+        var previousPwm = null;
+        var previousPos = null;
+        var previousTime = null;
+
         for(i = 0; i < arr.length; i++) {
 
           if (arr[i].typeCode == 70) {
+
+            if (previousPwm != null) {
+                dataPointsPwmFar.push({
+                    x: arr[i].t,
+                    y: previousPwm
+                });
+            }
+
+
             dataPointsPwmFar.push({
                 x: arr[i].t,
                 y: arr[i].value
                });
+               previousPwm = arr[i].value;
           }
           else {
-            dataPointsPosFar.push({
+
+           var currentPos = arr[i].value;
+           var currentTime = arr[i].t
+
+           if (previousPos != null && previousTime != null) {
+
+            var dt = currentTime - previousTime;
+
+            console.log('dt = ' + dt);
+
+            if (dt != 0) {
+
+                var ds = currentPos - previousPos;
+
+                dataPointsPosFar.push({
+                    x: arr[i].t,
+                    y: (ds / dt) * 100
+                });
+
+            }
+
+           }
+
+        previousPos = currentPos;
+        previousTime = currentTime;
+
+
+        /*
+           dataPointsPosFar.push({
             x: arr[i].t,
             y: arr[i].value
            });
+          */
           }
 
         }
