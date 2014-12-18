@@ -33,10 +33,10 @@
     }
 
     var dataPointsPwmFar = [];
-    var dataPointsSpeedFar = [];
+    var dataPointsPosFar = [];
 
     var dataPointsPwmNear = [];
-    var dataPointsSpeedNear = [];
+    var dataPointsPosNear = [];
 
     var xmlhttp = new XMLHttpRequest();
     var url = "movement5.log.json";
@@ -77,49 +77,17 @@
             previousPwmNear = addPwmPoint(previousPwmNear, dataPointsPwmNear, arr, i);
           }
           else if (arr[i].typeCode == 102) {
-
-           var currentPosFar = arr[i].value;
-           var currentTimeFar = arr[i].t;
-
-           if (previousPosFar != null && previousTimeFar != null) {
-
-            dt = currentTimeFar - previousTimeFar;
-            ds = currentPosFar - previousPosFar;
-
-            if (dt != 0) {
-                dataPointsSpeedFar.push({
+                dataPointsPosFar.push({
                     x: arr[i].t,
-                    y: (ds / dt) * 100
+                    y: arr[i].value
                 });
-            }
-
-           }
-          previousPosFar = currentPosFar;
-          previousTimeFar = currentTimeFar;
-
-        }
-        else if (arr[i].typeCode == 110) {
-
-           var currentPosNear = arr[i].value;
-           var currentTimeNear = arr[i].t;
-
-           if (previousPosNear != null && previousTimeNear != null) {
-
-            dt = currentTimeNear - previousTimeNear;
-            ds = currentPosNear - previousPosNear;
-
-            if (dt != 0) {
-                dataPointsSpeedNear.push({
-                    x: arr[i].t,
-                    y: (ds / dt) * 100
-                });
-            }
-
-           }
-          previousPosNear = currentPosNear;
-          previousTimeNear = currentTimeNear;
-
-        }
+          }
+          else if (arr[i].typeCode == 110) {
+            dataPointsPosNear.push({
+                x: arr[i].t,
+                y: arr[i].value
+            });
+          }
 
         }
 
@@ -168,9 +136,9 @@
 				type: "line",
 				xValueType: "dateTime",
 				showInLegend: true,
-				name: "Speed F" ,
+				name: "Pos F" ,
                 axisYType: "secondary",
-				dataPoints: dataPointsSpeedFar
+				dataPoints: dataPointsPosFar
 			},
         {
 				type:       "line",
@@ -183,9 +151,9 @@
 				type: "line",
 				xValueType: "dateTime",
 				showInLegend: true,
-				name: "Speed N" ,
+				name: "Pos N" ,
         axisYType: "secondary",
-				dataPoints: dataPointsSpeedNear
+				dataPoints: dataPointsPosNear
 			}
       ],
           legend:{
