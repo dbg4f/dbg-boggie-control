@@ -19,6 +19,28 @@
 {"cmd":"listAdd","typeCode":"F","v":0.0,"t":210}
 
 
+{"cmd":"listFree"}
+{"cmd":"listFree"}
+{"cmd":"sendReports","value":0.0}
+{"cmd":"listAdd","typeCode":"N","v":0.40,"t":10}
+{"cmd":"listAdd","typeCode":"N","v":0.50,"t":30}
+{"cmd":"listAdd","typeCode":"N","v":0.80,"t":50}
+{"cmd":"listAdd","typeCode":"N","v":0.70,"t":70}
+{"cmd":"listAdd","typeCode":"N","v":0.50,"t":90}
+{"cmd":"listAdd","typeCode":"N","v":0.60,"t":110}
+{"cmd":"listAdd","typeCode":"N","v":0.70,"t":150}
+{"cmd":"listAdd","typeCode":"N","v":0.80,"t":160}
+{"cmd":"listAdd","typeCode":"N","v":0.60,"t":170}
+{"cmd":"listAdd","typeCode":"N","v":0.0,"t":180}
+{"cmd":"listAdd","typeCode":"N","v":-0.1,"t":190}
+{"cmd":"listAdd","typeCode":"N","v":-0.2,"t":200}
+{"cmd":"listAdd","typeCode":"N","v":0.0,"t":210}
+
+
+
+
+
+
 
 {"cmd":"listAdd","typeCode":"F","v":0.6,"t":10}
 {"cmd":"listAdd","typeCode":"F","v":0.0,"t":150}
@@ -49,30 +71,17 @@
 
 
 
-{"cmd":"listAdd","typeCode":"F","v":0.10,"t":10}
-{"cmd":"listAdd","typeCode":"N","v":0.10,"t":10}
-{"cmd":"listAdd","typeCode":"F","v":0.15,"t":30}
-{"cmd":"listAdd","typeCode":"N","v":0.25,"t":30}
-{"cmd":"listAdd","typeCode":"F","v":0.20,"t":50}
-{"cmd":"listAdd","typeCode":"N","v":0.30,"t":50}
-{"cmd":"listAdd","typeCode":"F","v":0.25,"t":70}
-{"cmd":"listAdd","typeCode":"N","v":0.35,"t":70}
-{"cmd":"listAdd","typeCode":"F","v":0.30,"t":90}
-{"cmd":"listAdd","typeCode":"N","v":0.40,"t":90}
-{"cmd":"listAdd","typeCode":"F","v":0.40,"t":110}
-{"cmd":"listAdd","typeCode":"N","v":0.50,"t":110}
-{"cmd":"listAdd","typeCode":"F","v":0.35,"t":150}
-{"cmd":"listAdd","typeCode":"N","v":0.8,"t":150}
-{"cmd":"listAdd","typeCode":"F","v":0.25,"t":160}
-{"cmd":"listAdd","typeCode":"N","v":0.7,"t":160}
-{"cmd":"listAdd","typeCode":"F","v":0.15,"t":170}
-{"cmd":"listAdd","typeCode":"N","v":0.4,"t":170}
-{"cmd":"listAdd","typeCode":"F","v":0.0,"t":180}
-{"cmd":"listAdd","typeCode":"N","v":0.0,"t":180}
-{"cmd":"listAdd","typeCode":"F","v":-0.1,"t":190}
-{"cmd":"listAdd","typeCode":"N","v":-0.2,"t":190}
-{"cmd":"listAdd","typeCode":"F","v":-0.2,"t":200}
-{"cmd":"listAdd","typeCode":"N","v":-0.4,"t":200}
-{"cmd":"listAdd","typeCode":"F","v":0.0,"t":210}
-{"cmd":"listAdd","typeCode":"N","v":0.0,"t":210}
+{"cmd":"listFree"}
+{"cmd":"listAdd","typeCode":"F","v":0.30,"t":10}
+{"cmd":"listAdd","typeCode":"N","v":0.40,"t":15}
+{"cmd":"listAdd","typeCode":"F","v":0.40,"t":20}
+{"cmd":"listAdd","typeCode":"N","v":0.60,"t":25}
+{"cmd":"listAdd","typeCode":"F","v":0.43,"t":30}
+{"cmd":"listAdd","typeCode":"N","v":0.90,"t":35}
+{"cmd":"listAdd","typeCode":"F","v":0.00,"t":170}
+{"cmd":"listAdd","typeCode":"N","v":0.00,"t":175}
+{"cmd":"listAdd","typeCode":"F","v":-0.2,"t":180}
+{"cmd":"listAdd","typeCode":"N","v":-0.4,"t":185}
+{"cmd":"listAdd","typeCode":"F","v":0.0,"t":200}
+{"cmd":"listAdd","typeCode":"N","v":0.0,"t":205}
 

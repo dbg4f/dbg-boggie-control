@@ -148,9 +148,23 @@ Lfar  = 165
 
       Section section = new Section(new CartesianPoint(204, 52), new CartesianPoint(90, 116));
 
+
+      PosSensors previousSensors = null;
       for (CartesianPoint subSectionPoint : section.split(10)) {
         //System.out.println("cartesianPoint = " + subSectionPoint);
         PosSensors posSensors = lever.expectSensors(subSectionPoint.toPolarPoint());
+
+        if (previousSensors != null) {
+
+            double dFar = posSensors.far - previousSensors.far;
+            double dNear = posSensors.near - previousSensors.far;
+
+            //double dRatio =
+
+        }
+
+
+          previousSensors = posSensors;
         System.out.println("posSensors = " + posSensors);
       }
 
