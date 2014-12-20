@@ -36,6 +36,12 @@ public class JsonDataHandler extends AbstractHandler {
     if (request.getParameter("markers") != null) {
       response.getWriter().println(jsonMessagePicker.markers());
     }
+    else if (request.getParameter("sensors") != null) {
+      response.getWriter().println(jsonMessagePicker.sensors());
+    }
+    else if (request.getParameter("points") != null) {
+      response.getWriter().println(jsonMessagePicker.points());
+    }
     else {
       response.getWriter().println(jsonMessagePicker.log());
     }

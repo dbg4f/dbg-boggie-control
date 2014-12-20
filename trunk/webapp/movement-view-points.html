@@ -33,14 +33,14 @@
     }
 
     var dataPointsPwmFar = [];
-    var dataPointsSpeedFar = [];
+    var dataPointsPosFar = [];
 
     var dataPointsPwmNear = [];
-    var dataPointsSpeedNear = [];
+    var dataPointsPosNear = [];
 
     var xmlhttp = new XMLHttpRequest();
     //var url = "movement5.log.json";
-    var url = "dataset/?markers=1";
+    var url = "dataset/?points=1";
 
     xmlhttp.onreadystatechange = function() {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
@@ -65,61 +65,11 @@
         var ds,dt;
 
         for(i = 0; i < arr.length; i++) {
+        dataPointsPwmFar.push({
+        x: arr[i].x,
+        y: arr[i].y
+        });
 
-          //console.log(' type=' + arr[i].typeCode);
-
-          if (arr[i].typeCode == 70) {
-            previousPwmFar = addPwmPoint(previousPwmFar, dataPointsPwmFar, arr, i);
-            //console.log('prev pwm far ' + previousPwmFar + " " + dataPointsPwmFar.length);
-
-          }
-          else if (arr[i].typeCode == 78) {
-            previousPwmNear = addPwmPoint(previousPwmNear, dataPointsPwmNear, arr, i);
-          }
-          else if (arr[i].typeCode == 102) {
-
-           var currentPosFar = arr[i].value;
-           var currentTimeFar = arr[i].t;
-
-           if (previousPosFar != null && previousTimeFar != null) {
-
-            dt = currentTimeFar - previousTimeFar;
-            ds = currentPosFar - previousPosFar;
-
-            if (dt != 0) {
-                dataPointsSpeedFar.push({
-                    x: arr[i].t,
-                    y: (ds / dt) * 100
-                });
-            }
-
-           }
-          previousPosFar = currentPosFar;
-          previousTimeFar = currentTimeFar;
-
-        }
-        else if (arr[i].typeCode == 110) {
-
-           var currentPosNear = arr[i].value;
-           var currentTimeNear = arr[i].t;
-
-           if (previousPosNear != null && previousTimeNear != null) {
-
-            dt = currentTimeNear - previousTimeNear;
-            ds = currentPosNear - previousPosNear;
-
-            if (dt != 0) {
-                dataPointsSpeedNear.push({
-                    x: arr[i].t,
-                    y: (ds / dt) * 100
-                });
-            }
-
-           }
-          previousPosNear = currentPosNear;
-          previousTimeNear = currentTimeNear;
-
-        }
 
         }
 
@@ -168,9 +118,9 @@
 				type: "line",
 				xValueType: "dateTime",
 				showInLegend: true,
-				name: "Speed F" ,
+				name: "Pos F" ,
                 axisYType: "secondary",
-				dataPoints: dataPointsSpeedFar
+				dataPoints: dataPointsPosFar
 			},
         {
 				type:       "line",
@@ -183,9 +133,9 @@
 				type: "line",
 				xValueType: "dateTime",
 				showInLegend: true,
-				name: "Speed N" ,
+				name: "Pos N" ,
         axisYType: "secondary",
-				dataPoints: dataPointsSpeedNear
+				dataPoints: dataPointsPosNear
 			}
       ],
           legend:{

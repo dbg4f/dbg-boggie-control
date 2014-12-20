@@ -1,10 +1,10 @@
 package dbg.misc.format;
 
-import com.google.gson.Gson;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonParser;
-import com.google.gson.JsonSyntaxException;
+import com.google.gson.*;
 import com.google.gson.reflect.TypeToken;
+import dbg.misc.calc.CncCalc;
+import dbg.misc.calc.PosSensors;
+import dbg.misc.calc.TwainLever;
 import dbg.misc.ws.MessageConsumer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,6 +18,8 @@ import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+
+import static dbg.misc.calc.CncCalc.*;
 
 /**
  * @author bogdel
@@ -39,6 +41,9 @@ public class JsonMessagePicker implements MessageConsumer{
   private List<String> invalidMessages = new ArrayList<>();
 
   private List<TimedMarker> timedMarkers = new ArrayList<>();
+
+
+    TwainLever lever = new TwainLever(NEAR, FAR, ANGLE_XAB_BY_SENSOR_NEAR, ANGLE_ABC_BY_SENSOR_FAR);
 
 
     @Override
@@ -135,7 +140,7 @@ public class JsonMessagePicker implements MessageConsumer{
 
   public String log() {
       JsonArray array = new JsonArray();
-      Gson gson = new Gson();
+      Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
       for (PositionLogRow positionLogRow :logsRows) {
           array.add(gson.toJsonTree(positionLogRow));
@@ -146,7 +151,7 @@ public class JsonMessagePicker implements MessageConsumer{
 
   public String markers() {
       JsonArray array = new JsonArray();
-      Gson gson = new Gson();
+      Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
       for (TimedMarker timedMarker : timedMarkers) {
           array.add(gson.toJsonTree(timedMarker));
@@ -154,6 +159,60 @@ public class JsonMessagePicker implements MessageConsumer{
 
       return gson.toJson(array);
   }
+
+  public String sensors() {
+      JsonArray array = new JsonArray();
+      Gson gson = new GsonBuilder().setPrettyPrinting().create();
+
+      double currentFar = 0;
+      double currentNear = 0;
+
+
+      for (TimedMarker timedMarker : timedMarkers) {
+
+
+          if (timedMarker.getTypeCode() == 102) {
+              currentFar = timedMarker.getValue();
+              array.add(gson.toJsonTree(new PosSensors(currentNear, currentFar)));
+          }
+          if (timedMarker.getTypeCode() == 110) {
+              currentNear = timedMarker.getValue();
+              array.add(gson.toJsonTree(new PosSensors(currentNear, currentFar)));
+          }
+
+      }
+
+      return gson.toJson(array);
+  }
+
+  public String points() {
+      JsonArray array = new JsonArray();
+      Gson gson = new GsonBuilder().setPrettyPrinting().create();
+
+      double currentFar = 0;
+      double currentNear = 0;
+
+
+      for (TimedMarker timedMarker : timedMarkers) {
+
+
+          PosSensors posSensors = new PosSensors(currentNear, currentFar);
+          if (timedMarker.getTypeCode() == 102) {
+              currentFar = timedMarker.getValue();
+              array.add(gson.toJsonTree(lever.position(posSensors).toCartesianPoint()));
+          }
+          if (timedMarker.getTypeCode() == 110) {
+              currentNear = timedMarker.getValue();
+              array.add(gson.toJsonTree(lever.position(posSensors).toCartesianPoint()));
+          }
+
+      }
+
+      return gson.toJson(array);
+  }
+
+
+
    /*
   public static void main(String[] args) {
 
