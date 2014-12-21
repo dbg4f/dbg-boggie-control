@@ -5,6 +5,7 @@ package dbg.misc.format;
  */
 public class TimedMarker {
 
+
   public long t;
   public double value;
   public int typeCode;
