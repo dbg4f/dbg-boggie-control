@@ -33,7 +33,11 @@
              <br>
              <p>
                  <a href="../movement-view.html" class="btn btn-info btn-lg">Chart</a>
-                 <a href="reset" class="btn btn-info btn-lg">Reset</a>
+                 <a href="reset" class="btn btn-info btn-lg">Reset/Clear</a>
+                 <a href="sendReportsOn" class="btn btn-info btn-lg">sendReportsOn</a>
+                 <a href="sendReportsOff" class="btn btn-info btn-lg">sendReportsOff</a>
+                 <a href="version" class="btn btn-info btn-lg">Version</a>
+                 <a href="runMarkers" class="btn btn-info btn-lg">runMarkers</a>
              </p>
 
 

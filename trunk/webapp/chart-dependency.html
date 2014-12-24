@@ -10,8 +10,8 @@
     var dataPoints = [];
 
     var xmlhttp = new XMLHttpRequest();
-    var url = "dependency.json";
-    //var url = "dataset/?points=1";
+    //var url = "dependency.json";
+    var url = "dataset/?sensors=1";
 
     xmlhttp.onreadystatechange = function() {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
@@ -67,8 +67,7 @@
 
 			data: [
         {
-				type: "line",
-				xValueType: "dateTime",
+				type: "line",				
 				showInLegend: true,
 				name: "Rate F",
 				dataPoints: dataPoints

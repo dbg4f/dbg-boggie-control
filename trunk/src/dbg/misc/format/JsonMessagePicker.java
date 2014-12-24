@@ -12,12 +12,7 @@ import org.slf4j.LoggerFactory;
 import java.io.IOException;
 import java.lang.reflect.Field;
 import java.lang.reflect.Type;
-import java.util.ArrayList;
-import java.util.LinkedHashMap;
-import java.util.LinkedHashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 import static dbg.misc.calc.CncCalc.*;
 
@@ -164,22 +159,10 @@ public class JsonMessagePicker implements MessageConsumer{
       JsonArray array = new JsonArray();
       Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
-      double currentFar = 0;
-      double currentNear = 0;
+      List<PosSensors> dependency = TimedMarkerUtils.merge(timedMarkers);
 
-
-      for (TimedMarker timedMarker : timedMarkers) {
-
-
-          if (timedMarker.getTypeCode() == 102) {
-              currentFar = timedMarker.getValue();
-              array.add(gson.toJsonTree(new PosSensors(currentNear, currentFar)));
-          }
-          if (timedMarker.getTypeCode() == 110) {
-              currentNear = timedMarker.getValue();
-              array.add(gson.toJsonTree(new PosSensors(currentNear, currentFar)));
-          }
-
+      for (PosSensors posSensors : dependency) {
+          array.add(gson.toJsonTree(posSensors));
       }
 
       return gson.toJson(array);
