@@ -1,0 +1,13 @@
+
+1. try to get simple linear dependency (near, far)
+no matter where resulting point is
+
+
+{"cmd":"listAdd","typeCode":"F","v":0.30,"t":10}
+{"cmd":"listAdd","typeCode":"N","v":0.80,"t":20}
+{"cmd":"listAdd","typeCode":"F","v":0.60,"t":30}
+{"cmd":"listAdd","typeCode":"N","v":0.95,"t":40}
+{"cmd":"listAdd","typeCode":"F","v":0.0,"t":100}
+{"cmd":"listAdd","typeCode":"N","v":0.0,"t":110}
+
+

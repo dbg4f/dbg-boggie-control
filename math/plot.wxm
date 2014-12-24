@@ -92,5 +92,9 @@ y:[0.28155472842315343,0.2747140096995438,0.2692495295867755,0.2652668221645738,
 plot2d([discrete,x,y])$
 /* [wxMaxima: input   end   ] */
 
+/* [wxMaxima: input   start ] */
+plot2d([discrete,x,y],[style, [points, 1, 5, 1]])$
+/* [wxMaxima: input   end   ] */
+
 /* Maxima can't load/batch files which end with a comment! */
 "Created with wxMaxima"$

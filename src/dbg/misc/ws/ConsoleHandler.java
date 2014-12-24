@@ -67,7 +67,7 @@ public class ConsoleHandler extends AbstractHandler {
 
               for (String command : commands.split("\n")) {
                   //jsonMessagePicker.onMessage(command);
-                  MessageFlowMediator.getInstance().senToTarget(command, SerialRead.class);
+                  sendCommand(command);
                   try {
                       Thread.sleep(10);
                   } catch (InterruptedException e) {
@@ -82,6 +82,23 @@ public class ConsoleHandler extends AbstractHandler {
         }
         else if (tail.equalsIgnoreCase("reset")) {
           jsonMessagePicker.reset();
+          sendCommand("{\"cmd\":\"listFree\"}");
+          createCommandsForm(response);
+        }
+        else if (tail.equalsIgnoreCase("sendReportsOn")) {
+          sendCommand("{\"cmd\":\"sendReports\",\"value\":1.0}");
+          createCommandsForm(response);
+        }
+        else if (tail.equalsIgnoreCase("sendReportsOff")) {
+          sendCommand("{\"cmd\":\"sendReports\",\"value\":0.0}");
+          createCommandsForm(response);
+        }
+        else if (tail.equalsIgnoreCase("version")) {
+          sendCommand("{\"cmd\":\"version\"}");
+          createCommandsForm(response);
+        }
+        else if (tail.equalsIgnoreCase("runMarkers")) {
+          sendCommand("{\"cmd\":\"runMarkers\"}");
           createCommandsForm(response);
         }
         else {
@@ -102,7 +119,11 @@ public class ConsoleHandler extends AbstractHandler {
       // response.getWriter().println(HTML_FORM + "<pre>" + listCommands() + "</pre>");
   }
 
-  private void createBasicFtlForm(HttpServletResponse response) throws IOException {
+    private void sendCommand(String command) {
+        MessageFlowMediator.getInstance().senToTarget(command, SerialRead.class);
+    }
+
+    private void createBasicFtlForm(HttpServletResponse response) throws IOException {
     Map root = new HashMap();
     root.put("user", "Big Joe");
     Map latest = new HashMap();
