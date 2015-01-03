@@ -85,3 +85,9 @@
 {"cmd":"listAdd","typeCode":"F","v":0.0,"t":200}
 {"cmd":"listAdd","typeCode":"N","v":0.0,"t":205}
 
+{"cmd":"reg","value":0.13}
+
+{"cmd":"reg","value":0.17}
+
+{"cmd":"setK","value":50.0}
+{"cmd":"setK","value":60.0}

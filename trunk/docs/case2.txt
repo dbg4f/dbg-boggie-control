@@ -164,3 +164,818 @@
 {"counter":940,"near":0.160348,"far":0.173509,"t":98006}
 {"counter":941,"near":0.160065,"far":0.173466,"t":98109}
 {"counter":942,"near":0.159815,"far":0.173365,"t":98212}
+
+
+[qtp1388794365-17] INFO dbg.misc.ws.MessageFlowMediator - Message: {"cmd":"reg","value":0.17} sent to target
+
+{"speed":-0.000255,"ct":0,"t":0} sent to 1 consumers
+{"speed":-0.008817,"ct":0,"t":0} sent to 1 consumers
+{"speed":-0.000836,"ct":0,"t":0} sent to 1 consumers
+{"speed":-0.001730,"ct":0,"t":0} sent to 1 consumers
+{"speed":0.000436,"ct":0,"t":0} sent to 1 consumers
+{"speed":0.001490,"ct":0,"t":0} sent to 1 consumers
+{"speed":0.005560,"ct":0,"t":0} sent to 1 consumers
+{"speed":-0.004723,"ct":0,"t":0} sent to 1 consumers
+{"speed":0.002107,"ct":0,"t":0} sent to 1 consumers
+{"speed":-0.001357,"ct":0,"t":0} sent to 1 consumers
+{"speed":0.006286,"ct":0,"t":0} sent to 1 consumers
+ 
+
+ 
+[qtp1388794365-17] INFO dbg.misc.ws.MessageFlowMediator - Message: {"cmd":"reg","value":0.17} sent to target
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":-0.000255,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":-0.008817,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":-0.000836,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":-0.001730,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":0.000436,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":0.001490,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":0.005560,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":-0.004723,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":0.002107,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":-0.001357,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":0.006286,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":-0.003706,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":-0.003968,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":0.005850,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":-0.001458,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":0.001272,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":-0.009991,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":0.006850,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":-0.001635,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":-0.008174,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":0.017836,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":-0.010645,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":0.003524,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":-0.001390,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":0.001126,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":-0.001308,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":-0.005256,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":0.006321,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":-0.003221,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":0.002106,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":-0.002106,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":0.004883,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":-0.001162,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":-0.000655,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":-0.002068,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":-0.000473,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":0.000678,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":-0.004287,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":0.006359,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":0.000576,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":0.000836,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":-0.001054,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":-0.001458,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":0.002253,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":-0.006395,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":0.005935,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":-0.002253,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":-0.000509,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":-0.002272,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":0.002071,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":-0.004985,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":0.001963,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":0.010427,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":-0.003560,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":-0.004796,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":0.000436,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":0.004679,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":0.000509,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":-0.010899,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":0.008070,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":-0.001126,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":0.001763,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":-0.005231,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":0.005740,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":-0.006375,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":0.000581,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":0.003088,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":0.001187,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":-0.000581,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":-0.006322,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":0.005561,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":-0.001018,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":0.000611,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":0.000617,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":0.003379,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":-0.000678,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":-0.007666,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":0.007629,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":-0.002339,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":0.001126,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":-0.000509,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":0.001560,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":-0.003125,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":-0.005730,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":0.012861,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":-0.002652,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":-0.005662,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":0.003342,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":0.004542,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":-0.004748,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":-0.005340,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":0.009010,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":-0.006442,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":0.005158,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":-0.000654,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":0.003696,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":-0.004069,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":-0.003289,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":0.003088,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":0.001925,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":-0.003018,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":-0.002543,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":0.005123,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":-0.001662,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":-0.002361,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":0.005158,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":-0.001254,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":-0.003053,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":-0.000305,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":0.003342,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":-0.005704,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":0.000848,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":0.003414,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":0.001054,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":-0.000542,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":-0.009627,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":0.008613,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":-0.002180,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":0.001925,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":-0.002068,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":0.010717,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":-0.009737,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":-0.005425,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":0.009337,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":-0.004686,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":0.006205,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":-0.011553,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":0.005290,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":0.001780,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":-0.007920,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":0.006612,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":0.000872,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":0.001236,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":-0.008613,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":0.006140,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":0.000109,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":0.001593,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":0.001126,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":-0.003798,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":0.001562,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":-0.001671,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":0.007291,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":-0.006395,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":0.002725,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":-0.000950,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":-0.001016,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":0.003815,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":-0.005663,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":0.010246,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":-0.003959,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":-0.005392,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":0.003343,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":0.001017,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":-0.002544,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":-0.005268,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":0.007697,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":-0.001562,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":0.004069,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":-0.002814,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":-0.000581,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":-0.004747,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":0.002106,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":-0.005594,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":0.003729,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":-0.000291,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":-0.000291,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":0.006070,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":-0.003015,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":-0.004941,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":0.001187,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":0.001453,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":0.000291,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":0.003052,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":0.002797,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":-0.004238,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":-0.004469,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":0.006067,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":0.000645,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":-0.002326,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":-0.003996,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":0.007968,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":-0.005340,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":0.002397,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":0.002171,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":0.001525,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":-0.003729,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":-0.003270,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":0.005013,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":-0.004815,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":0.008465,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":-0.008429,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":0.005460,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":-0.001635,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":-0.005377,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":0.002171,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":0.004759,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":-0.001898,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":0.000908,"ct":0,"t":0} sent to 1 consumers
+
+{"regError":0.170000,"ct":0,"t":0} sent to 1 consumers
+
+{"speed":0.000182,"ct":0,"t":0} sent to 1 consumers

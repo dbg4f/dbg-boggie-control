@@ -11,3 +11,24 @@ no matter where resulting point is
 {"cmd":"listAdd","typeCode":"N","v":0.0,"t":110}
 
 
+
+2. sine pwm
+
+{"cmd":"sinePwmFar","T":200,"phase":0.0,"amp":0.6,"h":0.0}
+{"cmd":"sinePwmNear","T":200,"phase":0.0,"amp":0.6,"h":0.0}
+{"cmd":"iterationsCount","value":10}
+
+
+
+
+
+{"cmd":"sine","value":0}
+{"cmd":"sine","value":100}
+{"cmd":"sine","value":200}
+{"cmd":"sine","value":300}
+{"cmd":"sine","value":500}
+{"cmd":"sine","value":800}
+{"cmd":"sine","value":1000}
+
+{"cmd":"runSine"}
+
