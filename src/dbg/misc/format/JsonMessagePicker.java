@@ -37,6 +37,8 @@ public class JsonMessagePicker implements MessageConsumer{
 
   private List<TimedMarker> timedMarkers = new ArrayList<>();
 
+  private List<PositionReport> positionReports = new ArrayList<>();
+
 
     TwainLever lever = new TwainLever(NEAR, FAR, ANGLE_XAB_BY_SENSOR_NEAR, ANGLE_ABC_BY_SENSOR_FAR);
 
@@ -80,6 +82,15 @@ public class JsonMessagePicker implements MessageConsumer{
         TimedMarker row = gson.fromJson(rawInput, rowType);
 
         timedMarkers.add(row);
+
+      }
+      if (isConforms(PositionReport.class, messageImage.keySet())) {
+
+        Type rowType = new TypeToken<PositionReport>(){}.getType();
+
+         PositionReport row = gson.fromJson(rawInput, rowType);
+
+        positionReports.add(row);
 
       }
       else if (isConforms(CurrentPositionSnapshot.class, messageImage.keySet())) {
@@ -130,6 +141,7 @@ public class JsonMessagePicker implements MessageConsumer{
   public void reset() {
       logsRows.clear();
       timedMarkers.clear();
+      positionReports.clear();
   }
 
 
@@ -150,6 +162,17 @@ public class JsonMessagePicker implements MessageConsumer{
 
       for (TimedMarker timedMarker : timedMarkers) {
           array.add(gson.toJsonTree(timedMarker));
+      }
+
+      return gson.toJson(array);
+  }
+
+  public String positions() {
+      JsonArray array = new JsonArray();
+      Gson gson = new GsonBuilder().setPrettyPrinting().create();
+
+      for (PositionReport positionReport : positionReports) {
+          array.add(gson.toJsonTree(positionReport));
       }
 
       return gson.toJson(array);

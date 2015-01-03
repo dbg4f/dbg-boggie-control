@@ -4,15 +4,12 @@
 <head>
 	<script type="text/javascript">
 
-    window.onload = function () {
-    
-    var dataPointsError = [];
-    var dataPointsSpeed = [];
+	window.onload = function () {
 
+    var dataPoints = [];
 
     var xmlhttp = new XMLHttpRequest();
-    var url = "movement6.log.json";
-    //var url = "dataset/?markers=1";
+    var url = "movement7.log.json";
 
     xmlhttp.onreadystatechange = function() {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
@@ -25,33 +22,26 @@
     xmlhttp.send();
 
     function myFunction(arr) {
+        var out = "";
         var i;
         for(i = 0; i < arr.length; i++) {
 
-          if (arr[i].regError != null) {
-			dataPointsError.push({
-      					x: arr[i].t - 1658573,
-      					y: arr[i].regError
+          dataPoints.push({
+      					x: (arr[i].t - arr[0].t),
+      					y: (arr[i].position - arr[0].position)
       				});
-			}
-          if (arr[i].speed != null) {
-			dataPointsSpeed.push({
-      					x: arr[i].t - 1658573,
-      					y: arr[i].speed
-      				});
-			}
-
 
         }
 
     }
 
+
+		// dataPoints
+		var dataPoints1 = [];
+		var dataPoints2 = [];
+
 		var chart = new CanvasJS.Chart("chartContainer",{
 			zoomEnabled: true,
-			/*
-      title: {
-				text: "Share Value of Two Companies"
-			},*/
 			toolTip: {
 				shared: true
 
@@ -59,41 +49,27 @@
 			legend: {
 				verticalAlign: "top",
 				horizontalAlign: "center",
-                                fontSize: 10,
+        fontSize: 10,
 				fontWeight: "bold",
 				fontFamily: "calibri",
 				fontColor: "dimGrey"
 			},
-			axisX: {
-				/*title: "chart updates every 3 secs"*/
-        interlacedColor: "#F0F8FF"
-			},
+      axisX:{
+             gridColor: "lightblue" ,
+             gridThickness: 2
+           },
 			axisY:{
 				prefix: '',
-				includeZero: false
+        gridColor: "lightblue" ,
+        gridThickness: 2
 			},
-            axisY2:{
-                prefix: '',
-                includeZero: false
-            },
-
-			data: [
-        {
+			data: [{
+				// dataSeries1
 				type: "line",
-				xValueType: "dateTime",
 				showInLegend: true,
-				name: "Error F",
-				dataPoints: dataPointsError
-			},
-			{
-				type: "line",
-				xValueType: "dateTime",
-				showInLegend: true,
-				name: "Speed F" ,
-                axisYType: "secondary",
-				dataPoints: dataPointsSpeed
-			}
-      ],
+				name: "Pos Near",
+				dataPoints: dataPoints
+			}],
           legend:{
             cursor:"pointer",
             itemclick : function(e) {
@@ -110,13 +86,13 @@
 
 		var updateInterval = 3000;
 
-		var updateChart = function () {
+		var updateChart = function (count) {
 			chart.render();
 
 		};
 
 		// generates first set of dataPoints
-		updateChart();
+		updateChart(3000);
 
 		// update chart after specified interval
 		setInterval(function(){updateChart()}, updateInterval);
@@ -125,7 +101,8 @@
 	<script type="text/javascript" src="js/canvasjs.min.js"></script>
 </head>
 <body>
-	<div id="chartContainer" style="height: 700px; width: 100%;">
+  <br>
+	<div id="chartContainer" style="height: 700px; width: 900px;">
 	</div>
 </body>
 
