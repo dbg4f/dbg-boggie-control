@@ -68,6 +68,17 @@ public class TimedMarkerUtils<T> {
 
     }
 
+    public static PositionReport[] readArrayPositionReports(String path, String fileName) throws IOException {
+        byte[] content = Files.readAllBytes(FileSystems.getDefault().getPath(path, fileName));
+
+        Gson gson = new Gson();
+
+        PositionReport[] reports = gson.fromJson(new String(content), PositionReport[].class);
+
+        return reports;
+
+    }
+
     public static XY<PosSensors> createSensorsExtractorXY() {
         return new XY<PosSensors>() {
             @Override
@@ -80,6 +91,22 @@ public class TimedMarkerUtils<T> {
                 return posSensors.far;
             }
         };
+    }
+
+    public static XY<PositionReport> createPositionReportExtractorXY() {
+        return new XY<PositionReport>(){
+
+            @Override
+            public double x(PositionReport positionReport) {
+                return positionReport.getT();
+            }
+
+            @Override
+            public double y(PositionReport positionReport) {
+                return positionReport.getPosition();
+            }
+        };
+
     }
 
     public static XY<CartesianPoint> createCartesianPointExtractorXY() {
