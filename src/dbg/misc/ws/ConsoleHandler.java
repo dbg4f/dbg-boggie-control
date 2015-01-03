@@ -101,6 +101,10 @@ public class ConsoleHandler extends AbstractHandler {
           sendCommand("{\"cmd\":\"runMarkers\"}");
           createCommandsForm(response);
         }
+        else if (tail.equalsIgnoreCase("runSine")) {
+          sendCommand("{\"cmd\":\"runSine\"}");
+          createCommandsForm(response);
+        }
         else {
           createBasicFtlForm(response);
         }

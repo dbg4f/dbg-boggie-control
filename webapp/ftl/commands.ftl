@@ -38,6 +38,7 @@
                  <a href="sendReportsOff" class="btn btn-info btn-lg">sendReportsOff</a>
                  <a href="version" class="btn btn-info btn-lg">Version</a>
                  <a href="runMarkers" class="btn btn-info btn-lg">runMarkers</a>
+                 <a href="runSine" class="btn btn-info btn-lg">runSine</a>
              </p>
 
 
