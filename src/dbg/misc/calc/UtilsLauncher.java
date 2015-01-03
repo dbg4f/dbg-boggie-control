@@ -1,6 +1,7 @@
 package dbg.misc.calc;
 
 import dbg.misc.format.JsonUtils;
+import dbg.misc.format.PositionReport;
 import dbg.misc.format.TimedMarker;
 import dbg.misc.format.TimedMarkerUtils;
 
@@ -15,6 +16,24 @@ import static dbg.misc.calc.CncCalc.*;
 public class UtilsLauncher {
 
     public static void main(String[] args) throws IOException {
+
+
+        PositionReport[] reports = TimedMarkerUtils.readArrayPositionReports("docs/logs", "simple-movement3.json");
+
+        double position = reports[0].getPosition();
+        int t = reports[0].getT();
+
+        for (PositionReport report : reports) {
+            report.setT(report.getT() - t);
+            report.setPosition(report.getPosition() - position);
+        }
+
+
+        String maximaPositions = new TimedMarkerUtils<PositionReport>().toMaximaArrays(Arrays.asList(reports), TimedMarkerUtils.createPositionReportExtractorXY());
+
+        System.out.println("maximaPositions = \n" + maximaPositions);
+
+
 
         TimedMarker[] timedMarkers = TimedMarkerUtils.readArrayTimedMarkers("docs/logs", "both4.json");
 
