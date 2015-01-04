@@ -148,9 +148,9 @@ plot2d(p);
 
 /* [wxMaxima: input   start ] */
 
-Tm : 0.08;
-w0 : 0.0007;
-plot2d([discrete, (x/1000), y)$
+Tm : 81;
+w0 : 0.0015;
+plot2d([[discrete, x, y], w0*t + exp(-t/Tm) - w0*Tm], [t, 0, 160])$
 /* [wxMaxima: input   end   ] */
 
 /* Maxima can't load/batch files which end with a comment! */
