@@ -26,6 +26,7 @@ public class UtilsLauncher {
         for (PositionReport report : reports) {
             report.setT(report.getT() - t);
             report.setPosition(report.getPosition() - position);
+            System.out.println(String.format("%f %d", report.getPosition(), report.getT()));
         }
 
 
