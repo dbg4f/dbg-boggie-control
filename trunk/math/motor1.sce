@@ -1,5 +1,5 @@
-//data=read("/home/dmitri/projects/boggie/math/motor.txt",-1,2);
-data=read("/home/bogdel/work/google-code/boggie/math/motor2.txt",-1,2);
+data=read("/home/dmitri/projects/boggie/math/motor2.txt",-1,2);
+//data=read("/home/bogdel/work/google-code/boggie/math/motor2.txt",-1,2);
 time=(data(:,2)-data(1,2))/1000;
 angle=data(:,1);
 angle=angle';
