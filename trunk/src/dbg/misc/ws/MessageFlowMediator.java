@@ -35,7 +35,9 @@ public class MessageFlowMediator {
       }
     }
 
-    log.info("Message: " + message + " sent to " + activeConsumers.size() +  " consumers");
+    //log.info("Message: " + message + " sent to " + activeConsumers.size() +  " consumers");
+    //log.info(message);
+      System.err.print(message);
 
   }
 
@@ -46,7 +48,7 @@ public class MessageFlowMediator {
     if (consumer != null) {
       try {
           consumer.onMessage(message);
-          log.info("Message: " + message + " sent to target");
+          log.info("Message: " + message + " sent to target " + cl.getName());
       }
       catch (Exception e) {
         log.error("Failed to send message to target " + consumer + " " + e.getMessage(), e);
