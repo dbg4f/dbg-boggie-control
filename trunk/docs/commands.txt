@@ -90,4 +90,9 @@
 {"cmd":"reg","value":0.17}
 
 {"cmd":"setK","value":50.0}
+{"cmd":"setI","value":1.0}
+{"cmd":"setD","value":50.0}
+
+
+
 {"cmd":"setK","value":60.0}
