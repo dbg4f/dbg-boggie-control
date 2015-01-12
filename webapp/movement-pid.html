@@ -1,0 +1,166 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<script type="text/javascript">
+
+    window.onload = function () {
+    
+    var dataPointsErr = [];
+    var dataPointsAcc = [];
+    var dataPointsChg = [];
+    var dataPointsRes = [];
+
+
+    var xmlhttp = new XMLHttpRequest();
+    var url = "movement8.log.json";
+    //var url = "dataset/?markers=1";
+
+    xmlhttp.onreadystatechange = function() {
+        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+            var myArr = JSON.parse(xmlhttp.responseText);
+            myFunction(myArr);
+        }
+    };
+
+    xmlhttp.open("GET", url, true);
+    xmlhttp.send();
+
+    function myFunction(arr) {
+        var i;
+        for(i = 0; i < arr.length; i++) {
+
+		  var t = arr[i].t - arr[0].t;
+
+		  var err =arr[i].farErr;
+		  var acc =arr[i].farAcc;
+		  var chg =arr[i].farChg  * 10000;
+	
+		  var P = 18;
+		  var I = 0;
+		  var D = 1;
+          
+          var res = P*err + I*acc + D*chg;
+          
+          if (res > 1) {
+			res = 1;
+		  }
+		  
+		  if (res < -1) {
+			res = -1;
+		  }
+          
+          
+			dataPointsErr.push({x: t, y: err});
+			dataPointsAcc.push({x: t, y: acc});
+			dataPointsChg.push({x: t, y: chg});
+			dataPointsRes.push({x: t, y: res});
+
+
+        }
+
+    }
+
+		var chart = new CanvasJS.Chart("chartContainer",{
+			zoomEnabled: true,
+			/*
+      title: {
+				text: "Share Value of Two Companies"
+			},*/
+			toolTip: {
+				shared: true
+
+			},
+			legend: {
+				verticalAlign: "top",
+				horizontalAlign: "center",
+                                fontSize: 10,
+				fontWeight: "bold",
+				fontFamily: "calibri",
+				fontColor: "dimGrey"
+			},
+			axisX: {
+				/*title: "chart updates every 3 secs"*/
+        interlacedColor: "#F0F8FF"
+			},
+			axisY:{
+				prefix: '',
+				includeZero: false
+			},
+            axisY2:{
+                prefix: '',
+                includeZero: false
+            },
+
+			data: [
+        {
+				type: "line",
+				xValueType: "dateTime",
+				showInLegend: true,
+				name: "Error F",
+				dataPoints: dataPointsErr
+			},
+			{
+				type: "line",
+				xValueType: "dateTime",
+				showInLegend: true,
+				name: "Accumulated F" ,
+                axisYType: "secondary",
+				dataPoints: dataPointsAcc
+			},
+			{
+				type: "line",
+				xValueType: "dateTime",
+				showInLegend: true,
+				name: "Change F" ,
+                axisYType: "secondary",
+				dataPoints: dataPointsChg
+			},
+			{
+				type: "line",
+				xValueType: "dateTime",
+				showInLegend: true,
+				name: "Result F" ,
+                axisYType: "secondary",
+				dataPoints: dataPointsRes
+			},
+			
+			
+      ],
+          legend:{
+            cursor:"pointer",
+            itemclick : function(e) {
+              if (typeof(e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+                e.dataSeries.visible = false;
+              }
+              else {
+                e.dataSeries.visible = true;
+              }
+              chart.render();
+            }
+          }
+		});
+
+		var updateInterval = 3000;
+
+		var updateChart = function () {
+			chart.render();
+
+		};
+
+		// generates first set of dataPoints
+		updateChart();
+
+		// update chart after specified interval
+		setInterval(function(){updateChart()}, updateInterval);
+	}
+	</script>
+	<script type="text/javascript" src="js/canvasjs.min.js"></script>
+</head>
+<body>
+	<div id="chartContainer" style="height: 700px; width: 100%;">
+	</div>
+</body>
+
+
+</html>
