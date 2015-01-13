@@ -45,6 +45,9 @@ public class JsonDataHandler extends AbstractHandler {
     else if (request.getParameter("positions") != null) {
       response.getWriter().println(jsonMessagePicker.positions());
     }
+    else if (request.getParameter("pid") != null) {
+      response.getWriter().println(jsonMessagePicker.pid());
+    }
     else {
       response.getWriter().println(jsonMessagePicker.log());
     }

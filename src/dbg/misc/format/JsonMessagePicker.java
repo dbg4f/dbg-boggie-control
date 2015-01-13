@@ -39,6 +39,8 @@ public class JsonMessagePicker implements MessageConsumer{
 
   private List<PositionReport> positionReports = new ArrayList<>();
 
+  private List<PidSnapshot> pidSnapshots = new ArrayList<>();
+
 
     TwainLever lever = new TwainLever(NEAR, FAR, ANGLE_XAB_BY_SENSOR_NEAR, ANGLE_ABC_BY_SENSOR_FAR);
 
@@ -100,6 +102,15 @@ public class JsonMessagePicker implements MessageConsumer{
         snapshot = gson.fromJson(rawInput, rowType);
 
       }
+      else if (isConforms(PidSnapshot.class, messageImage.keySet())) {
+
+        Type rowType = new TypeToken<PidSnapshot>(){}.getType();
+
+        PidSnapshot pidSnapshot = gson.fromJson(rawInput, rowType);
+
+        pidSnapshots.add(pidSnapshot);
+
+      }
       else {
 
         unrecognizedMessages.add(messageImage);
@@ -142,6 +153,7 @@ public class JsonMessagePicker implements MessageConsumer{
       logsRows.clear();
       timedMarkers.clear();
       positionReports.clear();
+      pidSnapshots.clear();
   }
 
 
@@ -186,6 +198,17 @@ public class JsonMessagePicker implements MessageConsumer{
 
       for (PosSensors posSensors : dependency) {
           array.add(gson.toJsonTree(posSensors));
+      }
+
+      return gson.toJson(array);
+  }
+
+  public String pid() {
+      JsonArray array = new JsonArray();
+      Gson gson = new GsonBuilder().setPrettyPrinting().create();
+
+      for (PidSnapshot pidSnapshot : pidSnapshots) {
+          array.add(gson.toJsonTree(pidSnapshot));
       }
 
       return gson.toJson(array);

@@ -90,14 +90,28 @@
 {"cmd":"reg","value":0.17}
 
 {"cmd":"setK","value":50.0}
-{"cmd":"setI","value":1.0}
+{"cmd":"setI","value":0.0}
 {"cmd":"setD","value":50.0}
 
 
-{"cmd":"setK","value":18.0}
-{"cmd":"setI","value":0}
-{"cmd":"setD","value":1.0}
+{"cmd":"setK","value":15.0}
+{"cmd":"setI","value":0.0}
+{"cmd":"setD","value":3.0}
+
+
+{"cmd":"setK","value":12.0}
+{"cmd":"setI","value":0.0}
+{"cmd":"setD","value":2.0}
+12-0-2 - ok
+
+{"cmd":"setK","value":12.0}
+{"cmd":"setI","value":0.0}
+{"cmd":"setD","value":0.0}
+
+
 
 
 
 {"cmd":"setK","value":60.0}
+
+{"initialErr":15.000000,"initialAcc":0.000000,"initialChg":1.000000,"initialRes":0.000000,"ct":2232,"t":161654}

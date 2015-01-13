@@ -13,8 +13,8 @@
 
 
     var xmlhttp = new XMLHttpRequest();
-    var url = "movement8.log.json";
-    //var url = "dataset/?markers=1";
+    //var url = "movement8.log.json";
+    var url = "dataset/?pid=1";
 
     xmlhttp.onreadystatechange = function() {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
@@ -40,8 +40,8 @@
 		  var I = 0;
 		  var D = 1;
           
-          var res = P*err + I*acc + D*chg;
-          
+          var res = arr[i].farRes;//P*err + I*acc + D*chg;
+          /*
           if (res > 1) {
 			res = 1;
 		  }
@@ -49,6 +49,7 @@
 		  if (res < -1) {
 			res = -1;
 		  }
+        */
           
           
 			dataPointsErr.push({x: t, y: err});
