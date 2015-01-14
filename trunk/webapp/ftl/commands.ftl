@@ -39,6 +39,8 @@
                  <a href="version" class="btn btn-info btn-lg">Version</a>
                  <a href="runMarkers" class="btn btn-info btn-lg">runMarkers</a>
                  <a href="runSine" class="btn btn-info btn-lg">runSine</a>
+                 <a href="gotoUpper" class="btn btn-info btn-lg">goto Upper</a>
+                 <a href="gotoLower" class="btn btn-info btn-lg">goto Lower</a>
              </p>
 
 
