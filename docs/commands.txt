@@ -104,8 +104,8 @@
 {"cmd":"setD","value":2.0}
 12-0-2 - ok
 
-{"cmd":"setK","value":12.0}
-{"cmd":"setI","value":0.0}
+{"cmd":"setK","value":4.7}
+{"cmd":"setI","value":0.04}
 {"cmd":"setD","value":0.0}
 
 

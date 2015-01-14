@@ -105,6 +105,16 @@ public class ConsoleHandler extends AbstractHandler {
           sendCommand("{\"cmd\":\"runSine\"}");
           createCommandsForm(response);
         }
+        else if (tail.equalsIgnoreCase("gotoUpper")) {
+          jsonMessagePicker.reset();
+          sendCommand("{\"cmd\":\"reg\",\"value\":0.13}");
+          createCommandsForm(response);
+        }
+        else if (tail.equalsIgnoreCase("gotoLower")) {
+          jsonMessagePicker.reset();
+          sendCommand("{\"cmd\":\"reg\",\"value\":0.17}");
+          createCommandsForm(response);
+        }
         else {
           createBasicFtlForm(response);
         }
