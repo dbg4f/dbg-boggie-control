@@ -107,12 +107,16 @@ public class ConsoleHandler extends AbstractHandler {
         }
         else if (tail.equalsIgnoreCase("gotoUpper")) {
           jsonMessagePicker.reset();
-          sendCommand("{\"cmd\":\"reg\",\"value\":0.13}");
+          sendCommand("{\"cmd\":\"reg\",\"value\":0.09}");
           createCommandsForm(response);
         }
         else if (tail.equalsIgnoreCase("gotoLower")) {
           jsonMessagePicker.reset();
-          sendCommand("{\"cmd\":\"reg\",\"value\":0.17}");
+          sendCommand("{\"cmd\":\"reg\",\"value\":0.21}");
+          createCommandsForm(response);
+        }
+        else if (tail.equalsIgnoreCase("savePid")) {
+          jsonMessagePicker.savePid();
           createCommandsForm(response);
         }
         else {

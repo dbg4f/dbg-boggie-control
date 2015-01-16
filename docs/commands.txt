@@ -109,6 +109,28 @@
 {"cmd":"setD","value":0.0}
 
 
+no overflow, but not reached
+{"cmd":"setK","value":4.7}
+{"cmd":"setI","value":0.0}
+{"cmd":"setD","value":0.2}
+
+
+best result so far, sometimes res=0 reached (no PWM noise)
+{"cmd":"setK","value":4.7}
+{"cmd":"setI","value":0.0}
+{"cmd":"setD","value":0.25}
+
+
+ better on longer distances, overflow exists, but minimal
+{"cmd":"setK","value":3.3}
+{"cmd":"setI","value":0.0}
+{"cmd":"setD","value":0.3}
+
+
+
+
+
+
 
 
 
