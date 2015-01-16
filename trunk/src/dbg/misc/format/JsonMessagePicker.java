@@ -9,6 +9,7 @@ import dbg.misc.ws.MessageConsumer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.io.FileWriter;
 import java.io.IOException;
 import java.lang.reflect.Field;
 import java.lang.reflect.Type;
@@ -40,6 +41,7 @@ public class JsonMessagePicker implements MessageConsumer{
   private List<PositionReport> positionReports = new ArrayList<>();
 
   private List<PidSnapshot> pidSnapshots = new ArrayList<>();
+  private List<PidConfigSnapshot> pidConfigSnapshots = new ArrayList<>();
 
 
     TwainLever lever = new TwainLever(NEAR, FAR, ANGLE_XAB_BY_SENSOR_NEAR, ANGLE_ABC_BY_SENSOR_FAR);
@@ -111,6 +113,15 @@ public class JsonMessagePicker implements MessageConsumer{
         pidSnapshots.add(pidSnapshot);
 
       }
+      else if (isConforms(PidConfigSnapshot.class, messageImage.keySet())) {
+
+        Type rowType = new TypeToken<PidConfigSnapshot>(){}.getType();
+
+          PidConfigSnapshot pidConfigSnapshot = gson.fromJson(rawInput, rowType);
+
+        pidConfigSnapshots.add(pidConfigSnapshot);
+
+      }
       else {
 
         unrecognizedMessages.add(messageImage);
@@ -154,6 +165,26 @@ public class JsonMessagePicker implements MessageConsumer{
       timedMarkers.clear();
       positionReports.clear();
       pidSnapshots.clear();
+      pidConfigSnapshots.clear();
+  }
+
+
+  public void savePid() throws IOException {
+      String pid = pid();
+      String pidConfig = pidConfig();
+
+      String folder = "webapp/snapshots/pid/";
+
+      String fileName = "pid-" + System.currentTimeMillis();
+
+      FileWriter wr = new FileWriter(folder + fileName + ".json");
+      wr.write(pid);
+      wr.close();
+
+      wr = new FileWriter(folder + fileName + ".config.json");
+      wr.write(pidConfig);
+      wr.close();
+
   }
 
 
@@ -209,6 +240,17 @@ public class JsonMessagePicker implements MessageConsumer{
 
       for (PidSnapshot pidSnapshot : pidSnapshots) {
           array.add(gson.toJsonTree(pidSnapshot));
+      }
+
+      return gson.toJson(array);
+  }
+
+  public String pidConfig() {
+      JsonArray array = new JsonArray();
+      Gson gson = new GsonBuilder().setPrettyPrinting().create();
+
+      for (PidConfigSnapshot pidConfigSnapshot : pidConfigSnapshots) {
+          array.add(gson.toJsonTree(pidConfigSnapshot));
       }
 
       return gson.toJson(array);

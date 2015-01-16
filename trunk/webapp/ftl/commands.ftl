@@ -41,6 +41,7 @@
                  <a href="runSine" class="btn btn-info btn-lg">runSine</a>
                  <a href="gotoUpper" class="btn btn-info btn-lg">goto Upper</a>
                  <a href="gotoLower" class="btn btn-info btn-lg">goto Lower</a>
+                 <a href="savePid" class="btn btn-info btn-lg">Save PID</a>
              </p>
 
 
