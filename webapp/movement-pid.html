@@ -14,6 +14,7 @@
 
     var xmlhttp = new XMLHttpRequest();
     //var url = "movement8.log.json";
+    //var url = "snapshots/pid/pid-1421438811641.json";
     var url = "dataset/?pid=1";
 
     xmlhttp.onreadystatechange = function() {
@@ -142,7 +143,7 @@
           }
 		});
 
-		var updateInterval = 3000;
+		var updateInterval = 1000;
 
 		var updateChart = function () {
 			chart.render();
