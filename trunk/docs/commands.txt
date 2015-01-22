@@ -127,6 +127,11 @@ best result so far, sometimes res=0 reached (no PWM noise)
 {"cmd":"setD","value":0.3}
 
 
+{"cmd":"setK","value":5}
+{"cmd":"setI","value":0.03}
+{"cmd":"setD","value":0.3}
+
+
 
 
 
