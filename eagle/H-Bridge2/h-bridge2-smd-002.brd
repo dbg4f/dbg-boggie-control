@@ -1498,6 +1498,22 @@ grid 2.5 mm, outline 2.5 x 5 mm</description>
 <text x="-2.286" y="1.524" size="1.27" layer="25" ratio="10">&gt;NAME</text>
 <text x="-2.286" y="-2.794" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
 </package>
+<package name="R0603">
+<description>&lt;b&gt;RESISTOR&lt;/b&gt;</description>
+<wire x1="-0.432" y1="-0.356" x2="0.432" y2="-0.356" width="0.1524" layer="51"/>
+<wire x1="0.432" y1="0.356" x2="-0.432" y2="0.356" width="0.1524" layer="51"/>
+<wire x1="-1.473" y1="0.983" x2="1.473" y2="0.983" width="0.0508" layer="39"/>
+<wire x1="1.473" y1="0.983" x2="1.473" y2="-0.983" width="0.0508" layer="39"/>
+<wire x1="1.473" y1="-0.983" x2="-1.473" y2="-0.983" width="0.0508" layer="39"/>
+<wire x1="-1.473" y1="-0.983" x2="-1.473" y2="0.983" width="0.0508" layer="39"/>
+<smd name="1" x="-0.85" y="0" dx="1" dy="1.1" layer="1"/>
+<smd name="2" x="0.85" y="0" dx="1" dy="1.1" layer="1"/>
+<text x="-0.635" y="0.635" size="1.27" layer="25">&gt;NAME</text>
+<text x="-0.635" y="-1.905" size="1.27" layer="27">&gt;VALUE</text>
+<rectangle x1="0.4318" y1="-0.4318" x2="0.8382" y2="0.4318" layer="51"/>
+<rectangle x1="-0.8382" y1="-0.4318" x2="-0.4318" y2="0.4318" layer="51"/>
+<rectangle x1="-0.1999" y1="-0.4001" x2="0.1999" y2="0.4001" layer="35"/>
+</package>
 <package name="0411/15">
 <description>&lt;b&gt;RESISTOR&lt;/b&gt;&lt;p&gt;
 type 0411, grid 15 mm</description>
@@ -1838,9 +1854,9 @@ design rules under a new name.</description>
 <attribute name="OC_FARNELL" value="8638837" x="-73.66" y="6.35" size="1.778" layer="27" display="off"/>
 </element>
 <element name="C1" library="rcl" package="C025-025X050" value="" x="55.88" y="-86.36"/>
-<element name="C4" library="rcl" package="C025-025X050" value="" x="62.23" y="-86.36"/>
+<element name="C4" library="rcl" package="C025-025X050" value="" x="69.85" y="13.97"/>
 <element name="RHA" library="rcl" package="0411/15" value="" x="20.32" y="-80.01"/>
-<element name="RLA" library="rcl" package="0411/15" value="" x="55.88" y="-80.01"/>
+<element name="RLA" library="rcl" package="R0603" value="" x="57.15" y="15.24"/>
 <element name="RHB" library="rcl" package="0411/15" value="" x="38.1" y="-80.01"/>
 <element name="RLB" library="rcl" package="0411/15" value="" x="7.62" y="-86.36"/>
 <element name="JP_V+" library="dbg-misc" package="1X01" value="" x="48.26" y="-86.36"/>
@@ -1895,7 +1911,7 @@ design rules under a new name.</description>
 <signal name="N$5">
 <contactref element="RLA" pad="2"/>
 <contactref element="LA" pad="G"/>
-<wire x1="63.5" y1="-80.01" x2="1.27" y2="-49.53" width="0" layer="19" extent="1-1"/>
+<wire x1="58" y1="15.24" x2="1.27" y2="-49.53" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$6">
 <contactref element="RHA" pad="2"/>
@@ -1920,7 +1936,7 @@ design rules under a new name.</description>
 <signal name="N$10">
 <contactref element="UA" pad="1"/>
 <contactref element="RLA" pad="1"/>
-<wire x1="0" y1="-6.35" x2="48.26" y2="-80.01" width="0" layer="19" extent="1-1"/>
+<wire x1="0" y1="-6.35" x2="56.3" y2="15.24" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$11">
 <contactref element="RHB" pad="2"/>
@@ -1969,8 +1985,8 @@ design rules under a new name.</description>
 <contactref element="DF_LB" pad="C"/>
 <wire x1="39.37" y1="-86.36" x2="21.59" y2="-72.39" width="0" layer="19" extent="1-1"/>
 <wire x1="16.51" y1="-49.53" x2="21.59" y2="-72.39" width="0" layer="19" extent="1-1"/>
-<wire x1="63.5" y1="-86.36" x2="39.37" y2="-86.36" width="0" layer="19" extent="1-1"/>
-<wire x1="53.34" y1="-57.15" x2="63.5" y2="-86.36" width="0" layer="19" extent="1-1"/>
+<wire x1="71.12" y1="13.97" x2="39.37" y2="-86.36" width="0" layer="19" extent="1-1"/>
+<wire x1="53.34" y1="-57.15" x2="71.12" y2="13.97" width="0" layer="19" extent="1-1"/>
 <wire x1="19.05" y1="-16.51" x2="16.51" y2="-49.53" width="0" layer="19" extent="1-1"/>
 <wire x1="57.15" y1="-22.86" x2="53.34" y2="-57.15" width="0" layer="19" extent="1-1"/>
 </signal>
@@ -2007,7 +2023,7 @@ design rules under a new name.</description>
 <contactref element="D2" pad="C"/>
 <contactref element="UB" pad="6"/>
 <contactref element="C4" pad="1"/>
-<wire x1="60.96" y1="-86.36" x2="0" y2="-78.74" width="0" layer="19" extent="1-1"/>
+<wire x1="68.58" y1="13.97" x2="0" y2="-78.74" width="0" layer="19" extent="1-1"/>
 <wire x1="19.05" y1="-19.05" x2="0" y2="-78.74" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$22">
