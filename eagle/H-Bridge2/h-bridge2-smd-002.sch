@@ -13208,12 +13208,16 @@ Source: Comchip CGRM4001-G.pdf</description>
 <part name="DF_HB" library="dbg-misc" deviceset="1N5400" device=""/>
 <part name="DF_LB" library="dbg-misc" deviceset="1N5400" device=""/>
 <part name="DF_LA" library="dbg-misc" deviceset="1N5400" device=""/>
-<part name="C2" library="rcl" deviceset="C-EU" device="025-024X044"/>
 <part name="C3" library="rcl" deviceset="CPOL-EU" device="E5-13"/>
 <part name="RPD_LB" library="rcl" deviceset="R-EU_" device="R1206"/>
 <part name="RPD_LA" library="rcl" deviceset="R-EU_" device="R1206"/>
 <part name="RPD_LA1" library="rcl" deviceset="R-EU_" device="R1206"/>
 <part name="RPD_HB2" library="rcl" deviceset="R-EU_" device="R1206"/>
+<part name="C7" library="rcl" deviceset="C-EU" device="C4532"/>
+<part name="C8" library="rcl" deviceset="C-EU" device="C4532"/>
+<part name="C9" library="rcl" deviceset="CPOL-EU" device="E5-13"/>
+<part name="JP_V+1" library="dbg-misc" deviceset="PINHD-1X1" device=""/>
+<part name="JP_GND1" library="dbg-misc" deviceset="PINHD-1X1" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -13246,12 +13250,16 @@ Source: Comchip CGRM4001-G.pdf</description>
 <instance part="DF_HB" gate="1" x="7.62" y="106.68" rot="R90"/>
 <instance part="DF_LB" gate="1" x="10.16" y="78.74" rot="R90"/>
 <instance part="DF_LA" gate="1" x="-5.08" y="81.28" rot="R90"/>
-<instance part="C2" gate="G$1" x="-66.04" y="68.58"/>
 <instance part="C3" gate="G$1" x="-58.42" y="68.58"/>
 <instance part="RPD_LB" gate="G$1" x="35.56" y="73.66" rot="R90"/>
 <instance part="RPD_LA" gate="G$1" x="-27.94" y="71.12" rot="R90"/>
 <instance part="RPD_LA1" gate="G$1" x="-38.1" y="101.6" rot="R90"/>
 <instance part="RPD_HB2" gate="G$1" x="35.56" y="101.6" rot="R90"/>
+<instance part="C7" gate="G$1" x="-66.04" y="68.58"/>
+<instance part="C8" gate="G$1" x="-50.8" y="68.58"/>
+<instance part="C9" gate="G$1" x="-43.18" y="68.58"/>
+<instance part="JP_V+1" gate="G$1" x="-68.58" y="134.62" rot="R180"/>
+<instance part="JP_GND1" gate="G$1" x="38.1" y="48.26"/>
 </instances>
 <busses>
 </busses>
@@ -13310,7 +13318,6 @@ Source: Comchip CGRM4001-G.pdf</description>
 <wire x1="10.16" y1="76.2" x2="10.16" y2="73.66" width="0.1524" layer="91"/>
 <junction x="10.16" y="73.66"/>
 <junction x="-5.08" y="73.66"/>
-<pinref part="C2" gate="G$1" pin="2"/>
 <wire x1="-66.04" y1="63.5" x2="-66.04" y2="58.42" width="0.1524" layer="91"/>
 <junction x="-66.04" y="38.1"/>
 <wire x1="-66.04" y1="58.42" x2="-66.04" y2="38.1" width="0.1524" layer="91"/>
@@ -13330,6 +13337,18 @@ Source: Comchip CGRM4001-G.pdf</description>
 <wire x1="35.56" y1="68.58" x2="35.56" y2="66.04" width="0.1524" layer="91"/>
 <wire x1="35.56" y1="66.04" x2="27.94" y2="66.04" width="0.1524" layer="91"/>
 <junction x="27.94" y="66.04"/>
+<pinref part="C7" gate="G$1" pin="2"/>
+<pinref part="C9" gate="G$1" pin="-"/>
+<wire x1="-58.42" y1="58.42" x2="-50.8" y2="58.42" width="0.1524" layer="91"/>
+<wire x1="-50.8" y1="58.42" x2="-43.18" y2="58.42" width="0.1524" layer="91"/>
+<wire x1="-43.18" y1="58.42" x2="-43.18" y2="63.5" width="0.1524" layer="91"/>
+<pinref part="C8" gate="G$1" pin="2"/>
+<wire x1="-50.8" y1="63.5" x2="-50.8" y2="58.42" width="0.1524" layer="91"/>
+<junction x="-50.8" y="58.42"/>
+<pinref part="JP_GND1" gate="G$1" pin="1"/>
+<wire x1="35.56" y1="48.26" x2="27.94" y2="48.26" width="0.1524" layer="91"/>
+<wire x1="27.94" y1="48.26" x2="27.94" y2="58.42" width="0.1524" layer="91"/>
+<junction x="27.94" y="58.42"/>
 </segment>
 </net>
 <net name="N$5" class="0">
@@ -13540,7 +13559,8 @@ Source: Comchip CGRM4001-G.pdf</description>
 <wire x1="-66.04" y1="116.84" x2="-50.8" y2="116.84" width="0.1524" layer="91"/>
 <wire x1="-66.04" y1="121.92" x2="-50.8" y2="121.92" width="0.1524" layer="91"/>
 <pinref part="HB" gate="G$1" pin="D"/>
-<wire x1="-50.8" y1="121.92" x2="-22.86" y2="121.92" width="0.1524" layer="91"/>
+<wire x1="-50.8" y1="121.92" x2="-43.18" y2="121.92" width="0.1524" layer="91"/>
+<wire x1="-43.18" y1="121.92" x2="-22.86" y2="121.92" width="0.1524" layer="91"/>
 <wire x1="-22.86" y1="121.92" x2="-2.54" y2="121.92" width="0.1524" layer="91"/>
 <wire x1="-2.54" y1="121.92" x2="7.62" y2="121.92" width="0.1524" layer="91"/>
 <wire x1="7.62" y1="121.92" x2="25.4" y2="121.92" width="0.1524" layer="91"/>
@@ -13568,7 +13588,6 @@ Source: Comchip CGRM4001-G.pdf</description>
 <wire x1="7.62" y1="109.22" x2="7.62" y2="121.92" width="0.1524" layer="91"/>
 <junction x="-2.54" y="121.92"/>
 <junction x="7.62" y="121.92"/>
-<pinref part="C2" gate="G$1" pin="1"/>
 <wire x1="-66.04" y1="116.84" x2="-66.04" y2="81.28" width="0.1524" layer="91"/>
 <junction x="-66.04" y="116.84"/>
 <wire x1="-66.04" y1="81.28" x2="-66.04" y2="71.12" width="0.1524" layer="91"/>
@@ -13576,6 +13595,18 @@ Source: Comchip CGRM4001-G.pdf</description>
 <pinref part="C3" gate="G$1" pin="+"/>
 <wire x1="-58.42" y1="81.28" x2="-58.42" y2="71.12" width="0.1524" layer="91"/>
 <junction x="-66.04" y="81.28"/>
+<pinref part="C7" gate="G$1" pin="1"/>
+<pinref part="C9" gate="G$1" pin="+"/>
+<wire x1="-58.42" y1="81.28" x2="-50.8" y2="81.28" width="0.1524" layer="91"/>
+<wire x1="-50.8" y1="81.28" x2="-43.18" y2="81.28" width="0.1524" layer="91"/>
+<wire x1="-43.18" y1="81.28" x2="-43.18" y2="71.12" width="0.1524" layer="91"/>
+<pinref part="C8" gate="G$1" pin="1"/>
+<wire x1="-50.8" y1="81.28" x2="-50.8" y2="71.12" width="0.1524" layer="91"/>
+<junction x="-58.42" y="81.28"/>
+<junction x="-50.8" y="81.28"/>
+<pinref part="JP_V+1" gate="G$1" pin="1"/>
+<wire x1="-66.04" y1="134.62" x2="-43.18" y2="134.62" width="0.1524" layer="91"/>
+<wire x1="-43.18" y1="134.62" x2="-43.18" y2="121.92" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$18" class="0">
