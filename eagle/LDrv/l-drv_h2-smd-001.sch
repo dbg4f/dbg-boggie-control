@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
@@ -4314,6 +4314,9 @@ Source: LITE-ON ELECTRONICS, LTV816.pdf</description>
 <part name="ZERO7" library="rcl" deviceset="R-EU_" device="R1206"/>
 <part name="ZERO8" library="rcl" deviceset="R-EU_" device="R1206"/>
 <part name="ZERO9" library="rcl" deviceset="R-EU_" device="R1206"/>
+<part name="ZERO5" library="rcl" deviceset="R-EU_" device="R1206"/>
+<part name="ZERO11" library="rcl" deviceset="R-EU_" device="R1206"/>
+<part name="ZERO12" library="rcl" deviceset="R-EU_" device="R1206"/>
 </parts>
 <sheets>
 <sheet>
@@ -4328,7 +4331,7 @@ Source: LITE-ON ELECTRONICS, LTV816.pdf</description>
 <instance part="R_T_MC_DIR1" gate="G$1" x="25.4" y="-7.62"/>
 <instance part="GND1" gate="1" x="83.82" y="-111.76"/>
 <instance part="P+1" gate="VCC" x="132.08" y="93.98"/>
-<instance part="ROC1" gate="G$1" x="78.74" y="66.04" rot="R90"/>
+<instance part="ROC1" gate="G$1" x="86.36" y="66.04" rot="R90"/>
 <instance part="ROC2" gate="G$1" x="76.2" y="27.94" rot="R90"/>
 <instance part="ROC3" gate="G$1" x="71.12" y="-2.54" rot="R90"/>
 <instance part="JP_L1" gate="G$1" x="276.86" y="-48.26"/>
@@ -4360,6 +4363,9 @@ Source: LITE-ON ELECTRONICS, LTV816.pdf</description>
 <instance part="ZERO7" gate="G$1" x="68.58" y="58.42" rot="R180"/>
 <instance part="ZERO8" gate="G$1" x="243.84" y="-27.94" rot="R90"/>
 <instance part="ZERO9" gate="G$1" x="101.6" y="88.9" rot="R180"/>
+<instance part="ZERO5" gate="G$1" x="78.74" y="58.42" rot="R180"/>
+<instance part="ZERO11" gate="G$1" x="114.3" y="-10.16" rot="R180"/>
+<instance part="ZERO12" gate="G$1" x="96.52" y="-10.16" rot="R180"/>
 </instances>
 <busses>
 </busses>
@@ -4458,12 +4464,7 @@ Source: LITE-ON ELECTRONICS, LTV816.pdf</description>
 </net>
 <net name="N$D2" class="0">
 <segment>
-<pinref part="OK_T_DIR1" gate="G$1" pin="COL"/>
-<wire x1="58.42" y1="-10.16" x2="71.12" y2="-10.16" width="0.1524" layer="91"/>
-<pinref part="ROC3" gate="G$1" pin="1"/>
-<wire x1="71.12" y1="-10.16" x2="71.12" y2="-7.62" width="0.1524" layer="91"/>
-<wire x1="124.46" y1="-10.16" x2="71.12" y2="-10.16" width="0.1524" layer="91"/>
-<junction x="71.12" y="-10.16"/>
+<wire x1="124.46" y1="-10.16" x2="119.38" y2="-10.16" width="0.1524" layer="91"/>
 <wire x1="124.46" y1="-10.16" x2="124.46" y2="0" width="0.1524" layer="91"/>
 <wire x1="124.46" y1="0" x2="187.96" y2="0" width="0.1524" layer="91"/>
 <wire x1="187.96" y1="0" x2="187.96" y2="25.4" width="0.1524" layer="91"/>
@@ -4482,6 +4483,7 @@ Source: LITE-ON ELECTRONICS, LTV816.pdf</description>
 <pinref part="IC3" gate="C" pin="I0"/>
 <wire x1="274.32" y1="33.02" x2="274.32" y2="27.94" width="0.1524" layer="91"/>
 <junction x="198.12" y="22.86"/>
+<pinref part="ZERO11" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="N$PWM" class="0">
@@ -4510,10 +4512,10 @@ Source: LITE-ON ELECTRONICS, LTV816.pdf</description>
 <net name="N$D1" class="0">
 <segment>
 <pinref part="ROC1" gate="G$1" pin="1"/>
-<wire x1="78.74" y1="58.42" x2="78.74" y2="60.96" width="0.1524" layer="91"/>
-<wire x1="73.66" y1="58.42" x2="78.74" y2="58.42" width="0.1524" layer="91"/>
-<wire x1="157.48" y1="58.42" x2="78.74" y2="58.42" width="0.1524" layer="91"/>
-<junction x="78.74" y="58.42"/>
+<wire x1="86.36" y1="58.42" x2="86.36" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="83.82" y1="58.42" x2="86.36" y2="58.42" width="0.1524" layer="91"/>
+<wire x1="157.48" y1="58.42" x2="86.36" y2="58.42" width="0.1524" layer="91"/>
+<junction x="86.36" y="58.42"/>
 <wire x1="157.48" y1="58.42" x2="157.48" y2="50.8" width="0.1524" layer="91"/>
 <wire x1="157.48" y1="50.8" x2="198.12" y2="50.8" width="0.1524" layer="91"/>
 <wire x1="198.12" y1="50.8" x2="198.12" y2="53.34" width="0.1524" layer="91"/>
@@ -4530,7 +4532,7 @@ Source: LITE-ON ELECTRONICS, LTV816.pdf</description>
 <pinref part="IC3" gate="B" pin="I1"/>
 <wire x1="274.32" y1="43.18" x2="274.32" y2="48.26" width="0.1524" layer="91"/>
 <junction x="198.12" y="53.34"/>
-<pinref part="ZERO7" gate="G$1" pin="1"/>
+<pinref part="ZERO5" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="N$5" class="0">
@@ -4715,8 +4717,8 @@ Source: LITE-ON ELECTRONICS, LTV816.pdf</description>
 <wire x1="91.44" y1="78.74" x2="91.44" y2="71.12" width="0.1524" layer="91"/>
 <wire x1="91.44" y1="71.12" x2="91.44" y2="40.64" width="0.1524" layer="91"/>
 <wire x1="91.44" y1="40.64" x2="91.44" y2="5.08" width="0.1524" layer="91"/>
-<wire x1="78.74" y1="71.12" x2="78.74" y2="78.74" width="0.1524" layer="91"/>
-<wire x1="78.74" y1="78.74" x2="91.44" y2="78.74" width="0.1524" layer="91"/>
+<wire x1="86.36" y1="71.12" x2="86.36" y2="78.74" width="0.1524" layer="91"/>
+<wire x1="86.36" y1="78.74" x2="91.44" y2="78.74" width="0.1524" layer="91"/>
 <pinref part="ROC3" gate="G$1" pin="2"/>
 <wire x1="71.12" y1="2.54" x2="71.12" y2="5.08" width="0.1524" layer="91"/>
 <wire x1="71.12" y1="5.08" x2="91.44" y2="5.08" width="0.1524" layer="91"/>
@@ -4748,6 +4750,30 @@ Source: LITE-ON ELECTRONICS, LTV816.pdf</description>
 <wire x1="106.68" y1="88.9" x2="132.08" y2="88.9" width="0.1524" layer="91"/>
 <pinref part="P+1" gate="VCC" pin="VCC"/>
 <wire x1="132.08" y1="88.9" x2="132.08" y2="91.44" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$22" class="0">
+<segment>
+<pinref part="ZERO7" gate="G$1" pin="1"/>
+<pinref part="ZERO5" gate="G$1" pin="2"/>
+</segment>
+</net>
+<net name="N$27" class="0">
+<segment>
+<pinref part="ROC3" gate="G$1" pin="1"/>
+<wire x1="71.12" y1="-10.16" x2="71.12" y2="-7.62" width="0.1524" layer="91"/>
+<junction x="71.12" y="-10.16"/>
+<pinref part="OK_T_DIR1" gate="G$1" pin="COL"/>
+<wire x1="91.44" y1="-10.16" x2="71.12" y2="-10.16" width="0.1524" layer="91"/>
+<wire x1="58.42" y1="-10.16" x2="71.12" y2="-10.16" width="0.1524" layer="91"/>
+<pinref part="ZERO12" gate="G$1" pin="2"/>
+</segment>
+</net>
+<net name="N$28" class="0">
+<segment>
+<pinref part="ZERO11" gate="G$1" pin="2"/>
+<wire x1="109.22" y1="-10.16" x2="101.6" y2="-10.16" width="0.1524" layer="91"/>
+<pinref part="ZERO12" gate="G$1" pin="1"/>
 </segment>
 </net>
 </nets>

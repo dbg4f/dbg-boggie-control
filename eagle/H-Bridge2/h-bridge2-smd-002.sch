@@ -13013,30 +13013,6 @@ Source: http://products.nichicon.co.jp/en/pdf/XJA043/e-ud.pdf</description>
 <text x="-1.27" y="-3.175" size="1.27" layer="27">&gt;VALUE</text>
 <rectangle x1="-0.254" y1="-0.254" x2="0.254" y2="0.254" layer="51"/>
 </package>
-<package name="DO201-15">
-<description>&lt;B&gt;DIODE&lt;/B&gt;&lt;p&gt;
-diameter 5.6 mm, horizontal, grid 15.24 mm</description>
-<wire x1="-1.27" y1="0" x2="0" y2="0" width="0.1524" layer="21"/>
-<wire x1="0" y1="0.5842" x2="0" y2="0" width="0.1524" layer="21"/>
-<wire x1="0" y1="0" x2="1.143" y2="0.5842" width="0.1524" layer="21"/>
-<wire x1="1.143" y1="0.5842" x2="1.143" y2="-0.5842" width="0.1524" layer="21"/>
-<wire x1="1.143" y1="-0.5842" x2="0" y2="0" width="0.1524" layer="21"/>
-<wire x1="0" y1="0" x2="2.286" y2="0" width="0.1524" layer="21"/>
-<wire x1="0" y1="0" x2="0" y2="-0.5842" width="0.1524" layer="21"/>
-<wire x1="-5.08" y1="-2.794" x2="-5.08" y2="2.794" width="0.1524" layer="21"/>
-<wire x1="5.08" y1="2.794" x2="5.08" y2="-2.794" width="0.1524" layer="21"/>
-<wire x1="-5.08" y1="2.794" x2="5.08" y2="2.794" width="0.1524" layer="21"/>
-<wire x1="5.08" y1="-2.794" x2="-5.08" y2="-2.794" width="0.1524" layer="21"/>
-<wire x1="7.62" y1="0" x2="6.223" y2="0" width="1.27" layer="51"/>
-<wire x1="-7.62" y1="0" x2="-6.223" y2="0" width="1.27" layer="51"/>
-<pad name="C" x="-7.62" y="0" drill="1.4986" shape="long"/>
-<pad name="A" x="7.62" y="0" drill="1.4986" shape="long"/>
-<text x="-5.08" y="3.175" size="1.27" layer="25" ratio="10">&gt;NAME</text>
-<text x="-2.54" y="-2.159" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
-<rectangle x1="-4.191" y1="-2.794" x2="-3.429" y2="2.794" layer="21"/>
-<rectangle x1="-5.969" y1="-0.635" x2="-5.08" y2="0.635" layer="21"/>
-<rectangle x1="5.08" y1="-0.635" x2="5.969" y2="0.635" layer="21"/>
-</package>
 </packages>
 <symbols>
 <symbol name="PINHD1">
@@ -13047,17 +13023,6 @@ diameter 5.6 mm, horizontal, grid 15.24 mm</description>
 <text x="-6.35" y="3.175" size="1.778" layer="95">&gt;NAME</text>
 <text x="-6.35" y="-5.08" size="1.778" layer="96">&gt;VALUE</text>
 <pin name="1" x="-2.54" y="0" visible="pad" length="short" direction="pas" function="dot"/>
-</symbol>
-<symbol name="D">
-<wire x1="-1.27" y1="-1.27" x2="1.27" y2="0" width="0.254" layer="94"/>
-<wire x1="1.27" y1="0" x2="-1.27" y2="1.27" width="0.254" layer="94"/>
-<wire x1="1.27" y1="1.27" x2="1.27" y2="0" width="0.254" layer="94"/>
-<wire x1="-1.27" y1="1.27" x2="-1.27" y2="-1.27" width="0.254" layer="94"/>
-<wire x1="1.27" y1="0" x2="1.27" y2="-1.27" width="0.254" layer="94"/>
-<text x="2.54" y="0.4826" size="1.778" layer="95">&gt;NAME</text>
-<text x="2.54" y="-2.3114" size="1.778" layer="96">&gt;VALUE</text>
-<pin name="A" x="-2.54" y="0" visible="off" length="short" direction="pas"/>
-<pin name="C" x="2.54" y="0" visible="off" length="short" direction="pas" rot="R180"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -13070,24 +13035,6 @@ diameter 5.6 mm, horizontal, grid 15.24 mm</description>
 <device name="" package="1X01">
 <connects>
 <connect gate="G$1" pin="1" pad="1"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="1N5400" prefix="D">
-<description>&lt;B&gt;DIODE&lt;/B&gt;&lt;p&gt;
-standard rectifier, 3 A, 50 V (Motorola)</description>
-<gates>
-<gate name="1" symbol="D" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="DO201-15">
-<connects>
-<connect gate="1" pin="A" pad="A"/>
-<connect gate="1" pin="C" pad="C"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -13129,6 +13076,25 @@ Source: Comchip CGRM4001-G.pdf</description>
 <rectangle x1="1.5875" y1="-0.9" x2="1.95" y2="0.9" layer="51"/>
 <rectangle x1="-1.0249" y1="-0.9" x2="-0.6625" y2="0.9" layer="51"/>
 </package>
+<package name="SMA-DO214AC">
+<description>&lt;B&gt;DIODE&lt;/B&gt;</description>
+<wire x1="-2.2225" y1="0.635" x2="2.2225" y2="0.635" width="0.127" layer="51"/>
+<wire x1="-2.2225" y1="-0.635" x2="2.2225" y2="-0.635" width="0.127" layer="51"/>
+<wire x1="0.3175" y1="0" x2="-0.3175" y2="0.4763" width="0.127" layer="21"/>
+<wire x1="-0.3175" y1="0.4763" x2="-0.3175" y2="0" width="0.127" layer="21"/>
+<wire x1="-0.3175" y1="0" x2="-0.3175" y2="-0.4763" width="0.127" layer="21"/>
+<wire x1="-0.3175" y1="-0.4763" x2="0.3175" y2="0" width="0.127" layer="21"/>
+<wire x1="0.3175" y1="0" x2="0.3175" y2="0.4763" width="0.127" layer="21"/>
+<wire x1="0.3175" y1="0" x2="0.3175" y2="-0.4763" width="0.127" layer="21"/>
+<wire x1="-0.3175" y1="0" x2="-1.1113" y2="0" width="0.127" layer="21"/>
+<wire x1="0.3175" y1="0" x2="1.1113" y2="0" width="0.127" layer="21"/>
+<smd name="A" x="-2.05" y="0" dx="1.8" dy="1.7" layer="1"/>
+<smd name="K" x="2.05" y="0" dx="1.8" dy="1.7" layer="1"/>
+<text x="-3.175" y="1.5875" size="1.27" layer="25">&gt;NAME</text>
+<text x="-3.175" y="-2.8575" size="1.27" layer="27">&gt;VALUE</text>
+<rectangle x1="-2.3813" y1="-0.635" x2="-1.5875" y2="0.635" layer="51"/>
+<rectangle x1="1.5875" y1="-0.635" x2="2.3813" y2="0.635" layer="51"/>
+</package>
 </packages>
 <symbols>
 <symbol name="D">
@@ -13143,6 +13109,17 @@ Source: Comchip CGRM4001-G.pdf</description>
 <pin name="C" x="2.54" y="0" visible="off" length="short" direction="pas" rot="R180"/>
 <text x="-2.54" y="0" size="0.4064" layer="99" align="center">SpiceOrder 1</text>
 <text x="2.54" y="0" size="0.4064" layer="99" align="center">SpiceOrder 2</text>
+</symbol>
+<symbol name="D-1">
+<wire x1="-1.27" y1="-1.27" x2="1.27" y2="0" width="0.254" layer="94"/>
+<wire x1="1.27" y1="0" x2="-1.27" y2="1.27" width="0.254" layer="94"/>
+<wire x1="1.27" y1="1.27" x2="1.27" y2="0" width="0.254" layer="94"/>
+<wire x1="-1.27" y1="1.27" x2="-1.27" y2="-1.27" width="0.254" layer="94"/>
+<wire x1="1.27" y1="0" x2="1.27" y2="-1.27" width="0.254" layer="94"/>
+<text x="-2.54" y="2.54" size="1.778" layer="95">&gt;NAME</text>
+<text x="-2.54" y="-3.81" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="A" x="-2.54" y="0" visible="off" length="short" direction="pas"/>
+<pin name="C" x="2.54" y="0" visible="off" length="short" direction="pas" rot="R180"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -13166,6 +13143,85 @@ Source: Comchip CGRM4001-G.pdf</description>
 <technology name="5"/>
 <technology name="6"/>
 <technology name="7"/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="GF1" prefix="D">
+<description>&lt;B&gt;DIODE&lt;/B&gt;</description>
+<gates>
+<gate name="D" symbol="D-1" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="SMA-DO214AC">
+<connects>
+<connect gate="D" pin="A" pad="A"/>
+<connect gate="D" pin="C" pad="K"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
+<library name="acs711">
+<packages>
+<package name="SOIC8">
+<wire x1="-2.45" y1="-1.6" x2="2.45" y2="-1.6" width="0.05" layer="21"/>
+<wire x1="2.45" y1="1.95" x2="2.45" y2="-1.6" width="0.127" layer="21"/>
+<wire x1="2.45" y1="-1.6" x2="2.45" y2="-1.95" width="0.127" layer="21"/>
+<wire x1="-2.45" y1="1.95" x2="-2.45" y2="-1.6" width="0.127" layer="21"/>
+<circle x="-1.75" y="-1" radius="0.381" width="0.127" layer="21"/>
+<smd name="1" x="-1.905" y="-2.8" dx="0.65" dy="1.75" layer="1"/>
+<text x="4" y="-3" size="1.27" layer="27" ratio="10" rot="R90">&gt;VALUE</text>
+<text x="-2.8" y="-3" size="1.27" layer="25" ratio="10" rot="R90">&gt;NAME</text>
+<wire x1="-2.45" y1="-1.6" x2="-2.45" y2="-1.95" width="0.127" layer="21"/>
+<wire x1="-2.45" y1="1.95" x2="2.45" y2="1.95" width="0.127" layer="21"/>
+<wire x1="-2.45" y1="-1.95" x2="2.45" y2="-1.95" width="0.127" layer="21"/>
+<smd name="2" x="-0.635" y="-2.8" dx="0.65" dy="1.75" layer="1"/>
+<smd name="3" x="0.635" y="-2.8" dx="0.65" dy="1.75" layer="1"/>
+<smd name="4" x="1.905" y="-2.8" dx="0.65" dy="1.75" layer="1"/>
+<smd name="5" x="1.905" y="2.8" dx="0.65" dy="1.75" layer="1"/>
+<smd name="6" x="0.635" y="2.8" dx="0.65" dy="1.75" layer="1"/>
+<smd name="7" x="-0.635" y="2.8" dx="0.65" dy="1.75" layer="1"/>
+<smd name="8" x="-1.905" y="2.8" dx="0.65" dy="1.75" layer="1"/>
+</package>
+</packages>
+<symbols>
+<symbol name="ASC711">
+<pin name="IP+" x="-15.24" y="5.08" length="middle"/>
+<pin name="IP-" x="-15.24" y="-5.08" length="middle"/>
+<pin name="GND" x="15.24" y="-7.62" length="middle" rot="R180"/>
+<pin name="NFAULT" x="15.24" y="-2.54" length="middle" rot="R180"/>
+<pin name="VIOUT" x="15.24" y="2.54" length="middle" rot="R180"/>
+<pin name="VCC" x="15.24" y="7.62" length="middle" rot="R180"/>
+<wire x1="-10.16" y1="10.16" x2="-10.16" y2="-10.16" width="0.254" layer="94"/>
+<wire x1="-10.16" y1="-10.16" x2="10.16" y2="-10.16" width="0.254" layer="94"/>
+<wire x1="10.16" y1="-10.16" x2="10.16" y2="10.16" width="0.254" layer="94"/>
+<wire x1="10.16" y1="10.16" x2="-10.16" y2="10.16" width="0.254" layer="94"/>
+<text x="-10.16" y="13.97" size="1.27" layer="95">&gt;NAME</text>
+<text x="-10.16" y="11.43" size="1.27" layer="96">&gt;VALUE</text>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="ACS711">
+<gates>
+<gate name="G$1" symbol="ASC711" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="SOIC8">
+<connects>
+<connect gate="G$1" pin="GND" pad="5"/>
+<connect gate="G$1" pin="IP+" pad="1 2"/>
+<connect gate="G$1" pin="IP-" pad="3 4"/>
+<connect gate="G$1" pin="NFAULT" pad="6"/>
+<connect gate="G$1" pin="VCC" pad="8"/>
+<connect gate="G$1" pin="VIOUT" pad="7"/>
+</connects>
+<technologies>
+<technology name=""/>
 </technologies>
 </device>
 </devices>
@@ -13204,10 +13260,10 @@ Source: Comchip CGRM4001-G.pdf</description>
 <part name="JP1" library="pinhead" deviceset="PINHD-2X5" device=""/>
 <part name="C5" library="rcl" deviceset="C-EU" device="C4532"/>
 <part name="C6" library="rcl" deviceset="C-EU" device="C4532"/>
-<part name="DF_HA" library="dbg-misc" deviceset="1N5400" device=""/>
-<part name="DF_HB" library="dbg-misc" deviceset="1N5400" device=""/>
-<part name="DF_LB" library="dbg-misc" deviceset="1N5400" device=""/>
-<part name="DF_LA" library="dbg-misc" deviceset="1N5400" device=""/>
+<part name="DF_HA" library="diode" deviceset="GF1" device=""/>
+<part name="DF_HB" library="diode" deviceset="GF1" device=""/>
+<part name="DF_LB" library="diode" deviceset="GF1" device=""/>
+<part name="DF_LA" library="diode" deviceset="GF1" device=""/>
 <part name="C3" library="rcl" deviceset="CPOL-EU" device="E5-13"/>
 <part name="RPD_LB" library="rcl" deviceset="R-EU_" device="R1206"/>
 <part name="RPD_LA" library="rcl" deviceset="R-EU_" device="R1206"/>
@@ -13218,13 +13274,15 @@ Source: Comchip CGRM4001-G.pdf</description>
 <part name="C9" library="rcl" deviceset="CPOL-EU" device="E5-13"/>
 <part name="JP_V+1" library="dbg-misc" deviceset="PINHD-1X1" device=""/>
 <part name="JP_GND1" library="dbg-misc" deviceset="PINHD-1X1" device=""/>
+<part name="U$1" library="acs711" deviceset="ACS711" device=""/>
+<part name="JP_MA2" library="dbg-misc" deviceset="PINHD-1X1" device=""/>
 </parts>
 <sheets>
 <sheet>
 <plain>
 </plain>
 <instances>
-<instance part="JP_MAIN" gate="A" x="12.7" y="50.8"/>
+<instance part="JP_MAIN" gate="A" x="38.1" y="-10.16"/>
 <instance part="HA" gate="G$1" x="-25.4" y="111.76"/>
 <instance part="LA" gate="G$1" x="-25.4" y="86.36"/>
 <instance part="HB" gate="G$1" x="27.94" y="111.76" rot="MR0"/>
@@ -13246,10 +13304,10 @@ Source: Comchip CGRM4001-G.pdf</description>
 <instance part="JP1" gate="A" x="-81.28" y="22.86"/>
 <instance part="C5" gate="G$1" x="149.86" y="88.9"/>
 <instance part="C6" gate="G$1" x="-142.24" y="83.82"/>
-<instance part="DF_HA" gate="1" x="-2.54" y="114.3" rot="R90"/>
-<instance part="DF_HB" gate="1" x="7.62" y="106.68" rot="R90"/>
-<instance part="DF_LB" gate="1" x="10.16" y="78.74" rot="R90"/>
-<instance part="DF_LA" gate="1" x="-5.08" y="81.28" rot="R90"/>
+<instance part="DF_HA" gate="D" x="-2.54" y="114.3" rot="R90"/>
+<instance part="DF_HB" gate="D" x="7.62" y="106.68" rot="R90"/>
+<instance part="DF_LB" gate="D" x="10.16" y="78.74" rot="R90"/>
+<instance part="DF_LA" gate="D" x="-5.08" y="81.28" rot="R90"/>
 <instance part="C3" gate="G$1" x="-58.42" y="68.58"/>
 <instance part="RPD_LB" gate="G$1" x="35.56" y="73.66" rot="R90"/>
 <instance part="RPD_LA" gate="G$1" x="-27.94" y="71.12" rot="R90"/>
@@ -13260,6 +13318,8 @@ Source: Comchip CGRM4001-G.pdf</description>
 <instance part="C9" gate="G$1" x="-43.18" y="68.58"/>
 <instance part="JP_V+1" gate="G$1" x="-68.58" y="134.62" rot="R180"/>
 <instance part="JP_GND1" gate="G$1" x="38.1" y="48.26"/>
+<instance part="U$1" gate="G$1" x="-30.48" y="-15.24"/>
+<instance part="JP_MA2" gate="G$1" x="-50.8" y="-30.48"/>
 </instances>
 <busses>
 </busses>
@@ -13312,9 +13372,9 @@ Source: Comchip CGRM4001-G.pdf</description>
 <wire x1="-127" y1="76.2" x2="-127" y2="81.28" width="0.1524" layer="91"/>
 <wire x1="-127" y1="81.28" x2="-116.84" y2="81.28" width="0.1524" layer="91"/>
 <junction x="-116.84" y="81.28"/>
-<pinref part="DF_LA" gate="1" pin="A"/>
+<pinref part="DF_LA" gate="D" pin="A"/>
 <wire x1="-5.08" y1="78.74" x2="-5.08" y2="73.66" width="0.1524" layer="91"/>
-<pinref part="DF_LB" gate="1" pin="A"/>
+<pinref part="DF_LB" gate="D" pin="A"/>
 <wire x1="10.16" y1="76.2" x2="10.16" y2="73.66" width="0.1524" layer="91"/>
 <junction x="10.16" y="73.66"/>
 <junction x="-5.08" y="73.66"/>
@@ -13349,6 +13409,8 @@ Source: Comchip CGRM4001-G.pdf</description>
 <wire x1="35.56" y1="48.26" x2="27.94" y2="48.26" width="0.1524" layer="91"/>
 <wire x1="27.94" y1="48.26" x2="27.94" y2="58.42" width="0.1524" layer="91"/>
 <junction x="27.94" y="58.42"/>
+<junction x="-58.42" y="58.42"/>
+<junction x="-93.98" y="38.1"/>
 </segment>
 </net>
 <net name="N$5" class="0">
@@ -13467,18 +13529,19 @@ Source: Comchip CGRM4001-G.pdf</description>
 <wire x1="-22.86" y1="101.6" x2="-22.86" y2="99.06" width="0.1524" layer="91"/>
 <wire x1="-22.86" y1="99.06" x2="-22.86" y2="93.98" width="0.1524" layer="91"/>
 <wire x1="-22.86" y1="93.98" x2="-22.86" y2="91.44" width="0.1524" layer="91"/>
-<wire x1="-7.62" y1="99.06" x2="-22.86" y2="99.06" width="0.1524" layer="91"/>
+<wire x1="-7.62" y1="99.06" x2="-15.24" y2="99.06" width="0.1524" layer="91"/>
 <junction x="-22.86" y="99.06"/>
+<wire x1="-15.24" y1="99.06" x2="-22.86" y2="99.06" width="0.1524" layer="91"/>
 <wire x1="-33.02" y1="104.14" x2="-22.86" y2="104.14" width="0.1524" layer="91"/>
 <junction x="-129.54" y="58.42"/>
 <junction x="-22.86" y="104.14"/>
-<pinref part="DF_HA" gate="1" pin="A"/>
+<pinref part="DF_HA" gate="D" pin="A"/>
 <wire x1="-2.54" y1="111.76" x2="-2.54" y2="106.68" width="0.1524" layer="91"/>
 <wire x1="-2.54" y1="106.68" x2="-20.32" y2="106.68" width="0.1524" layer="91"/>
 <wire x1="-20.32" y1="106.68" x2="-20.32" y2="101.6" width="0.1524" layer="91"/>
 <wire x1="-20.32" y1="101.6" x2="-22.86" y2="101.6" width="0.1524" layer="91"/>
 <junction x="-22.86" y="101.6"/>
-<pinref part="DF_LA" gate="1" pin="C"/>
+<pinref part="DF_LA" gate="D" pin="C"/>
 <wire x1="-5.08" y1="83.82" x2="-5.08" y2="93.98" width="0.1524" layer="91"/>
 <wire x1="-5.08" y1="93.98" x2="-22.86" y2="93.98" width="0.1524" layer="91"/>
 <junction x="-22.86" y="93.98"/>
@@ -13486,6 +13549,14 @@ Source: Comchip CGRM4001-G.pdf</description>
 <wire x1="-38.1" y1="96.52" x2="-38.1" y2="93.98" width="0.1524" layer="91"/>
 <wire x1="-38.1" y1="93.98" x2="-33.02" y2="93.98" width="0.1524" layer="91"/>
 <junction x="-33.02" y="93.98"/>
+<wire x1="-15.24" y1="99.06" x2="-15.24" y2="7.62" width="0.1524" layer="91"/>
+<wire x1="-15.24" y1="7.62" x2="-50.8" y2="7.62" width="0.1524" layer="91"/>
+<wire x1="-50.8" y1="7.62" x2="-50.8" y2="10.16" width="0.1524" layer="91"/>
+<wire x1="-50.8" y1="10.16" x2="-63.5" y2="10.16" width="0.1524" layer="91"/>
+<wire x1="-63.5" y1="10.16" x2="-63.5" y2="-10.16" width="0.1524" layer="91"/>
+<pinref part="U$1" gate="G$1" pin="IP+"/>
+<wire x1="-63.5" y1="-10.16" x2="-45.72" y2="-10.16" width="0.1524" layer="91"/>
+<junction x="-15.24" y="99.06"/>
 </segment>
 </net>
 <net name="N$20" class="0">
@@ -13521,13 +13592,13 @@ Source: Comchip CGRM4001-G.pdf</description>
 <wire x1="50.8" y1="93.98" x2="25.4" y2="93.98" width="0.1524" layer="91"/>
 <junction x="25.4" y="93.98"/>
 <junction x="127" y="58.42"/>
-<pinref part="DF_HB" gate="1" pin="A"/>
+<pinref part="DF_HB" gate="D" pin="A"/>
 <wire x1="7.62" y1="104.14" x2="7.62" y2="101.6" width="0.1524" layer="91"/>
 <wire x1="7.62" y1="101.6" x2="10.16" y2="101.6" width="0.1524" layer="91"/>
 <wire x1="10.16" y1="101.6" x2="10.16" y2="104.14" width="0.1524" layer="91"/>
 <wire x1="10.16" y1="104.14" x2="25.4" y2="104.14" width="0.1524" layer="91"/>
 <junction x="25.4" y="104.14"/>
-<pinref part="DF_LB" gate="1" pin="C"/>
+<pinref part="DF_LB" gate="D" pin="C"/>
 <wire x1="10.16" y1="81.28" x2="10.16" y2="91.44" width="0.1524" layer="91"/>
 <wire x1="10.16" y1="91.44" x2="22.86" y2="91.44" width="0.1524" layer="91"/>
 <wire x1="22.86" y1="91.44" x2="22.86" y2="93.98" width="0.1524" layer="91"/>
@@ -13582,9 +13653,9 @@ Source: Comchip CGRM4001-G.pdf</description>
 <wire x1="-142.24" y1="96.52" x2="-142.24" y2="86.36" width="0.1524" layer="91"/>
 <junction x="-129.54" y="96.52"/>
 <junction x="-22.86" y="121.92"/>
-<pinref part="DF_HA" gate="1" pin="C"/>
+<pinref part="DF_HA" gate="D" pin="C"/>
 <wire x1="-2.54" y1="116.84" x2="-2.54" y2="121.92" width="0.1524" layer="91"/>
-<pinref part="DF_HB" gate="1" pin="C"/>
+<pinref part="DF_HB" gate="D" pin="C"/>
 <wire x1="7.62" y1="109.22" x2="7.62" y2="121.92" width="0.1524" layer="91"/>
 <junction x="-2.54" y="121.92"/>
 <junction x="7.62" y="121.92"/>
@@ -13607,6 +13678,7 @@ Source: Comchip CGRM4001-G.pdf</description>
 <pinref part="JP_V+1" gate="G$1" pin="1"/>
 <wire x1="-66.04" y1="134.62" x2="-43.18" y2="134.62" width="0.1524" layer="91"/>
 <wire x1="-43.18" y1="134.62" x2="-43.18" y2="121.92" width="0.1524" layer="91"/>
+<junction x="-43.18" y="121.92"/>
 </segment>
 </net>
 <net name="N$18" class="0">
@@ -13698,6 +13770,15 @@ Source: Comchip CGRM4001-G.pdf</description>
 <pinref part="JP1" gate="A" pin="8"/>
 <pinref part="UB" gate="A" pin="LIN"/>
 <wire x1="114.3" y1="76.2" x2="172.72" y2="76.2" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$1" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="IP-"/>
+<wire x1="-45.72" y1="-20.32" x2="-66.04" y2="-20.32" width="0.1524" layer="91"/>
+<wire x1="-66.04" y1="-20.32" x2="-66.04" y2="-30.48" width="0.1524" layer="91"/>
+<pinref part="JP_MA2" gate="G$1" pin="1"/>
+<wire x1="-66.04" y1="-30.48" x2="-53.34" y2="-30.48" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>

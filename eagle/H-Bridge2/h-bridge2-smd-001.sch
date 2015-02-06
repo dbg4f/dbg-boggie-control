@@ -12819,6 +12819,68 @@ general purpose rectifier, 1 A</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="acs711">
+<packages>
+<package name="SOIC8">
+<wire x1="-2.45" y1="-1.6" x2="2.45" y2="-1.6" width="0.05" layer="21"/>
+<wire x1="2.45" y1="1.95" x2="2.45" y2="-1.6" width="0.127" layer="21"/>
+<wire x1="2.45" y1="-1.6" x2="2.45" y2="-1.95" width="0.127" layer="21"/>
+<wire x1="-2.45" y1="1.95" x2="-2.45" y2="-1.6" width="0.127" layer="21"/>
+<circle x="-1.75" y="-1" radius="0.381" width="0.127" layer="21"/>
+<smd name="1" x="-1.905" y="-2.8" dx="0.65" dy="1.75" layer="1"/>
+<text x="4" y="-3" size="1.27" layer="27" ratio="10" rot="R90">&gt;VALUE</text>
+<text x="-2.8" y="-3" size="1.27" layer="25" ratio="10" rot="R90">&gt;NAME</text>
+<wire x1="-2.45" y1="-1.6" x2="-2.45" y2="-1.95" width="0.127" layer="21"/>
+<wire x1="-2.45" y1="1.95" x2="2.45" y2="1.95" width="0.127" layer="21"/>
+<wire x1="-2.45" y1="-1.95" x2="2.45" y2="-1.95" width="0.127" layer="21"/>
+<smd name="2" x="-0.635" y="-2.8" dx="0.65" dy="1.75" layer="1"/>
+<smd name="3" x="0.635" y="-2.8" dx="0.65" dy="1.75" layer="1"/>
+<smd name="4" x="1.905" y="-2.8" dx="0.65" dy="1.75" layer="1"/>
+<smd name="5" x="1.905" y="2.8" dx="0.65" dy="1.75" layer="1"/>
+<smd name="6" x="0.635" y="2.8" dx="0.65" dy="1.75" layer="1"/>
+<smd name="7" x="-0.635" y="2.8" dx="0.65" dy="1.75" layer="1"/>
+<smd name="8" x="-1.905" y="2.8" dx="0.65" dy="1.75" layer="1"/>
+</package>
+</packages>
+<symbols>
+<symbol name="ASC711">
+<pin name="IP+" x="-15.24" y="5.08" length="middle"/>
+<pin name="IP-" x="-15.24" y="-5.08" length="middle"/>
+<pin name="GND" x="15.24" y="-7.62" length="middle" rot="R180"/>
+<pin name="NFAULT" x="15.24" y="-2.54" length="middle" rot="R180"/>
+<pin name="VIOUT" x="15.24" y="2.54" length="middle" rot="R180"/>
+<pin name="VCC" x="15.24" y="7.62" length="middle" rot="R180"/>
+<wire x1="-10.16" y1="10.16" x2="-10.16" y2="-10.16" width="0.254" layer="94"/>
+<wire x1="-10.16" y1="-10.16" x2="10.16" y2="-10.16" width="0.254" layer="94"/>
+<wire x1="10.16" y1="-10.16" x2="10.16" y2="10.16" width="0.254" layer="94"/>
+<wire x1="10.16" y1="10.16" x2="-10.16" y2="10.16" width="0.254" layer="94"/>
+<text x="-10.16" y="13.97" size="1.27" layer="95">&gt;NAME</text>
+<text x="-10.16" y="11.43" size="1.27" layer="96">&gt;VALUE</text>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="ACS711">
+<gates>
+<gate name="G$1" symbol="ASC711" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="SOIC8">
+<connects>
+<connect gate="G$1" pin="GND" pad="5"/>
+<connect gate="G$1" pin="IP+" pad="1 2"/>
+<connect gate="G$1" pin="IP-" pad="3 4"/>
+<connect gate="G$1" pin="NFAULT" pad="6"/>
+<connect gate="G$1" pin="VCC" pad="8"/>
+<connect gate="G$1" pin="VIOUT" pad="7"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -12857,6 +12919,8 @@ general purpose rectifier, 1 A</description>
 <part name="C2" library="rcl" deviceset="CPOL-EU" device="E5-13"/>
 <part name="C3" library="rcl" deviceset="CPOL-EU" device="E5-13"/>
 <part name="C7" library="rcl" deviceset="CPOL-EU" device="E5-13"/>
+<part name="U$1" library="acs711" deviceset="ACS711" device=""/>
+<part name="JP_MA1" library="dbg-misc" deviceset="PINHD-1X1" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -12891,6 +12955,8 @@ general purpose rectifier, 1 A</description>
 <instance part="C2" gate="G$1" x="-2.54" y="25.4"/>
 <instance part="C3" gate="G$1" x="5.08" y="25.4"/>
 <instance part="C7" gate="G$1" x="12.7" y="25.4"/>
+<instance part="U$1" gate="G$1" x="81.28" y="-48.26"/>
+<instance part="JP_MA1" gate="G$1" x="81.28" y="-71.12"/>
 </instances>
 <busses>
 </busses>
@@ -13075,6 +13141,13 @@ general purpose rectifier, 1 A</description>
 <wire x1="58.42" y1="40.64" x2="58.42" y2="50.8" width="0.1524" layer="91"/>
 <wire x1="58.42" y1="50.8" x2="40.64" y2="50.8" width="0.1524" layer="91"/>
 <junction x="40.64" y="50.8"/>
+<pinref part="U$1" gate="G$1" pin="IP+"/>
+<wire x1="66.04" y1="-43.18" x2="53.34" y2="-43.18" width="0.1524" layer="91"/>
+<wire x1="53.34" y1="-43.18" x2="53.34" y2="-35.56" width="0.1524" layer="91"/>
+<wire x1="53.34" y1="-35.56" x2="63.5" y2="-35.56" width="0.1524" layer="91"/>
+<wire x1="63.5" y1="-35.56" x2="63.5" y2="50.8" width="0.1524" layer="91"/>
+<wire x1="63.5" y1="50.8" x2="58.42" y2="50.8" width="0.1524" layer="91"/>
+<junction x="58.42" y="50.8"/>
 </segment>
 </net>
 <net name="N$20" class="0">
@@ -13273,6 +13346,14 @@ general purpose rectifier, 1 A</description>
 <pinref part="JP1" gate="A" pin="8"/>
 <pinref part="UB" gate="A" pin="LIN"/>
 <wire x1="177.8" y1="33.02" x2="236.22" y2="33.02" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$1" class="0">
+<segment>
+<wire x1="68.58" y1="-53.34" x2="60.96" y2="-53.34" width="0.1524" layer="91"/>
+<wire x1="60.96" y1="-53.34" x2="60.96" y2="-71.12" width="0.1524" layer="91"/>
+<pinref part="JP_MA1" gate="G$1" pin="1"/>
+<wire x1="60.96" y1="-71.12" x2="78.74" y2="-71.12" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
