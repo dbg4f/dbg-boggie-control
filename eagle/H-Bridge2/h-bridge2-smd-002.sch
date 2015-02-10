@@ -705,19 +705,19 @@ Source: http://www.irf.com/product-info/datasheets/data/irlz44zpbf.pdf</descript
 <packages>
 <package name="DIP254P762X533-14">
 <pad name="1" x="-7.62" y="15.24" drill="1.1176" shape="square"/>
-<pad name="2" x="-7.62" y="12.7" drill="1.1176"/>
-<pad name="3" x="-7.62" y="10.16" drill="1.1176"/>
-<pad name="4" x="-7.62" y="7.62" drill="1.1176"/>
-<pad name="5" x="-7.62" y="5.08" drill="1.1176"/>
-<pad name="6" x="-7.62" y="2.54" drill="1.1176"/>
-<pad name="7" x="-7.62" y="0" drill="1.1176"/>
-<pad name="8" x="0" y="0" drill="1.1176"/>
-<pad name="9" x="0" y="2.54" drill="1.1176"/>
-<pad name="10" x="0" y="5.08" drill="1.1176"/>
-<pad name="11" x="0" y="7.62" drill="1.1176"/>
-<pad name="12" x="0" y="10.16" drill="1.1176"/>
-<pad name="13" x="0" y="12.7" drill="1.1176"/>
-<pad name="14" x="0" y="15.24" drill="1.1176"/>
+<pad name="2" x="-7.62" y="12.7" drill="1.1176" shape="long"/>
+<pad name="3" x="-7.62" y="10.16" drill="1.1176" shape="long"/>
+<pad name="4" x="-7.62" y="7.62" drill="1.1176" shape="long"/>
+<pad name="5" x="-7.62" y="5.08" drill="1.1176" shape="long"/>
+<pad name="6" x="-7.62" y="2.54" drill="1.1176" shape="long"/>
+<pad name="7" x="-7.62" y="0" drill="1.1176" shape="long"/>
+<pad name="8" x="0" y="0" drill="1.1176" shape="long"/>
+<pad name="9" x="0" y="2.54" drill="1.1176" shape="long"/>
+<pad name="10" x="0" y="5.08" drill="1.1176" shape="long"/>
+<pad name="11" x="0" y="7.62" drill="1.1176" shape="long"/>
+<pad name="12" x="0" y="10.16" drill="1.1176" shape="long"/>
+<pad name="13" x="0" y="12.7" drill="1.1176" shape="long"/>
+<pad name="14" x="0" y="15.24" drill="1.1176" shape="long"/>
 <wire x1="-0.254" y1="16.5354" x2="-0.254" y2="17.7038" width="0.1524" layer="21"/>
 <wire x1="-7.366" y1="-1.2954" x2="-7.366" y2="-2.4638" width="0.1524" layer="21"/>
 <wire x1="-7.366" y1="-2.4638" x2="-0.254" y2="-2.4638" width="0.1524" layer="21"/>
@@ -852,6 +852,27 @@ Source: http://www.irf.com/product-info/datasheets/data/irlz44zpbf.pdf</descript
 <attribute name="PACKAGE" value="PDIP-14" constant="no"/>
 <attribute name="SUPPLIER" value="INTERNATIONAL RECTIFIER" constant="no"/>
 </technology>
+</technologies>
+</device>
+<device name="DIP25-WITH-LONG-PADS" package="DIP254P762X533-14">
+<connects>
+<connect gate="A" pin="COM" pad="2"/>
+<connect gate="A" pin="HIN" pad="10"/>
+<connect gate="A" pin="HO" pad="7"/>
+<connect gate="A" pin="LIN" pad="12"/>
+<connect gate="A" pin="LO" pad="1"/>
+<connect gate="A" pin="NC" pad="4"/>
+<connect gate="A" pin="NC_2" pad="8"/>
+<connect gate="A" pin="NC_3" pad="14"/>
+<connect gate="A" pin="SD" pad="11"/>
+<connect gate="A" pin="VB" pad="6"/>
+<connect gate="A" pin="VCC" pad="3"/>
+<connect gate="A" pin="VDD" pad="9"/>
+<connect gate="A" pin="VS" pad="5"/>
+<connect gate="A" pin="VSS" pad="13"/>
+</connects>
+<technologies>
+<technology name=""/>
 </technologies>
 </device>
 </devices>
