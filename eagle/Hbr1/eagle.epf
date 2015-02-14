@@ -687,7 +687,7 @@ UsedLibrary="/home/dmitri/eagle/ir2110.lbr"
 
 [Win_1]
 Type="Library Editor"
-Loc="0 0 599 399"
+Loc="0 24 599 423"
 State=1
 Number=1
 File="/home/dmitri/eagle/ir2110.lbr"

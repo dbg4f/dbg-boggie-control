@@ -13297,6 +13297,9 @@ Source: Comchip CGRM4001-G.pdf</description>
 <part name="JP_GND1" library="dbg-misc" deviceset="PINHD-1X1" device=""/>
 <part name="U$1" library="acs711" deviceset="ACS711" device=""/>
 <part name="JP_MA2" library="dbg-misc" deviceset="PINHD-1X1" device=""/>
+<part name="RC_LP" library="rcl" deviceset="R-EU_" device="R1206"/>
+<part name="RC_FLT" library="rcl" deviceset="R-EU_" device="R1206"/>
+<part name="CC_LP" library="rcl" deviceset="C-EU" device="C4532"/>
 </parts>
 <sheets>
 <sheet>
@@ -13341,6 +13344,9 @@ Source: Comchip CGRM4001-G.pdf</description>
 <instance part="JP_GND1" gate="G$1" x="38.1" y="48.26"/>
 <instance part="U$1" gate="G$1" x="-30.48" y="-15.24"/>
 <instance part="JP_MA2" gate="G$1" x="-50.8" y="-30.48"/>
+<instance part="RC_LP" gate="G$1" x="15.24" y="-10.16" rot="R180"/>
+<instance part="RC_FLT" gate="G$1" x="0" y="-12.7" rot="R90"/>
+<instance part="CC_LP" gate="G$1" x="5.08" y="-12.7"/>
 </instances>
 <busses>
 </busses>
@@ -13804,6 +13810,72 @@ Source: Comchip CGRM4001-G.pdf</description>
 <wire x1="-55.88" y1="-20.32" x2="-55.88" y2="-10.16" width="0.1524" layer="91"/>
 <pinref part="U$1" gate="G$1" pin="IP+"/>
 <wire x1="-55.88" y1="-10.16" x2="-45.72" y2="-10.16" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$2" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="VCC"/>
+<wire x1="-15.24" y1="-7.62" x2="-5.08" y2="-7.62" width="0.1524" layer="91"/>
+<wire x1="-5.08" y1="-7.62" x2="-5.08" y2="-5.08" width="0.1524" layer="91"/>
+<wire x1="-5.08" y1="-5.08" x2="0" y2="-5.08" width="0.1524" layer="91"/>
+<junction x="0" y="-5.08"/>
+<pinref part="RC_FLT" gate="G$1" pin="2"/>
+<wire x1="0" y1="-5.08" x2="0" y2="-7.62" width="0.1524" layer="91"/>
+<wire x1="0" y1="-5.08" x2="20.32" y2="-5.08" width="0.1524" layer="91"/>
+<wire x1="20.32" y1="-5.08" x2="20.32" y2="7.62" width="0.1524" layer="91"/>
+<pinref part="JP_MAIN" gate="A" pin="1"/>
+<wire x1="20.32" y1="7.62" x2="35.56" y2="7.62" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$3" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="NFAULT"/>
+<wire x1="-15.24" y1="-17.78" x2="-5.08" y2="-17.78" width="0.1524" layer="91"/>
+<wire x1="-5.08" y1="-17.78" x2="-5.08" y2="-20.32" width="0.1524" layer="91"/>
+<wire x1="-5.08" y1="-20.32" x2="0" y2="-20.32" width="0.1524" layer="91"/>
+<pinref part="RC_FLT" gate="G$1" pin="1"/>
+<wire x1="0" y1="-17.78" x2="0" y2="-20.32" width="0.1524" layer="91"/>
+<junction x="0" y="-20.32"/>
+<wire x1="0" y1="-20.32" x2="10.16" y2="-20.32" width="0.1524" layer="91"/>
+<wire x1="10.16" y1="-20.32" x2="10.16" y2="-17.78" width="0.1524" layer="91"/>
+<wire x1="10.16" y1="-17.78" x2="27.94" y2="-17.78" width="0.1524" layer="91"/>
+<wire x1="27.94" y1="-17.78" x2="27.94" y2="2.54" width="0.1524" layer="91"/>
+<pinref part="JP_MAIN" gate="A" pin="3"/>
+<wire x1="27.94" y1="2.54" x2="35.56" y2="2.54" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$15" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="VIOUT"/>
+<wire x1="-15.24" y1="-12.7" x2="-10.16" y2="-12.7" width="0.1524" layer="91"/>
+<wire x1="-10.16" y1="-12.7" x2="-10.16" y2="2.54" width="0.1524" layer="91"/>
+<wire x1="-10.16" y1="2.54" x2="5.08" y2="2.54" width="0.1524" layer="91"/>
+<wire x1="5.08" y1="2.54" x2="7.62" y2="2.54" width="0.1524" layer="91"/>
+<wire x1="7.62" y1="2.54" x2="7.62" y2="-10.16" width="0.1524" layer="91"/>
+<pinref part="RC_LP" gate="G$1" pin="2"/>
+<wire x1="7.62" y1="-10.16" x2="10.16" y2="-10.16" width="0.1524" layer="91"/>
+<pinref part="CC_LP" gate="G$1" pin="1"/>
+<wire x1="5.08" y1="-10.16" x2="5.08" y2="2.54" width="0.1524" layer="91"/>
+<junction x="5.08" y="2.54"/>
+</segment>
+</net>
+<net name="N$19" class="0">
+<segment>
+<pinref part="RC_LP" gate="G$1" pin="1"/>
+<wire x1="20.32" y1="-10.16" x2="25.4" y2="-10.16" width="0.1524" layer="91"/>
+<wire x1="25.4" y1="-10.16" x2="25.4" y2="5.08" width="0.1524" layer="91"/>
+<pinref part="JP_MAIN" gate="A" pin="2"/>
+<wire x1="25.4" y1="5.08" x2="35.56" y2="5.08" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$21" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="GND"/>
+<wire x1="-15.24" y1="-22.86" x2="5.08" y2="-22.86" width="0.1524" layer="91"/>
+<pinref part="CC_LP" gate="G$1" pin="2"/>
+<wire x1="5.08" y1="-22.86" x2="20.32" y2="-22.86" width="0.1524" layer="91"/>
+<wire x1="5.08" y1="-17.78" x2="5.08" y2="-22.86" width="0.1524" layer="91"/>
+<junction x="5.08" y="-22.86"/>
 </segment>
 </net>
 </nets>
