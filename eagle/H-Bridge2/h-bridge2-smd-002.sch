@@ -13574,10 +13574,12 @@ Source: Comchip CGRM4001-G.pdf</description>
 <wire x1="-15.24" y1="7.62" x2="-50.8" y2="7.62" width="0.1524" layer="91"/>
 <wire x1="-50.8" y1="7.62" x2="-50.8" y2="10.16" width="0.1524" layer="91"/>
 <wire x1="-50.8" y1="10.16" x2="-63.5" y2="10.16" width="0.1524" layer="91"/>
-<wire x1="-63.5" y1="10.16" x2="-63.5" y2="-10.16" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="IP+"/>
-<wire x1="-63.5" y1="-10.16" x2="-45.72" y2="-10.16" width="0.1524" layer="91"/>
+<wire x1="-63.5" y1="10.16" x2="-63.5" y2="-12.7" width="0.1524" layer="91"/>
 <junction x="-15.24" y="99.06"/>
+<wire x1="-63.5" y1="-12.7" x2="-50.8" y2="-12.7" width="0.1524" layer="91"/>
+<wire x1="-50.8" y1="-12.7" x2="-50.8" y2="-20.32" width="0.1524" layer="91"/>
+<pinref part="U$1" gate="G$1" pin="IP-"/>
+<wire x1="-50.8" y1="-20.32" x2="-45.72" y2="-20.32" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$20" class="0">
@@ -13795,11 +13797,13 @@ Source: Comchip CGRM4001-G.pdf</description>
 </net>
 <net name="N$1" class="0">
 <segment>
-<pinref part="U$1" gate="G$1" pin="IP-"/>
-<wire x1="-45.72" y1="-20.32" x2="-66.04" y2="-20.32" width="0.1524" layer="91"/>
 <wire x1="-66.04" y1="-20.32" x2="-66.04" y2="-30.48" width="0.1524" layer="91"/>
 <pinref part="JP_MA2" gate="G$1" pin="1"/>
 <wire x1="-66.04" y1="-30.48" x2="-53.34" y2="-30.48" width="0.1524" layer="91"/>
+<wire x1="-66.04" y1="-20.32" x2="-55.88" y2="-20.32" width="0.1524" layer="91"/>
+<wire x1="-55.88" y1="-20.32" x2="-55.88" y2="-10.16" width="0.1524" layer="91"/>
+<pinref part="U$1" gate="G$1" pin="IP+"/>
+<wire x1="-55.88" y1="-10.16" x2="-45.72" y2="-10.16" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
