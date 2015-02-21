@@ -13592,11 +13592,21 @@ Source: Comchip CGRM4001-G.pdf</description>
 <segment>
 <pinref part="UA" gate="A" pin="SD"/>
 <wire x1="-106.68" y1="83.82" x2="-137.16" y2="83.82" width="0.1524" layer="91"/>
-<wire x1="-137.16" y1="83.82" x2="-137.16" y2="22.86" width="0.1524" layer="91"/>
+<wire x1="-137.16" y1="83.82" x2="-137.16" y2="35.56" width="0.1524" layer="91"/>
+<wire x1="-137.16" y1="35.56" x2="-137.16" y2="22.86" width="0.1524" layer="91"/>
 <wire x1="-137.16" y1="22.86" x2="-91.44" y2="22.86" width="0.1524" layer="91"/>
 <wire x1="-91.44" y1="22.86" x2="-91.44" y2="25.4" width="0.1524" layer="91"/>
 <pinref part="JP1" gate="A" pin="3"/>
 <wire x1="-91.44" y1="25.4" x2="-83.82" y2="25.4" width="0.1524" layer="91"/>
+<pinref part="UB" gate="A" pin="SD"/>
+<wire x1="114.3" y1="83.82" x2="119.38" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="119.38" y1="83.82" x2="119.38" y2="101.6" width="0.1524" layer="91"/>
+<wire x1="119.38" y1="101.6" x2="175.26" y2="101.6" width="0.1524" layer="91"/>
+<wire x1="175.26" y1="101.6" x2="175.26" y2="22.86" width="0.1524" layer="91"/>
+<wire x1="175.26" y1="22.86" x2="-60.96" y2="22.86" width="0.1524" layer="91"/>
+<wire x1="-137.16" y1="35.56" x2="-60.96" y2="35.56" width="0.1524" layer="91"/>
+<wire x1="-60.96" y1="35.56" x2="-60.96" y2="22.86" width="0.1524" layer="91"/>
+<junction x="-137.16" y="35.56"/>
 </segment>
 </net>
 <net name="N$16" class="0">
@@ -13781,17 +13791,6 @@ Source: Comchip CGRM4001-G.pdf</description>
 <pinref part="JP1" gate="A" pin="4"/>
 </segment>
 </net>
-<net name="N$27" class="0">
-<segment>
-<pinref part="UB" gate="A" pin="SD"/>
-<wire x1="114.3" y1="83.82" x2="119.38" y2="83.82" width="0.1524" layer="91"/>
-<wire x1="119.38" y1="83.82" x2="119.38" y2="101.6" width="0.1524" layer="91"/>
-<wire x1="119.38" y1="101.6" x2="175.26" y2="101.6" width="0.1524" layer="91"/>
-<wire x1="175.26" y1="101.6" x2="175.26" y2="22.86" width="0.1524" layer="91"/>
-<wire x1="175.26" y1="22.86" x2="-76.2" y2="22.86" width="0.1524" layer="91"/>
-<pinref part="JP1" gate="A" pin="6"/>
-</segment>
-</net>
 <net name="N$28" class="0">
 <segment>
 <wire x1="172.72" y1="76.2" x2="172.72" y2="20.32" width="0.1524" layer="91"/>
@@ -13873,9 +13872,12 @@ Source: Comchip CGRM4001-G.pdf</description>
 <pinref part="U$1" gate="G$1" pin="GND"/>
 <wire x1="-15.24" y1="-22.86" x2="5.08" y2="-22.86" width="0.1524" layer="91"/>
 <pinref part="CC_LP" gate="G$1" pin="2"/>
-<wire x1="5.08" y1="-22.86" x2="20.32" y2="-22.86" width="0.1524" layer="91"/>
+<wire x1="5.08" y1="-22.86" x2="22.86" y2="-22.86" width="0.1524" layer="91"/>
 <wire x1="5.08" y1="-17.78" x2="5.08" y2="-22.86" width="0.1524" layer="91"/>
 <junction x="5.08" y="-22.86"/>
+<wire x1="22.86" y1="-22.86" x2="22.86" y2="0" width="0.1524" layer="91"/>
+<pinref part="JP_MAIN" gate="A" pin="4"/>
+<wire x1="22.86" y1="0" x2="35.56" y2="0" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
