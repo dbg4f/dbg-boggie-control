@@ -1,0 +1,3 @@
+- Communication with boggie driver (MC)
+- Dashboard UI (web or native)
+- Logging and analysis
