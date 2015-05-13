@@ -41,12 +41,39 @@ public class CircleIntersection {
 
     }
 
+    public CartesianPoint getLeft() {
+        if (intersectionPoints.size() !=2) {
+            throw  new IllegalStateException("No points of circle intersection");
+        }
 
+        CartesianPoint point1 = intersectionPoints.get(0);
+        CartesianPoint point2 = intersectionPoints.get(1);
+        return point1.x < point2.x ? point1 : point2;
+
+    }
+
+
+    public CartesianPoint getRight() {
+        if (intersectionPoints.size() !=2) {
+            throw  new IllegalStateException("No points of circle intersection");
+        }
+
+        CartesianPoint point1 = intersectionPoints.get(0);
+        CartesianPoint point2 = intersectionPoints.get(1);
+        return point1.x > point2.x ? point1 : point2;
+
+
+    }
+
+
+
+    /*
     public static void main(String[] args) {
         CircleIntersection intersection = new CircleIntersection(new Circle(3, new CartesianPoint(1, 2)), new Circle(4, new CartesianPoint(3,-1)));
 
         System.out.println(intersection.intersectionPoints);
     }
+    */
 
 
 }
