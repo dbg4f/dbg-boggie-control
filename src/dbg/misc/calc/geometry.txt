@@ -1,0 +1,7 @@
+width        100
+between axes 24
+all levers   50
+pen-top      33
+pen-bottom   74
+hmin         75
+hmax         125

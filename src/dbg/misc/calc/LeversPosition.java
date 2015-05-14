@@ -2,9 +2,11 @@ package dbg.misc.calc;
 
 public class LeversPosition {
 
+
+
     private final CoupledTwainLeverPair pair;
 
-    CartesianPoint rightLowerEnd;
+    CartesianPoint rightLowerTop;
 
     public LeversPosition(CoupledTwainLeverPair pair) {
         this.pair = pair;
@@ -12,12 +14,14 @@ public class LeversPosition {
 
     public LeverAngles calcAngles(CartesianPoint pen) {
 
-        rightLowerEnd = new CircleIntersection(
-                new Circle(pair.penToRightLowerEndDistance, pen),
+        rightLowerTop = new CircleIntersection(
+                new Circle(pair.penToRightUpperTopDistance, pen),
                 new Circle(pair.leverRightLowerLength, pair.leverRightStart)).getRight();
 
 
 
+
+        return new LeverAngles(0, 0);
     }
 
 
