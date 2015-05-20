@@ -44,6 +44,22 @@
                  <a href="savePid" class="btn btn-info btn-lg">Save PID</a>
              </p>
 
+             <ul>
+              <li>
+                <a href="stepLeftLeft" class="btn btn-info btn-lg">Left <<<-</a>
+                <a href="stepLeftRight" class="btn btn-info btn-lg">Left ->>></a>
+              </li>
+              <li>
+                <a href="stepRightLeft" class="btn btn-info btn-lg">Right <<<-</a>
+                <a href="stepRightRight" class="btn btn-info btn-lg">Right ->>></a>
+              </li>
+              <li>
+                <a href="stepLiftUp" class="btn btn-info btn-lg">Lift Up</a>
+                <a href="stepLiftDown" class="btn btn-info btn-lg">Lift Down</a>
+              </li>
+             </ul>
+
+
 
      </div>
 
