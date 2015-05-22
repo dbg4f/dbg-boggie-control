@@ -16,6 +16,7 @@ public class CncController implements MessageConsumer {
     private CncSensors targetSensors = new CncSensors();
     private CncSensors currentSensors = new CncSensors();
     private CncSensors perviousSensors = new CncSensors();
+    private CncSensorsMask sensorsMask = new CncSensorsMask();
     private Type rowType = new TypeToken<CncSensors>(){}.getType();;
     private Gson gson = new Gson();
 

@@ -5,16 +5,24 @@ public class CncSensors {
     public double left;
     public double right;
     public double lift;
-    public double t;
+    public int t;
 
     public CncSensors() {
     }
 
-    public CncSensors(double left, double right, double lift, double t) {
+    public CncSensors(double left, double right, double lift, int t) {
         this.left = left;
         this.right = right;
         this.lift = lift;
         this.t = t;
+    }
+
+    public CncSensors distanceTo(CncSensors sensors) {
+        return new CncSensors(
+                    sensors.left - left,
+                    sensors.right - right,
+                    sensors.lift - lift,
+                    t);
     }
 
     public double getLeft() {
@@ -41,8 +49,12 @@ public class CncSensors {
         this.lift = lift;
     }
 
-    public double getT() {
+    public int getT() {
         return t;
+    }
+
+    public void setT(int t) {
+        this.t = t;
     }
 
     @Override
@@ -55,7 +67,4 @@ public class CncSensors {
                 '}';
     }
 
-    public void setT(double t) {
-        this.t = t;
-    }
 }
