@@ -9,4 +9,7 @@ public class Util {
     }
 
 
+    public static long now() {
+        return System.currentTimeMillis();
+    }
 }

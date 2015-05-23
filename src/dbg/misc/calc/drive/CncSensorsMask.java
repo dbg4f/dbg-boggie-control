@@ -7,6 +7,15 @@ public class CncSensorsMask {
     private int lift = 1;
 
 
+    public static CncSensorsMask LIFT_ONLY = new CncSensorsMask(0, 0, 1);
+    public static CncSensorsMask LEVERS_ONLY = new CncSensorsMask(1, 1, 0);
+
+    public CncSensorsMask(int left, int right, int lift) {
+        this.left = left;
+        this.right = right;
+        this.lift = lift;
+    }
+
     public int getLeft() {
         return left;
     }
