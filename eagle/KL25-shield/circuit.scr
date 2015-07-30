@@ -1,0 +1,26 @@
+# draw KL25 shield
+
+# ANALOG (18288000 812800) 	1X06 pinhead 
+# J6     (18288000 1625600) 1X06 pinhead 
+#
+# J1    (17475200 16256000) 1X08-TH SmartPrj 1.954, 2.12584252
+# J5    (17475200 15443200) 1X08-TH SmartPrj 2.1    2.125
+#
+# J2    (11785600 812800) 	1X08-TH SmartPrj 1.4, -0.075
+# POWER (11785600 1625600) 	1X08-TH SmartPrj 1.028, 0.047
+#
+#
+# J3    (9672320 16256000) 	1X10-TH SmartPrj 1.35, 2.125
+# J4    (9672320 15443200) 	1X10-TH SmartPrj 1.5 , 2.125
+#
+#
+# 10x2 (J3,J4) -- narrow -- 08x2 (J1,J5)
+#
+# 08x2 (J2, POWER) -- wide -- 06x2 (ANALOG, J6)
+
+
+
+add PINHD-2X10@pinhead J1 (1 0)
+add PINHD-2X8@pinhead J2 (1 2)
+add PINHD-2X6@pinhead J3 (1 3)
+add PINHD-2X8@pinhead J4 (1 4)

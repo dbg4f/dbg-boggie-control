@@ -1,0 +1,5 @@
+grid on;
+move J1 (1   1.05);
+move J2 (1.1 1.45);
+move J3 (1.2 1.55);
+move J4 (1   2);
