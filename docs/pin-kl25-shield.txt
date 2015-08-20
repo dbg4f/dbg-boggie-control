@@ -1,0 +1,52 @@
+
+ACS
+
+VCC - red
+OUT - green - A1 - PTB1
+GND - blue
+
+
+HC-05
+
+EN - white - PTE30 (AnOUT)
+VCC5V
+GND
+TX - yellow - UART0-RX-PTA1
+RX - green -UART0-TX-PTA2
+
+
+POWER
+
+Vin - white - A0-PTB0
+
+
+TFT/SD
+
+
+GND
+VCC
+NC
+NC
+NC
+RESET 	- blue 	- PTE4
+AO 	- green - PTE5
+SDA 	- brown - PTE3
+SCK 	- yellow- PTE21
+CS 	- white - PTE20
+SD-SCK 	- red 	- PTE29
+SD-MISO - orange- PTE22
+SD-MOSI - brown - PTE23
+CS 	- white - PTE2
+LED+
+LED-
+
+
+
+
+RJ1
+
+
+
+RJ2
+
+
