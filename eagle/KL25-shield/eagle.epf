@@ -1,0 +1,20 @@
+[Eagle]
+Version="07 03 00"
+Platform="Linux"
+Serial="62191E841E-LSR-WLM-1EL"
+Globals="Globals"
+Desktop="Desktop"
+
+[Globals]
+AutoSaveProject=1
+UsedLibrary="/home/bogdel/eagle-7.3.0/lbr/41xx.lbr"
+
+[Win_1]
+Type="Control Panel"
+Loc="0 0 1200 808"
+State=1
+Number=0
+
+[Desktop]
+Screen="1920 1200"
+Window="Win_1"

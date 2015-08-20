@@ -1,0 +1,14 @@
+width        100
+between axes 24
+all levers   50
+pen-top      33
+pen-bottom   74
+hmin         75
+hmax         125
+
+
+left  90deg = 0.5316
+right 90deg = 0.3527
+
+lift touch = 0.3612
+     ~5mm  = 0.3568
