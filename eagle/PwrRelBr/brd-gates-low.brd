@@ -15,7 +15,7 @@
 <layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="yes"/>
 <layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="22" name="bPlace" color="7" fill="1" visible="no" active="yes"/>
 <layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="25" name="tNames" color="7" fill="1" visible="yes" active="yes"/>
@@ -1250,26 +1250,16 @@ www.irf.com</description>
 <description>&lt;b&gt;Pin Header Connectors&lt;/b&gt;&lt;p&gt;
 &lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
 <packages>
-<package name="1X08">
+<package name="1X02">
 <description>&lt;b&gt;PIN HEADER&lt;/b&gt;</description>
-<wire x1="5.715" y1="1.27" x2="6.985" y2="1.27" width="0.1524" layer="21"/>
-<wire x1="6.985" y1="1.27" x2="7.62" y2="0.635" width="0.1524" layer="21"/>
-<wire x1="7.62" y1="0.635" x2="7.62" y2="-0.635" width="0.1524" layer="21"/>
-<wire x1="7.62" y1="-0.635" x2="6.985" y2="-1.27" width="0.1524" layer="21"/>
-<wire x1="2.54" y1="0.635" x2="3.175" y2="1.27" width="0.1524" layer="21"/>
-<wire x1="3.175" y1="1.27" x2="4.445" y2="1.27" width="0.1524" layer="21"/>
-<wire x1="4.445" y1="1.27" x2="5.08" y2="0.635" width="0.1524" layer="21"/>
-<wire x1="5.08" y1="0.635" x2="5.08" y2="-0.635" width="0.1524" layer="21"/>
-<wire x1="5.08" y1="-0.635" x2="4.445" y2="-1.27" width="0.1524" layer="21"/>
-<wire x1="4.445" y1="-1.27" x2="3.175" y2="-1.27" width="0.1524" layer="21"/>
-<wire x1="3.175" y1="-1.27" x2="2.54" y2="-0.635" width="0.1524" layer="21"/>
-<wire x1="5.715" y1="1.27" x2="5.08" y2="0.635" width="0.1524" layer="21"/>
-<wire x1="5.08" y1="-0.635" x2="5.715" y2="-1.27" width="0.1524" layer="21"/>
-<wire x1="6.985" y1="-1.27" x2="5.715" y2="-1.27" width="0.1524" layer="21"/>
 <wire x1="-1.905" y1="1.27" x2="-0.635" y2="1.27" width="0.1524" layer="21"/>
 <wire x1="-0.635" y1="1.27" x2="0" y2="0.635" width="0.1524" layer="21"/>
 <wire x1="0" y1="0.635" x2="0" y2="-0.635" width="0.1524" layer="21"/>
 <wire x1="0" y1="-0.635" x2="-0.635" y2="-1.27" width="0.1524" layer="21"/>
+<wire x1="-2.54" y1="0.635" x2="-2.54" y2="-0.635" width="0.1524" layer="21"/>
+<wire x1="-1.905" y1="1.27" x2="-2.54" y2="0.635" width="0.1524" layer="21"/>
+<wire x1="-2.54" y1="-0.635" x2="-1.905" y2="-1.27" width="0.1524" layer="21"/>
+<wire x1="-0.635" y1="-1.27" x2="-1.905" y2="-1.27" width="0.1524" layer="21"/>
 <wire x1="0" y1="0.635" x2="0.635" y2="1.27" width="0.1524" layer="21"/>
 <wire x1="0.635" y1="1.27" x2="1.905" y2="1.27" width="0.1524" layer="21"/>
 <wire x1="1.905" y1="1.27" x2="2.54" y2="0.635" width="0.1524" layer="21"/>
@@ -1277,56 +1267,12 @@ www.irf.com</description>
 <wire x1="2.54" y1="-0.635" x2="1.905" y2="-1.27" width="0.1524" layer="21"/>
 <wire x1="1.905" y1="-1.27" x2="0.635" y2="-1.27" width="0.1524" layer="21"/>
 <wire x1="0.635" y1="-1.27" x2="0" y2="-0.635" width="0.1524" layer="21"/>
-<wire x1="-5.08" y1="0.635" x2="-4.445" y2="1.27" width="0.1524" layer="21"/>
-<wire x1="-4.445" y1="1.27" x2="-3.175" y2="1.27" width="0.1524" layer="21"/>
-<wire x1="-3.175" y1="1.27" x2="-2.54" y2="0.635" width="0.1524" layer="21"/>
-<wire x1="-2.54" y1="0.635" x2="-2.54" y2="-0.635" width="0.1524" layer="21"/>
-<wire x1="-2.54" y1="-0.635" x2="-3.175" y2="-1.27" width="0.1524" layer="21"/>
-<wire x1="-3.175" y1="-1.27" x2="-4.445" y2="-1.27" width="0.1524" layer="21"/>
-<wire x1="-4.445" y1="-1.27" x2="-5.08" y2="-0.635" width="0.1524" layer="21"/>
-<wire x1="-1.905" y1="1.27" x2="-2.54" y2="0.635" width="0.1524" layer="21"/>
-<wire x1="-2.54" y1="-0.635" x2="-1.905" y2="-1.27" width="0.1524" layer="21"/>
-<wire x1="-0.635" y1="-1.27" x2="-1.905" y2="-1.27" width="0.1524" layer="21"/>
-<wire x1="-9.525" y1="1.27" x2="-8.255" y2="1.27" width="0.1524" layer="21"/>
-<wire x1="-8.255" y1="1.27" x2="-7.62" y2="0.635" width="0.1524" layer="21"/>
-<wire x1="-7.62" y1="0.635" x2="-7.62" y2="-0.635" width="0.1524" layer="21"/>
-<wire x1="-7.62" y1="-0.635" x2="-8.255" y2="-1.27" width="0.1524" layer="21"/>
-<wire x1="-7.62" y1="0.635" x2="-6.985" y2="1.27" width="0.1524" layer="21"/>
-<wire x1="-6.985" y1="1.27" x2="-5.715" y2="1.27" width="0.1524" layer="21"/>
-<wire x1="-5.715" y1="1.27" x2="-5.08" y2="0.635" width="0.1524" layer="21"/>
-<wire x1="-5.08" y1="0.635" x2="-5.08" y2="-0.635" width="0.1524" layer="21"/>
-<wire x1="-5.08" y1="-0.635" x2="-5.715" y2="-1.27" width="0.1524" layer="21"/>
-<wire x1="-5.715" y1="-1.27" x2="-6.985" y2="-1.27" width="0.1524" layer="21"/>
-<wire x1="-6.985" y1="-1.27" x2="-7.62" y2="-0.635" width="0.1524" layer="21"/>
-<wire x1="-10.16" y1="0.635" x2="-10.16" y2="-0.635" width="0.1524" layer="21"/>
-<wire x1="-9.525" y1="1.27" x2="-10.16" y2="0.635" width="0.1524" layer="21"/>
-<wire x1="-10.16" y1="-0.635" x2="-9.525" y2="-1.27" width="0.1524" layer="21"/>
-<wire x1="-8.255" y1="-1.27" x2="-9.525" y2="-1.27" width="0.1524" layer="21"/>
-<wire x1="8.255" y1="1.27" x2="9.525" y2="1.27" width="0.1524" layer="21"/>
-<wire x1="9.525" y1="1.27" x2="10.16" y2="0.635" width="0.1524" layer="21"/>
-<wire x1="10.16" y1="0.635" x2="10.16" y2="-0.635" width="0.1524" layer="21"/>
-<wire x1="10.16" y1="-0.635" x2="9.525" y2="-1.27" width="0.1524" layer="21"/>
-<wire x1="8.255" y1="1.27" x2="7.62" y2="0.635" width="0.1524" layer="21"/>
-<wire x1="7.62" y1="-0.635" x2="8.255" y2="-1.27" width="0.1524" layer="21"/>
-<wire x1="9.525" y1="-1.27" x2="8.255" y2="-1.27" width="0.1524" layer="21"/>
-<pad name="1" x="-8.89" y="0" drill="1.016" shape="long" rot="R90"/>
-<pad name="2" x="-6.35" y="0" drill="1.016" shape="long" rot="R90"/>
-<pad name="3" x="-3.81" y="0" drill="1.016" shape="long" rot="R90"/>
-<pad name="4" x="-1.27" y="0" drill="1.016" shape="long" rot="R90"/>
-<pad name="5" x="1.27" y="0" drill="1.016" shape="long" rot="R90"/>
-<pad name="6" x="3.81" y="0" drill="1.016" shape="long" rot="R90"/>
-<pad name="7" x="6.35" y="0" drill="1.016" shape="long" rot="R90"/>
-<pad name="8" x="8.89" y="0" drill="1.016" shape="long" rot="R90"/>
-<text x="-10.2362" y="1.8288" size="1.27" layer="25" ratio="10">&gt;NAME</text>
-<text x="-10.16" y="-3.175" size="1.27" layer="27">&gt;VALUE</text>
-<rectangle x1="6.096" y1="-0.254" x2="6.604" y2="0.254" layer="51"/>
-<rectangle x1="3.556" y1="-0.254" x2="4.064" y2="0.254" layer="51"/>
-<rectangle x1="1.016" y1="-0.254" x2="1.524" y2="0.254" layer="51"/>
+<pad name="1" x="-1.27" y="0" drill="1.016" shape="long" rot="R90"/>
+<pad name="2" x="1.27" y="0" drill="1.016" shape="long" rot="R90"/>
+<text x="-2.6162" y="1.8288" size="1.27" layer="25" ratio="10">&gt;NAME</text>
+<text x="-2.54" y="-3.175" size="1.27" layer="27">&gt;VALUE</text>
 <rectangle x1="-1.524" y1="-0.254" x2="-1.016" y2="0.254" layer="51"/>
-<rectangle x1="-4.064" y1="-0.254" x2="-3.556" y2="0.254" layer="51"/>
-<rectangle x1="-6.604" y1="-0.254" x2="-6.096" y2="0.254" layer="51"/>
-<rectangle x1="-9.144" y1="-0.254" x2="-8.636" y2="0.254" layer="51"/>
-<rectangle x1="8.636" y1="-0.254" x2="9.144" y2="0.254" layer="51"/>
+<rectangle x1="1.016" y1="-0.254" x2="1.524" y2="0.254" layer="51"/>
 </package>
 </packages>
 </library>
@@ -1578,75 +1524,97 @@ design rules under a new name.</description>
 </autorouter>
 <elements>
 <element name="C1" library="rcl" package="C050-055X075" value="" x="16.51" y="25.4" rot="R270"/>
-<element name="C3" library="rcl" package="E5-13" value="" x="8.89" y="60.96" rot="R180"/>
-<element name="DCL1A" library="diode" package="DO201-15" value="BY251" x="19.05" y="64.77" rot="R90"/>
-<element name="DCL1A1" library="diode" package="DO201-15" value="BY251" x="31.75" y="63.5" rot="R90"/>
-<element name="IC_PWR_PWM" library="ir" package="DIL08" value="IR4427" x="24.13" y="25.4">
+<element name="CC" library="rcl" package="E5-13" value="" x="8.89" y="60.96" rot="R180"/>
+<element name="DA1" library="diode" package="DO201-15" value="BY251" x="19.05" y="64.77" rot="R90"/>
+<element name="DB1" library="diode" package="DO201-15" value="BY251" x="31.75" y="63.5" rot="R90"/>
+<element name="IC_DRV1" library="ir" package="DIL08" value="IR4427" x="24.13" y="25.4">
 <attribute name="MPN" value="IR4427" x="24.13" y="25.4" size="1.778" layer="27" display="off"/>
 <attribute name="MF" value="INTERNATIONAL RECTIFIER(IR)" x="24.13" y="25.4" size="1.778" layer="27" display="off"/>
 <attribute name="OC_FARNELL" value="1023267" x="24.13" y="25.4" size="1.778" layer="27" display="off"/>
 <attribute name="OC_NEWARK" value="27C6914" x="24.13" y="25.4" size="1.778" layer="27" display="off"/>
 </element>
-<element name="JP1" library="pinhead" package="1X08" value="" x="43.18" y="5.08" rot="R180"/>
-<element name="JP1_OUT_A" library="dbg-misc" package="1X01" value="" x="19.05" y="50.8" rot="R270"/>
-<element name="JP1_OUT_B" library="dbg-misc" package="1X01" value="" x="31.75" y="49.53" rot="R90"/>
-<element name="JP_GND" library="dbg-misc" package="1X01" value="" x="8.89" y="76.2" rot="R180"/>
-<element name="JP_PWR" library="dbg-misc" package="1X01" value="" x="11.43" y="48.26" rot="R90"/>
-<element name="Q_PWM" library="dbg-misc" package="TO220BH" value="IRLZ44Z" x="16.51" y="67.31" rot="R90"/>
-<element name="Q_PWR" library="dbg-misc" package="TO220BH" value="IRLZ44Z" x="21.59" y="55.88" rot="R90"/>
-<element name="R1A" library="rcl" package="0207/10" value="" x="20.32" y="45.72"/>
-<element name="R1B" library="rcl" package="0207/10" value="" x="20.32" y="43.18"/>
-<element name="RG1_A" library="rcl" package="0207/10" value="" x="22.86" y="35.56" rot="R90"/>
-<element name="RG_1B" library="rcl" package="0207/10" value="" x="27.94" y="39.37" rot="R90"/>
-<element name="RG1_A1" library="rcl" package="0207/10" value="" x="19.05" y="35.56" rot="R90"/>
-<element name="RG_1B1" library="rcl" package="0207/10" value="" x="31.75" y="39.37" rot="R90"/>
+<element name="JPA1" library="dbg-misc" package="1X01" value="" x="19.05" y="50.8" rot="R270"/>
+<element name="JPB1" library="dbg-misc" package="1X01" value="" x="31.75" y="49.53" rot="R90"/>
+<element name="JP_GND1" library="dbg-misc" package="1X01" value="" x="8.89" y="76.2" rot="R180"/>
+<element name="JP_PWR1" library="dbg-misc" package="1X01" value="" x="11.43" y="48.26" rot="R90"/>
+<element name="QA1" library="dbg-misc" package="TO220BH" value="IRLZ44Z" x="16.51" y="67.31" rot="R90"/>
+<element name="QB1" library="dbg-misc" package="TO220BH" value="IRLZ44Z" x="21.59" y="55.88" rot="R90"/>
+<element name="RA1" library="rcl" package="0207/10" value="" x="20.32" y="45.72"/>
+<element name="RB1" library="rcl" package="0207/10" value="" x="20.32" y="43.18"/>
+<element name="RGA1" library="rcl" package="0207/10" value="" x="22.86" y="35.56" rot="R90"/>
+<element name="RGB1" library="rcl" package="0207/10" value="" x="27.94" y="39.37" rot="R90"/>
+<element name="RGDA" library="rcl" package="0207/10" value="" x="19.05" y="35.56" rot="R90"/>
+<element name="RGDB1" library="rcl" package="0207/10" value="" x="31.75" y="39.37" rot="R90"/>
+<element name="JPIN1" library="pinhead" package="1X02" value="" x="48.26" y="7.62"/>
+<element name="QA2" library="dbg-misc" package="TO220BH" value="IRLZ44Z" x="36.83" y="67.31" rot="R90"/>
+<element name="QB2" library="dbg-misc" package="TO220BH" value="IRLZ44Z" x="41.91" y="55.88" rot="R90"/>
+<element name="IC_DRV2" library="ir" package="DIL08" value="IR4427" x="44.45" y="25.4">
+<attribute name="OC_NEWARK" value="27C6914" x="19.05" y="50.8" size="1.778" layer="27" display="off"/>
+<attribute name="OC_FARNELL" value="1023267" x="19.05" y="50.8" size="1.778" layer="27" display="off"/>
+<attribute name="MPN" value="IR4427" x="19.05" y="50.8" size="1.778" layer="27" display="off"/>
+<attribute name="MF" value="INTERNATIONAL RECTIFIER(IR)" x="19.05" y="50.8" size="1.778" layer="27" display="off"/>
+</element>
+<element name="JP_PWR2" library="dbg-misc" package="1X01" value="" x="35.56" y="33.02" rot="R90"/>
+<element name="JP_GND2" library="dbg-misc" package="1X01" value="" x="44.45" y="76.2"/>
+<element name="C2" library="rcl" package="C050-055X075" value="" x="36.83" y="25.4" rot="R270"/>
+<element name="JPA2" library="dbg-misc" package="1X01" value="" x="39.37" y="50.8" rot="R90"/>
+<element name="RGA2" library="rcl" package="0207/10" value="" x="39.37" y="35.56" rot="R90"/>
+<element name="RGB2" library="rcl" package="0207/10" value="" x="48.26" y="39.37" rot="R90"/>
+<element name="DA2" library="diode" package="DO201-15" value="BY251" x="39.37" y="64.77" rot="R90"/>
+<element name="JPB2" library="dbg-misc" package="1X01" value="" x="52.07" y="49.53" rot="R90"/>
+<element name="DB2" library="diode" package="DO201-15" value="BY251" x="52.07" y="63.5" rot="R90"/>
+<element name="RA2" library="rcl" package="0207/10" value="" x="40.64" y="45.72"/>
+<element name="RB2" library="rcl" package="0207/10" value="" x="40.64" y="43.18"/>
+<element name="RGDA1" library="rcl" package="0207/10" value="" x="43.18" y="35.56" rot="R90"/>
+<element name="RGDB2" library="rcl" package="0207/10" value="" x="52.07" y="39.37" rot="R90"/>
+<element name="JPIN2" library="pinhead" package="1X02" value="" x="71.12" y="8.89" rot="R180"/>
 </elements>
 <signals>
 <signal name="N$3">
-<contactref element="IC_PWR_PWM" pad="7"/>
-<contactref element="RG1_A" pad="1"/>
+<contactref element="IC_DRV1" pad="7"/>
+<contactref element="RGA1" pad="1"/>
 <wire x1="22.86" y1="30.48" x2="22.86" y2="29.21" width="0.4064" layer="16"/>
-<contactref element="RG1_A1" pad="1"/>
+<contactref element="RGDA" pad="1"/>
 <wire x1="19.05" y1="30.48" x2="22.86" y2="30.48" width="0.4064" layer="16"/>
 </signal>
 <signal name="N$4">
-<contactref element="IC_PWR_PWM" pad="5"/>
-<contactref element="RG_1B" pad="1"/>
+<contactref element="IC_DRV1" pad="5"/>
+<contactref element="RGB1" pad="1"/>
 <wire x1="27.94" y1="34.29" x2="27.94" y2="29.21" width="0.4064" layer="16"/>
-<contactref element="RG_1B1" pad="1"/>
+<contactref element="RGDB1" pad="1"/>
 <wire x1="31.75" y1="34.29" x2="27.94" y2="34.29" width="0.4064" layer="16"/>
 </signal>
 <signal name="N$5">
-<contactref element="RG1_A" pad="2"/>
-<contactref element="Q_PWM" pad="G"/>
-<contactref element="R1A" pad="2"/>
-<contactref element="RG1_A1" pad="2"/>
+<contactref element="RGA1" pad="2"/>
+<contactref element="QA1" pad="G"/>
+<contactref element="RA1" pad="2"/>
+<contactref element="RGDA" pad="2"/>
 <wire x1="19.05" y1="40.64" x2="22.86" y2="40.64" width="0.4064" layer="16"/>
 <wire x1="22.86" y1="64.77" x2="22.86" y2="45.72" width="0.4064" layer="16"/>
 <wire x1="22.86" y1="45.72" x2="22.86" y2="40.64" width="0.4064" layer="16"/>
 <wire x1="25.4" y1="45.72" x2="22.86" y2="45.72" width="0.4064" layer="16"/>
 </signal>
 <signal name="N$6">
-<contactref element="RG_1B" pad="2"/>
-<contactref element="Q_PWR" pad="G"/>
-<contactref element="R1B" pad="2"/>
-<contactref element="RG_1B1" pad="2"/>
+<contactref element="RGB1" pad="2"/>
+<contactref element="QB1" pad="G"/>
+<contactref element="RB1" pad="2"/>
+<contactref element="RGDB1" pad="2"/>
 <wire x1="27.94" y1="44.45" x2="31.75" y2="44.45" width="0.4064" layer="16"/>
 <wire x1="27.94" y1="53.34" x2="27.94" y2="44.45" width="0.4064" layer="16"/>
 <wire x1="27.94" y1="43.18" x2="27.94" y2="44.45" width="0.4064" layer="16"/>
 <wire x1="25.4" y1="43.18" x2="27.94" y2="43.18" width="0.4064" layer="16"/>
 </signal>
 <signal name="GND">
-<contactref element="IC_PWR_PWM" pad="3"/>
+<contactref element="IC_DRV1" pad="3"/>
 <contactref element="C1" pad="2"/>
-<contactref element="Q_PWR" pad="S"/>
-<contactref element="Q_PWM" pad="S"/>
-<contactref element="DCL1A" pad="A"/>
-<contactref element="JP_GND" pad="1"/>
-<contactref element="DCL1A1" pad="A"/>
-<contactref element="C3" pad="-"/>
-<contactref element="R1A" pad="1"/>
-<contactref element="R1B" pad="1"/>
+<contactref element="QB1" pad="S"/>
+<contactref element="QA1" pad="S"/>
+<contactref element="DA1" pad="A"/>
+<contactref element="JP_GND1" pad="1"/>
+<contactref element="DB1" pad="A"/>
+<contactref element="CC" pad="-"/>
+<contactref element="RA1" pad="1"/>
+<contactref element="RB1" pad="1"/>
 <wire x1="25.4" y1="21.59" x2="25.4" y2="24.13" width="0.4064" layer="16"/>
 <wire x1="25.4" y1="24.13" x2="16.51" y2="24.13" width="0.4064" layer="16"/>
 <wire x1="16.51" y1="24.13" x2="6.35" y2="24.13" width="0.4064" layer="16"/>
@@ -1668,10 +1636,10 @@ design rules under a new name.</description>
 <wire x1="16.51" y1="22.86" x2="16.51" y2="24.13" width="0.4064" layer="16"/>
 </signal>
 <signal name="VCC">
-<contactref element="IC_PWR_PWM" pad="6"/>
-<contactref element="JP_PWR" pad="1"/>
+<contactref element="IC_DRV1" pad="6"/>
+<contactref element="JP_PWR1" pad="1"/>
 <contactref element="C1" pad="1"/>
-<contactref element="C3" pad="+"/>
+<contactref element="CC" pad="+"/>
 <wire x1="25.4" y1="29.21" x2="25.4" y2="26.67" width="0.4064" layer="16"/>
 <wire x1="11.43" y1="26.67" x2="16.51" y2="26.67" width="0.4064" layer="16"/>
 <wire x1="16.51" y1="26.67" x2="25.4" y2="26.67" width="0.4064" layer="16"/>
@@ -1681,33 +1649,136 @@ design rules under a new name.</description>
 <wire x1="16.51" y1="27.94" x2="16.51" y2="26.67" width="0.4064" layer="16"/>
 </signal>
 <signal name="N$22">
-<contactref element="Q_PWM" pad="D"/>
-<contactref element="DCL1A" pad="C"/>
-<contactref element="JP1_OUT_A" pad="1"/>
+<contactref element="QA1" pad="D"/>
+<contactref element="DA1" pad="C"/>
+<contactref element="JPA1" pad="1"/>
 <wire x1="22.86" y1="67.31" x2="19.05" y2="67.31" width="1.778" layer="16"/>
 <wire x1="19.05" y1="67.31" x2="19.05" y2="57.15" width="1.778" layer="16"/>
 <wire x1="19.05" y1="50.8" x2="19.05" y2="57.15" width="1.778" layer="16"/>
 </signal>
 <signal name="N$21">
-<contactref element="Q_PWR" pad="D"/>
-<contactref element="JP1_OUT_B" pad="1"/>
-<contactref element="DCL1A1" pad="C"/>
+<contactref element="QB1" pad="D"/>
+<contactref element="JPB1" pad="1"/>
+<contactref element="DB1" pad="C"/>
 <wire x1="27.94" y1="55.88" x2="31.75" y2="55.88" width="1.778" layer="16"/>
 <wire x1="31.75" y1="55.88" x2="31.75" y2="49.53" width="1.778" layer="16"/>
 </signal>
 <signal name="N$2">
-<contactref element="JP1" pad="7"/>
-<contactref element="IC_PWR_PWM" pad="4"/>
-<wire x1="27.94" y1="21.59" x2="27.94" y2="11.43" width="0.4064" layer="16"/>
-<wire x1="27.94" y1="11.43" x2="36.83" y2="11.43" width="0.4064" layer="16"/>
-<wire x1="36.83" y1="11.43" x2="36.83" y2="5.08" width="0.4064" layer="16"/>
+<contactref element="IC_DRV1" pad="4"/>
+<contactref element="JPIN1" pad="1"/>
+<wire x1="27.94" y1="21.59" x2="29.21" y2="21.59" width="0.4064" layer="16"/>
+<wire x1="29.21" y1="21.59" x2="29.21" y2="7.62" width="0.4064" layer="16"/>
+<wire x1="29.21" y1="7.62" x2="46.99" y2="7.62" width="0.4064" layer="16"/>
 </signal>
 <signal name="N$1">
-<contactref element="IC_PWR_PWM" pad="2"/>
-<contactref element="JP1" pad="8"/>
-<wire x1="22.86" y1="21.59" x2="22.86" y2="8.89" width="0.4064" layer="16"/>
-<wire x1="22.86" y1="8.89" x2="34.29" y2="8.89" width="0.4064" layer="16"/>
-<wire x1="34.29" y1="8.89" x2="34.29" y2="5.08" width="0.4064" layer="16"/>
+<contactref element="IC_DRV1" pad="2"/>
+<contactref element="JPIN1" pad="2"/>
+<wire x1="22.86" y1="21.59" x2="22.86" y2="5.08" width="0.4064" layer="16"/>
+<wire x1="22.86" y1="5.08" x2="49.53" y2="5.08" width="0.4064" layer="16"/>
+<wire x1="49.53" y1="5.08" x2="49.53" y2="7.62" width="0.4064" layer="16"/>
+</signal>
+<signal name="N$7">
+<contactref element="IC_DRV2" pad="7"/>
+<contactref element="RGA2" pad="1"/>
+<contactref element="RGDA1" pad="1"/>
+<wire x1="43.18" y1="30.48" x2="43.18" y2="29.21" width="0.4064" layer="16"/>
+<wire x1="39.37" y1="30.48" x2="43.18" y2="30.48" width="0.4064" layer="16"/>
+</signal>
+<signal name="N$8">
+<contactref element="IC_DRV2" pad="5"/>
+<contactref element="RGB2" pad="1"/>
+<contactref element="RGDB2" pad="1"/>
+<wire x1="48.26" y1="29.21" x2="48.26" y2="34.29" width="0.4064" layer="16"/>
+<wire x1="48.26" y1="34.29" x2="52.07" y2="34.29" width="0.4064" layer="16"/>
+</signal>
+<signal name="N$9">
+<contactref element="RGA2" pad="2"/>
+<contactref element="QA2" pad="G"/>
+<contactref element="RA2" pad="2"/>
+<contactref element="RGDA1" pad="2"/>
+<wire x1="39.37" y1="40.64" x2="43.18" y2="40.64" width="0.4064" layer="16"/>
+<wire x1="43.18" y1="64.77" x2="43.18" y2="45.72" width="0.4064" layer="16"/>
+<wire x1="43.18" y1="45.72" x2="43.18" y2="40.64" width="0.4064" layer="16"/>
+<wire x1="45.72" y1="45.72" x2="43.18" y2="45.72" width="0.4064" layer="16"/>
+</signal>
+<signal name="N$10">
+<contactref element="RGB2" pad="2"/>
+<contactref element="QB2" pad="G"/>
+<contactref element="RB2" pad="2"/>
+<contactref element="RGDB2" pad="2"/>
+<wire x1="52.07" y1="44.45" x2="48.26" y2="44.45" width="0.4064" layer="16"/>
+<wire x1="45.72" y1="43.18" x2="48.26" y2="43.18" width="0.4064" layer="16"/>
+<wire x1="48.26" y1="43.18" x2="48.26" y2="44.45" width="0.4064" layer="16"/>
+<wire x1="48.26" y1="53.34" x2="48.26" y2="44.45" width="0.4064" layer="16"/>
+</signal>
+<signal name="GND1">
+<contactref element="IC_DRV2" pad="3"/>
+<contactref element="C2" pad="2"/>
+<contactref element="QB2" pad="S"/>
+<contactref element="QA2" pad="S"/>
+<contactref element="DA2" pad="A"/>
+<contactref element="JP_GND2" pad="1"/>
+<contactref element="DB2" pad="A"/>
+<contactref element="RA2" pad="1"/>
+<contactref element="RB2" pad="1"/>
+<wire x1="35.56" y1="43.18" x2="35.56" y2="45.72" width="0.4064" layer="16"/>
+<wire x1="44.45" y1="76.2" x2="39.37" y2="76.2" width="3.81" layer="16"/>
+<wire x1="35.56" y1="76.2" x2="39.37" y2="76.2" width="3.81" layer="16"/>
+<wire x1="44.45" y1="76.2" x2="48.26" y2="76.2" width="3.81" layer="16"/>
+<wire x1="48.26" y1="76.2" x2="48.26" y2="71.12" width="1.778" layer="16"/>
+<wire x1="48.26" y1="71.12" x2="48.26" y2="69.85" width="0.4064" layer="16"/>
+<wire x1="48.26" y1="69.85" x2="48.26" y2="58.42" width="1.778" layer="16"/>
+<wire x1="52.07" y1="71.12" x2="48.26" y2="71.12" width="1.778" layer="16"/>
+<wire x1="43.18" y1="69.85" x2="48.26" y2="69.85" width="1.778" layer="16"/>
+<wire x1="39.37" y1="72.39" x2="39.37" y2="76.2" width="1.778" layer="16"/>
+<wire x1="35.56" y1="45.72" x2="35.56" y2="76.2" width="0.4064" layer="16"/>
+<wire x1="45.72" y1="21.59" x2="45.72" y2="24.13" width="0.4064" layer="16"/>
+<wire x1="45.72" y1="24.13" x2="59.69" y2="24.13" width="0.4064" layer="16"/>
+<wire x1="45.72" y1="24.13" x2="36.83" y2="24.13" width="0.4064" layer="16"/>
+<wire x1="30.48" y1="24.13" x2="36.83" y2="24.13" width="0.4064" layer="16"/>
+<wire x1="36.83" y1="24.13" x2="36.83" y2="22.86" width="0.4064" layer="16"/>
+<wire x1="36.83" y1="24.13" x2="35.56" y2="43.18" width="0" layer="19" extent="16-16"/>
+</signal>
+<signal name="VCC1">
+<contactref element="IC_DRV2" pad="6"/>
+<contactref element="JP_PWR2" pad="1"/>
+<contactref element="C2" pad="1"/>
+<wire x1="45.72" y1="29.21" x2="45.72" y2="26.67" width="0.4064" layer="16"/>
+<wire x1="45.72" y1="26.67" x2="36.83" y2="26.67" width="0.4064" layer="16"/>
+<wire x1="36.83" y1="27.94" x2="36.83" y2="26.67" width="0.4064" layer="16"/>
+<wire x1="36.83" y1="26.67" x2="35.56" y2="26.67" width="0.4064" layer="16"/>
+<wire x1="35.56" y1="26.67" x2="30.48" y2="26.67" width="0.4064" layer="16"/>
+<wire x1="45.72" y1="26.67" x2="59.69" y2="26.67" width="0.4064" layer="16"/>
+<wire x1="35.56" y1="33.02" x2="35.56" y2="26.67" width="0.4064" layer="16"/>
+</signal>
+<signal name="N$11">
+<contactref element="QA2" pad="D"/>
+<contactref element="DA2" pad="C"/>
+<contactref element="JPA2" pad="1"/>
+<wire x1="43.18" y1="67.31" x2="39.37" y2="67.31" width="1.778" layer="16"/>
+<wire x1="39.37" y1="67.31" x2="39.37" y2="57.15" width="1.778" layer="16"/>
+<wire x1="39.37" y1="50.8" x2="39.37" y2="57.15" width="1.778" layer="16"/>
+</signal>
+<signal name="N$12">
+<contactref element="QB2" pad="D"/>
+<contactref element="JPB2" pad="1"/>
+<contactref element="DB2" pad="C"/>
+<wire x1="48.26" y1="55.88" x2="52.07" y2="55.88" width="1.778" layer="16"/>
+<wire x1="52.07" y1="55.88" x2="52.07" y2="49.53" width="1.778" layer="16"/>
+</signal>
+<signal name="N$13">
+<contactref element="IC_DRV2" pad="4"/>
+<contactref element="JPIN2" pad="1"/>
+<wire x1="48.26" y1="21.59" x2="72.39" y2="8.89" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="N$14">
+<contactref element="IC_DRV2" pad="2"/>
+<contactref element="JPIN2" pad="2"/>
+<wire x1="43.18" y1="21.59" x2="69.85" y2="8.89" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="N$15">
+<wire x1="30.48" y1="76.2" x2="29.21" y2="76.2" width="0.4064" layer="16"/>
+<wire x1="30.48" y1="76.2" x2="34.29" y2="76.2" width="3.81" layer="16"/>
 </signal>
 </signals>
 </board>
