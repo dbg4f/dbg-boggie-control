@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="dots" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
@@ -12760,6 +12760,8 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <part name="JP1" library="pinhead" deviceset="PINHD-1X8" device=""/>
 <part name="R1A" library="rcl" deviceset="R-EU_" device="0207/10"/>
 <part name="R1B" library="rcl" deviceset="R-EU_" device="0207/10"/>
+<part name="RG1_A1" library="rcl" deviceset="R-EU_" device="0207/10"/>
+<part name="RG_1B1" library="rcl" deviceset="R-EU_" device="0207/10"/>
 </parts>
 <sheets>
 <sheet>
@@ -12782,6 +12784,8 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <instance part="JP1" gate="A" x="0" y="53.34" rot="R180"/>
 <instance part="R1A" gate="G$1" x="86.36" y="45.72" rot="R90"/>
 <instance part="R1B" gate="G$1" x="101.6" y="43.18" rot="R90"/>
+<instance part="RG1_A1" gate="G$1" x="68.58" y="66.04"/>
+<instance part="RG_1B1" gate="G$1" x="68.58" y="50.8"/>
 </instances>
 <busses>
 </busses>
@@ -12791,6 +12795,9 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <pinref part="IC_PWR_PWM" gate="P" pin="OUTA"/>
 <pinref part="RG1_A" gate="G$1" pin="1"/>
 <wire x1="55.88" y1="60.96" x2="63.5" y2="60.96" width="0.1524" layer="91"/>
+<pinref part="RG1_A1" gate="G$1" pin="1"/>
+<wire x1="63.5" y1="66.04" x2="63.5" y2="60.96" width="0.1524" layer="91"/>
+<junction x="63.5" y="60.96"/>
 </segment>
 </net>
 <net name="N$4" class="0">
@@ -12798,6 +12805,9 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <pinref part="IC_PWR_PWM" gate="P" pin="OUTB"/>
 <pinref part="RG_1B" gate="G$1" pin="1"/>
 <wire x1="55.88" y1="55.88" x2="63.5" y2="55.88" width="0.1524" layer="91"/>
+<pinref part="RG_1B1" gate="G$1" pin="1"/>
+<wire x1="63.5" y1="50.8" x2="63.5" y2="55.88" width="0.1524" layer="91"/>
+<junction x="63.5" y="55.88"/>
 </segment>
 </net>
 <net name="N$5" class="0">
@@ -12809,6 +12819,9 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <wire x1="86.36" y1="60.96" x2="91.44" y2="60.96" width="0.1524" layer="91"/>
 <wire x1="86.36" y1="50.8" x2="86.36" y2="60.96" width="0.1524" layer="91"/>
 <junction x="86.36" y="60.96"/>
+<pinref part="RG1_A1" gate="G$1" pin="2"/>
+<wire x1="73.66" y1="60.96" x2="73.66" y2="66.04" width="0.1524" layer="91"/>
+<junction x="73.66" y="60.96"/>
 </segment>
 </net>
 <net name="N$6" class="0">
@@ -12822,14 +12835,17 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <pinref part="R1B" gate="G$1" pin="2"/>
 <wire x1="101.6" y1="48.26" x2="101.6" y2="55.88" width="0.1524" layer="91"/>
 <junction x="101.6" y="55.88"/>
+<pinref part="RG_1B1" gate="G$1" pin="2"/>
+<wire x1="73.66" y1="50.8" x2="73.66" y2="55.88" width="0.1524" layer="91"/>
+<junction x="73.66" y="55.88"/>
 </segment>
 </net>
 <net name="GND" class="0">
 <segment>
 <pinref part="IC_PWR_PWM" gate="P" pin="GND"/>
-<wire x1="55.88" y1="53.34" x2="71.12" y2="53.34" width="0.1524" layer="91"/>
-<wire x1="71.12" y1="53.34" x2="71.12" y2="33.02" width="0.1524" layer="91"/>
-<wire x1="71.12" y1="33.02" x2="76.2" y2="33.02" width="0.1524" layer="91"/>
+<wire x1="55.88" y1="53.34" x2="58.42" y2="53.34" width="0.1524" layer="91"/>
+<wire x1="58.42" y1="53.34" x2="58.42" y2="33.02" width="0.1524" layer="91"/>
+<wire x1="58.42" y1="33.02" x2="76.2" y2="33.02" width="0.1524" layer="91"/>
 <pinref part="C1" gate="G$1" pin="2"/>
 <wire x1="76.2" y1="33.02" x2="76.2" y2="38.1" width="0.1524" layer="91"/>
 <wire x1="76.2" y1="33.02" x2="86.36" y2="33.02" width="0.1524" layer="91"/>
@@ -12870,20 +12886,20 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <net name="VCC" class="0">
 <segment>
 <pinref part="IC_PWR_PWM" gate="P" pin="VS"/>
-<wire x1="73.66" y1="63.5" x2="55.88" y2="63.5" width="0.1524" layer="91"/>
+<wire x1="58.42" y1="63.5" x2="55.88" y2="63.5" width="0.1524" layer="91"/>
 <pinref part="JP_PWR" gate="G$1" pin="1"/>
-<wire x1="71.12" y1="71.12" x2="73.66" y2="71.12" width="0.1524" layer="91"/>
-<wire x1="73.66" y1="71.12" x2="76.2" y2="71.12" width="0.1524" layer="91"/>
+<wire x1="58.42" y1="71.12" x2="71.12" y2="71.12" width="0.1524" layer="91"/>
+<wire x1="71.12" y1="71.12" x2="76.2" y2="71.12" width="0.1524" layer="91"/>
 <wire x1="71.12" y1="86.36" x2="71.12" y2="71.12" width="0.1524" layer="91"/>
 <wire x1="5.08" y1="86.36" x2="22.86" y2="86.36" width="0.1524" layer="91"/>
 <wire x1="22.86" y1="86.36" x2="71.12" y2="86.36" width="0.1524" layer="91"/>
-<wire x1="73.66" y1="63.5" x2="73.66" y2="71.12" width="0.1524" layer="91"/>
-<junction x="73.66" y="71.12"/>
+<wire x1="58.42" y1="63.5" x2="58.42" y2="71.12" width="0.1524" layer="91"/>
 <pinref part="C1" gate="G$1" pin="1"/>
 <wire x1="76.2" y1="45.72" x2="76.2" y2="71.12" width="0.1524" layer="91"/>
 <pinref part="C3" gate="G$1" pin="+"/>
 <wire x1="22.86" y1="40.64" x2="22.86" y2="86.36" width="0.1524" layer="91"/>
 <junction x="22.86" y="86.36"/>
+<junction x="71.12" y="71.12"/>
 </segment>
 </net>
 <net name="N$22" class="0">
