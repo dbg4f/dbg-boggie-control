@@ -12,7 +12,7 @@ EN - white - PTE30 (AnOUT)
 VCC5V
 GND
 TX - yellow - UART0-RX-PTA1
-RX - green -UART0-TX-PTA2
+RX - green  -UART0-TX-PTA2
 
 
 POWER
@@ -29,14 +29,14 @@ NC
 NC
 NC
 RESET 	- blue 	- PTE4
-AO 	- green - PTE5
+AO 	    - green - PTE5
 SDA 	- brown - PTE3
 SCK 	- yellow- PTE21
-CS 	- white - PTE20
+CS 	    - white - PTE20
 SD-SCK 	- red 	- PTE29
 SD-MISO - orange- PTE22
 SD-MOSI - brown - PTE23
-CS 	- white - PTE2
+CS 	    - white - PTE2
 LED+
 LED-
 
@@ -62,35 +62,35 @@ RJ1 (A)
 2 Vin
 3 <empty>
 4 <empty>
-5 B3
-6 C2
+5 B3       PTB3 A3/PWM
+6 C2       PTC2 A4/PWM
 7 GND
-8 B2
+8 B2       PTB2 A2/PWM
 
 
 
 RJ2
 
 1 3.3V
-2 A4
-3 A12
-4 D4
-5 C9
-6 C8
+2 A4       PTA4  / PWM
+3 A12      PTA12 / PWM
+4 D4       PTD4  / PWM
+5 C9       PTC9  / PWM / I2C
+6 C8       PTC8  / PWM / I2C
 7 GND
-8 A5
+8 A5       PTA5  / PWM
 
 
 RJ3
 
-1 E23
-2 E22
+1 E23       PTE23 / UART2
+2 E22       PTE22 / UART2
 3 GND
-4 D2
+4 D2        PTD2 / SPIO
 5 <empty>
-6 D3
+6 D3        PTD3 / SPIO
 7 <empty>
-8 D1
+8 D1        PTD1 / SPIO
 
 
 
