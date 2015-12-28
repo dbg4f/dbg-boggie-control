@@ -41,6 +41,19 @@ LED+
 LED-
 
 
+tmp socket
+
+1 white  3.3V
+2 orange A4
+3 white  A12
+4 blue   D4
+5 white  C9
+6 brown  C8
+7 white  GND
+8 green  A5
+
+
+
 
 
 RJ1 (A)
@@ -70,14 +83,14 @@ RJ2
 
 RJ3
 
-1
-2
-3
-4
-5
-6
-7
-8
+1 E23
+2 E22
+3 GND
+4 D2
+5 <empty>
+6 D3
+7 <empty>
+8 D1
 
 
 
