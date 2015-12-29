@@ -14,7 +14,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * Basic Echo Client Socket
  */
-@WebSocket(maxTextMessageSize = 64 * 1024)
+@WebSocket()
 public class SimpleEchoSocket {
 
   private final CountDownLatch closeLatch;
