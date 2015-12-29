@@ -32,7 +32,33 @@ public class LeversPosition {
                 new Circle(pair.leverLeftUpperLength, bothTop),
                 new Circle(pair.leverLeftLowerLength, pair.leverLeftStart)).getLeft();
 
-        return new LeverAngles(0, 0);
+        Section leftLever = new Section(pair.leverLeftStart, leftLowerTop);
+        Section rightLever = new Section(pair.leverRightStart, rightLowerTop);
+        return new LeverAngles(leftLever.angleOX(), rightLever.angleOX());
+    }
+
+    public CartesianPoint leverEnd(double angle, CartesianPoint startPos, double leverLength) {
+        return new CartesianPoint(
+                startPos.x + Math.cos(angle) * leverLength,
+                startPos.y + Math.sin(angle) * leverLength);
+    }
+
+    public CartesianPoint calcPen(LeverAngles leverAngles) {
+        leftLowerTop = leverEnd(leverAngles.left, pair.leverLeftStart, pair.leverLeftLowerLength);
+        rightLowerTop = leverEnd(leverAngles.right, pair.leverRightStart, pair.leverRightLowerLength);
+
+        bothTop = new CircleIntersection(
+                new Circle(pair.leverLeftUpperLength, leftLowerTop),
+                new Circle(pair.leverRightUpperLength, rightLowerTop)
+        ).getUpper();
+
+        pen = new CircleIntersection(
+                new Circle(pair.penToRightUpperBottomDistance, rightLowerTop),
+                new Circle(pair.penToRightUpperTopDistance, bothTop)
+        ).getUpper();
+
+
+        return pen;
     }
 
     @Override
@@ -60,13 +86,15 @@ public class LeversPosition {
         CoupledTwainLeverPair pair = new CoupledTwainLeverPair();
         LeversPosition pos = new LeversPosition(pair);
 
-        pos.calcAngles(new CartesianPoint(70, 100));
+        LeverAngles leverAngles = pos.calcAngles(new CartesianPoint(70, 100));
+
 
         System.out.println("pos = " + pos);
         System.out.println("pen             = " + pos.pen);
         System.out.println("rightLowerTop   = " + pos.rightLowerTop);
         System.out.println("bothTop         = " + pos.bothTop);
         System.out.println("leftLowerTop    = " + pos.leftLowerTop);
+        System.out.println("leverAngles     = " + leverAngles);
 
 
         System.out.println(draw(pair.leverRightStart, pos.rightLowerTop));
@@ -76,6 +104,16 @@ public class LeversPosition {
 
         System.out.println(draw(pair.leverLeftStart,  pos.leftLowerTop));
         System.out.println(draw(pos.leftLowerTop,     pos.bothTop));
+        pos = new LeversPosition(pair);
+
+        pos.calcPen(leverAngles);
+
+        System.out.println("pen             = " + pos.pen);
+        System.out.println("rightLowerTop   = " + pos.rightLowerTop);
+        System.out.println("bothTop         = " + pos.bothTop);
+        System.out.println("leftLowerTop    = " + pos.leftLowerTop);
+
+
 
     }
 

@@ -8,4 +8,12 @@ class LeverAngles {
         this.left = left;
         this.right = right;
     }
+
+    @Override
+    public String toString() {
+        return "LeverAngles{" +
+                "left=" + left +
+                ", right=" + right +
+                '}';
+    }
 }

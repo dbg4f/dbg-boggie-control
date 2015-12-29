@@ -31,6 +31,10 @@ public class Section {
     return subSections;
   }
 
+  public double angleOX() {
+    return Math.acos((p2.x - p1.x) / length());
+  }
+
   private double rangeValue(double start, double end, int index, int count) {
     return  start + ((end - start) * index) / count;
   }

@@ -65,6 +65,16 @@ public class CircleIntersection {
 
     }
 
+    public CartesianPoint getUpper() {
+        if (intersectionPoints.size() !=2) {
+            throw  new IllegalStateException("No points of circle intersection");
+        }
+
+        CartesianPoint point1 = intersectionPoints.get(0);
+        CartesianPoint point2 = intersectionPoints.get(1);
+        return point1.y > point2.y ? point1 : point2;
+
+    }
 
 
     /*
