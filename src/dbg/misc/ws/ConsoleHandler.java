@@ -120,19 +120,19 @@ public class ConsoleHandler extends AbstractHandler {
           createCommandsForm(response);
         }
         else if (tail.equalsIgnoreCase("stepLeftLeft")) {
-          sendCommand("{\"cmd\":\"stepLeft\",\"pwm\":-0.6,\"duration\":10}");
+          sendCommand("{\"cmd\":\"stepLeft\",\"pwm\":-0.6,\"duration\":5}");
           createCommandsForm(response);
         }
         else if (tail.equalsIgnoreCase("stepLeftRight")) {
-          sendCommand("{\"cmd\":\"stepLeft\",\"pwm\":0.6,\"duration\":10}");
+          sendCommand("{\"cmd\":\"stepLeft\",\"pwm\":0.6,\"duration\":5}");
           createCommandsForm(response);
         }
         else if (tail.equalsIgnoreCase("stepRightLeft")) {
-          sendCommand("{\"cmd\":\"stepRight\",\"pwm\":-0.6,\"duration\":10}");
+          sendCommand("{\"cmd\":\"stepRight\",\"pwm\":-0.6,\"duration\":5}");
           createCommandsForm(response);
         }
         else if (tail.equalsIgnoreCase("stepRightRight")) {
-          sendCommand("{\"cmd\":\"stepRight\",\"pwm\":0.6,\"duration\":10}");
+          sendCommand("{\"cmd\":\"stepRight\",\"pwm\":0.6,\"duration\":5}");
           createCommandsForm(response);
         }
         else if (tail.equalsIgnoreCase("stepLiftUp")) {

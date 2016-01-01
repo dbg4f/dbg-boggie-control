@@ -46,12 +46,12 @@
 
              <ul>
               <li>
-                <a href="stepLeftLeft" class="btn btn-info btn-lg">Left <<<-</a>
-                <a href="stepLeftRight" class="btn btn-info btn-lg">Left ->>></a>
+                <a href="stepLeftLeft" class="btn btn-info btn-lg">Left Down</a>
+                <a href="stepLeftRight" class="btn btn-info btn-lg">Left Up</a>
               </li>
               <li>
-                <a href="stepRightLeft" class="btn btn-info btn-lg">Right <<<-</a>
-                <a href="stepRightRight" class="btn btn-info btn-lg">Right ->>></a>
+                <a href="stepRightLeft" class="btn btn-info btn-lg">Right Down</a>
+                <a href="stepRightRight" class="btn btn-info btn-lg">Right Up</a>
               </li>
               <li>
                 <a href="stepLiftUp" class="btn btn-info btn-lg">Lift Up</a>

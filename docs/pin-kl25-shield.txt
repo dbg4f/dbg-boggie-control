@@ -129,5 +129,16 @@ RJ B / 8 (B green)
 
 RJ A / 6 (A brown)
 
+RJ A / 1 (A orange-white) - 3V3
+RJ A / 7 (A green-white) GND
+
+
+---------------------------------------------
+
+
+L298, LEFT, PWM, BLUE, brown-white RJ-B, 5, PTC9
+             IN, ORANGE, green RJ-B,     8, PTA5
+             IN, RED,    brown RJ-B,     6, PTC8
+
 
 
