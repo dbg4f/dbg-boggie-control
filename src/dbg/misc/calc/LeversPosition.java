@@ -81,7 +81,59 @@ public class LeversPosition {
         return buffer.toString();
     }
 
+    static final double[][] CALIBRATION = new double[][] {
+
+            {0.492, 0.117, 48, 98 }    ,
+            {0.556, 0.058, 40, 110 }   ,
+            {0.521, 0.070, 30, 100 }   ,
+            {0.488, 0.066, 20, 90  }   ,
+            {0.544, 0.129, 40, 90  }   ,
+            {0.564, 0.155, 50, 90  }   ,
+            {0.601, 0.140, 60, 100 }   ,
+            {0.605, 0.195, 70, 90  }   ,
+            {0.620, 0.241, 80, 70  }   ,
+    };
+
+    public static void calibration() {
+
+        CoupledTwainLeverPair pair = new CoupledTwainLeverPair();
+        LeversPosition pos = new LeversPosition(pair);
+
+        for (double[] c : CALIBRATION) {
+
+            double x = c[2];
+            double y = c[3];
+
+
+            LeverAngles angles = pos.calcAngles(new CartesianPoint(x, y));
+            double al = angles.left;
+            double ar = angles.right;
+
+            System.out.println(String.format("%s,%s,%s,%s,%s,%s",
+                    String.valueOf(c[0]),
+                    String.valueOf(c[1]),
+                    String.valueOf(al),
+                    String.valueOf(ar),
+                    String.valueOf(x),
+                    String.valueOf(y)
+                    ));
+
+
+        }
+
+
+        System.out.println();
+    }
+
     public static void main(String[] args) {
+
+
+
+        calibration();
+        if(true) {
+            return;
+        }
+
 
         CoupledTwainLeverPair pair = new CoupledTwainLeverPair();
         LeversPosition pos = new LeversPosition(pair);

@@ -5,8 +5,8 @@ import dbg.misc.calc.drive.CncSensors;
 
 public class CoupledTwainLeverPair {
 
-    public final CartesianPoint leverLeftStart = new CartesianPoint(100/2-12, 0);
-    public final CartesianPoint leverRightStart = new CartesianPoint(100/2+12, 0);
+    public final CartesianPoint leverLeftStart = new CartesianPoint(35, 5);
+    public final CartesianPoint leverRightStart = new CartesianPoint(35+23, 5);
     public final Rectangle workingArea = new Rectangle(0, 75, 100, 125);
 
     public final double fullSensorAngle = (300/360)*(2.0*Math.PI); // ~300 deg
