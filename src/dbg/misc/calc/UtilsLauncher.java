@@ -264,6 +264,19 @@ public class UtilsLauncher {
 
         LeverAngles leverAngles = pos.calcAngles(new CartesianPoint(70, 100));
 
+        for (CalibrationCase c : CoupledTwainLeverPair.ADC_CALIBRATION_DATA){
+
+            CartesianPoint point = pos.penByAdc(new LeverAnglesSensor(c.near, c.far));
+
+            System.out.println("point = " + point);
+            System.out.println("c = " + c);
+
+            System.out.println();
+
+
+
+        }
+
         LeverAnglesSensor sensor = pos.adcByPen(new CartesianPoint(50, 80));
 
         CartesianPoint point = pos.penByAdc(new LeverAnglesSensor(0.582077, 0.193898));
