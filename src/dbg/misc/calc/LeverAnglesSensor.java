@@ -1,17 +1,17 @@
 package dbg.misc.calc;
 
-public class LeverAngles {
+public class LeverAnglesSensor {
     public final double left;
     public final double right;
 
-    LeverAngles(double left, double right) {
+    LeverAnglesSensor(double left, double right) {
         this.left = left;
         this.right = right;
     }
 
     @Override
     public String toString() {
-        return "LeverAngles{" +
+        return "LeverAnglesSensor{" +
                 "left=" + left +
                 ", right=" + right +
                 '}';

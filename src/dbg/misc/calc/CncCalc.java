@@ -62,67 +62,9 @@ Lfar  = 165
     public static LinearDependency ANGLE_ABC_BY_SENSOR_FAR  = new LinearDependency(-4.609018187697576, 2.5929563564270324);
 
 
-    static double[] x1 = {
-            0.618285,
-            0.545176,
-            0.490636,
-            0.532677,
-            0.653506,
-            0.582077,
-            0.685275,
-            0.650554,
-            0.635523,
-            0.533102,
-    };
-
-    static double[] y1 = {
-            2.0454798959717033,
-            2.296122642612522,
-            2.579268806610414,
-            2.4093680972398475,
-            1.9183787754196733,
-            2.151099396369019,
-            1.795327038383244,
-            1.8942619623916783,
-            2.0047351115114713,
-            2.4519059510764523,
-    };
-
-    static double[] x2 = {
-            0.192164,
-            0.162065,
-            0.074242,
-            0.070789,
-            0.170992,
-            0.193898,
-            0.181731,
-            0.250124,
-            0.103211,
-            0.002244,
-    };
-
-    static double[] y2 = {
-            0.48019848047689356,
-            0.6103985090009164,
-            1.0582197800982835,
-            1.0274180835919953,
-            0.5574424603854268,
-            0.4531161157609204,
-            0.4861845051482322,
-            0.19689443831425518,
-            0.832994957236855,
-            1.3386365957026711,
-    };
-
     public static void main(String[] args) {
 
-        LinearRegressionResult result1 = LinearRegression.calc(y1, x1);
-
-        System.out.println("result1 = " + result1);
-
-        LinearRegressionResult result2 = LinearRegression.calc(y2, x2);
-
-        System.out.println("result2 = " + result2);
+        UtilsLauncher.correlateLevers();
 
     }
 
