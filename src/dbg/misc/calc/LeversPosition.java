@@ -1,5 +1,7 @@
 package dbg.misc.calc;
 
+import java.util.Collection;
+
 public class LeversPosition {
 
 
@@ -128,11 +130,40 @@ public class LeversPosition {
         System.out.println();
     }
 
+
+    public static void restrictedArea() {
+
+        CoupledTwainLeverPair pair = new CoupledTwainLeverPair();
+
+        LeversPosition position = new LeversPosition(pair);
+
+        for (Section section : pair.workingArea.getSections()) {
+            dumpSection(position, section);
+        }
+
+
+    }
+
+    private static void dumpSection(LeversPosition position, Section sideSection) {
+        Collection<CartesianPoint> sidePoints = sideSection.split(10);
+
+        for (CartesianPoint sidePoint : sidePoints) {
+
+            LeverAngles leverAngles = position.calcAngles(sidePoint);
+
+            //System.out.println(side + " = " + sidePoint + " " + leverAngles);
+            System.out.println(leverAngles.left + " " + leverAngles.right);
+        }
+    }
+
     public static void main(String[] args) {
 
 
 
-        calibration();
+        //calibration();
+
+        restrictedArea();
+
         if(true) {
             return;
         }

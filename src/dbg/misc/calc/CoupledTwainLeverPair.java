@@ -7,11 +7,12 @@ public class CoupledTwainLeverPair {
 
     public final CartesianPoint leverLeftStart = new CartesianPoint(35, 5);
     public final CartesianPoint leverRightStart = new CartesianPoint(35+23, 5);
-    public final Rectangle workingArea = new Rectangle(0, 75, 100, 125);
+    public final Rectangle workingArea = new Rectangle(50, 70, 80, 110);
+    public final CartesianPoint calibrationPoint = new CartesianPoint(50, 90);
 
-    public final double fullSensorAngle = (300/360)*(2.0*Math.PI); // ~300 deg
 
-    public final CncSensors verticalPositionReference = new CncSensors(0.5316, 0.3527, 0.0, 0);
+    //public final double fullSensorAngle = (300/360)*(2.0*Math.PI); // ~300 deg
+    //public final CncSensors verticalPositionReference = new CncSensors(0.5316, 0.3527, 0.0, 0);
 
     public final double leverLeftLowerLength = 50;
     public final double leverRightLowerLength = 50;
