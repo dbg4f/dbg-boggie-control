@@ -16,6 +16,7 @@ public class LeversController implements PositionAware {
 
     public void onPositionReport(LeverAnglesSensor sensor) {
 
+        // archive each report
         // keep previous positions to detect speed
         // detect when pen is out of working area
         // detect when command not executed or not sanctioned move occurred

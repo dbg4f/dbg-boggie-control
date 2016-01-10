@@ -4,6 +4,8 @@ import dbg.misc.format.JsonUtils;
 import dbg.misc.format.PositionReport;
 import dbg.misc.format.TimedMarker;
 import dbg.misc.format.TimedMarkerUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -15,6 +17,9 @@ import java.util.List;
 import static dbg.misc.calc.CncCalc.*;
 
 public class UtilsLauncher {
+
+
+    private static Logger log = LoggerFactory.getLogger(UtilsLauncher.class);
 
     static final double[][] CALIBRATION = new double[][] {
 
@@ -81,6 +86,9 @@ public class UtilsLauncher {
     };
 
     public static void main1(String[] args) throws IOException {
+
+
+
 
 
         PositionReport[] reports = TimedMarkerUtils.readArrayPositionReports("docs/logs", "simple-movement3.json");
@@ -246,6 +254,7 @@ public class UtilsLauncher {
 
     public static void main(String[] args) {
 
+        log.info("Start utils launcher");
 
 
         //calibration();
