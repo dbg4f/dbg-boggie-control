@@ -38,6 +38,11 @@ public class Rectangle {
         };
     }
 
+    public CoordinateRelation[] pointRelation(CartesianPoint point) {
+        // TODO: implement
+        return new CoordinateRelation[] {CoordinateRelation.MATCHES, CoordinateRelation.MATCHES};
+    }
+
     public Section getSection(RectangleSide side) {
 
         RectCorners rectCorners = new RectCorners().invoke();
