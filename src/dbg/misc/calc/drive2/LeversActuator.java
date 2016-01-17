@@ -5,9 +5,7 @@ package dbg.misc.calc.drive2;
  */
 public interface LeversActuator {
 
-    void blinkLeft(int periodMs, double pwm);
 
-    void blinkRight(int periodMs, double pwm);
-
+    void blinkBoth(int periodLeftMs, int periodRightMs, double pwmLeft, double pwmRight);
 
 }

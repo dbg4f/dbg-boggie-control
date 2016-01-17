@@ -38,9 +38,26 @@ public class Rectangle {
         };
     }
 
+    public CoordinateRelation getRelation(double target, double min, double max) {
+        if (target < min) {
+            return CoordinateRelation.BEFORE;
+        }
+        else if (target > max) {
+            return CoordinateRelation.AFTER;
+        }
+        else {
+            return CoordinateRelation.MATCHES;
+        }
+    }
+
     public CoordinateRelation[] pointRelation(CartesianPoint point) {
-        // TODO: implement
-        return new CoordinateRelation[] {CoordinateRelation.MATCHES, CoordinateRelation.MATCHES};
+
+        RectCorners rectCorners = new RectCorners().invoke();
+
+        return new CoordinateRelation[]{
+                getRelation(point.x, rectCorners.getLowerLeft().x, rectCorners.getLowerRight().x),
+                getRelation(point.y, rectCorners.getLowerLeft().y, rectCorners.getUpperLeft().y)
+        };
     }
 
     public Section getSection(RectangleSide side) {

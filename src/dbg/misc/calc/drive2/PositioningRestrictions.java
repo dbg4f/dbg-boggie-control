@@ -21,8 +21,9 @@ public class PositioningRestrictions {
 
         CoordinateRelation[] coordinateRelations = pair.workingArea.pointRelation(point);
 
-        return false;
-
+        return
+                coordinateRelations[0] == CoordinateRelation.MATCHES
+                        && coordinateRelations[1] == CoordinateRelation.MATCHES;
 
     }
 

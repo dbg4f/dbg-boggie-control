@@ -8,5 +8,5 @@ import dbg.misc.calc.drive.CncSensors;
  */
 public interface PositionAware {
 
-    void onPositionReport(CncSensors sensors);
+    void onPositionReport(LeverAnglesSensor sensors);
 }
