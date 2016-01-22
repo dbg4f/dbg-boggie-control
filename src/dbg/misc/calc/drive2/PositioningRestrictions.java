@@ -17,14 +17,17 @@ public class PositioningRestrictions {
 
     public boolean inBorders(LeverAnglesSensor sensor) {
 
-        CartesianPoint point = position.penByAdc(sensor);
+        return inBorders(position.penByAdc(sensor));
+    }
+
+    public boolean inBorders(CartesianPoint point) {
+
 
         CoordinateRelation[] coordinateRelations = pair.workingArea.pointRelation(point);
 
         return
                 coordinateRelations[0] == CoordinateRelation.MATCHES
                         && coordinateRelations[1] == CoordinateRelation.MATCHES;
-
     }
 
 }

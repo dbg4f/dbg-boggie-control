@@ -13,6 +13,9 @@ import org.slf4j.LoggerFactory;
  */
 public class LeversController implements PositionAware {
 
+    public static final double POSITIONING_PRECISION = 0.001;
+    public static final int MAX_SENSORS_AGE = 1000;
+
     enum State {
         IDLE,
         COMMAND_PROCESSING,
@@ -34,12 +37,18 @@ public class LeversController implements PositionAware {
 
     private LeversPosition position;
 
+    private PositioningRestrictions positioningRestrictions;
+
     public void setActuator(LeversActuator actuator) {
         this.actuator = actuator;
     }
 
     public void setPosition(LeversPosition position) {
         this.position = position;
+    }
+
+    public void setPositioningRestrictions(PositioningRestrictions positioningRestrictions) {
+        this.positioningRestrictions = positioningRestrictions;
     }
 
     public void setCommandQueue(CommandQueue commandQueue) {
@@ -67,32 +76,57 @@ public class LeversController implements PositionAware {
 
     private boolean isSensorReady() {
 
-        return lastSensors != null && System.currentTimeMillis() - lastSensorsTime < 1000;
+        return lastSensors != null && System.currentTimeMillis() - lastSensorsTime < MAX_SENSORS_AGE;
 
     }
 
     public void onTimer() {
+
         // detect stalls
 
         if (state == State.IDLE) {
 
-
-
             if (isSensorReady()) {
-
-                LeverAnglesSensor currentSensors = lastSensors;
-
-                CartesianPoint currentPen = position.penByAdc(lastSensors);
 
                 CncCommand command = commandQueue.getNext();
 
-                if (command.getCode() != CncCommandCode.LINE_TO) {
-                    throw new IllegalStateException("LINE_TO command supported only");
+                if (command != null) {
+
+                    state = State.ERROR;
+
+                    if (command.getCode() != CncCommandCode.LINE_TO) {
+                        throw new IllegalStateException("LINE_TO command supported only");
+                    }
+
+                    CartesianPoint targetPen = new CartesianPoint(command.getX(), command.getY());
+
+                    if (!positioningRestrictions.inBorders(targetPen)) {
+                        throw new IllegalArgumentException("Target position " + targetPen + " is out of working area ");
+                    }
+
+                    LeverAnglesSensor currentSensors = lastSensors;
+
+                    CartesianPoint currentPen = position.penByAdc(lastSensors);
+
+                    LeverAnglesSensor targetSensor = position.adcByPen(targetPen);
+
+                    LeverAnglesSensor diffToTarget = currentSensors.difference(targetSensor);
+
+
+                    if (isDifferenceSmallEnough(diffToTarget)) {
+
+                        // reached position
+
+                    }
+
+
+
+
+                    state = State.COMMAND_PROCESSING;
+
+
                 }
 
-                CartesianPoint targetPen = new CartesianPoint(command.getX(), command.getY());
-
-                LeverAnglesSensor targetSensor = position.adcByPen(targetPen);
 
 
 
@@ -113,6 +147,11 @@ public class LeversController implements PositionAware {
 
 
 
+    }
+
+
+    private boolean isDifferenceSmallEnough(LeverAnglesSensor diff) {
+        return Math.abs(diff.left) < POSITIONING_PRECISION && Math.abs(diff.right) < POSITIONING_PRECISION;
     }
 
 

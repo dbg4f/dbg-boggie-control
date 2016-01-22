@@ -9,6 +9,10 @@ public class LeverAnglesSensor {
         this.right = right;
     }
 
+    public LeverAnglesSensor difference(LeverAnglesSensor sensor) {
+        return new LeverAnglesSensor(left - sensor.left, right - sensor.right);
+    }
+
     @Override
     public String toString() {
         return "LeverAnglesSensor{" +

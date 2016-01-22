@@ -2,7 +2,7 @@ package dbg.misc.calc;
 
 public class Rectangle {
 
-    ;
+
 
     public final CartesianPoint corner1;
     public final CartesianPoint corner2;
