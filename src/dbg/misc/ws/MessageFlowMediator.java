@@ -37,7 +37,7 @@ public class MessageFlowMediator {
 
     //log.info("Message: " + message + " sent to " + activeConsumers.size() +  " consumers");
     //log.info(message);
-      System.err.print(message);
+      log.info(message);
 
   }
 
