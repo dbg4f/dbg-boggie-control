@@ -1,6 +1,5 @@
 package dbg.misc.calc.drive2.push;
 
-import dbg.misc.calc.LeverAnglesSensor;
 import dbg.misc.calc.drive2.DrivePush;
 
 /**

@@ -17,21 +17,12 @@ public class CommandProcessingContext implements PositionAware, LeversActuator{
 
     private LeverAnglesSensor initialSensors;
     private LeverAnglesSensor reachedSensors;
+    private long commandStartedTime;
 
-    public CommandProcessingContext(CncCommand command) {
+    public CommandProcessingContext(CncCommand command, LeverAnglesSensor initialSensors) {
         this.command = command;
-    }
-
-    class BlinkPair {
-        DrivePush left;
-        DrivePush right;
-        long time;
-
-        public BlinkPair(DrivePush left, DrivePush right) {
-            this.left = left;
-            this.right = right;
-            this.time = System.currentTimeMillis();
-        }
+        this.initialSensors = initialSensors;
+        commandStartedTime = System.currentTimeMillis();
     }
 
     class PositionReport {
@@ -42,18 +33,50 @@ public class CommandProcessingContext implements PositionAware, LeversActuator{
             this.sensor = sensor;
             this.time = System.currentTimeMillis();
         }
+
+        @Override
+        public String toString() {
+            return "PositionReport{" +
+                    "sensor=" + sensor +
+                    ", time=" + time +
+                    '}';
+        }
     }
 
     private List<PositionReport> positionReports = new ArrayList<>();
-    private List<BlinkPair> slideCommands = new ArrayList<>();
+    private List<PushPair> slideCommands = new ArrayList<>();
+
+    public void finalizeCommand(LeverAnglesSensor sensor) {
+        reachedSensors = sensor;
+    }
+
+    public CncCommand getCommand() {
+        return command;
+    }
+
+    public long timeElapsed() {
+        return System.currentTimeMillis() - commandStartedTime;
+    }
 
     @Override
     public void blinkBoth(DrivePush left, DrivePush right) {
-        slideCommands.add(new BlinkPair(left, right));
+        slideCommands.add(new PushPair(left, right));
     }
 
     @Override
     public void onPositionReport(LeverAnglesSensor sensors) {
         positionReports.add(new PositionReport(sensors));
+    }
+
+    @Override
+    public String toString() {
+        return "CommandProcessingContext{" +
+                "pushList=" + pushList +
+                ", command=" + command +
+                ", initialSensors=" + initialSensors +
+                ", reachedSensors=" + reachedSensors +
+                ", positionReports=" + positionReports +
+                ", slideCommands=" + slideCommands +
+                '}';
     }
 }

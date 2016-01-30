@@ -3,6 +3,7 @@ import dbg.misc.calc.CoupledTwainLeverPair;
 import dbg.misc.calc.LeverAnglesSensor;
 import dbg.misc.calc.LeversPosition;
 import dbg.misc.calc.drive2.CommandQueue;
+import dbg.misc.calc.drive2.LeversController;
 import dbg.misc.calc.drive2.PositioningRestrictions;
 
 /**
@@ -14,10 +15,14 @@ public class TestAssembly {
     public final LeversPosition position = new LeversPosition(pair);
     public final PositioningRestrictions restrictions = new PositioningRestrictions(pair, position);
     public final CommandQueue commandQueue = new CommandQueue();
+    public final LeversController leversController = new LeversController();
 
     public TestAssembly() {
 
         position.calcAdcAngleDependency();
+
+        //leversController.setActuator();
+        leversController.setCommandQueue(commandQueue);
 
 
 
