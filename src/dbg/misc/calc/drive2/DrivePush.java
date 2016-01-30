@@ -34,6 +34,10 @@ public class DrivePush {
         this.pwm = pwm;
     }
 
+    public DrivePush invertPwm() {
+        return new DrivePush(lengthMsec, -pwm);
+    }
+
     public int getLengthMsec() {
         return lengthMsec;
     }

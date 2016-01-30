@@ -6,7 +6,7 @@ public class CncCommand {
     private final int x;
     private final int y;
 
-    private CncCommand(CncCommandCode code, int x, int y) {
+    public CncCommand(CncCommandCode code, int x, int y) {
         this.code = code;
         this.x = x;
         this.y = y;

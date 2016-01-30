@@ -59,8 +59,8 @@ public class CommandProcessingContext implements PositionAware, LeversActuator{
     }
 
     @Override
-    public void blinkBoth(DrivePush left, DrivePush right) {
-        slideCommands.add(new PushPair(left, right));
+    public void blinkBoth(PushPair pushPair) {
+        slideCommands.add(pushPair);
     }
 
     @Override

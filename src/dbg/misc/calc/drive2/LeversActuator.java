@@ -6,6 +6,6 @@ package dbg.misc.calc.drive2;
 public interface LeversActuator {
 
 
-    void blinkBoth(DrivePush left, DrivePush right);
+    void blinkBoth(PushPair pushPair);
 
 }

@@ -23,11 +23,15 @@ public class PositioningRestrictions {
     public boolean inBorders(CartesianPoint point) {
 
 
-        CoordinateRelation[] coordinateRelations = pair.workingArea.pointRelation(point);
+        CoordinateRelation[] coordinateRelations = getWorkingArea().pointRelation(point);
 
         return
                 coordinateRelations[0] == CoordinateRelation.MATCHES
                         && coordinateRelations[1] == CoordinateRelation.MATCHES;
+    }
+
+    public Rectangle getWorkingArea() {
+        return pair.workingArea;
     }
 
 }

@@ -20,6 +20,10 @@ public class CartesianPoint {
         return Math.sqrt(dx*dx + dy*dy);
     }
 
+    public CartesianPoint round() {
+        return new CartesianPoint(Math.round(x), Math.round(y));
+    }
+
     @Override
     public String toString() {
         return "CartesianPoint{" +

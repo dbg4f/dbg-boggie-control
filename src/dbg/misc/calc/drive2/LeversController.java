@@ -3,6 +3,7 @@ package dbg.misc.calc.drive2;
 import dbg.misc.calc.CartesianPoint;
 import dbg.misc.calc.LeverAnglesSensor;
 import dbg.misc.calc.LeversPosition;
+import dbg.misc.calc.SensorPwmDirectionDependency;
 import dbg.misc.calc.drive.CncCommand;
 import dbg.misc.calc.drive.CncCommandCode;
 import dbg.misc.calc.drive2.push.PushCalculator;
@@ -33,7 +34,7 @@ public class LeversController implements PositionAware {
     private static Logger log = LoggerFactory.getLogger(LeversController.class);
 
 
-    private State state;
+    private State state = State.IDLE;
 
     private LeverAnglesSensor lastSensors;
 
@@ -51,6 +52,7 @@ public class LeversController implements PositionAware {
 
     private PushCalculator pushCalculator;
 
+    private SensorPwmDirectionDependency dependency = SensorPwmDirectionDependency.STRAIGHT;
 
     public void setActuator(LeversActuator actuator) {
         this.actuator = actuator;
@@ -86,7 +88,7 @@ public class LeversController implements PositionAware {
         // check if position is updated (not older than 1 sec)
         //
 
-        log.info("Sensors: " + sensors);
+        log.info("Sensors: " + sensors + " pos " + position.penByAdc(sensors).round());
 
         lastSensors = sensors;
         lastSensorsTime = System.currentTimeMillis();
@@ -113,14 +115,25 @@ public class LeversController implements PositionAware {
 
                     CncCommand command = acquireCommand();
 
-                    state = State.ERROR;
+                    if (command != null) {
 
-                    validateCommand(command);
+                        state = State.ERROR;
 
-                    state = State.COMMAND_PROCESSING;
+                        validateCommand(command);
+
+                        state = State.COMMAND_PROCESSING;
+                    }
+
                 }
 
-                CncCommand command = currentCommandProcessingContext.getCommand();
+                CncCommand command = null;
+
+                if (currentCommandProcessingContext != null) {
+
+                    command = currentCommandProcessingContext.getCommand();
+
+                }
+
 
                 if (command != null) {
 
@@ -190,11 +203,13 @@ public class LeversController implements PositionAware {
         DrivePush drivePushLeft = pushCalculator.calc(diffToTarget.left);
         DrivePush drivePushRight = pushCalculator.calc(diffToTarget.right);
 
+        PushPair pushPair = new PushPair(drivePushLeft, drivePushRight);
+
         log.info("Diff " + diffToTarget + ", push " + drivePushLeft + " " + drivePushRight);
 
-        currentCommandProcessingContext.blinkBoth(drivePushLeft, drivePushRight);
+        currentCommandProcessingContext.blinkBoth(pushPair);
 
-        actuator.blinkBoth(drivePushLeft, drivePushRight);
+        actuator.blinkBoth(pushPair);
     }
 
     private void finalizeCommand() {
@@ -210,7 +225,10 @@ public class LeversController implements PositionAware {
     private CncCommand acquireCommand() {
         CncCommand command = commandQueue.getNext();
 
-        currentCommandProcessingContext = new CommandProcessingContext(command, lastSensors);
+        if (command != null) {
+
+            currentCommandProcessingContext = new CommandProcessingContext(command, lastSensors);
+        }
 
         return command;
     }
@@ -223,7 +241,7 @@ public class LeversController implements PositionAware {
         CartesianPoint targetPen = new CartesianPoint(command.getX(), command.getY());
 
         if (!positioningRestrictions.inBorders(targetPen)) {
-            throw new IllegalArgumentException("Target position " + targetPen + " is out of working area ");
+            throw new IllegalArgumentException("Target position " + targetPen + " is out of working area " + positioningRestrictions.getWorkingArea());
         }
     }
 

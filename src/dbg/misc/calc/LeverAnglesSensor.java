@@ -15,6 +15,10 @@ public class LeverAnglesSensor {
         this.timeMarker = timeMarker;
     }
 
+    public LeverAnglesSensor move(double deltaLeft, double deltaRight) {
+        return new LeverAnglesSensor(left + deltaLeft,  right + deltaRight);
+    }
+
     public LeverAnglesSensor difference(LeverAnglesSensor sensor) {
         return new LeverAnglesSensor(left - sensor.left, right - sensor.right);
     }
@@ -24,6 +28,7 @@ public class LeverAnglesSensor {
         return "LeverAnglesSensor{" +
                 "left=" + left +
                 ", right=" + right +
+                ", timeMarker=" + timeMarker +
                 '}';
     }
 }
