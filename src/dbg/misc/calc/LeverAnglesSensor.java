@@ -23,6 +23,11 @@ public class LeverAnglesSensor {
         return new LeverAnglesSensor(left - sensor.left, right - sensor.right);
     }
 
+    public boolean isSameSign(LeverAnglesSensor sensor) {
+        return Math.signum(sensor.left) == Math.signum(left) &&
+                Math.signum(sensor.right) == Math.signum(right);
+    }
+
     @Override
     public String toString() {
         return "LeverAnglesSensor{" +

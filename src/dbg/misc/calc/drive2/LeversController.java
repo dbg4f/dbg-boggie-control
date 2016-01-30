@@ -99,7 +99,13 @@ public class LeversController implements PositionAware {
 
     }
 
-    private boolean isSensorReady() {
+    public LeverAnglesSensor getLastSensors() {
+        return lastSensors;
+    }
+
+
+
+    public boolean isSensorReady() {
 
         return lastSensors != null && System.currentTimeMillis() - lastSensorsTime < MAX_SENSORS_AGE;
 
@@ -145,10 +151,13 @@ public class LeversController implements PositionAware {
 
                     LeverAnglesSensor targetSensor = position.adcByPen(targetPen);
 
+                    currentCommandProcessingContext.setTargetSensors(targetSensor);
+
                     LeverAnglesSensor diffToTarget = currentSensors.difference(targetSensor);
 
+                    LeverAnglesSensor fullDifference = currentCommandProcessingContext.getInitialSensors().difference(targetSensor);
 
-                    PositioningStatus positioningStatus = positioningStatus(diffToTarget);
+                    PositioningStatus positioningStatus = positioningStatus(diffToTarget, fullDifference);
 
                     log.info("Positioning status: " + positioningStatus + " pen " + currentPen + " diff " + diffToTarget);
 
@@ -173,29 +182,11 @@ public class LeversController implements PositionAware {
 
                     }
 
-
-
                 }
-
-
-
-
-
-
-
-
-
 
             }
 
-
-
-
-
         }
-
-
-
 
     }
 
@@ -246,7 +237,7 @@ public class LeversController implements PositionAware {
     }
 
 
-    private PositioningStatus positioningStatus(LeverAnglesSensor diff) {
+    private PositioningStatus positioningStatus(LeverAnglesSensor diff, LeverAnglesSensor fullDifference) {
 
         if (isDifferenceSmallEnough(diff)) {
             return PositioningStatus.REACHED;
@@ -256,19 +247,21 @@ public class LeversController implements PositionAware {
             return PositioningStatus.TIMEOUT;
         }
 
-
-        // TODO: detect overshoot ()
+        if (!fullDifference.isSameSign(diff)) {
+            return PositioningStatus.OVERSHOOT;
+        }
 
         return PositioningStatus.NOT_REACHED;
 
     }
 
     private boolean isDifferenceSmallEnough(LeverAnglesSensor diff) {
-        return Math.abs(diff.left) < POSITIONING_PRECISION && Math.abs(diff.right) < POSITIONING_PRECISION;
+        return isSmallEnough(diff.left) && isSmallEnough(diff.right);
     }
 
-
-
+    private boolean isSmallEnough(double difference) {
+        return Math.abs(difference) < POSITIONING_PRECISION;
+    }
 
 
 }

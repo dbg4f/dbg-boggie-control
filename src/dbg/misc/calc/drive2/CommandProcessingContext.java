@@ -16,6 +16,7 @@ public class CommandProcessingContext implements PositionAware, LeversActuator{
     private final CncCommand command;
 
     private LeverAnglesSensor initialSensors;
+    private LeverAnglesSensor targetSensors;
     private LeverAnglesSensor reachedSensors;
     private long commandStartedTime;
 
@@ -23,6 +24,14 @@ public class CommandProcessingContext implements PositionAware, LeversActuator{
         this.command = command;
         this.initialSensors = initialSensors;
         commandStartedTime = System.currentTimeMillis();
+    }
+
+    public void setTargetSensors(LeverAnglesSensor targetSensors) {
+        this.targetSensors = targetSensors;
+    }
+
+    public LeverAnglesSensor getInitialSensors() {
+        return initialSensors;
     }
 
     class PositionReport {
@@ -58,6 +67,7 @@ public class CommandProcessingContext implements PositionAware, LeversActuator{
         return System.currentTimeMillis() - commandStartedTime;
     }
 
+
     @Override
     public void blinkBoth(PushPair pushPair) {
         slideCommands.add(pushPair);
@@ -74,7 +84,9 @@ public class CommandProcessingContext implements PositionAware, LeversActuator{
                 "pushList=" + pushList +
                 ", command=" + command +
                 ", initialSensors=" + initialSensors +
+                ", targetSensors=" + targetSensors +
                 ", reachedSensors=" + reachedSensors +
+                ", commandStartedTime=" + commandStartedTime +
                 ", positionReports=" + positionReports +
                 ", slideCommands=" + slideCommands +
                 '}';

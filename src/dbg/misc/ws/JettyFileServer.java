@@ -1,5 +1,6 @@
 package dbg.misc.ws;
 
+import dbg.misc.calc.drive2.LeversControllerAdapter;
 import dbg.misc.format.JsonMessagePicker;
 import dbg.misc.ws.serial.SerialRead;
 import org.eclipse.jetty.server.Connector;
@@ -25,6 +26,8 @@ public class JettyFileServer {
       JsonMessagePicker messagePicker = new JsonMessagePicker();
 
       MessageFlowMediator.getInstance().registerConsumer(messagePicker);
+
+    LeversControllerAdapter.getInstance();
 
     Server server = new Server(9090);
     Connector connector = new ServerConnector(server);
