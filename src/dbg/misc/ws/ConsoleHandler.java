@@ -1,5 +1,6 @@
 package dbg.misc.ws;
 
+import dbg.misc.calc.drive2.LeversControllerAdapter;
 import dbg.misc.format.JsonMessagePicker;
 import dbg.misc.ws.serial.SerialRead;
 import freemarker.template.Configuration;
@@ -12,6 +13,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import javax.servlet.ServletException;
+import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.File;
@@ -50,6 +52,8 @@ public class ConsoleHandler extends AbstractHandler {
 
 
      String[] requestParts = baseRequest.getRequestURI().split("/");
+
+      ServletOutputStream responseOutputStream = response.getOutputStream();
 
       if (requestParts.length > 2) {
 
@@ -143,9 +147,23 @@ public class ConsoleHandler extends AbstractHandler {
           sendCommand("{\"cmd\":\"stepLift\",\"pwm\":-0.6,\"duration\":10}");
           createCommandsForm(response);
         }
+        else if (tail.equalsIgnoreCase("positionReport")) {
+          responseOutputStream.print(String.valueOf(LeversControllerAdapter.getInstance().getSensors()));
+          responseOutputStream.flush();
+        }
+        else if (tail.equalsIgnoreCase("lineTo")) {
+          int x = Integer.valueOf(requestParts[3]);
+          int y = Integer.valueOf(requestParts[4]);
+
+          LeversControllerAdapter.getInstance().moveTo(x, y);
+
+          responseOutputStream.print(String.valueOf(LeversControllerAdapter.getInstance().getSensors()));
+          responseOutputStream.flush();
+        }
         else {
           createBasicFtlForm(response);
         }
+
 
       }
       else {
