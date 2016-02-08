@@ -11,8 +11,6 @@ import java.util.List;
  */
 public class CommandProcessingContext implements PositionAware, LeversActuator{
 
-    private List<DrivePush> pushList = new ArrayList<>();
-
     private final CncCommand command;
 
     private LeverAnglesSensor initialSensors;
@@ -81,8 +79,7 @@ public class CommandProcessingContext implements PositionAware, LeversActuator{
     @Override
     public String toString() {
         return "CommandProcessingContext{" +
-                "pushList=" + pushList +
-                ", command=" + command +
+                "command=" + command +
                 ", initialSensors=" + initialSensors +
                 ", targetSensors=" + targetSensors +
                 ", reachedSensors=" + reachedSensors +

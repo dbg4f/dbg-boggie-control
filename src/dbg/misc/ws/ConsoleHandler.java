@@ -1,5 +1,7 @@
 package dbg.misc.ws;
 
+import dbg.misc.calc.drive.CncCommand;
+import dbg.misc.calc.drive.CncCommandCode;
 import dbg.misc.calc.drive2.LeversControllerAdapter;
 import dbg.misc.format.JsonMessagePicker;
 import dbg.misc.ws.serial.SerialRead;
@@ -61,6 +63,21 @@ public class ConsoleHandler extends AbstractHandler {
 
         if (tail.equalsIgnoreCase("commands")) {
           createCommandsForm(response);
+        }
+        else if (tail.equalsIgnoreCase("drive")) {
+
+          String driveCommand = request.getParameter("coordinates");
+
+          if (driveCommand != null && driveCommand.length() > 0) {
+            log.info("Coordinates: " + driveCommand);
+            String[] xy = driveCommand.split("\\s");
+            LeversControllerAdapter.getInstance().getCommandQueue().addCommand(new CncCommand(CncCommandCode.LINE_TO, Integer.valueOf(xy[0]), Integer.valueOf(xy[1])));
+          }
+
+          createDriveForm(response);
+        }
+        else if (tail.equalsIgnoreCase("archive")) {
+          createArchiveForm(response);
         }
         else if (tail.equalsIgnoreCase("sendCommands")) {
           String commands = request.getParameter("commands");
@@ -221,5 +238,18 @@ public class ConsoleHandler extends AbstractHandler {
 
       /* Get the template (uses cache internally) */
     fillTemplate(response, root, "commands.ftl");
+  }
+
+  private void createDriveForm(HttpServletResponse response) throws IOException {
+    Map root = new HashMap();
+      /* Get the template (uses cache internally) */
+    root.put("contexts", LeversControllerAdapter.getInstance().getLeversController().getContextArchive().getContexts());
+    fillTemplate(response, root, "drive.ftl");
+  }
+
+  private void createArchiveForm(HttpServletResponse response) throws IOException {
+    Map root = new HashMap();
+      /* Get the template (uses cache internally) */
+    fillTemplate(response, root, "archive.ftl");
   }
 }

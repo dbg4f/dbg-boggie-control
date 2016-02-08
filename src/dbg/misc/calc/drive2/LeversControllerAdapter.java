@@ -4,6 +4,7 @@ import com.google.gson.Gson;
 import com.google.gson.JsonParser;
 import com.google.gson.JsonSyntaxException;
 import com.google.gson.reflect.TypeToken;
+import dbg.misc.calc.CoupledServoPairEmulator;
 import dbg.misc.calc.CoupledTwainLeverPair;
 import dbg.misc.calc.LeverAnglesSensor;
 import dbg.misc.calc.LeversPosition;
@@ -15,6 +16,8 @@ import dbg.misc.calc.drive2.push.PushCalculator;
 import dbg.misc.ws.MessageConsumer;
 import dbg.misc.ws.MessageFlowMediator;
 import dbg.misc.ws.serial.SerialRead;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.lang.reflect.Field;
@@ -28,6 +31,8 @@ import java.util.Set;
  * Created by dmitri on 30.01.16.
  */
 public class LeversControllerAdapter implements MessageConsumer, LeversActuator, Runnable {
+
+    private static Logger log = LoggerFactory.getLogger(LeversControllerAdapter.class);
 
     private LeversController leversController;
 
@@ -62,7 +67,13 @@ public class LeversControllerAdapter implements MessageConsumer, LeversActuator,
     }
 
 
+    public LeversController getLeversController() {
+        return leversController;
+    }
 
+    public CommandQueue getCommandQueue() {
+        return commandQueue;
+    }
 
     public void setup() {
          final CoupledTwainLeverPair pair = new CoupledTwainLeverPair();
@@ -74,7 +85,31 @@ public class LeversControllerAdapter implements MessageConsumer, LeversActuator,
 
         position.calcAdcAngleDependency();
 
-        leversController.setActuator(this);
+
+
+
+        if (System.getProperty("drive-emulator", "false").equals("true")) {
+
+            CoupledServoPairEmulator emulator = new CoupledServoPairEmulator();
+            leversController.setActuator(emulator);
+            emulator.setController(leversController);
+            emulator.setAnglesSensor(new LeverAnglesSensor(0.607276, 0.105258));
+            emulator.launch();
+
+            log.info("Running emulator configuration");
+
+        }
+        else {
+
+            leversController.setActuator(this);
+
+        }
+
+
+
+
+
+
         leversController.setCommandQueue(commandQueue);
         leversController.setPosition(position);
         leversController.setPositioningRestrictions(restrictions);

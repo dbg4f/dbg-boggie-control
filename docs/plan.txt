@@ -10,3 +10,10 @@ dependencies
  - javahidapi
  - spring mvc and ioc
  - h2
+
+
+
+- command context holder and history
+- show contexts history on the page
+- enqueue command form
+

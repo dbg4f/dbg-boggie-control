@@ -15,6 +15,8 @@ import org.slf4j.LoggerFactory;
  */
 public class LeversController implements PositionAware {
 
+    private static Logger log = LoggerFactory.getLogger(LeversController.class);
+
     public static final double POSITIONING_PRECISION = 0.001;
     public static final int MAX_SENSORS_AGE = 1000;
     public static final int CMD_TIMEOUT_MSEC = 5000;
@@ -30,9 +32,6 @@ public class LeversController implements PositionAware {
         OVERSHOOT,
         TIMEOUT
     }
-
-    private static Logger log = LoggerFactory.getLogger(LeversController.class);
-
 
     private State state = State.IDLE;
 
@@ -52,6 +51,8 @@ public class LeversController implements PositionAware {
 
     private PushCalculator pushCalculator;
 
+    private ContextArchive contextArchive = new ContextArchive();
+
     private SensorPwmDirectionDependency dependency = SensorPwmDirectionDependency.STRAIGHT;
 
     public void setActuator(LeversActuator actuator) {
@@ -70,7 +71,13 @@ public class LeversController implements PositionAware {
         this.pushCalculator = pushCalculator;
     }
 
+    public void setContextArchive(ContextArchive contextArchive) {
+        this.contextArchive = contextArchive;
+    }
 
+    public ContextArchive getContextArchive() {
+        return contextArchive;
+    }
 
     public void setCommandQueue(CommandQueue commandQueue) {
         this.commandQueue = commandQueue;
@@ -219,6 +226,9 @@ public class LeversController implements PositionAware {
         if (command != null) {
 
             currentCommandProcessingContext = new CommandProcessingContext(command, lastSensors);
+
+            contextArchive.addCommandContext(currentCommandProcessingContext);
+
         }
 
         return command;
