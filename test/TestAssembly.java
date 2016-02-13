@@ -22,7 +22,7 @@ public class TestAssembly {
     public final CommandQueue commandQueue = new CommandQueue();
     public final LeversController leversController = new LeversController();
     public final CoupledServoPairEmulator emulator = new CoupledServoPairEmulator();
-    public final PushCalculator pushCalculator = new FixedPwmPushCalculator(0.6, 1);
+    public final PushCalculator pushCalculator = new FixedPwmPushCalculator(0.6, 3);
 
 
 
@@ -50,9 +50,16 @@ public class TestAssembly {
 
         TestAssembly testAssembly = new TestAssembly();
 
-        testAssembly.commandQueue.addCommand(new CncCommand(CncCommandCode.LINE_TO, 50, 100));
-        testAssembly.commandQueue.addCommand(new CncCommand(CncCommandCode.LINE_TO, 60, 80));
+        //testAssembly.commandQueue.addCommand(new CncCommand(CncCommandCode.LINE_TO, 50, 100));
+        //testAssembly.commandQueue.addCommand(new CncCommand(CncCommandCode.LINE_TO, 60, 80));
 
+
+        //{left=0.596942, right=0.134262,  pos CartesianPoint{x=52.0, y=100.0}
+
+
+        LeverAnglesSensor s = testAssembly.position.adcByPen(new CartesianPoint(80, 100));
+
+        System.out.println("s = " + s);
 
     }
 

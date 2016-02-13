@@ -42,6 +42,7 @@
                  <a href="gotoUpper" class="btn btn-info btn-lg">goto Upper</a>
                  <a href="gotoLower" class="btn btn-info btn-lg">goto Lower</a>
                  <a href="savePid" class="btn btn-info btn-lg">Save PID</a>
+                 <a href="stepBoth" class="btn btn-info btn-lg">StepBoth</a>
              </p>
 
              <ul>

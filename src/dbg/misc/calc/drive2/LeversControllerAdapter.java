@@ -81,7 +81,7 @@ public class LeversControllerAdapter implements MessageConsumer, LeversActuator,
          final PositioningRestrictions restrictions = new PositioningRestrictions(pair, position);
          commandQueue = new CommandQueue();
          leversController = new LeversController();
-         final PushCalculator pushCalculator = new FixedPwmPushCalculator(0.6, 1);
+         final PushCalculator pushCalculator = new FixedPwmPushCalculator(0.6, 3);
 
         position.calcAdcAngleDependency();
 

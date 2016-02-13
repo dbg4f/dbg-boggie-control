@@ -35,11 +35,15 @@ public class PushPair {
 
     public String toJson() {
 
-        Map<String, String> m = new LinkedHashMap<>();
-        m.put("pwmLeft",        String.valueOf(left.getPwm()));
-        m.put("durationLeft",   String.valueOf(left.getLengthMsec()));
-        m.put("pwmRight",       String.valueOf(right.getPwm()));
-        m.put("durationRight",  String.valueOf(right.getLengthMsec()));
+        Map<String, Object> m = new LinkedHashMap<>();
+        m.put("cmd",            "stepBoth");
+        m.put("pwmLeft",        left.getPwm());
+        m.put("durationLeft",   left.getLengthMsec());
+        m.put("pwmRight",       right.getPwm());
+        m.put("durationRight",  right.getLengthMsec());
+
+
+
         Type mapType = new TypeToken<Map<String, Number>>() {}.getType();
 
         Gson gson = new GsonBuilder().create();

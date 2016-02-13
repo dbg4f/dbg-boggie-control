@@ -17,7 +17,7 @@ public class CoupledServoPairEmulator implements Runnable, LeversActuator {
 
     private LeverAnglesSensor anglesSensor;
 
-    private SensorPwmDirectionDependency dependency = SensorPwmDirectionDependency.STRAIGHT;
+    private SensorPwmDirectionDependency dependency = SensorPwmDirectionDependency.RIGHT_REVERSED;
 
     public void setDependency(SensorPwmDirectionDependency dependency) {
         this.dependency = dependency;

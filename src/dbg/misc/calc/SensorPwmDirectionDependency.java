@@ -8,6 +8,7 @@ public class SensorPwmDirectionDependency {
     private final boolean rightStraight;
 
     public static final SensorPwmDirectionDependency STRAIGHT = new SensorPwmDirectionDependency(true, true);
+    public static final SensorPwmDirectionDependency RIGHT_REVERSED = new SensorPwmDirectionDependency(true, false);
 
     public SensorPwmDirectionDependency(boolean leftStraight, boolean rightStraight) {
         this.leftStraight = leftStraight;

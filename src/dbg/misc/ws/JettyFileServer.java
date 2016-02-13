@@ -27,7 +27,7 @@ public class JettyFileServer {
 
       MessageFlowMediator.getInstance().registerConsumer(messagePicker);
 
-    LeversControllerAdapter.getInstance();
+      LeversControllerAdapter.getInstance();
 
     Server server = new Server(9090);
     Connector connector = new ServerConnector(server);

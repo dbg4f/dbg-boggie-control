@@ -53,7 +53,7 @@ public class LeversController implements PositionAware {
 
     private ContextArchive contextArchive = new ContextArchive();
 
-    private SensorPwmDirectionDependency dependency = SensorPwmDirectionDependency.STRAIGHT;
+    private SensorPwmDirectionDependency dependency = SensorPwmDirectionDependency.RIGHT_REVERSED;
 
     public void setActuator(LeversActuator actuator) {
         this.actuator = actuator;

@@ -164,6 +164,10 @@ public class ConsoleHandler extends AbstractHandler {
           sendCommand("{\"cmd\":\"stepLift\",\"pwm\":-0.6,\"duration\":10}");
           createCommandsForm(response);
         }
+        else if (tail.equalsIgnoreCase("stepBoth")) {
+          sendCommand("{\"cmd\":\"stepBoth\",\"pwmLeft\":\"-0.6\",\"durationLeft\":\"1\",\"pwmRight\":\"-0.6\",\"durationRight\":\"1\"}");
+          createCommandsForm(response);
+        }
         else if (tail.equalsIgnoreCase("positionReport")) {
           responseOutputStream.print(String.valueOf(LeversControllerAdapter.getInstance().getSensors()));
           responseOutputStream.flush();

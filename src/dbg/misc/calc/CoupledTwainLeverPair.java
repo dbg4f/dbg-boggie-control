@@ -6,7 +6,7 @@ public class CoupledTwainLeverPair {
 
     public final CartesianPoint leverLeftStart = new CartesianPoint(35, 5);
     public final CartesianPoint leverRightStart = new CartesianPoint(35+23, 5);
-    public final Rectangle workingArea = new Rectangle(50, 70, 80, 110);
+    public final Rectangle workingArea = new Rectangle(20, 70, 80, 110);
     public final CartesianPoint referencePoint = new CartesianPoint(50, 90);
 
 
