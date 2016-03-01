@@ -4,6 +4,7 @@ import dbg.misc.calc.LeverAnglesSensor;
 import dbg.misc.calc.drive.CncCommand;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -76,8 +77,43 @@ public class CommandProcessingContext implements PositionAware, LeversActuator{
         positionReports.add(new PositionReport(sensors));
     }
 
+    public String summary() {
+
+
+        String summary = "";
+
+
+        summary += "initial " + initialSensors.left + " " + initialSensors.right + "\n";
+        summary += "target  " + targetSensors.left + " " + targetSensors.right + "\n";
+
+        if (reachedSensors != null) {
+
+            summary += "reached " + reachedSensors.left + " " + reachedSensors.right + "\n";
+        }
+
+        summary += " start " + new Date(commandStartedTime).toString() + "\n";
+
+        for (PositionReport report : positionReports) {
+            summary += (commandStartedTime - report.time) + " " + report.sensor.left + " " + report.sensor.right + "\n";;
+        }
+
+
+        for (PushPair pair : slideCommands) {
+            summary += (commandStartedTime - pair.time) + " " + pair.getLeft() + " " + pair.getRight() + "\n";;
+        }
+
+
+        return summary;
+
+    }
+
+
+
     @Override
     public String toString() {
+
+        return summary();
+/*
         return "CommandProcessingContext{" +
                 "command=" + command +
                 ", initialSensors=" + initialSensors +
@@ -86,6 +122,6 @@ public class CommandProcessingContext implements PositionAware, LeversActuator{
                 ", commandStartedTime=" + commandStartedTime +
                 ", positionReports=" + positionReports +
                 ", slideCommands=" + slideCommands +
-                '}';
+                '}';*/
     }
 }

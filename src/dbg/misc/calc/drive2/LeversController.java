@@ -28,6 +28,8 @@ public class LeversController implements PositionAware {
 
     enum PositioningStatus {
         NOT_REACHED,
+        LEFT_REACHED,
+        RIGH_REACHED,
         REACHED,
         OVERSHOOT,
         TIMEOUT
@@ -110,7 +112,9 @@ public class LeversController implements PositionAware {
         return lastSensors;
     }
 
-
+    public CartesianPoint getLastPoint() {
+        return position.penByAdc(getLastSensors());
+    }
 
     public boolean isSensorReady() {
 
@@ -173,15 +177,19 @@ public class LeversController implements PositionAware {
                         case TIMEOUT:
                         case OVERSHOOT:
                         case REACHED:
-
                             finalizeCommand();
-
                             break;
 
                         case NOT_REACHED:
+                            applyPush(diffToTarget, false, false);
+                            break;
 
-                            applyPush(diffToTarget);
+                        case LEFT_REACHED:
+                            applyPush(diffToTarget, true, false);
+                            break;
 
+                        case RIGH_REACHED:
+                            applyPush(diffToTarget, false, true);
                             break;
 
                         default:
@@ -197,9 +205,9 @@ public class LeversController implements PositionAware {
 
     }
 
-    private void applyPush(LeverAnglesSensor diffToTarget) {
-        DrivePush drivePushLeft = pushCalculator.calc(diffToTarget.left);
-        DrivePush drivePushRight = pushCalculator.calc(diffToTarget.right);
+    private void applyPush(LeverAnglesSensor diffToTarget, boolean leftReached, boolean rightReached) {
+        DrivePush drivePushLeft = leftReached ? DrivePush.ZERO_PUSH : pushCalculator.calc(diffToTarget.left);
+        DrivePush drivePushRight = rightReached ? DrivePush.ZERO_PUSH : pushCalculator.calc(diffToTarget.right);
 
         PushPair pushPair = new PushPair(drivePushLeft, drivePushRight);
 
@@ -257,11 +265,23 @@ public class LeversController implements PositionAware {
             return PositioningStatus.TIMEOUT;
         }
 
-        if (!fullDifference.isSameSign(diff)) {
+        if (fullDifference.isBothDifferentSign(diff)) {
             return PositioningStatus.OVERSHOOT;
         }
 
-        return PositioningStatus.NOT_REACHED;
+        if (fullDifference.isBothSameSign(diff)) {
+            return PositioningStatus.NOT_REACHED;
+        }
+
+        if (fullDifference.isLeftDifferentSign(diff)) {
+            return PositioningStatus.LEFT_REACHED;
+        }
+
+        if (fullDifference.isRightDifferentSign(diff)) {
+            return PositioningStatus.RIGH_REACHED;
+        }
+
+        throw new IllegalStateException("Cannot recognize positioning status: " + diff + " " + fullDifference);
 
     }
 

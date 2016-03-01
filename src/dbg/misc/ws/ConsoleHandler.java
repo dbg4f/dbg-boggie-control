@@ -2,6 +2,7 @@ package dbg.misc.ws;
 
 import dbg.misc.calc.drive.CncCommand;
 import dbg.misc.calc.drive.CncCommandCode;
+import dbg.misc.calc.drive2.LeversController;
 import dbg.misc.calc.drive2.LeversControllerAdapter;
 import dbg.misc.format.JsonMessagePicker;
 import dbg.misc.ws.serial.SerialRead;
@@ -243,7 +244,11 @@ public class ConsoleHandler extends AbstractHandler {
   private void createDriveForm(HttpServletResponse response) throws IOException {
     Map root = new HashMap();
       /* Get the template (uses cache internally) */
-    root.put("contexts", LeversControllerAdapter.getInstance().getLeversController().getContextArchive().getContexts());
+    LeversController leversController = LeversControllerAdapter.getInstance().getLeversController();
+    root.put("contexts", leversController.getContextArchive().getContexts());
+    root.put("sensors", leversController.getLastSensors());
+    root.put("point", leversController.getLastPoint());
+    root.put("sensorsReady", leversController.isSensorReady());
     fillTemplate(response, root, "drive.ftl");
   }
 

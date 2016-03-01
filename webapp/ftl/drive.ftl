@@ -29,20 +29,20 @@
         <button type="submit" class="btn btn-default">Send</button>
     </form>
 
+
     <br>
+<pre>
+    Point:     ${point}
+    Sensors:   ${sensors}
+    Ready:     ${sensorsReady?c}
+</pre>
 
     <#list contexts as context>
-        <p>${context}
+    <pre>
+        ${context}
+    </pre>
     </#list>
 
-    <table>
-        <tr>
-            <td>111</td>
-        </tr>
-        <tr>
-            <td>222</td>
-        </tr>
-    </table>
 
 
 </div>

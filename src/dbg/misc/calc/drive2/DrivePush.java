@@ -10,6 +10,8 @@ public class DrivePush {
 
     private final double pwm;
 
+    public static DrivePush ZERO_PUSH = new DrivePush(0, 0);
+
 
     public DrivePush(int lengthMsec, double pwm) {
 

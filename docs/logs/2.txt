@@ -1,0 +1,351 @@
+
+
+
+
+2016-03-01 16:51:18,340  INFO   [ConsoleHandler] Coordinates: 55 110
+2016-03-01 16:51:18,341  INFO   [CommandQueue] Command added to queue [793232309]: CncCommand{code=LINE_TO, x=55, y=110}
+2016-03-01 16:51:18,431  INFO   [LeversController] Sensors: LeverAnglesSensor{left=0.607276, right=0.105258, timeMarker=0} pos CartesianPoint{x=53.0, y=108.0}
+2016-03-01 16:51:18,431  INFO   [CommandQueue] Command to execute [793232309]: CncCommand{code=LINE_TO, x=55, y=110}
+2016-03-01 16:51:18,433  INFO   [LeversController] Positioning status: NOT_REACHED pen CartesianPoint{x=53.17129206061567, y=108.22981497715581} diff LeverAnglesSensor{left=-0.007571467398743592, right=0.0031119307386765632, timeMarker=0}
+2016-03-01 16:51:18,433  INFO   [LeversController] Positioning status: NOT_REACHED pen CartesianPoint{x=53.17129206061567, y=108.22981497715581} diff LeverAnglesSensor{left=-0.007571467398743592, right=0.0031119307386765632, timeMarker=0}
+2016-03-01 16:51:18,434  INFO   [LeversController] Diff LeverAnglesSensor{left=-0.007571467398743592, right=0.0031119307386765632, timeMarker=0}, push DrivePush{lengthMsec=1, pwm=-0.6} DrivePush{lengthMsec=1, pwm=0.6}
+2016-03-01 16:51:18,434  INFO   [LeversController] Diff LeverAnglesSensor{left=-0.007571467398743592, right=0.0031119307386765632, timeMarker=0}, push DrivePush{lengthMsec=1, pwm=-0.6} DrivePush{lengthMsec=1, pwm=0.6}
+2016-03-01 16:51:18,434  INFO   [CoupledServoPairEmulator] blinkBoth: BlinkPair{left=DrivePush{lengthMsec=1, pwm=0.6}, right=DrivePush{lengthMsec=1, pwm=-0.6}, time=1456843878434} new sensors LeverAnglesSensor{left=0.609276, right=0.103258, timeMarker=0}
+2016-03-01 16:51:18,434  INFO   [CoupledServoPairEmulator] blinkBoth: BlinkPair{left=DrivePush{lengthMsec=1, pwm=0.6}, right=DrivePush{lengthMsec=1, pwm=-0.6}, time=1456843878434} new sensors LeverAnglesSensor{left=0.609276, right=0.103258, timeMarker=0}
+2016-03-01 16:51:18,734  INFO   [LeversController] Positioning status: NOT_REACHED pen CartesianPoint{x=53.17129206061567, y=108.22981497715581} diff LeverAnglesSensor{left=-0.007571467398743592, right=0.0031119307386765632, timeMarker=0}
+2016-03-01 16:51:18,734  INFO   [LeversController] Diff LeverAnglesSensor{left=-0.007571467398743592, right=0.0031119307386765632, timeMarker=0}, push DrivePush{lengthMsec=1, pwm=-0.6} DrivePush{lengthMsec=1, pwm=0.6}
+2016-03-01 16:51:18,734  INFO   [CoupledServoPairEmulator] blinkBoth: BlinkPair{left=DrivePush{lengthMsec=1, pwm=0.6}, right=DrivePush{lengthMsec=1, pwm=-0.6}, time=1456843878734} new sensors LeverAnglesSensor{left=0.610276, right=0.102258, timeMarker=0}
+2016-03-01 16:51:18,934  INFO   [LeversController] Sensors: LeverAnglesSensor{left=0.610276, right=0.102258, timeMarker=0} pos CartesianPoint{x=54.0, y=109.0}
+2016-03-01 16:51:18,935  INFO   [LeversController] Positioning status: NOT_REACHED pen CartesianPoint{x=53.74387539198308, y=109.29874230980145} diff LeverAnglesSensor{left=-0.004571467398743589, right=1.1193073867656056E-4, timeMarker=0}
+2016-03-01 16:51:18,935  INFO   [LeversController] Diff LeverAnglesSensor{left=-0.004571467398743589, right=1.1193073867656056E-4, timeMarker=0}, push DrivePush{lengthMsec=1, pwm=-0.6} DrivePush{lengthMsec=1, pwm=0.6}
+2016-03-01 16:51:18,935  INFO   [CoupledServoPairEmulator] blinkBoth: BlinkPair{left=DrivePush{lengthMsec=1, pwm=0.6}, right=DrivePush{lengthMsec=1, pwm=-0.6}, time=1456843878935} new sensors LeverAnglesSensor{left=0.611276, right=0.101258, timeMarker=0}
+2016-03-01 16:51:19,035  INFO   [LeversController] Positioning status: NOT_REACHED pen CartesianPoint{x=53.74387539198308, y=109.29874230980145} diff LeverAnglesSensor{left=-0.004571467398743589, right=1.1193073867656056E-4, timeMarker=0}
+2016-03-01 16:51:19,035  INFO   [LeversController] Diff LeverAnglesSensor{left=-0.004571467398743589, right=1.1193073867656056E-4, timeMarker=0}, push DrivePush{lengthMsec=1, pwm=-0.6} DrivePush{lengthMsec=1, pwm=0.6}
+2016-03-01 16:51:19,036  INFO   [CoupledServoPairEmulator] blinkBoth: BlinkPair{left=DrivePush{lengthMsec=1, pwm=0.6}, right=DrivePush{lengthMsec=1, pwm=-0.6}, time=1456843879035} new sensors LeverAnglesSensor{left=0.612276, right=0.100258, timeMarker=0}
+2016-03-01 16:51:19,336  INFO   [LeversController] Positioning status: NOT_REACHED pen CartesianPoint{x=53.74387539198308, y=109.29874230980145} diff LeverAnglesSensor{left=-0.004571467398743589, right=1.1193073867656056E-4, timeMarker=0}
+2016-03-01 16:51:19,337  INFO   [LeversController] Diff LeverAnglesSensor{left=-0.004571467398743589, right=1.1193073867656056E-4, timeMarker=0}, push DrivePush{lengthMsec=1, pwm=-0.6} DrivePush{lengthMsec=1, pwm=0.6}
+2016-03-01 16:51:19,337  INFO   [CoupledServoPairEmulator] blinkBoth: BlinkPair{left=DrivePush{lengthMsec=1, pwm=0.6}, right=DrivePush{lengthMsec=1, pwm=-0.6}, time=1456843879336} new sensors LeverAnglesSensor{left=0.613276, right=0.099258, timeMarker=0}
+2016-03-01 16:51:19,435  INFO   [LeversController] Sensors: LeverAnglesSensor{left=0.613276, right=0.099258, timeMarker=0} pos CartesianPoint{x=54.0, y=110.0}
+2016-03-01 16:51:19,436  INFO   [LeversController] Positioning status: NOT_REACHED pen CartesianPoint{x=54.303362419647584, y=110.33221332596675} diff LeverAnglesSensor{left=-0.0015714673987435868, right=-0.002888069261323442, timeMarker=0}
+2016-03-01 16:51:19,436  INFO   [LeversController] Diff LeverAnglesSensor{left=-0.0015714673987435868, right=-0.002888069261323442, timeMarker=0}, push DrivePush{lengthMsec=1, pwm=-0.6} DrivePush{lengthMsec=1, pwm=-0.6}
+2016-03-01 16:51:19,436  INFO   [CoupledServoPairEmulator] blinkBoth: BlinkPair{left=DrivePush{lengthMsec=1, pwm=0.6}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456843879436} new sensors LeverAnglesSensor{left=0.614276, right=0.100258, timeMarker=0}
+2016-03-01 16:51:19,637  INFO   [LeversController] Positioning status: NOT_REACHED pen CartesianPoint{x=54.303362419647584, y=110.33221332596675} diff LeverAnglesSensor{left=-0.0015714673987435868, right=-0.002888069261323442, timeMarker=0}
+2016-03-01 16:51:19,638  INFO   [LeversController] Diff LeverAnglesSensor{left=-0.0015714673987435868, right=-0.002888069261323442, timeMarker=0}, push DrivePush{lengthMsec=1, pwm=-0.6} DrivePush{lengthMsec=1, pwm=-0.6}
+2016-03-01 16:51:19,638  INFO   [CoupledServoPairEmulator] blinkBoth: BlinkPair{left=DrivePush{lengthMsec=1, pwm=0.6}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456843879638} new sensors LeverAnglesSensor{left=0.615276, right=0.101258, timeMarker=0}
+2016-03-01 16:51:19,936  INFO   [LeversController] Sensors: LeverAnglesSensor{left=0.615276, right=0.101258, timeMarker=0} pos CartesianPoint{x=55.0, y=110.0}
+2016-03-01 16:51:19,937  INFO   [LeversController] Positioning status: REACHED pen CartesianPoint{x=55.038502204763944, y=110.23474728657182} diff LeverAnglesSensor{left=4.28532601256415E-4, right=-8.880692613234403E-4, timeMarker=0}
+2016-03-01 16:51:19,937  INFO   [LeversController] Finalize command: CommandProcessingContext{command=CncCommand{code=LINE_TO, x=55, y=110}, initialSensors=LeverAnglesSensor{left=0.607276, right=0.105258, timeMarker=0}, targetSensors=LeverAnglesSensor{left=0.6148474673987436, right=0.10214606926132344, timeMarker=0}, reachedSensors=null, commandStartedTime=1456843878432, positionReports=[PositionReport{sensor=LeverAnglesSensor{left=0.610276, right=0.102258, timeMarker=0}, time=1456843878935}, PositionReport{sensor=LeverAnglesSensor{left=0.613276, right=0.099258, timeMarker=0}, time=1456843879436}, PositionReport{sensor=LeverAnglesSensor{left=0.615276, right=0.101258, timeMarker=0}, time=1456843879937}], slideCommands=[BlinkPair{left=DrivePush{lengthMsec=1, pwm=0.6}, right=DrivePush{lengthMsec=1, pwm=-0.6}, time=1456843878434}, BlinkPair{left=DrivePush{lengthMsec=1, pwm=0.6}, right=DrivePush{lengthMsec=1, pwm=-0.6}, time=1456843878434}, BlinkPair{left=DrivePush{lengthMsec=1, pwm=0.6}, right=DrivePush{lengthMsec=1, pwm=-0.6}, time=1456843878734}, BlinkPair{left=DrivePush{lengthMsec=1, pwm=0.6}, right=DrivePush{lengthMsec=1, pwm=-0.6}, time=1456843878935}, BlinkPair{left=DrivePush{lengthMsec=1, pwm=0.6}, right=DrivePush{lengthMsec=1, pwm=-0.6}, time=1456843879035}, BlinkPair{left=DrivePush{lengthMsec=1, pwm=0.6}, right=DrivePush{lengthMsec=1, pwm=-0.6}, time=1456843879336}, BlinkPair{left=DrivePush{lengthMsec=1, pwm=0.6}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456843879436}, BlinkPair{left=DrivePush{lengthMsec=1, pwm=0.6}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456843879638}]}
+2016-03-01 16:51:19,938  INFO   [CommandQueue] Command complete [793232309]: CncCommand{code=LINE_TO, x=55, y=110}
+
+
+
+ CommandProcessingContext{
+ command=CncCommand{code=LINE_TO, x=55, y=110},
+ initialSensors=LeverAnglesSensor{left=0.607276, right=0.105258, timeMarker=0},
+ targetSensors=LeverAnglesSensor{left=0.6148474673987436, right=0.10214606926132344, timeMarker=0},
+ reachedSensors=LeverAnglesSensor{left=0.615276, right=0.101258, timeMarker=0},
+
+ commandStartedTime=1456843878432,
+ positionReports=[
+ PositionReport{sensor=LeverAnglesSensor{left=0.610276, right=0.102258, timeMarker=0}, time=1456843878935},
+ PositionReport{sensor=LeverAnglesSensor{left=0.613276, right=0.099258, timeMarker=0}, time=1456843879436},
+ PositionReport{sensor=LeverAnglesSensor{left=0.615276, right=0.101258, timeMarker=0}, time=1456843879937}],
+ slideCommands=[
+ BlinkPair{left=DrivePush{lengthMsec=1, pwm=0.6}, right=DrivePush{lengthMsec=1, pwm=-0.6}, time=1456843878434},
+ BlinkPair{left=DrivePush{lengthMsec=1, pwm=0.6}, right=DrivePush{lengthMsec=1, pwm=-0.6}, time=1456843878434},
+ BlinkPair{left=DrivePush{lengthMsec=1, pwm=0.6}, right=DrivePush{lengthMsec=1, pwm=-0.6}, time=1456843878734},
+ BlinkPair{left=DrivePush{lengthMsec=1, pwm=0.6}, right=DrivePush{lengthMsec=1, pwm=-0.6}, time=1456843878935},
+ BlinkPair{left=DrivePush{lengthMsec=1, pwm=0.6}, right=DrivePush{lengthMsec=1, pwm=-0.6}, time=1456843879035},
+ BlinkPair{left=DrivePush{lengthMsec=1, pwm=0.6}, right=DrivePush{lengthMsec=1, pwm=-0.6}, time=1456843879336},
+ BlinkPair{left=DrivePush{lengthMsec=1, pwm=0.6}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456843879436},
+ BlinkPair{left=DrivePush{lengthMsec=1, pwm=0.6}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456843879638}]}
+
+
+
+\2016-03-01 16:56:17,215  INFO   [ConsoleHandler] Coordinates: 54 100
+ 2016-03-01 16:56:17,215  INFO   [CommandQueue] Command added to queue [46065926]: CncCommand{code=LINE_TO, x=54, y=100}
+ 2016-03-01 16:56:17,342  INFO   [CommandQueue] Command to execute [46065926]: CncCommand{code=LINE_TO, x=54, y=100}
+ 2016-03-01 16:56:17,342  INFO   [LeversController] Positioning status: NOT_REACHED pen CartesianPoint{x=55.038502204763944, y=110.23474728657182} diff LeverAnglesSensor{left=0.012770356687507811, right=-0.036855803490754166, timeMarker=0}
+ 2016-03-01 16:56:17,342  INFO   [LeversController] Diff LeverAnglesSensor{left=0.012770356687507811, right=-0.036855803490754166, timeMarker=0}, push DrivePush{lengthMsec=1, pwm=0.6} DrivePush{lengthMsec=1, pwm=-0.6}
+ 2016-03-01 16:56:17,342  INFO   [CoupledServoPairEmulator] blinkBoth: BlinkPair{left=DrivePush{lengthMsec=1, pwm=-0.6}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456844177342} new sensors LeverAnglesSensor{left=0.614276, right=0.102258, timeMarker=0}
+ 2016-03-01 16:56:17,602  INFO   [LeversController] Sensors: LeverAnglesSensor{left=0.614276, right=0.102258, timeMarker=0} pos CartesianPoint{x=55.0, y=110.0}
+ 2016-03-01 16:56:17,602  INFO   [LeversController] Positioning status: NOT_REACHED pen CartesianPoint{x=54.85168014920165, y=109.89487318055565} diff LeverAnglesSensor{left=0.01177035668750781, right=-0.035855803490754165, timeMarker=0}
+ 2016-03-01 16:56:17,602  INFO   [LeversController] Diff LeverAnglesSensor{left=0.01177035668750781, right=-0.035855803490754165, timeMarker=0}, push DrivePush{lengthMsec=1, pwm=0.6} DrivePush{lengthMsec=1, pwm=-0.6}
+ 2016-03-01 16:56:17,602  INFO   [CoupledServoPairEmulator] blinkBoth: BlinkPair{left=DrivePush{lengthMsec=1, pwm=-0.6}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456844177602} new sensors LeverAnglesSensor{left=0.613276, right=0.103258, timeMarker=0}
+ 2016-03-01 16:56:17,642  INFO   [LeversController] Positioning status: NOT_REACHED pen CartesianPoint{x=54.85168014920165, y=109.89487318055565} diff LeverAnglesSensor{left=0.01177035668750781, right=-0.035855803490754165, timeMarker=0}
+ 2016-03-01 16:56:17,642  INFO   [LeversController] Diff LeverAnglesSensor{left=0.01177035668750781, right=-0.035855803490754165, timeMarker=0}, push DrivePush{lengthMsec=1, pwm=0.6} DrivePush{lengthMsec=1, pwm=-0.6}
+ 2016-03-01 16:56:17,642  INFO   [CoupledServoPairEmulator] blinkBoth: BlinkPair{left=DrivePush{lengthMsec=1, pwm=-0.6}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456844177642} new sensors LeverAnglesSensor{left=0.612276, right=0.104258, timeMarker=0}
+ 2016-03-01 16:56:17,943  INFO   [LeversController] Positioning status: NOT_REACHED pen CartesianPoint{x=54.85168014920165, y=109.89487318055565} diff LeverAnglesSensor{left=0.01177035668750781, right=-0.035855803490754165, timeMarker=0}
+ 2016-03-01 16:56:17,943  INFO   [LeversController] Diff LeverAnglesSensor{left=0.01177035668750781, right=-0.035855803490754165, timeMarker=0}, push DrivePush{lengthMsec=1, pwm=0.6} DrivePush{lengthMsec=1, pwm=-0.6}
+ 2016-03-01 16:56:17,943  INFO   [CoupledServoPairEmulator] blinkBoth: BlinkPair{left=DrivePush{lengthMsec=1, pwm=-0.6}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456844177943} new sensors LeverAnglesSensor{left=0.611276, right=0.105258, timeMarker=0}
+ 2016-03-01 16:56:18,103  INFO   [LeversController] Sensors: LeverAnglesSensor{left=0.611276, right=0.105258, timeMarker=0} pos CartesianPoint{x=54.0, y=109.0}
+ 2016-03-01 16:56:18,103  INFO   [LeversController] Positioning status: NOT_REACHED pen CartesianPoint{x=54.28242484249289, y=108.8520730348867} diff LeverAnglesSensor{left=0.008770356687507808, right=-0.03285580349075416, timeMarker=0}
+ 2016-03-01 16:56:18,103  INFO   [LeversController] Diff LeverAnglesSensor{left=0.008770356687507808, right=-0.03285580349075416, timeMarker=0}, push DrivePush{lengthMsec=1, pwm=0.6} DrivePush{lengthMsec=1, pwm=-0.6}
+ 2016-03-01 16:56:18,103  INFO   [CoupledServoPairEmulator] blinkBoth: BlinkPair{left=DrivePush{lengthMsec=1, pwm=-0.6}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456844178103} new sensors LeverAnglesSensor{left=0.610276, right=0.106258, timeMarker=0}
+ 2016-03-01 16:56:18,244  INFO   [LeversController] Positioning status: NOT_REACHED pen CartesianPoint{x=54.28242484249289, y=108.8520730348867} diff LeverAnglesSensor{left=0.008770356687507808, right=-0.03285580349075416, timeMarker=0}
+ 2016-03-01 16:56:18,244  INFO   [LeversController] Diff LeverAnglesSensor{left=0.008770356687507808, right=-0.03285580349075416, timeMarker=0}, push DrivePush{lengthMsec=1, pwm=0.6} DrivePush{lengthMsec=1, pwm=-0.6}
+ 2016-03-01 16:56:18,244  INFO   [CoupledServoPairEmulator] blinkBoth: BlinkPair{left=DrivePush{lengthMsec=1, pwm=-0.6}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456844178244} new sensors LeverAnglesSensor{left=0.609276, right=0.107258, timeMarker=0}
+ 2016-03-01 16:56:18,544  INFO   [LeversController] Positioning status: NOT_REACHED pen CartesianPoint{x=54.28242484249289, y=108.8520730348867} diff LeverAnglesSensor{left=0.008770356687507808, right=-0.03285580349075416, timeMarker=0}
+ 2016-03-01 16:56:18,544  INFO   [LeversController] Diff LeverAnglesSensor{left=0.008770356687507808, right=-0.03285580349075416, timeMarker=0}, push DrivePush{lengthMsec=1, pwm=0.6} DrivePush{lengthMsec=1, pwm=-0.6}
+ 2016-03-01 16:56:18,544  INFO   [CoupledServoPairEmulator] blinkBoth: BlinkPair{left=DrivePush{lengthMsec=1, pwm=-0.6}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456844178544} new sensors LeverAnglesSensor{left=0.608276, right=0.10825800000000001, timeMarker=0}
+ 2016-03-01 16:56:18,603  INFO   [LeversController] Sensors: LeverAnglesSensor{left=0.608276, right=0.10825800000000001, timeMarker=0} pos CartesianPoint{x=54.0, y=108.0}
+ 2016-03-01 16:56:18,603  INFO   [LeversController] Positioning status: NOT_REACHED pen CartesianPoint{x=53.699480726217885, y=107.77347173066755} diff LeverAnglesSensor{left=0.005770356687507805, right=-0.02985580349075416, timeMarker=0}
+ 2016-03-01 16:56:18,603  INFO   [LeversController] Diff LeverAnglesSensor{left=0.005770356687507805, right=-0.02985580349075416, timeMarker=0}, push DrivePush{lengthMsec=1, pwm=0.6} DrivePush{lengthMsec=1, pwm=-0.6}
+ 2016-03-01 16:56:18,603  INFO   [CoupledServoPairEmulator] blinkBoth: BlinkPair{left=DrivePush{lengthMsec=1, pwm=-0.6}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456844178603} new sensors LeverAnglesSensor{left=0.607276, right=0.10925800000000001, timeMarker=0}
+ 2016-03-01 16:56:18,844  INFO   [LeversController] Positioning status: NOT_REACHED pen CartesianPoint{x=53.699480726217885, y=107.77347173066755} diff LeverAnglesSensor{left=0.005770356687507805, right=-0.02985580349075416, timeMarker=0}
+ 2016-03-01 16:56:18,844  INFO   [LeversController] Diff LeverAnglesSensor{left=0.005770356687507805, right=-0.02985580349075416, timeMarker=0}, push DrivePush{lengthMsec=1, pwm=0.6} DrivePush{lengthMsec=1, pwm=-0.6}
+ 2016-03-01 16:56:18,844  INFO   [CoupledServoPairEmulator] blinkBoth: BlinkPair{left=DrivePush{lengthMsec=1, pwm=-0.6}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456844178844} new sensors LeverAnglesSensor{left=0.606276, right=0.11025800000000001, timeMarker=0}
+ 2016-03-01 16:56:19,104  INFO   [LeversController] Sensors: LeverAnglesSensor{left=0.606276, right=0.11025800000000001, timeMarker=0} pos CartesianPoint{x=53.0, y=107.0}
+ 2016-03-01 16:56:19,104  INFO   [LeversController] Positioning status: NOT_REACHED pen CartesianPoint{x=53.30289186644549, y=107.0337897732928} diff LeverAnglesSensor{left=0.003770356687507803, right=-0.027855803490754158, timeMarker=0}
+ 2016-03-01 16:56:19,104  INFO   [LeversController] Diff LeverAnglesSensor{left=0.003770356687507803, right=-0.027855803490754158, timeMarker=0}, push DrivePush{lengthMsec=1, pwm=0.6} DrivePush{lengthMsec=1, pwm=-0.6}
+ 2016-03-01 16:56:19,104  INFO   [CoupledServoPairEmulator] blinkBoth: BlinkPair{left=DrivePush{lengthMsec=1, pwm=-0.6}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456844179104} new sensors LeverAnglesSensor{left=0.605276, right=0.11125800000000001, timeMarker=0}
+ 2016-03-01 16:56:19,145  INFO   [LeversController] Positioning status: NOT_REACHED pen CartesianPoint{x=53.30289186644549, y=107.0337897732928} diff LeverAnglesSensor{left=0.003770356687507803, right=-0.027855803490754158, timeMarker=0}
+ 2016-03-01 16:56:19,145  INFO   [LeversController] Diff LeverAnglesSensor{left=0.003770356687507803, right=-0.027855803490754158, timeMarker=0}, push DrivePush{lengthMsec=1, pwm=0.6} DrivePush{lengthMsec=1, pwm=-0.6}
+ 2016-03-01 16:56:19,145  INFO   [CoupledServoPairEmulator] blinkBoth: BlinkPair{left=DrivePush{lengthMsec=1, pwm=-0.6}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456844179145} new sensors LeverAnglesSensor{left=0.604276, right=0.11225800000000001, timeMarker=0}
+ 2016-03-01 16:56:19,445  INFO   [LeversController] Positioning status: NOT_REACHED pen CartesianPoint{x=53.30289186644549, y=107.0337897732928} diff LeverAnglesSensor{left=0.003770356687507803, right=-0.027855803490754158, timeMarker=0}
+ 2016-03-01 16:56:19,445  INFO   [LeversController] Diff LeverAnglesSensor{left=0.003770356687507803, right=-0.027855803490754158, timeMarker=0}, push DrivePush{lengthMsec=1, pwm=0.6} DrivePush{lengthMsec=1, pwm=-0.6}
+ 2016-03-01 16:56:19,445  INFO   [CoupledServoPairEmulator] blinkBoth: BlinkPair{left=DrivePush{lengthMsec=1, pwm=-0.6}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456844179445} new sensors LeverAnglesSensor{left=0.603276, right=0.11325800000000001, timeMarker=0}
+ 2016-03-01 16:56:19,604  INFO   [LeversController] Sensors: LeverAnglesSensor{left=0.603276, right=0.11325800000000001, timeMarker=0} pos CartesianPoint{x=53.0, y=106.0}
+ 2016-03-01 16:56:19,604  INFO   [LeversController] Positioning status: NOT_REACHED pen CartesianPoint{x=52.69546626674324, y=105.89211376947081} diff LeverAnglesSensor{left=7.703566875078005E-4, right=-0.024855803490754155, timeMarker=0}
+ 2016-03-01 16:56:19,604  INFO   [LeversController] Diff LeverAnglesSensor{left=7.703566875078005E-4, right=-0.024855803490754155, timeMarker=0}, push DrivePush{lengthMsec=1, pwm=0.6} DrivePush{lengthMsec=1, pwm=-0.6}
+ 2016-03-01 16:56:19,604  INFO   [CoupledServoPairEmulator] blinkBoth: BlinkPair{left=DrivePush{lengthMsec=1, pwm=-0.6}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456844179604} new sensors LeverAnglesSensor{left=0.602276, right=0.11425800000000001, timeMarker=0}
+ 2016-03-01 16:56:19,745  INFO   [LeversController] Positioning status: NOT_REACHED pen CartesianPoint{x=52.69546626674324, y=105.89211376947081} diff LeverAnglesSensor{left=7.703566875078005E-4, right=-0.024855803490754155, timeMarker=0}
+ 2016-03-01 16:56:19,745  INFO   [LeversController] Diff LeverAnglesSensor{left=7.703566875078005E-4, right=-0.024855803490754155, timeMarker=0}, push DrivePush{lengthMsec=1, pwm=0.6} DrivePush{lengthMsec=1, pwm=-0.6}
+ 2016-03-01 16:56:19,746  INFO   [CoupledServoPairEmulator] blinkBoth: BlinkPair{left=DrivePush{lengthMsec=1, pwm=-0.6}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456844179745} new sensors LeverAnglesSensor{left=0.601276, right=0.11525800000000001, timeMarker=0}
+ 2016-03-01 16:56:20,046  INFO   [LeversController] Positioning status: NOT_REACHED pen CartesianPoint{x=52.69546626674324, y=105.89211376947081} diff LeverAnglesSensor{left=7.703566875078005E-4, right=-0.024855803490754155, timeMarker=0}
+ 2016-03-01 16:56:20,046  INFO   [LeversController] Diff LeverAnglesSensor{left=7.703566875078005E-4, right=-0.024855803490754155, timeMarker=0}, push DrivePush{lengthMsec=1, pwm=0.6} DrivePush{lengthMsec=1, pwm=-0.6}
+ 2016-03-01 16:56:20,046  INFO   [CoupledServoPairEmulator] blinkBoth: BlinkPair{left=DrivePush{lengthMsec=1, pwm=-0.6}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456844180046} new sensors LeverAnglesSensor{left=0.600276, right=0.11625800000000001, timeMarker=0}
+ 2016-03-01 16:56:20,105  INFO   [LeversController] Sensors: LeverAnglesSensor{left=0.600276, right=0.11625800000000001, timeMarker=0} pos CartesianPoint{x=52.0, y=105.0}
+ 2016-03-01 16:56:20,105  INFO   [LeversController] Positioning status: NOT_REACHED pen CartesianPoint{x=52.07216490548797, y=104.71017086522338} diff LeverAnglesSensor{left=-0.002229643312492202, right=-0.021855803490754153, timeMarker=0}
+ 2016-03-01 16:56:20,105  INFO   [LeversController] Diff LeverAnglesSensor{left=-0.002229643312492202, right=-0.021855803490754153, timeMarker=0}, push DrivePush{lengthMsec=1, pwm=-0.6} DrivePush{lengthMsec=1, pwm=-0.6}
+ 2016-03-01 16:56:20,105  INFO   [CoupledServoPairEmulator] blinkBoth: BlinkPair{left=DrivePush{lengthMsec=1, pwm=0.6}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456844180105} new sensors LeverAnglesSensor{left=0.601276, right=0.11725800000000001, timeMarker=0}
+ 2016-03-01 16:56:20,346  INFO   [LeversController] Positioning status: NOT_REACHED pen CartesianPoint{x=52.07216490548797, y=104.71017086522338} diff LeverAnglesSensor{left=-0.002229643312492202, right=-0.021855803490754153, timeMarker=0}
+ 2016-03-01 16:56:20,346  INFO   [LeversController] Diff LeverAnglesSensor{left=-0.002229643312492202, right=-0.021855803490754153, timeMarker=0}, push DrivePush{lengthMsec=1, pwm=-0.6} DrivePush{lengthMsec=1, pwm=-0.6}
+ 2016-03-01 16:56:20,346  INFO   [CoupledServoPairEmulator] blinkBoth: BlinkPair{left=DrivePush{lengthMsec=1, pwm=0.6}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456844180346} new sensors LeverAnglesSensor{left=0.602276, right=0.11825800000000002, timeMarker=0}
+ 2016-03-01 16:56:20,605  INFO   [LeversController] Sensors: LeverAnglesSensor{left=0.602276, right=0.11825800000000002, timeMarker=0} pos CartesianPoint{x=53.0, y=105.0}
+ 2016-03-01 16:56:20,605  INFO   [LeversController] Positioning status: NOT_REACHED pen CartesianPoint{x=52.776801782900364, y=104.62111384354833} diff LeverAnglesSensor{left=-2.2964331249220038E-4, right=-0.01985580349075415, timeMarker=0}
+ 2016-03-01 16:56:20,605  INFO   [LeversController] Diff LeverAnglesSensor{left=-2.2964331249220038E-4, right=-0.01985580349075415, timeMarker=0}, push DrivePush{lengthMsec=1, pwm=-0.6} DrivePush{lengthMsec=1, pwm=-0.6}
+ 2016-03-01 16:56:20,605  INFO   [CoupledServoPairEmulator] blinkBoth: BlinkPair{left=DrivePush{lengthMsec=1, pwm=0.6}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456844180605} new sensors LeverAnglesSensor{left=0.603276, right=0.11925800000000002, timeMarker=0}
+ 2016-03-01 16:56:20,647  INFO   [LeversController] Positioning status: NOT_REACHED pen CartesianPoint{x=52.776801782900364, y=104.62111384354833} diff LeverAnglesSensor{left=-2.2964331249220038E-4, right=-0.01985580349075415, timeMarker=0}
+ 2016-03-01 16:56:20,647  INFO   [LeversController] Diff LeverAnglesSensor{left=-2.2964331249220038E-4, right=-0.01985580349075415, timeMarker=0}, push DrivePush{lengthMsec=1, pwm=-0.6} DrivePush{lengthMsec=1, pwm=-0.6}
+ 2016-03-01 16:56:20,647  INFO   [CoupledServoPairEmulator] blinkBoth: BlinkPair{left=DrivePush{lengthMsec=1, pwm=0.6}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456844180647} new sensors LeverAnglesSensor{left=0.604276, right=0.12025800000000002, timeMarker=0}
+ 2016-03-01 16:56:20,947  INFO   [LeversController] Positioning status: NOT_REACHED pen CartesianPoint{x=52.776801782900364, y=104.62111384354833} diff LeverAnglesSensor{left=-2.2964331249220038E-4, right=-0.01985580349075415, timeMarker=0}
+ 2016-03-01 16:56:20,947  INFO   [LeversController] Diff LeverAnglesSensor{left=-2.2964331249220038E-4, right=-0.01985580349075415, timeMarker=0}, push DrivePush{lengthMsec=1, pwm=-0.6} DrivePush{lengthMsec=1, pwm=-0.6}
+ 2016-03-01 16:56:20,947  INFO   [CoupledServoPairEmulator] blinkBoth: BlinkPair{left=DrivePush{lengthMsec=1, pwm=0.6}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456844180947} new sensors LeverAnglesSensor{left=0.605276, right=0.12125800000000002, timeMarker=0}
+ 2016-03-01 16:56:21,106  INFO   [LeversController] Sensors: LeverAnglesSensor{left=0.605276, right=0.12125800000000002, timeMarker=0} pos CartesianPoint{x=54.0, y=104.0}
+ 2016-03-01 16:56:21,106  INFO   [LeversController] Positioning status: NOT_REACHED pen CartesianPoint{x=53.833814651321084, y=104.47964066947654} diff LeverAnglesSensor{left=0.0027703566875078023, right=-0.016855803490754148, timeMarker=0}
+ 2016-03-01 16:56:21,106  INFO   [LeversController] Diff LeverAnglesSensor{left=0.0027703566875078023, right=-0.016855803490754148, timeMarker=0}, push DrivePush{lengthMsec=1, pwm=0.6} DrivePush{lengthMsec=1, pwm=-0.6}
+ 2016-03-01 16:56:21,106  INFO   [CoupledServoPairEmulator] blinkBoth: BlinkPair{left=DrivePush{lengthMsec=1, pwm=-0.6}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456844181106} new sensors LeverAnglesSensor{left=0.604276, right=0.12225800000000002, timeMarker=0}
+ 2016-03-01 16:56:21,248  INFO   [LeversController] Positioning status: NOT_REACHED pen CartesianPoint{x=53.833814651321084, y=104.47964066947654} diff LeverAnglesSensor{left=0.0027703566875078023, right=-0.016855803490754148, timeMarker=0}
+ 2016-03-01 16:56:21,248  INFO   [LeversController] Diff LeverAnglesSensor{left=0.0027703566875078023, right=-0.016855803490754148, timeMarker=0}, push DrivePush{lengthMsec=1, pwm=0.6} DrivePush{lengthMsec=1, pwm=-0.6}
+ 2016-03-01 16:56:21,248  INFO   [CoupledServoPairEmulator] blinkBoth: BlinkPair{left=DrivePush{lengthMsec=1, pwm=-0.6}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456844181248} new sensors LeverAnglesSensor{left=0.603276, right=0.12325800000000002, timeMarker=0}
+ 2016-03-01 16:56:21,548  INFO   [LeversController] Positioning status: NOT_REACHED pen CartesianPoint{x=53.833814651321084, y=104.47964066947654} diff LeverAnglesSensor{left=0.0027703566875078023, right=-0.016855803490754148, timeMarker=0}
+ 2016-03-01 16:56:21,548  INFO   [LeversController] Diff LeverAnglesSensor{left=0.0027703566875078023, right=-0.016855803490754148, timeMarker=0}, push DrivePush{lengthMsec=1, pwm=0.6} DrivePush{lengthMsec=1, pwm=-0.6}
+ 2016-03-01 16:56:21,548  INFO   [CoupledServoPairEmulator] blinkBoth: BlinkPair{left=DrivePush{lengthMsec=1, pwm=-0.6}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456844181548} new sensors LeverAnglesSensor{left=0.602276, right=0.12425800000000002, timeMarker=0}
+ 2016-03-01 16:56:21,606  INFO   [LeversController] Sensors: LeverAnglesSensor{left=0.602276, right=0.12425800000000002, timeMarker=0} pos CartesianPoint{x=53.0, y=103.0}
+ 2016-03-01 16:56:21,606  INFO   [LeversController] Positioning status: NOT_REACHED pen CartesianPoint{x=53.17545422871337, y=103.2628433768966} diff LeverAnglesSensor{left=-2.2964331249220038E-4, right=-0.013855803490754146, timeMarker=0}
+ 2016-03-01 16:56:21,606  INFO   [LeversController] Diff LeverAnglesSensor{left=-2.2964331249220038E-4, right=-0.013855803490754146, timeMarker=0}, push DrivePush{lengthMsec=1, pwm=-0.6} DrivePush{lengthMsec=1, pwm=-0.6}
+ 2016-03-01 16:56:21,606  INFO   [CoupledServoPairEmulator] blinkBoth: BlinkPair{left=DrivePush{lengthMsec=1, pwm=0.6}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456844181606} new sensors LeverAnglesSensor{left=0.603276, right=0.125258, timeMarker=0}
+ 2016-03-01 16:56:21,848  INFO   [LeversController] Positioning status: NOT_REACHED pen CartesianPoint{x=53.17545422871337, y=103.2628433768966} diff LeverAnglesSensor{left=-2.2964331249220038E-4, right=-0.013855803490754146, timeMarker=0}
+ 2016-03-01 16:56:21,848  INFO   [LeversController] Diff LeverAnglesSensor{left=-2.2964331249220038E-4, right=-0.013855803490754146, timeMarker=0}, push DrivePush{lengthMsec=1, pwm=-0.6} DrivePush{lengthMsec=1, pwm=-0.6}
+ 2016-03-01 16:56:21,849  INFO   [CoupledServoPairEmulator] blinkBoth: BlinkPair{left=DrivePush{lengthMsec=1, pwm=0.6}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456844181848} new sensors LeverAnglesSensor{left=0.604276, right=0.126258, timeMarker=0}
+ 2016-03-01 16:56:22,107  INFO   [LeversController] Sensors: LeverAnglesSensor{left=0.604276, right=0.126258, timeMarker=0} pos CartesianPoint{x=54.0, y=103.0}
+ 2016-03-01 16:56:22,107  INFO   [LeversController] Positioning status: NOT_REACHED pen CartesianPoint{x=53.872958777165614, y=103.16648728231894} diff LeverAnglesSensor{left=0.0017703566875078014, right=-0.011855803490754158, timeMarker=0}
+ 2016-03-01 16:56:22,107  INFO   [LeversController] Diff LeverAnglesSensor{left=0.0017703566875078014, right=-0.011855803490754158, timeMarker=0}, push DrivePush{lengthMsec=1, pwm=0.6} DrivePush{lengthMsec=1, pwm=-0.6}
+ 2016-03-01 16:56:22,107  INFO   [CoupledServoPairEmulator] blinkBoth: BlinkPair{left=DrivePush{lengthMsec=1, pwm=-0.6}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456844182107} new sensors LeverAnglesSensor{left=0.603276, right=0.127258, timeMarker=0}
+ 2016-03-01 16:56:22,149  INFO   [LeversController] Positioning status: NOT_REACHED pen CartesianPoint{x=53.872958777165614, y=103.16648728231894} diff LeverAnglesSensor{left=0.0017703566875078014, right=-0.011855803490754158, timeMarker=0}
+ 2016-03-01 16:56:22,149  INFO   [LeversController] Diff LeverAnglesSensor{left=0.0017703566875078014, right=-0.011855803490754158, timeMarker=0}, push DrivePush{lengthMsec=1, pwm=0.6} DrivePush{lengthMsec=1, pwm=-0.6}
+ 2016-03-01 16:56:22,149  INFO   [CoupledServoPairEmulator] blinkBoth: BlinkPair{left=DrivePush{lengthMsec=1, pwm=-0.6}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456844182149} new sensors LeverAnglesSensor{left=0.602276, right=0.128258, timeMarker=0}
+ 2016-03-01 16:56:22,449  INFO   [LeversController] Positioning status: TIMEOUT pen CartesianPoint{x=53.872958777165614, y=103.16648728231894} diff LeverAnglesSensor{left=0.0017703566875078014, right=-0.011855803490754158, timeMarker=0}
+ 2016-03-01 16:56:22,449  INFO   [LeversController] Finalize command:
+
+ CommandProcessingContext{
+ command=CncCommand{code=LINE_TO, x=54, y=100},
+ initialSensors=LeverAnglesSensor{left=0.615276, right=0.101258, timeMarker=0},
+ targetSensors=LeverAnglesSensor{left=0.6025056433124922, right=0.13811380349075417, timeMarker=0},
+ reachedSensors=LeverAnglesSensor{left=0.604276, right=0.126258, timeMarker=0},
+ commandStartedTime=1456844177342,
+ positionReports=[
+ PositionReport{sensor=LeverAnglesSensor{left=0.614276, right=0.102258, timeMarker=0}, time=1456844177602},
+ PositionReport{sensor=LeverAnglesSensor{left=0.611276, right=0.105258, timeMarker=0}, time=1456844178103},
+ PositionReport{sensor=LeverAnglesSensor{left=0.608276, right=0.10825800000000001, timeMarker=0}, time=1456844178603},
+ PositionReport{sensor=LeverAnglesSensor{left=0.606276, right=0.11025800000000001, timeMarker=0}, time=1456844179104},
+ PositionReport{sensor=LeverAnglesSensor{left=0.603276, right=0.11325800000000001, timeMarker=0}, time=1456844179604},
+ PositionReport{sensor=LeverAnglesSensor{left=0.600276, right=0.11625800000000001, timeMarker=0}, time=1456844180105},
+ PositionReport{sensor=LeverAnglesSensor{left=0.602276, right=0.11825800000000002, timeMarker=0}, time=1456844180605},
+ PositionReport{sensor=LeverAnglesSensor{left=0.605276, right=0.12125800000000002, timeMarker=0}, time=1456844181106},
+ PositionReport{sensor=LeverAnglesSensor{left=0.602276, right=0.12425800000000002, timeMarker=0}, time=1456844181606},
+ PositionReport{sensor=LeverAnglesSensor{left=0.604276, right=0.126258, timeMarker=0}, time=1456844182107}],
+
+ slideCommands=[
+ BlinkPair{left=DrivePush{lengthMsec=1, pwm=-0.6}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456844177342},
+ BlinkPair{left=DrivePush{lengthMsec=1, pwm=-0.6}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456844177602},
+ BlinkPair{left=DrivePush{lengthMsec=1, pwm=-0.6}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456844177642},
+ BlinkPair{left=DrivePush{lengthMsec=1, pwm=-0.6}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456844177943},
+ BlinkPair{left=DrivePush{lengthMsec=1, pwm=-0.6}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456844178103},
+ BlinkPair{left=DrivePush{lengthMsec=1, pwm=-0.6}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456844178244},
+ BlinkPair{left=DrivePush{lengthMsec=1, pwm=-0.6}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456844178544},
+ BlinkPair{left=DrivePush{lengthMsec=1, pwm=-0.6}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456844178603},
+ BlinkPair{left=DrivePush{lengthMsec=1, pwm=-0.6}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456844178844},
+ BlinkPair{left=DrivePush{lengthMsec=1, pwm=-0.6}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456844179104},
+ BlinkPair{left=DrivePush{lengthMsec=1, pwm=-0.6}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456844179145},
+ BlinkPair{left=DrivePush{lengthMsec=1, pwm=-0.6}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456844179445},
+ BlinkPair{left=DrivePush{lengthMsec=1, pwm=-0.6}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456844179604},
+ BlinkPair{left=DrivePush{lengthMsec=1, pwm=-0.6}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456844179745},
+ BlinkPair{left=DrivePush{lengthMsec=1, pwm=-0.6}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456844180046},
+ BlinkPair{left=DrivePush{lengthMsec=1, pwm=0.6}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456844180105},
+ BlinkPair{left=DrivePush{lengthMsec=1, pwm=0.6}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456844180346},
+ BlinkPair{left=DrivePush{lengthMsec=1, pwm=0.6}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456844180605},
+ BlinkPair{left=DrivePush{lengthMsec=1, pwm=0.6}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456844180647},
+ BlinkPair{left=DrivePush{lengthMsec=1, pwm=0.6}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456844180947},
+ BlinkPair{left=DrivePush{lengthMsec=1, pwm=-0.6}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456844181106},
+ BlinkPair{left=DrivePush{lengthMsec=1, pwm=-0.6}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456844181248},
+ BlinkPair{left=DrivePush{lengthMsec=1, pwm=-0.6}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456844181548},
+ BlinkPair{left=DrivePush{lengthMsec=1, pwm=0.6}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456844181606},
+ BlinkPair{left=DrivePush{lengthMsec=1, pwm=0.6}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456844181848},
+ BlinkPair{left=DrivePush{lengthMsec=1, pwm=-0.6}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456844182107},
+ BlinkPair{left=DrivePush{lengthMsec=1, pwm=-0.6}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456844182149}]}
+
+
+016-03-01 17:11:53,379  INFO   [ConsoleHandler] Coordinates: 55 100
+2016-03-01 17:11:53,380  INFO   [CommandQueue] Command added to queue [725484171]: CncCommand{code=LINE_TO, x=55, y=100}
+2016-03-01 17:11:53,544  INFO   [CommandQueue] Command to execute [725484171]: CncCommand{code=LINE_TO, x=55, y=100}
+2016-03-01 17:11:53,545  INFO   [LeversController] Positioning status: NOT_REACHED pen CartesianPoint{x=53.17129206061567, y=108.22981497715581} diff LeverAnglesSensor{left=0.0017474605195334503, right=-0.035249557849931515, timeMarker=0}
+2016-03-01 17:11:53,546  INFO   [LeversController] Diff LeverAnglesSensor{left=0.0017474605195334503, right=-0.035249557849931515, timeMarker=0}, push DrivePush{lengthMsec=1, pwm=0.6} DrivePush{lengthMsec=1, pwm=-0.6}
+2016-03-01 17:11:53,546  INFO   [CoupledServoPairEmulator] blinkBoth: BlinkPair{left=DrivePush{lengthMsec=1, pwm=-0.6}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456845113546} new sensors LeverAnglesSensor{left=0.606276, right=0.106258, timeMarker=0}
+2016-03-01 17:11:53,847  INFO   [LeversController] Positioning status: NOT_REACHED pen CartesianPoint{x=53.17129206061567, y=108.22981497715581} diff LeverAnglesSensor{left=0.0017474605195334503, right=-0.035249557849931515, timeMarker=0}
+2016-03-01 17:11:53,847  INFO   [LeversController] Diff LeverAnglesSensor{left=0.0017474605195334503, right=-0.035249557849931515, timeMarker=0}, push DrivePush{lengthMsec=1, pwm=0.6} DrivePush{lengthMsec=1, pwm=-0.6}
+2016-03-01 17:11:53,847  INFO   [CoupledServoPairEmulator] blinkBoth: BlinkPair{left=DrivePush{lengthMsec=1, pwm=-0.6}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456845113847} new sensors LeverAnglesSensor{left=0.605276, right=0.107258, timeMarker=0}
+2016-03-01 17:11:53,858  INFO   [LeversController] Sensors: LeverAnglesSensor{left=0.605276, right=0.107258, timeMarker=0} pos CartesianPoint{x=53.0, y=107.0}
+2016-03-01 17:11:53,859  INFO   [LeversController] Positioning status: LEFT_REACHED pen CartesianPoint{x=52.78195873353981, y=107.49680544711465} diff LeverAnglesSensor{left=-2.525394804665515E-4, right=-0.03324955784993151, timeMarker=0}
+2016-03-01 17:11:53,859  INFO   [LeversController] Diff LeverAnglesSensor{left=-2.525394804665515E-4, right=-0.03324955784993151, timeMarker=0}, push DrivePush{lengthMsec=0, pwm=0.0} DrivePush{lengthMsec=1, pwm=-0.6}
+2016-03-01 17:11:53,859  INFO   [CoupledServoPairEmulator] blinkBoth: BlinkPair{left=DrivePush{lengthMsec=0, pwm=-0.0}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456845113859} new sensors LeverAnglesSensor{left=0.604276, right=0.10825800000000001, timeMarker=0}
+2016-03-01 17:11:54,148  INFO   [LeversController] Positioning status: LEFT_REACHED pen CartesianPoint{x=52.78195873353981, y=107.49680544711465} diff LeverAnglesSensor{left=-2.525394804665515E-4, right=-0.03324955784993151, timeMarker=0}
+2016-03-01 17:11:54,148  INFO   [LeversController] Diff LeverAnglesSensor{left=-2.525394804665515E-4, right=-0.03324955784993151, timeMarker=0}, push DrivePush{lengthMsec=0, pwm=0.0} DrivePush{lengthMsec=1, pwm=-0.6}
+2016-03-01 17:11:54,148  INFO   [CoupledServoPairEmulator] blinkBoth: BlinkPair{left=DrivePush{lengthMsec=0, pwm=-0.0}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456845114148} new sensors LeverAnglesSensor{left=0.603276, right=0.10925800000000001, timeMarker=0}
+2016-03-01 17:11:54,360  INFO   [LeversController] Sensors: LeverAnglesSensor{left=0.603276, right=0.10925800000000001, timeMarker=0} pos CartesianPoint{x=52.0, y=107.0}
+2016-03-01 17:11:54,360  INFO   [LeversController] Positioning status: LEFT_REACHED pen CartesianPoint{x=52.38627411870817, y=106.7469406689074} diff LeverAnglesSensor{left=-0.0022525394804665533, right=-0.03124955784993151, timeMarker=0}
+2016-03-01 17:11:54,360  INFO   [LeversController] Diff LeverAnglesSensor{left=-0.0022525394804665533, right=-0.03124955784993151, timeMarker=0}, push DrivePush{lengthMsec=0, pwm=0.0} DrivePush{lengthMsec=1, pwm=-0.6}
+2016-03-01 17:11:54,360  INFO   [CoupledServoPairEmulator] blinkBoth: BlinkPair{left=DrivePush{lengthMsec=0, pwm=-0.0}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456845114360} new sensors LeverAnglesSensor{left=0.602276, right=0.11025800000000001, timeMarker=0}
+2016-03-01 17:11:54,449  INFO   [LeversController] Positioning status: LEFT_REACHED pen CartesianPoint{x=52.38627411870817, y=106.7469406689074} diff LeverAnglesSensor{left=-0.0022525394804665533, right=-0.03124955784993151, timeMarker=0}
+2016-03-01 17:11:54,449  INFO   [LeversController] Diff LeverAnglesSensor{left=-0.0022525394804665533, right=-0.03124955784993151, timeMarker=0}, push DrivePush{lengthMsec=0, pwm=0.0} DrivePush{lengthMsec=1, pwm=-0.6}
+2016-03-01 17:11:54,449  INFO   [CoupledServoPairEmulator] blinkBoth: BlinkPair{left=DrivePush{lengthMsec=0, pwm=-0.0}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456845114449} new sensors LeverAnglesSensor{left=0.601276, right=0.11125800000000001, timeMarker=0}
+2016-03-01 17:11:54,749  INFO   [LeversController] Positioning status: LEFT_REACHED pen CartesianPoint{x=52.38627411870817, y=106.7469406689074} diff LeverAnglesSensor{left=-0.0022525394804665533, right=-0.03124955784993151, timeMarker=0}
+2016-03-01 17:11:54,749  INFO   [LeversController] Diff LeverAnglesSensor{left=-0.0022525394804665533, right=-0.03124955784993151, timeMarker=0}, push DrivePush{lengthMsec=0, pwm=0.0} DrivePush{lengthMsec=1, pwm=-0.6}
+2016-03-01 17:11:54,749  INFO   [CoupledServoPairEmulator] blinkBoth: BlinkPair{left=DrivePush{lengthMsec=0, pwm=-0.0}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456845114749} new sensors LeverAnglesSensor{left=0.600276, right=0.11225800000000001, timeMarker=0}
+2016-03-01 17:11:54,860  INFO   [LeversController] Sensors: LeverAnglesSensor{left=0.600276, right=0.11225800000000001, timeMarker=0} pos CartesianPoint{x=52.0, y=106.0}
+2016-03-01 17:11:54,860  INFO   [LeversController] Positioning status: LEFT_REACHED pen CartesianPoint{x=51.78028618181568, y=105.58939864294398} diff LeverAnglesSensor{left=-0.005252539480466556, right=-0.02824955784993151, timeMarker=0}
+2016-03-01 17:11:54,861  INFO   [LeversController] Diff LeverAnglesSensor{left=-0.005252539480466556, right=-0.02824955784993151, timeMarker=0}, push DrivePush{lengthMsec=0, pwm=0.0} DrivePush{lengthMsec=1, pwm=-0.6}
+2016-03-01 17:11:54,861  INFO   [CoupledServoPairEmulator] blinkBoth: BlinkPair{left=DrivePush{lengthMsec=0, pwm=-0.0}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456845114861} new sensors LeverAnglesSensor{left=0.599276, right=0.11325800000000001, timeMarker=0}
+2016-03-01 17:11:55,050  INFO   [LeversController] Positioning status: LEFT_REACHED pen CartesianPoint{x=51.78028618181568, y=105.58939864294398} diff LeverAnglesSensor{left=-0.005252539480466556, right=-0.02824955784993151, timeMarker=0}
+2016-03-01 17:11:55,050  INFO   [LeversController] Diff LeverAnglesSensor{left=-0.005252539480466556, right=-0.02824955784993151, timeMarker=0}, push DrivePush{lengthMsec=0, pwm=0.0} DrivePush{lengthMsec=1, pwm=-0.6}
+2016-03-01 17:11:55,050  INFO   [CoupledServoPairEmulator] blinkBoth: BlinkPair{left=DrivePush{lengthMsec=0, pwm=-0.0}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456845115050} new sensors LeverAnglesSensor{left=0.598276, right=0.11425800000000001, timeMarker=0}
+2016-03-01 17:11:55,350  INFO   [LeversController] Positioning status: LEFT_REACHED pen CartesianPoint{x=51.78028618181568, y=105.58939864294398} diff LeverAnglesSensor{left=-0.005252539480466556, right=-0.02824955784993151, timeMarker=0}
+2016-03-01 17:11:55,350  INFO   [LeversController] Diff LeverAnglesSensor{left=-0.005252539480466556, right=-0.02824955784993151, timeMarker=0}, push DrivePush{lengthMsec=0, pwm=0.0} DrivePush{lengthMsec=1, pwm=-0.6}
+2016-03-01 17:11:55,350  INFO   [CoupledServoPairEmulator] blinkBoth: BlinkPair{left=DrivePush{lengthMsec=0, pwm=-0.0}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456845115350} new sensors LeverAnglesSensor{left=0.597276, right=0.11525800000000001, timeMarker=0}
+2016-03-01 17:11:55,361  INFO   [LeversController] Sensors: LeverAnglesSensor{left=0.597276, right=0.11525800000000001, timeMarker=0} pos CartesianPoint{x=51.0, y=104.0}
+2016-03-01 17:11:55,361  INFO   [LeversController] Positioning status: LEFT_REACHED pen CartesianPoint{x=51.158490385418375, y=104.39079629009933} diff LeverAnglesSensor{left=-0.008252539480466559, right=-0.025249557849931506, timeMarker=0}
+2016-03-01 17:11:55,361  INFO   [LeversController] Diff LeverAnglesSensor{left=-0.008252539480466559, right=-0.025249557849931506, timeMarker=0}, push DrivePush{lengthMsec=0, pwm=0.0} DrivePush{lengthMsec=1, pwm=-0.6}
+2016-03-01 17:11:55,361  INFO   [CoupledServoPairEmulator] blinkBoth: BlinkPair{left=DrivePush{lengthMsec=0, pwm=-0.0}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456845115361} new sensors LeverAnglesSensor{left=0.596276, right=0.11625800000000001, timeMarker=0}
+2016-03-01 17:11:55,651  INFO   [LeversController] Positioning status: LEFT_REACHED pen CartesianPoint{x=51.158490385418375, y=104.39079629009933} diff LeverAnglesSensor{left=-0.008252539480466559, right=-0.025249557849931506, timeMarker=0}
+2016-03-01 17:11:55,651  INFO   [LeversController] Diff LeverAnglesSensor{left=-0.008252539480466559, right=-0.025249557849931506, timeMarker=0}, push DrivePush{lengthMsec=0, pwm=0.0} DrivePush{lengthMsec=1, pwm=-0.6}
+2016-03-01 17:11:55,651  INFO   [CoupledServoPairEmulator] blinkBoth: BlinkPair{left=DrivePush{lengthMsec=0, pwm=-0.0}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456845115651} new sensors LeverAnglesSensor{left=0.595276, right=0.11725800000000001, timeMarker=0}
+2016-03-01 17:11:55,862  INFO   [LeversController] Sensors: LeverAnglesSensor{left=0.595276, right=0.11725800000000001, timeMarker=0} pos CartesianPoint{x=51.0, y=104.0}
+2016-03-01 17:11:55,862  INFO   [LeversController] Positioning status: LEFT_REACHED pen CartesianPoint{x=50.73463992798792, y=103.56780446204141} diff LeverAnglesSensor{left=-0.01025253948046656, right=-0.023249557849931504, timeMarker=0}
+2016-03-01 17:11:55,862  INFO   [LeversController] Diff LeverAnglesSensor{left=-0.01025253948046656, right=-0.023249557849931504, timeMarker=0}, push DrivePush{lengthMsec=0, pwm=0.0} DrivePush{lengthMsec=1, pwm=-0.6}
+2016-03-01 17:11:55,862  INFO   [CoupledServoPairEmulator] blinkBoth: BlinkPair{left=DrivePush{lengthMsec=0, pwm=-0.0}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456845115862} new sensors LeverAnglesSensor{left=0.594276, right=0.11825800000000002, timeMarker=0}
+2016-03-01 17:11:55,951  INFO   [LeversController] Positioning status: LEFT_REACHED pen CartesianPoint{x=50.73463992798792, y=103.56780446204141} diff LeverAnglesSensor{left=-0.01025253948046656, right=-0.023249557849931504, timeMarker=0}
+2016-03-01 17:11:55,951  INFO   [LeversController] Diff LeverAnglesSensor{left=-0.01025253948046656, right=-0.023249557849931504, timeMarker=0}, push DrivePush{lengthMsec=0, pwm=0.0} DrivePush{lengthMsec=1, pwm=-0.6}
+2016-03-01 17:11:55,951  INFO   [CoupledServoPairEmulator] blinkBoth: BlinkPair{left=DrivePush{lengthMsec=0, pwm=-0.0}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456845115951} new sensors LeverAnglesSensor{left=0.593276, right=0.11925800000000002, timeMarker=0}
+2016-03-01 17:11:56,252  INFO   [LeversController] Positioning status: LEFT_REACHED pen CartesianPoint{x=50.73463992798792, y=103.56780446204141} diff LeverAnglesSensor{left=-0.01025253948046656, right=-0.023249557849931504, timeMarker=0}
+2016-03-01 17:11:56,252  INFO   [LeversController] Diff LeverAnglesSensor{left=-0.01025253948046656, right=-0.023249557849931504, timeMarker=0}, push DrivePush{lengthMsec=0, pwm=0.0} DrivePush{lengthMsec=1, pwm=-0.6}
+2016-03-01 17:11:56,252  INFO   [CoupledServoPairEmulator] blinkBoth: BlinkPair{left=DrivePush{lengthMsec=0, pwm=-0.0}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456845116252} new sensors LeverAnglesSensor{left=0.592276, right=0.12025800000000002, timeMarker=0}
+2016-03-01 17:11:56,362  INFO   [LeversController] Sensors: LeverAnglesSensor{left=0.592276, right=0.12025800000000002, timeMarker=0} pos CartesianPoint{x=50.0, y=102.0}
+2016-03-01 17:11:56,362  INFO   [LeversController] Positioning status: LEFT_REACHED pen CartesianPoint{x=50.08395382492754, y=102.29550473403631} diff LeverAnglesSensor{left=-0.013252539480466563, right=-0.0202495578499315, timeMarker=0}
+2016-03-01 17:11:56,362  INFO   [LeversController] Diff LeverAnglesSensor{left=-0.013252539480466563, right=-0.0202495578499315, timeMarker=0}, push DrivePush{lengthMsec=0, pwm=0.0} DrivePush{lengthMsec=1, pwm=-0.6}
+2016-03-01 17:11:56,362  INFO   [CoupledServoPairEmulator] blinkBoth: BlinkPair{left=DrivePush{lengthMsec=0, pwm=-0.0}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456845116362} new sensors LeverAnglesSensor{left=0.591276, right=0.12125800000000002, timeMarker=0}
+2016-03-01 17:11:56,552  INFO   [LeversController] Positioning status: LEFT_REACHED pen CartesianPoint{x=50.08395382492754, y=102.29550473403631} diff LeverAnglesSensor{left=-0.013252539480466563, right=-0.0202495578499315, timeMarker=0}
+2016-03-01 17:11:56,552  INFO   [LeversController] Diff LeverAnglesSensor{left=-0.013252539480466563, right=-0.0202495578499315, timeMarker=0}, push DrivePush{lengthMsec=0, pwm=0.0} DrivePush{lengthMsec=1, pwm=-0.6}
+2016-03-01 17:11:56,552  INFO   [CoupledServoPairEmulator] blinkBoth: BlinkPair{left=DrivePush{lengthMsec=0, pwm=-0.0}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456845116552} new sensors LeverAnglesSensor{left=0.590276, right=0.12225800000000002, timeMarker=0}
+2016-03-01 17:11:56,852  INFO   [LeversController] Positioning status: LEFT_REACHED pen CartesianPoint{x=50.08395382492754, y=102.29550473403631} diff LeverAnglesSensor{left=-0.013252539480466563, right=-0.0202495578499315, timeMarker=0}
+2016-03-01 17:11:56,853  INFO   [LeversController] Diff LeverAnglesSensor{left=-0.013252539480466563, right=-0.0202495578499315, timeMarker=0}, push DrivePush{lengthMsec=0, pwm=0.0} DrivePush{lengthMsec=1, pwm=-0.6}
+2016-03-01 17:11:56,853  INFO   [CoupledServoPairEmulator] blinkBoth: BlinkPair{left=DrivePush{lengthMsec=0, pwm=-0.0}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456845116853} new sensors LeverAnglesSensor{left=0.589276, right=0.12325800000000002, timeMarker=0}
+2016-03-01 17:11:56,863  INFO   [LeversController] Sensors: LeverAnglesSensor{left=0.589276, right=0.12325800000000002, timeMarker=0} pos CartesianPoint{x=49.0, y=101.0}
+2016-03-01 17:11:56,863  INFO   [LeversController] Positioning status: LEFT_REACHED pen CartesianPoint{x=49.41407728803348, y=100.9751398443332} diff LeverAnglesSensor{left=-0.016252539480466566, right=-0.0172495578499315, timeMarker=0}
+2016-03-01 17:11:56,863  INFO   [LeversController] Diff LeverAnglesSensor{left=-0.016252539480466566, right=-0.0172495578499315, timeMarker=0}, push DrivePush{lengthMsec=0, pwm=0.0} DrivePush{lengthMsec=1, pwm=-0.6}
+2016-03-01 17:11:56,863  INFO   [CoupledServoPairEmulator] blinkBoth: BlinkPair{left=DrivePush{lengthMsec=0, pwm=-0.0}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456845116863} new sensors LeverAnglesSensor{left=0.588276, right=0.12425800000000002, timeMarker=0}
+2016-03-01 17:11:57,153  INFO   [LeversController] Positioning status: LEFT_REACHED pen CartesianPoint{x=49.41407728803348, y=100.9751398443332} diff LeverAnglesSensor{left=-0.016252539480466566, right=-0.0172495578499315, timeMarker=0}
+2016-03-01 17:11:57,153  INFO   [LeversController] Diff LeverAnglesSensor{left=-0.016252539480466566, right=-0.0172495578499315, timeMarker=0}, push DrivePush{lengthMsec=0, pwm=0.0} DrivePush{lengthMsec=1, pwm=-0.6}
+2016-03-01 17:11:57,153  INFO   [CoupledServoPairEmulator] blinkBoth: BlinkPair{left=DrivePush{lengthMsec=0, pwm=-0.0}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456845117153} new sensors LeverAnglesSensor{left=0.587276, right=0.125258, timeMarker=0}
+2016-03-01 17:11:57,363  INFO   [LeversController] Sensors: LeverAnglesSensor{left=0.587276, right=0.125258, timeMarker=0} pos CartesianPoint{x=49.0, y=100.0}
+2016-03-01 17:11:57,363  INFO   [LeversController] Positioning status: LEFT_REACHED pen CartesianPoint{x=48.95599929761872, y=100.06646595820722} diff LeverAnglesSensor{left=-0.018252539480466567, right=-0.015249557849931511, timeMarker=0}
+2016-03-01 17:11:57,363  INFO   [LeversController] Diff LeverAnglesSensor{left=-0.018252539480466567, right=-0.015249557849931511, timeMarker=0}, push DrivePush{lengthMsec=0, pwm=0.0} DrivePush{lengthMsec=1, pwm=-0.6}
+2016-03-01 17:11:57,363  INFO   [CoupledServoPairEmulator] blinkBoth: BlinkPair{left=DrivePush{lengthMsec=0, pwm=-0.0}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456845117363} new sensors LeverAnglesSensor{left=0.586276, right=0.126258, timeMarker=0}
+2016-03-01 17:11:57,453  INFO   [LeversController] Positioning status: LEFT_REACHED pen CartesianPoint{x=48.95599929761872, y=100.06646595820722} diff LeverAnglesSensor{left=-0.018252539480466567, right=-0.015249557849931511, timeMarker=0}
+2016-03-01 17:11:57,454  INFO   [LeversController] Diff LeverAnglesSensor{left=-0.018252539480466567, right=-0.015249557849931511, timeMarker=0}, push DrivePush{lengthMsec=0, pwm=0.0} DrivePush{lengthMsec=1, pwm=-0.6}
+2016-03-01 17:11:57,454  INFO   [CoupledServoPairEmulator] blinkBoth: BlinkPair{left=DrivePush{lengthMsec=0, pwm=-0.0}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456845117454} new sensors LeverAnglesSensor{left=0.585276, right=0.127258, timeMarker=0}
+2016-03-01 17:11:57,754  INFO   [LeversController] Positioning status: LEFT_REACHED pen CartesianPoint{x=48.95599929761872, y=100.06646595820722} diff LeverAnglesSensor{left=-0.018252539480466567, right=-0.015249557849931511, timeMarker=0}
+2016-03-01 17:11:57,754  INFO   [LeversController] Diff LeverAnglesSensor{left=-0.018252539480466567, right=-0.015249557849931511, timeMarker=0}, push DrivePush{lengthMsec=0, pwm=0.0} DrivePush{lengthMsec=1, pwm=-0.6}
+2016-03-01 17:11:57,754  INFO   [CoupledServoPairEmulator] blinkBoth: BlinkPair{left=DrivePush{lengthMsec=0, pwm=-0.0}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456845117754} new sensors LeverAnglesSensor{left=0.584276, right=0.128258, timeMarker=0}
+2016-03-01 17:11:57,864  INFO   [LeversController] Sensors: LeverAnglesSensor{left=0.584276, right=0.128258, timeMarker=0} pos CartesianPoint{x=48.0, y=99.0}
+2016-03-01 17:11:57,864  INFO   [LeversController] Positioning status: LEFT_REACHED pen CartesianPoint{x=48.250167757033346, y=98.6577440185302} diff LeverAnglesSensor{left=-0.02125253948046657, right=-0.012249557849931508, timeMarker=0}
+2016-03-01 17:11:57,864  INFO   [LeversController] Diff LeverAnglesSensor{left=-0.02125253948046657, right=-0.012249557849931508, timeMarker=0}, push DrivePush{lengthMsec=0, pwm=0.0} DrivePush{lengthMsec=1, pwm=-0.6}
+2016-03-01 17:11:57,864  INFO   [CoupledServoPairEmulator] blinkBoth: BlinkPair{left=DrivePush{lengthMsec=0, pwm=-0.0}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456845117864} new sensors LeverAnglesSensor{left=0.583276, right=0.129258, timeMarker=0}
+2016-03-01 17:11:58,054  INFO   [LeversController] Positioning status: LEFT_REACHED pen CartesianPoint{x=48.250167757033346, y=98.6577440185302} diff LeverAnglesSensor{left=-0.02125253948046657, right=-0.012249557849931508, timeMarker=0}
+2016-03-01 17:11:58,054  INFO   [LeversController] Diff LeverAnglesSensor{left=-0.02125253948046657, right=-0.012249557849931508, timeMarker=0}, push DrivePush{lengthMsec=0, pwm=0.0} DrivePush{lengthMsec=1, pwm=-0.6}
+2016-03-01 17:11:58,054  INFO   [CoupledServoPairEmulator] blinkBoth: BlinkPair{left=DrivePush{lengthMsec=0, pwm=-0.0}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456845118054} new sensors LeverAnglesSensor{left=0.582276, right=0.130258, timeMarker=0}
+2016-03-01 17:11:58,355  INFO   [LeversController] Positioning status: LEFT_REACHED pen CartesianPoint{x=48.250167757033346, y=98.6577440185302} diff LeverAnglesSensor{left=-0.02125253948046657, right=-0.012249557849931508, timeMarker=0}
+2016-03-01 17:11:58,355  INFO   [LeversController] Diff LeverAnglesSensor{left=-0.02125253948046657, right=-0.012249557849931508, timeMarker=0}, push DrivePush{lengthMsec=0, pwm=0.0} DrivePush{lengthMsec=1, pwm=-0.6}
+2016-03-01 17:11:58,355  INFO   [CoupledServoPairEmulator] blinkBoth: BlinkPair{left=DrivePush{lengthMsec=0, pwm=-0.0}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456845118355} new sensors LeverAnglesSensor{left=0.581276, right=0.131258, timeMarker=0}
+2016-03-01 17:11:58,364  INFO   [LeversController] Sensors: LeverAnglesSensor{left=0.581276, right=0.131258, timeMarker=0} pos CartesianPoint{x=48.0, y=97.0}
+2016-03-01 17:11:58,364  INFO   [LeversController] Positioning status: LEFT_REACHED pen CartesianPoint{x=47.51976669856143, y=97.18976924369959} diff LeverAnglesSensor{left=-0.024252539480466573, right=-0.009249557849931506, timeMarker=0}
+2016-03-01 17:11:58,364  INFO   [LeversController] Diff LeverAnglesSensor{left=-0.024252539480466573, right=-0.009249557849931506, timeMarker=0}, push DrivePush{lengthMsec=0, pwm=0.0} DrivePush{lengthMsec=1, pwm=-0.6}
+2016-03-01 17:11:58,364  INFO   [CoupledServoPairEmulator] blinkBoth: BlinkPair{left=DrivePush{lengthMsec=0, pwm=-0.0}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456845118364} new sensors LeverAnglesSensor{left=0.580276, right=0.13225800000000001, timeMarker=0}
+2016-03-01 17:11:58,655  INFO   [LeversController] Positioning status: TIMEOUT pen CartesianPoint{x=47.51976669856143, y=97.18976924369959} diff LeverAnglesSensor{left=-0.024252539480466573, right=-0.009249557849931506, timeMarker=0}
+2016-03-01 17:11:58,656  INFO   [LeversController] Finalize command:
+
+CommandProcessingContext{command=CncCommand{code=LINE_TO, x=55, y=100},
+initialSensors=LeverAnglesSensor{left=0.607276, right=0.105258, timeMarker=0},
+targetSensors=LeverAnglesSensor{left=0.6055285394804666, right=0.14050755784993152, timeMarker=0},
+reachedSensors=null,
+commandStartedTime=1456845113545,
+positionReports=[
+PositionReport{sensor=LeverAnglesSensor{left=0.605276, right=0.107258, timeMarker=0}, time=1456845113859},
+PositionReport{sensor=LeverAnglesSensor{left=0.603276, right=0.10925800000000001, timeMarker=0}, time=1456845114360},
+PositionReport{sensor=LeverAnglesSensor{left=0.600276, right=0.11225800000000001, timeMarker=0}, time=1456845114860},
+PositionReport{sensor=LeverAnglesSensor{left=0.597276, right=0.11525800000000001, timeMarker=0}, time=1456845115361},
+PositionReport{sensor=LeverAnglesSensor{left=0.595276, right=0.11725800000000001, timeMarker=0}, time=1456845115862},
+PositionReport{sensor=LeverAnglesSensor{left=0.592276, right=0.12025800000000002, timeMarker=0}, time=1456845116362},
+PositionReport{sensor=LeverAnglesSensor{left=0.589276, right=0.12325800000000002, timeMarker=0}, time=1456845116863},
+PositionReport{sensor=LeverAnglesSensor{left=0.587276, right=0.125258, timeMarker=0}, time=1456845117363},
+PositionReport{sensor=LeverAnglesSensor{left=0.584276, right=0.128258, timeMarker=0}, time=1456845117864},
+ PositionReport{sensor=LeverAnglesSensor{left=0.581276, right=0.131258, timeMarker=0}, time=1456845118364}],
+
+ slideCommands=[
+ BlinkPair{left=DrivePush{lengthMsec=1, pwm=-0.6}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456845113546},
+ BlinkPair{left=DrivePush{lengthMsec=1, pwm=-0.6}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456845113847},
+ BlinkPair{left=DrivePush{lengthMsec=0, pwm=-0.0}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456845113859},
+ BlinkPair{left=DrivePush{lengthMsec=0, pwm=-0.0}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456845114148},
+ BlinkPair{left=DrivePush{lengthMsec=0, pwm=-0.0}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456845114360},
+ BlinkPair{left=DrivePush{lengthMsec=0, pwm=-0.0}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456845114449},
+ BlinkPair{left=DrivePush{lengthMsec=0, pwm=-0.0}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456845114749},
+ BlinkPair{left=DrivePush{lengthMsec=0, pwm=-0.0}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456845114861},
+ BlinkPair{left=DrivePush{lengthMsec=0, pwm=-0.0}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456845115050},
+  BlinkPair{left=DrivePush{lengthMsec=0, pwm=-0.0}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456845115350},
+  BlinkPair{left=DrivePush{lengthMsec=0, pwm=-0.0}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456845115361},
+  BlinkPair{left=DrivePush{lengthMsec=0, pwm=-0.0}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456845115651},
+   BlinkPair{left=DrivePush{lengthMsec=0, pwm=-0.0}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456845115862},
+   BlinkPair{left=DrivePush{lengthMsec=0, pwm=-0.0}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456845115951},
+   BlinkPair{left=DrivePush{lengthMsec=0, pwm=-0.0}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456845116252},
+   BlinkPair{left=DrivePush{lengthMsec=0, pwm=-0.0}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456845116362},
+    BlinkPair{left=DrivePush{lengthMsec=0, pwm=-0.0}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456845116552},
+    BlinkPair{left=DrivePush{lengthMsec=0, pwm=-0.0}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456845116853},
+    BlinkPair{left=DrivePush{lengthMsec=0, pwm=-0.0}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456845116863},
+    BlinkPair{left=DrivePush{lengthMsec=0, pwm=-0.0}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456845117153},
+    BlinkPair{left=DrivePush{lengthMsec=0, pwm=-0.0}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456845117363},
+    BlinkPair{left=DrivePush{lengthMsec=0, pwm=-0.0}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456845117454},
+    BlinkPair{left=DrivePush{lengthMsec=0, pwm=-0.0}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456845117754},
+    BlinkPair{left=DrivePush{lengthMsec=0, pwm=-0.0}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456845117864},
+    BlinkPair{left=DrivePush{lengthMsec=0, pwm=-0.0}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456845118054},
+    BlinkPair{left=DrivePush{lengthMsec=0, pwm=-0.0}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456845118355},
+    BlinkPair{left=DrivePush{lengthMsec=0, pwm=-0.0}, right=DrivePush{lengthMsec=1, pwm=0.6}, time=1456845118364}]}
