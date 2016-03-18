@@ -36,6 +36,15 @@ public class DrivePush {
         this.pwm = pwm;
     }
 
+    public String report() {
+        if (pwm == 0 || lengthMsec == 0) {
+            return "0";
+        }
+        else {
+            return String.format("%.2fx%d", pwm, lengthMsec);
+        }
+    }
+
     public DrivePush invertPwm() {
         return new DrivePush(lengthMsec, -pwm);
     }

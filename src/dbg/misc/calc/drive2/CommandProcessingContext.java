@@ -90,13 +90,15 @@ public class CommandProcessingContext implements PositionAware, LeversActuator{
         return String.format("%10s %s", text, sensor != null ? sensor.formatShort() : "N/A");
     }
 
+    public String sensorsWithDiff(LeverAnglesSensor sensor, LeverAnglesSensor target, String text) {
+        return String.format("%10s %s (%s)", text, sensor.formatShort(), sensor.difference(target).formatShort());
+    }
+
     public String pushPair(PushPair pair) {
 
-        return String.format("L %d %f - R %d %f",
-                pair.getLeft().getLengthMsec(),
-                pair.getLeft().getPwm(),
-                pair.getRight().getLengthMsec(),
-                pair.getRight().getPwm());
+        return String.format("L %s - R %s",
+                pair.getLeft().report(),
+                pair.getRight().report());
 
     }
 
@@ -125,7 +127,8 @@ public class CommandProcessingContext implements PositionAware, LeversActuator{
 
         for (PositionReport report : positionReports) {
             long time = report.time - commandStartedTime;
-            addLogRecord(time, report.sensor.formatShort(), logRows);;
+            addLogRecord(time, sensorsWithDiff(report.sensor, targetSensors, ""), logRows);
+            //addLogRecord(time, report.sensor.formatShort(), logRows);;
             last = report.sensor;
         }
 
@@ -136,10 +139,10 @@ public class CommandProcessingContext implements PositionAware, LeversActuator{
         }
 
 
-        summary += sensors(initialSensors, "initial") + "\n";
+        summary += sensorsWithDiff(initialSensors, targetSensors, "initial") + "\n";
         summary += sensors(targetSensors,  "target") + "\n";
         summary += sensors(reachedSensors, "reached") + "\n";
-        summary += sensors(last, "last") + "\n";
+        summary += sensorsWithDiff(last, targetSensors, "last") + "\n";
 
         for (Map.Entry<Long, List<String>> entry : logRows.entrySet()) {
 

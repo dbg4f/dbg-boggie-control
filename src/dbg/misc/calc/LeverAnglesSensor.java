@@ -46,8 +46,10 @@ public class LeverAnglesSensor {
     }
 
     public String formatShort() {
-        return String.format("%.6f %.6f", left, right);
+        return String.format("%.4f %.4f", left, right);
     }
+
+
 
 
     @Override
