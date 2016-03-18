@@ -116,9 +116,7 @@ public class CommandProcessingContext implements PositionAware, LeversActuator{
         String summary = "\n";
 
 
-        summary += sensors(initialSensors, "initial") + "\n";
-        summary += sensors(targetSensors,  "target") + "\n";
-        summary += sensors(reachedSensors, "reached") + "\n";
+        LeverAnglesSensor last = null;
 
         summary += " start " + formatDate(new Date(commandStartedTime)) + "\n";
 
@@ -128,6 +126,7 @@ public class CommandProcessingContext implements PositionAware, LeversActuator{
         for (PositionReport report : positionReports) {
             long time = report.time - commandStartedTime;
             addLogRecord(time, report.sensor.formatShort(), logRows);;
+            last = report.sensor;
         }
 
 
@@ -137,6 +136,11 @@ public class CommandProcessingContext implements PositionAware, LeversActuator{
         }
 
 
+        summary += sensors(initialSensors, "initial") + "\n";
+        summary += sensors(targetSensors,  "target") + "\n";
+        summary += sensors(reachedSensors, "reached") + "\n";
+        summary += sensors(last, "last") + "\n";
+
         for (Map.Entry<Long, List<String>> entry : logRows.entrySet()) {
 
             for (String line : entry.getValue()) {
@@ -144,6 +148,8 @@ public class CommandProcessingContext implements PositionAware, LeversActuator{
             }
 
         }
+
+
 
         return summary;
 
