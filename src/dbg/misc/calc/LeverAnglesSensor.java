@@ -45,6 +45,11 @@ public class LeverAnglesSensor {
         return Math.signum(s1) != Math.signum(s2);
     }
 
+    public String formatShort() {
+        return String.format("%.6f %.6f", left, right);
+    }
+
+
     @Override
     public String toString() {
         return "LeverAnglesSensor{" +

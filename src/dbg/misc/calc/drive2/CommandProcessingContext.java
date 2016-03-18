@@ -3,9 +3,13 @@ package dbg.misc.calc.drive2;
 import dbg.misc.calc.LeverAnglesSensor;
 import dbg.misc.calc.drive.CncCommand;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
+import java.util.SortedMap;
+import java.util.TreeMap;
 
 /**
  * Created by dmitri on 23.01.16.
@@ -40,6 +44,11 @@ public class CommandProcessingContext implements PositionAware, LeversActuator{
         public PositionReport(LeverAnglesSensor sensor) {
             this.sensor = sensor;
             this.time = System.currentTimeMillis();
+        }
+
+
+        public String formatShort() {
+            return sensor.formatShort();
         }
 
         @Override
@@ -77,36 +86,72 @@ public class CommandProcessingContext implements PositionAware, LeversActuator{
         positionReports.add(new PositionReport(sensors));
     }
 
+    public String sensors(LeverAnglesSensor sensor, String text) {
+        return String.format("%10s %s", text, sensor != null ? sensor.formatShort() : "N/A");
+    }
+
+    public String pushPair(PushPair pair) {
+
+        return String.format("L %d %f - R %d %f",
+                pair.getLeft().getLengthMsec(),
+                pair.getLeft().getPwm(),
+                pair.getRight().getLengthMsec(),
+                pair.getRight().getPwm());
+
+    }
+
+    public void addLogRecord(long time, String line, SortedMap<Long, List<String>> logRows) {
+
+        if (!logRows.containsKey(time)) {
+            logRows.put(time, new ArrayList<>());
+        }
+
+        logRows.get(time).add(line);
+
+    }
+
     public String summary() {
 
 
-        String summary = "";
+        String summary = "\n";
 
 
-        summary += "initial " + initialSensors.left + " " + initialSensors.right + "\n";
-        summary += "target  " + targetSensors.left + " " + targetSensors.right + "\n";
+        summary += sensors(initialSensors, "initial") + "\n";
+        summary += sensors(targetSensors,  "target") + "\n";
+        summary += sensors(reachedSensors, "reached") + "\n";
 
-        if (reachedSensors != null) {
+        summary += " start " + formatDate(new Date(commandStartedTime)) + "\n";
 
-            summary += "reached " + reachedSensors.left + " " + reachedSensors.right + "\n";
-        }
+        SortedMap<Long, List<String>> logRows = new TreeMap<>();
 
-        summary += " start " + new Date(commandStartedTime).toString() + "\n";
 
         for (PositionReport report : positionReports) {
-            summary += (commandStartedTime - report.time) + " " + report.sensor.left + " " + report.sensor.right + "\n";;
+            long time = report.time - commandStartedTime;
+            addLogRecord(time, report.sensor.formatShort(), logRows);;
         }
 
 
         for (PushPair pair : slideCommands) {
-            summary += (commandStartedTime - pair.time) + " " + pair.getLeft() + " " + pair.getRight() + "\n";;
+            long time = pair.time - commandStartedTime;
+            addLogRecord(time, "-----> " + pushPair(pair), logRows);
         }
 
+
+        for (Map.Entry<Long, List<String>> entry : logRows.entrySet()) {
+
+            for (String line : entry.getValue()) {
+                summary += String.format("%10s %s", String.valueOf(entry.getKey()), line) + "\n";
+            }
+
+        }
 
         return summary;
 
     }
 
+    public static String formatDate(Date date) {
+        return new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'").format(date);
+    }
 
 
     @Override
