@@ -28,6 +28,11 @@ public class LeverAnglesSensor {
                 Math.signum(sensor.right) == Math.signum(right);
     }
 
+    public boolean isDifferentSign(LeverAnglesSensor sensor) {
+        return Math.signum(sensor.left) != Math.signum(left) &&
+                Math.signum(sensor.right) != Math.signum(right);
+    }
+
     @Override
     public String toString() {
         return "LeverAnglesSensor{" +

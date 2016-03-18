@@ -53,7 +53,7 @@ public class LeversController implements PositionAware {
 
     private ContextArchive contextArchive = new ContextArchive();
 
-    private SensorPwmDirectionDependency dependency = SensorPwmDirectionDependency.RIGHT_REVERSED;
+    private SensorPwmDirectionDependency dependency = SensorPwmDirectionDependency.LEFT_REVERSED;
 
     public void setActuator(LeversActuator actuator) {
         this.actuator = actuator;
@@ -207,6 +207,8 @@ public class LeversController implements PositionAware {
 
         currentCommandProcessingContext.blinkBoth(pushPair);
 
+        pushPair.applyDepenency(dependency);
+
         actuator.blinkBoth(pushPair);
     }
 
@@ -257,7 +259,7 @@ public class LeversController implements PositionAware {
             return PositioningStatus.TIMEOUT;
         }
 
-        if (!fullDifference.isSameSign(diff)) {
+        if (!fullDifference.isDifferentSign(diff)) {
             return PositioningStatus.OVERSHOOT;
         }
 

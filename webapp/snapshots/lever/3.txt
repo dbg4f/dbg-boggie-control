@@ -1,0 +1,174 @@
+2016-02-14 16:02:20,366  INFO   [SerialRead] Msg sent to serial:{"cmd":"sendReports","value":1.0}
+2016-02-14 16:02:20,366  INFO   [MessageFlowMediator] Message: {"cmd":"sendReports","value":1.0} sent to target dbg.misc.ws.serial.SerialRead
+2016-02-14 16:02:20,392  INFO   [LeversController] Sensors: LeverAnglesSensor{left=0.575124, right=0.139369, timeMarker=1076209} pos CartesianPoint{x=46.0, y=93.0}
+{"left":0.575124,"right":0.139369,"lift":0.351172,"t":1076209}
+2016-02-14 16:02:20,504  INFO   [LeversController] Sensors: LeverAnglesSensor{left=0.575254, right=0.139292, timeMarker=1076321} pos CartesianPoint{x=46.0, y=93.0}
+{"left":0.575254,"right":0.139292,"lift":0.351198,"t":1076321}
+2016-02-14 16:02:20,616  INFO   [LeversController] Sensors: LeverAnglesSensor{left=0.575189, right=0.139434, timeMarker=1076434} pos CartesianPoint{x=46.0, y=93.0}
+{"left":0.575189,"right":0.139434,"lift":0.351104,"t":1076434}
+2016-02-14 16:02:20,728  INFO   [LeversController] Sensors: LeverAnglesSensor{left=0.575128, right=0.139388, timeMarker=1076547} pos CartesianPoint{x=46.0, y=93.0}
+{"left":0.575128,"right":0.139388,"lift":0.351170,"t":1076547}
+2016-02-14 16:02:20,841  INFO   [LeversController] Sensors: LeverAnglesSensor{left=0.575219, right=0.139295, timeMarker=1076660} pos CartesianPoint{x=46.0, y=93.0}
+{"left":0.575219,"right":0.139295,"lift":0.351193,"t":1076660}
+2016-02-14 16:02:20,954  INFO   [LeversController] Sensors: LeverAnglesSensor{left=0.575142, right=0.139299, timeMarker=1076773} pos CartesianPoint{x=46.0, y=93.0}
+{"left":0.575142,"right":0.139299,"lift":0.351132,"t":1076773}
+2016-02-14 16:02:21,067  INFO   [LeversController] Sensors: LeverAnglesSensor{left=0.575194, right=0.13933, timeMarker=1076886} pos CartesianPoint{x=46.0, y=93.0}
+{"left":0.575194,"right":0.139330,"lift":0.351158,"t":1076886}
+2016-02-14 16:02:21,180  INFO   [LeversController] Sensors: LeverAnglesSensor{left=0.575148, right=0.139315, timeMarker=1076999} pos CartesianPoint{x=46.0, y=93.0}
+{"left":0.575148,"right":0.139315,"lift":0.351137,"t":1076999}
+2016-02-14 16:02:21,293  INFO   [LeversController] Sensors: LeverAnglesSensor{left=0.575062, right=0.139265, timeMarker=1077112} pos CartesianPoint{x=46.0, y=93.0}
+{"left":0.575062,"right":0.139265,"lift":0.351115,"t":1077112}
+2016-02-14 16:02:21,406  INFO   [LeversController] Sensors: LeverAnglesSensor{left=0.575137, right=0.139416, timeMarker=1077225} pos CartesianPoint{x=46.0, y=93.0}
+{"left":0.575137,"right":0.139416,"lift":0.351157,"t":1077225}
+2016-02-14 16:02:21,519  INFO   [LeversController] Sensors: LeverAnglesSensor{left=0.575071, right=0.139323, timeMarker=1077338} pos CartesianPoint{x=46.0, y=93.0}
+{"left":0.575071,"right":0.139323,"lift":0.351130,"t":1077338}
+2016-02-14 16:02:21,632  INFO   [LeversController] Sensors: LeverAnglesSensor{left=0.575099, right=0.13916, timeMarker=1077451} pos CartesianPoint{x=46.0, y=93.0}
+{"left":0.575099,"right":0.139160,"lift":0.351149,"t":1077451}
+2016-02-14 16:02:21,745  INFO   [LeversController] Sensors: LeverAnglesSensor{left=0.57518, right=0.139236, timeMarker=1077564} pos CartesianPoint{x=46.0, y=93.0}
+{"left":0.575180,"right":0.139236,"lift":0.351189,"t":1077564}
+2016-02-14 16:02:21,859  INFO   [LeversController] Sensors: LeverAnglesSensor{left=0.575164, right=0.139417, timeMarker=1077677} pos CartesianPoint{x=46.0, y=93.0}
+{"left":0.575164,"right":0.139417,"lift":0.351125,"t":1077677}
+2016-02-14 16:02:21,974  INFO   [LeversController] Sensors: LeverAnglesSensor{left=0.575044, right=0.139312, timeMarker=1077790} pos CartesianPoint{x=46.0, y=93.0}
+{"left":0.575044,"right":0.139312,"lift":0.351143,"t":1077790}
+2016-02-14 16:02:22,084  INFO   [LeversController] Sensors: LeverAnglesSensor{left=0.575208, right=0.13931, timeMarker=1077903} pos CartesianPoint{x=46.0, y=93.0}
+{"left":0.575208,"right":0.139310,"lift":0.351153,"t":1077903}
+2016-02-14 16:02:22,197  INFO   [LeversController] Sensors: LeverAnglesSensor{left=0.575035, right=0.139176, timeMarker=1078016} pos CartesianPoint{x=46.0, y=93.0}
+{"left":0.575035,"right":0.139176,"lift":0.351115,"t":1078016}
+2016-02-14 16:02:22,280  INFO   [ConsoleHandler] Coordinates: 80 100
+2016-02-14 16:02:22,286  INFO   [CommandQueue] Command added to queue [501447639]: CncCommand{code=LINE_TO, x=80, y=100}
+2016-02-14 16:02:22,317  INFO   [LeversController] Sensors: LeverAnglesSensor{left=0.575151, right=0.13919, timeMarker=1078129} pos CartesianPoint{x=46.0, y=93.0}
+{"left":0.575151,"right":0.139190,"lift":0.351172,"t":1078129}
+2016-02-14 16:02:22,429  INFO   [CommandQueue] Command to execute [501447639]: CncCommand{code=LINE_TO, x=80, y=100}
+2016-02-14 16:02:22,430  INFO   [LeversController] Sensors: LeverAnglesSensor{left=0.575293, right=0.139402, timeMarker=1078242} pos CartesianPoint{x=46.0, y=93.0}
+{"left":0.575293,"right":0.139402,"lift":0.351173,"t":1078242}
+2016-02-14 16:02:22,431  INFO   [LeversController] Positioning status: NOT_REACHED pen CartesianPoint{x=46.026508145866366, y=93.43033614646316} diff LeverAnglesSensor{left=-0.10560925898670925, right=-0.047560656719614264, timeMarker=0}
+2016-02-14 16:02:22,435  INFO   [LeversController] Diff LeverAnglesSensor{left=-0.10560925898670925, right=-0.047560656719614264, timeMarker=0}, push DrivePush{lengthMsec=3, pwm=-0.6} DrivePush{lengthMsec=3, pwm=-0.6}
+2016-02-14 16:02:22,443  INFO   [SerialRead] Msg sent to serial:{"cmd":"stepBoth","pwmLeft":-0.6,"durationLeft":3,"pwmRight":0.6,"durationRight":3}
+2016-02-14 16:02:22,444  INFO   [MessageFlowMediator] Message: {"cmd":"stepBoth","pwmLeft":-0.6,"durationLeft":3,"pwmRight":0.6,"durationRight":3} sent to target dbg.misc.ws.serial.SerialRead
+2016-02-14 16:02:22,476  INFO   [LeversController] Sensors: LeverAnglesSensor{left=0.575312, right=0.1397, timeMarker=1078295} pos CartesianPoint{x=46.0, y=93.0}
+{"left":0.575312,"right":0.139700,"lift":0.351108,"t":1078295}
+2016-02-14 16:02:22,589  INFO   [LeversController] Sensors: LeverAnglesSensor{left=0.578938, right=0.146783, timeMarker=1078407} pos CartesianPoint{x=47.0, y=92.0}
+{"left":0.578938,"right":0.146783,"lift":0.351173,"t":1078407}
+2016-02-14 16:02:22,701  INFO   [LeversController] Sensors: LeverAnglesSensor{left=0.57909, right=0.147008, timeMarker=1078520} pos CartesianPoint{x=47.0, y=92.0}
+{"left":0.579090,"right":0.147008,"lift":0.351164,"t":1078520}
+2016-02-14 16:02:22,744  INFO   [LeversController] Positioning status: NOT_REACHED pen CartesianPoint{x=47.277364058651344, y=92.17529687557138} diff LeverAnglesSensor{left=-0.10181225898670931, right=-0.03995465671961426, timeMarker=0}
+2016-02-14 16:02:22,744  INFO   [LeversController] Diff LeverAnglesSensor{left=-0.10181225898670931, right=-0.03995465671961426, timeMarker=0}, push DrivePush{lengthMsec=3, pwm=-0.6} DrivePush{lengthMsec=3, pwm=-0.6}
+2016-02-14 16:02:22,744  INFO   [SerialRead] Msg sent to serial:{"cmd":"stepBoth","pwmLeft":-0.6,"durationLeft":3,"pwmRight":0.6,"durationRight":3}
+2016-02-14 16:02:22,744  INFO   [MessageFlowMediator] Message: {"cmd":"stepBoth","pwmLeft":-0.6,"durationLeft":3,"pwmRight":0.6,"durationRight":3} sent to target dbg.misc.ws.serial.SerialRead
+2016-02-14 16:02:22,777  INFO   [LeversController] Sensors: LeverAnglesSensor{left=0.579325, right=0.147096, timeMarker=1078596} pos CartesianPoint{x=47.0, y=92.0}
+{"left":0.579325,"right":0.147096,"lift":0.351122,"t":1078596}
+2016-02-14 16:02:22,889  INFO   [LeversController] Sensors: LeverAnglesSensor{left=0.58285, right=0.153607, timeMarker=1078708} pos CartesianPoint{x=48.0, y=91.0}
+{"left":0.582850,"right":0.153607,"lift":0.351158,"t":1078708}
+2016-02-14 16:02:23,002  INFO   [LeversController] Sensors: LeverAnglesSensor{left=0.582822, right=0.153968, timeMarker=1078821} pos CartesianPoint{x=48.0, y=91.0}
+{"left":0.582822,"right":0.153968,"lift":0.351183,"t":1078821}
+2016-02-14 16:02:23,045  INFO   [LeversController] Positioning status: NOT_REACHED pen CartesianPoint{x=48.45286630087898, y=91.05748889146328} diff LeverAnglesSensor{left=-0.09808025898670936, right=-0.03299465671961427, timeMarker=0}
+2016-02-14 16:02:23,045  INFO   [LeversController] Diff LeverAnglesSensor{left=-0.09808025898670936, right=-0.03299465671961427, timeMarker=0}, push DrivePush{lengthMsec=3, pwm=-0.6} DrivePush{lengthMsec=3, pwm=-0.6}
+2016-02-14 16:02:23,045  INFO   [SerialRead] Msg sent to serial:{"cmd":"stepBoth","pwmLeft":-0.6,"durationLeft":3,"pwmRight":0.6,"durationRight":3}
+2016-02-14 16:02:23,045  INFO   [MessageFlowMediator] Message: {"cmd":"stepBoth","pwmLeft":-0.6,"durationLeft":3,"pwmRight":0.6,"durationRight":3} sent to target dbg.misc.ws.serial.SerialRead
+2016-02-14 16:02:23,077  INFO   [LeversController] Sensors: LeverAnglesSensor{left=0.583079, right=0.154248, timeMarker=1078896} pos CartesianPoint{x=49.0, y=91.0}
+{"left":0.583079,"right":0.154248,"lift":0.351134,"t":1078896}
+2016-02-14 16:02:23,190  INFO   [LeversController] Sensors: LeverAnglesSensor{left=0.588207, right=0.16063, timeMarker=1079009} pos CartesianPoint{x=50.0, y=90.0}
+{"left":0.588207,"right":0.160630,"lift":0.351156,"t":1079009}
+2016-02-14 16:02:23,303  INFO   [LeversController] Sensors: LeverAnglesSensor{left=0.588089, right=0.161042, timeMarker=1079122} pos CartesianPoint{x=50.0, y=90.0}
+{"left":0.588089,"right":0.161042,"lift":0.351164,"t":1079122}
+2016-02-14 16:02:23,345  INFO   [LeversController] Positioning status: NOT_REACHED pen CartesianPoint{x=50.07419495967963, y=90.29687438207648} diff LeverAnglesSensor{left=-0.09281325898670933, right=-0.02592065671961427, timeMarker=0}
+2016-02-14 16:02:23,345  INFO   [LeversController] Diff LeverAnglesSensor{left=-0.09281325898670933, right=-0.02592065671961427, timeMarker=0}, push DrivePush{lengthMsec=3, pwm=-0.6} DrivePush{lengthMsec=3, pwm=-0.6}
+2016-02-14 16:02:23,346  INFO   [SerialRead] Msg sent to serial:{"cmd":"stepBoth","pwmLeft":-0.6,"durationLeft":3,"pwmRight":0.6,"durationRight":3}
+2016-02-14 16:02:23,346  INFO   [MessageFlowMediator] Message: {"cmd":"stepBoth","pwmLeft":-0.6,"durationLeft":3,"pwmRight":0.6,"durationRight":3} sent to target dbg.misc.ws.serial.SerialRead
+2016-02-14 16:02:23,378  INFO   [LeversController] Sensors: LeverAnglesSensor{left=0.588278, right=0.161556, timeMarker=1079197} pos CartesianPoint{x=50.0, y=90.0}
+{"left":0.588278,"right":0.161556,"lift":0.351169,"t":1079197}
+2016-02-14 16:02:23,491  INFO   [LeversController] Sensors: LeverAnglesSensor{left=0.591607, right=0.167687, timeMarker=1079310} pos CartesianPoint{x=51.0, y=89.0}
+{"left":0.591607,"right":0.167687,"lift":0.351099,"t":1079310}
+2016-02-14 16:02:23,604  INFO   [LeversController] Sensors: LeverAnglesSensor{left=0.591737, right=0.168455, timeMarker=1079423} pos CartesianPoint{x=51.0, y=89.0}
+{"left":0.591737,"right":0.168455,"lift":0.351183,"t":1079423}
+2016-02-14 16:02:23,646  INFO   [LeversController] Positioning status: NOT_REACHED pen CartesianPoint{x=51.132078945518046, y=88.94742939626185} diff LeverAnglesSensor{left=-0.08916525898670935, right=-0.01850765671961427, timeMarker=0}
+2016-02-14 16:02:23,646  INFO   [LeversController] Diff LeverAnglesSensor{left=-0.08916525898670935, right=-0.01850765671961427, timeMarker=0}, push DrivePush{lengthMsec=3, pwm=-0.6} DrivePush{lengthMsec=3, pwm=-0.6}
+2016-02-14 16:02:23,646  INFO   [SerialRead] Msg sent to serial:{"cmd":"stepBoth","pwmLeft":-0.6,"durationLeft":3,"pwmRight":0.6,"durationRight":3}
+2016-02-14 16:02:23,646  INFO   [MessageFlowMediator] Message: {"cmd":"stepBoth","pwmLeft":-0.6,"durationLeft":3,"pwmRight":0.6,"durationRight":3} sent to target dbg.misc.ws.serial.SerialRead
+2016-02-14 16:02:23,678  INFO   [LeversController] Sensors: LeverAnglesSensor{left=0.592036, right=0.1687, timeMarker=1079498} pos CartesianPoint{x=51.0, y=89.0}
+{"left":0.592036,"right":0.168700,"lift":0.351170,"t":1079498}
+2016-02-14 16:02:23,791  INFO   [LeversController] Sensors: LeverAnglesSensor{left=0.593797, right=0.175094, timeMarker=1079610} pos CartesianPoint{x=52.0, y=87.0}
+{"left":0.593797,"right":0.175094,"lift":0.351127,"t":1079610}
+2016-02-14 16:02:23,904  INFO   [LeversController] Sensors: LeverAnglesSensor{left=0.593756, right=0.175192, timeMarker=1079723} pos CartesianPoint{x=52.0, y=87.0}
+{"left":0.593756,"right":0.175192,"lift":0.351176,"t":1079723}
+2016-02-14 16:02:23,947  INFO   [LeversController] Positioning status: NOT_REACHED pen CartesianPoint{x=51.595344481408986, y=87.2997913736869} diff LeverAnglesSensor{left=-0.08714625898670936, right=-0.011770656719614275, timeMarker=0}
+2016-02-14 16:02:23,947  INFO   [LeversController] Diff LeverAnglesSensor{left=-0.08714625898670936, right=-0.011770656719614275, timeMarker=0}, push DrivePush{lengthMsec=3, pwm=-0.6} DrivePush{lengthMsec=3, pwm=-0.6}
+2016-02-14 16:02:23,947  INFO   [SerialRead] Msg sent to serial:{"cmd":"stepBoth","pwmLeft":-0.6,"durationLeft":3,"pwmRight":0.6,"durationRight":3}
+2016-02-14 16:02:23,947  INFO   [MessageFlowMediator] Message: {"cmd":"stepBoth","pwmLeft":-0.6,"durationLeft":3,"pwmRight":0.6,"durationRight":3} sent to target dbg.misc.ws.serial.SerialRead
+2016-02-14 16:02:23,979  INFO   [LeversController] Sensors: LeverAnglesSensor{left=0.59419, right=0.175712, timeMarker=1079798} pos CartesianPoint{x=52.0, y=87.0}
+{"left":0.594190,"right":0.175712,"lift":0.351182,"t":1079798}
+2016-02-14 16:02:24,092  INFO   [LeversController] Sensors: LeverAnglesSensor{left=0.597523, right=0.18165, timeMarker=1079911} pos CartesianPoint{x=53.0, y=86.0}
+{"left":0.597523,"right":0.181650,"lift":0.351129,"t":1079911}
+2016-02-14 16:02:24,205  INFO   [LeversController] Sensors: LeverAnglesSensor{left=0.597623, right=0.182233, timeMarker=1080024} pos CartesianPoint{x=53.0, y=86.0}
+{"left":0.597623,"right":0.182233,"lift":0.351187,"t":1080024}
+2016-02-14 16:02:24,247  INFO   [LeversController] Positioning status: NOT_REACHED pen CartesianPoint{x=52.611254890554015, y=86.05050561916242} diff LeverAnglesSensor{left=-0.08327925898670929, right=-0.004729656719614256, timeMarker=0}
+2016-02-14 16:02:24,247  INFO   [LeversController] Diff LeverAnglesSensor{left=-0.08327925898670929, right=-0.004729656719614256, timeMarker=0}, push DrivePush{lengthMsec=3, pwm=-0.6} DrivePush{lengthMsec=3, pwm=-0.6}
+2016-02-14 16:02:24,248  INFO   [SerialRead] Msg sent to serial:{"cmd":"stepBoth","pwmLeft":-0.6,"durationLeft":3,"pwmRight":0.6,"durationRight":3}
+2016-02-14 16:02:24,248  INFO   [MessageFlowMediator] Message: {"cmd":"stepBoth","pwmLeft":-0.6,"durationLeft":3,"pwmRight":0.6,"durationRight":3} sent to target dbg.misc.ws.serial.SerialRead
+2016-02-14 16:02:24,280  INFO   [LeversController] Sensors: LeverAnglesSensor{left=0.597754, right=0.182586, timeMarker=1080099} pos CartesianPoint{x=53.0, y=86.0}
+{"left":0.597754,"right":0.182586,"lift":0.351177,"t":1080099}
+2016-02-14 16:02:24,392  INFO   [LeversController] Sensors: LeverAnglesSensor{left=0.598853, right=0.189052, timeMarker=1080211} pos CartesianPoint{x=53.0, y=84.0}
+{"left":0.598853,"right":0.189052,"lift":0.351131,"t":1080211}
+2016-02-14 16:02:24,505  INFO   [LeversController] Sensors: LeverAnglesSensor{left=0.598859, right=0.189586, timeMarker=1080324} pos CartesianPoint{x=53.0, y=84.0}
+{"left":0.598859,"right":0.189586,"lift":0.351192,"t":1080324}
+2016-02-14 16:02:24,548  INFO   [LeversController] Positioning status: OVERSHOOT pen CartesianPoint{x=52.56794687913896, y=83.79412694395732} diff LeverAnglesSensor{left=-0.08204325898670928, right=0.0026233432803857426, timeMarker=0}
+2016-02-14 16:02:24,548  INFO   [LeversController] Finalize command: CommandProcessingContext{command=CncCommand{code=LINE_TO, x=80, y=100}, initialSensors=LeverAnglesSensor{left=0.575151, right=0.13919, timeMarker=1078129}, targetSensors=LeverAnglesSensor{left=0.6809022589867093, right=0.18696265671961426, timeMarker=0}, reachedSensors=null, commandStartedTime=1455458542430, positionReports=[PositionReport{sensor=LeverAnglesSensor{left=0.575293, right=0.139402, timeMarker=1078242}, time=1455458542430}, PositionReport{sensor=LeverAnglesSensor{left=0.575312, right=0.1397, timeMarker=1078295}, time=1455458542476}, PositionReport{sensor=LeverAnglesSensor{left=0.578938, right=0.146783, timeMarker=1078407}, time=1455458542589}, PositionReport{sensor=LeverAnglesSensor{left=0.57909, right=0.147008, timeMarker=1078520}, time=1455458542701}, PositionReport{sensor=LeverAnglesSensor{left=0.579325, right=0.147096, timeMarker=1078596}, time=1455458542777}, PositionReport{sensor=LeverAnglesSensor{left=0.58285, right=0.153607, timeMarker=1078708}, time=1455458542889}, PositionReport{sensor=LeverAnglesSensor{left=0.582822, right=0.153968, timeMarker=1078821}, time=1455458543002}, PositionReport{sensor=LeverAnglesSensor{left=0.583079, right=0.154248, timeMarker=1078896}, time=1455458543077}, PositionReport{sensor=LeverAnglesSensor{left=0.588207, right=0.16063, timeMarker=1079009}, time=1455458543190}, PositionReport{sensor=LeverAnglesSensor{left=0.588089, right=0.161042, timeMarker=1079122}, time=1455458543303}, PositionReport{sensor=LeverAnglesSensor{left=0.588278, right=0.161556, timeMarker=1079197}, time=1455458543378}, PositionReport{sensor=LeverAnglesSensor{left=0.591607, right=0.167687, timeMarker=1079310}, time=1455458543491}, PositionReport{sensor=LeverAnglesSensor{left=0.591737, right=0.168455, timeMarker=1079423}, time=1455458543604}, PositionReport{sensor=LeverAnglesSensor{left=0.592036, right=0.1687, timeMarker=1079498}, time=1455458543678}, PositionReport{sensor=LeverAnglesSensor{left=0.593797, right=0.175094, timeMarker=1079610}, time=1455458543791}, PositionReport{sensor=LeverAnglesSensor{left=0.593756, right=0.175192, timeMarker=1079723}, time=1455458543904}, PositionReport{sensor=LeverAnglesSensor{left=0.59419, right=0.175712, timeMarker=1079798}, time=1455458543979}, PositionReport{sensor=LeverAnglesSensor{left=0.597523, right=0.18165, timeMarker=1079911}, time=1455458544092}, PositionReport{sensor=LeverAnglesSensor{left=0.597623, right=0.182233, timeMarker=1080024}, time=1455458544205}, PositionReport{sensor=LeverAnglesSensor{left=0.597754, right=0.182586, timeMarker=1080099}, time=1455458544280}, PositionReport{sensor=LeverAnglesSensor{left=0.598853, right=0.189052, timeMarker=1080211}, time=1455458544392}, PositionReport{sensor=LeverAnglesSensor{left=0.598859, right=0.189586, timeMarker=1080324}, time=1455458544505}], slideCommands=[BlinkPair{left=DrivePush{lengthMsec=3, pwm=-0.6}, right=DrivePush{lengthMsec=3, pwm=0.6}, time=1455458542435}, BlinkPair{left=DrivePush{lengthMsec=3, pwm=-0.6}, right=DrivePush{lengthMsec=3, pwm=0.6}, time=1455458542744}, BlinkPair{left=DrivePush{lengthMsec=3, pwm=-0.6}, right=DrivePush{lengthMsec=3, pwm=0.6}, time=1455458543045}, BlinkPair{left=DrivePush{lengthMsec=3, pwm=-0.6}, right=DrivePush{lengthMsec=3, pwm=0.6}, time=1455458543345}, BlinkPair{left=DrivePush{lengthMsec=3, pwm=-0.6}, right=DrivePush{lengthMsec=3, pwm=0.6}, time=1455458543646}, BlinkPair{left=DrivePush{lengthMsec=3, pwm=-0.6}, right=DrivePush{lengthMsec=3, pwm=0.6}, time=1455458543947}, BlinkPair{left=DrivePush{lengthMsec=3, pwm=-0.6}, right=DrivePush{lengthMsec=3, pwm=0.6}, time=1455458544247}]}
+2016-02-14 16:02:24,618  INFO   [LeversController] Sensors: LeverAnglesSensor{left=0.598835, right=0.18973, timeMarker=1080437} pos CartesianPoint{x=53.0, y=84.0}
+{"left":0.598835,"right":0.189730,"lift":0.351160,"t":1080437}
+2016-02-14 16:02:24,731  INFO   [LeversController] Sensors: LeverAnglesSensor{left=0.598891, right=0.189806, timeMarker=1080550} pos CartesianPoint{x=53.0, y=84.0}
+{"left":0.598891,"right":0.189806,"lift":0.351156,"t":1080550}
+2016-02-14 16:02:24,844  INFO   [LeversController] Sensors: LeverAnglesSensor{left=0.59896, right=0.189752, timeMarker=1080663} pos CartesianPoint{x=53.0, y=84.0}
+{"left":0.598960,"right":0.189752,"lift":0.351199,"t":1080663}
+2016-02-14 16:02:24,848  INFO   [CommandQueue] Command complete [501447639]: CncCommand{code=LINE_TO, x=80, y=100}
+2016-02-14 16:02:24,957  INFO   [LeversController] Sensors: LeverAnglesSensor{left=0.598948, right=0.1897, timeMarker=1080776} pos CartesianPoint{x=53.0, y=84.0}
+{"left":0.598948,"right":0.189700,"lift":0.351143,"t":1080776}
+2016-02-14 16:02:25,070  INFO   [LeversController] Sensors: LeverAnglesSensor{left=0.599027, right=0.189736, timeMarker=1080889} pos CartesianPoint{x=53.0, y=84.0}
+{"left":0.599027,"right":0.189736,"lift":0.351181,"t":1080889}
+2016-02-14 16:02:25,183  INFO   [LeversController] Sensors: LeverAnglesSensor{left=0.599133, right=0.189791, timeMarker=1081002} pos CartesianPoint{x=53.0, y=84.0}
+{"left":0.599133,"right":0.189791,"lift":0.351151,"t":1081002}
+2016-02-14 16:02:25,296  INFO   [LeversController] Sensors: LeverAnglesSensor{left=0.5991, right=0.189899, timeMarker=1081115} pos CartesianPoint{x=53.0, y=84.0}
+{"left":0.599100,"right":0.189899,"lift":0.351133,"t":1081115}
+2016-02-14 16:02:25,409  INFO   [LeversController] Sensors: LeverAnglesSensor{left=0.599088, right=0.189751, timeMarker=1081228} pos CartesianPoint{x=53.0, y=84.0}
+{"left":0.599088,"right":0.189751,"lift":0.351121,"t":1081228}
+2016-02-14 16:02:25,522  INFO   [LeversController] Sensors: LeverAnglesSensor{left=0.599003, right=0.189892, timeMarker=1081341} pos CartesianPoint{x=53.0, y=84.0}
+{"left":0.599003,"right":0.189892,"lift":0.351183,"t":1081341}
+2016-02-14 16:02:25,635  INFO   [LeversController] Sensors: LeverAnglesSensor{left=0.598953, right=0.18992, timeMarker=1081454} pos CartesianPoint{x=53.0, y=84.0}
+{"left":0.598953,"right":0.189920,"lift":0.351144,"t":1081454}
+2016-02-14 16:02:25,748  INFO   [LeversController] Sensors: LeverAnglesSensor{left=0.599046, right=0.189898, timeMarker=1081567} pos CartesianPoint{x=53.0, y=84.0}
+{"left":0.599046,"right":0.189898,"lift":0.351141,"t":1081567}
+2016-02-14 16:02:25,861  INFO   [LeversController] Sensors: LeverAnglesSensor{left=0.59904, right=0.19001, timeMarker=1081680} pos CartesianPoint{x=53.0, y=84.0}
+{"left":0.599040,"right":0.190010,"lift":0.351195,"t":1081680}
+2016-02-14 16:02:25,974  INFO   [LeversController] Sensors: LeverAnglesSensor{left=0.599062, right=0.189667, timeMarker=1081793} pos CartesianPoint{x=53.0, y=84.0}
+{"left":0.599062,"right":0.189667,"lift":0.351141,"t":1081793}
+2016-02-14 16:02:26,087  INFO   [LeversController] Sensors: LeverAnglesSensor{left=0.598978, right=0.189835, timeMarker=1081906} pos CartesianPoint{x=53.0, y=84.0}
+{"left":0.598978,"right":0.189835,"lift":0.351149,"t":1081906}
+2016-02-14 16:02:26,200  INFO   [LeversController] Sensors: LeverAnglesSensor{left=0.599124, right=0.189998, timeMarker=1082019} pos CartesianPoint{x=53.0, y=84.0}
+{"left":0.599124,"right":0.189998,"lift":0.351123,"t":1082019}
+2016-02-14 16:02:26,315  INFO   [LeversController] Sensors: LeverAnglesSensor{left=0.599061, right=0.189952, timeMarker=1082132} pos CartesianPoint{x=53.0, y=84.0}
+{"left":0.599061,"right":0.189952,"lift":0.351138,"t":1082132}
+2016-02-14 16:02:26,426  INFO   [LeversController] Sensors: LeverAnglesSensor{left=0.599174, right=0.190057, timeMarker=1082245} pos CartesianPoint{x=53.0, y=84.0}
+{"left":0.599174,"right":0.190057,"lift":0.351181,"t":1082245}
+2016-02-14 16:02:26,539  INFO   [LeversController] Sensors: LeverAnglesSensor{left=0.599153, right=0.190002, timeMarker=1082358} pos CartesianPoint{x=53.0, y=84.0}
+{"left":0.599153,"right":0.190002,"lift":0.351140,"t":1082358}
+2016-02-14 16:02:26,653  INFO   [LeversController] Sensors: LeverAnglesSensor{left=0.599139, right=0.18992, timeMarker=1082471} pos CartesianPoint{x=53.0, y=84.0}
+{"left":0.599139,"right":0.189920,"lift":0.351147,"t":1082471}
+2016-02-14 16:02:26,765  INFO   [LeversController] Sensors: LeverAnglesSensor{left=0.599032, right=0.190025, timeMarker=1082584} pos CartesianPoint{x=53.0, y=84.0}
+{"left":0.599032,"right":0.190025,"lift":0.351194,"t":1082584}
+2016-02-14 16:02:26,878  INFO   [LeversController] Sensors: LeverAnglesSensor{left=0.599228, right=0.190021, timeMarker=1082697} pos CartesianPoint{x=53.0, y=84.0}
+{"left":0.599228,"right":0.190021,"lift":0.351124,"t":1082697}
+2016-02-14 16:02:26,991  INFO   [LeversController] Sensors: LeverAnglesSensor{left=0.5992, right=0.189891, timeMarker=1082810} pos CartesianPoint{x=53.0, y=84.0}
+{"left":0.599200,"right":0.189891,"lift":0.351147,"t":1082810}
+2016-02-14 16:02:27,104  INFO   [LeversController] Sensors: LeverAnglesSensor{left=0.599385, right=0.189942, timeMarker=1082923} pos CartesianPoint{x=53.0, y=84.0}
+{"left":0.599385,"right":0.189942,"lift":0.351171,"t":1082923}
+2016-02-14 16:02:27,217  INFO   [LeversController] Sensors: LeverAnglesSensor{left=0.599194, right=0.189852, timeMarker=1083036} pos CartesianPoint{x=53.0, y=84.0}
+{"left":0.599194,"right":0.189852,"lift":0.351116,"t":1083036}
+2016-02-14 16:02:27,330  INFO   [LeversController] Sensors: LeverAnglesSensor{left=0.599212, right=0.189879, timeMarker=1083149} pos CartesianPoint{x=53.0, y=84.0}
+{"left":0.599212,"right":0.189879,"lift":0.351164,"t":1083149}
+2016-02-14 16:02:27,443  INFO   [LeversController] Sensors: LeverAnglesSensor{left=0.599169, right=0.190036, timeMarker=1083262} pos CartesianPoint{x=53.0, y=84.0}
+{"left":0.599169,"right":0.190036,"lift":0.351171,"t":1083262}
+2016-02-14 16:02:27,556  INFO   [LeversController] Sensors: LeverAnglesSensor{left=0.599195, right=0.189957, timeMarker=1083375} pos CartesianPoint{x=53.0, y=84.0}
+{"left":0.599195,"right":0.189957,"lift":0.351107,"t":1083375}
+2016-02-14 16:02:27,668  INFO   [SerialRead] Msg sent to serial:{"cmd":"sendReports","value":0.0}
+2016-02-14 16:02:27,668  INFO   [MessageFlowMediator] Message: {"cmd":"sendReports","value":0.0} sent to target dbg.misc.ws.serial.SerialRead
+2016-02-14 16:02:27,669  INFO   [LeversController] Sensors: LeverAnglesSensor{left=0.59927, right=0.189948, timeMarker=1083488} pos CartesianPoint{x=53.0, y=84.0}
+{"left":0.599270,"right":0.189948,"lift":0.351172,"t":1083488}
