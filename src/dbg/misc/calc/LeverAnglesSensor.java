@@ -23,15 +23,32 @@ public class LeverAnglesSensor {
         return new LeverAnglesSensor(left - sensor.left, right - sensor.right);
     }
 
-    public boolean isSameSign(LeverAnglesSensor sensor) {
-        return Math.signum(sensor.left) == Math.signum(left) &&
-                Math.signum(sensor.right) == Math.signum(right);
+    public boolean isBothDifferentSign(LeverAnglesSensor sensor) {
+        return isLeftDifferentSign(sensor) &&
+                isRightDifferentSign(sensor);
     }
 
-    public boolean isDifferentSign(LeverAnglesSensor sensor) {
-        return Math.signum(sensor.left) != Math.signum(left) &&
-                Math.signum(sensor.right) != Math.signum(right);
+    public boolean isBothSameSign(LeverAnglesSensor sensor) {
+        return !isLeftDifferentSign(sensor) &&
+                !isRightDifferentSign(sensor);
     }
+
+    public boolean isRightDifferentSign(LeverAnglesSensor sensor) {
+        return isDifferentSign(sensor.right, right);
+    }
+
+    public boolean isLeftDifferentSign(LeverAnglesSensor sensor) {
+        return isDifferentSign(sensor.left, left);
+    }
+
+    private boolean isDifferentSign(double s1, double s2) {
+        return Math.signum(s1) != Math.signum(s2);
+    }
+
+    public String formatShort() {
+        return String.format("%.6f %.6f", left, right);
+    }
+
 
     @Override
     public String toString() {
